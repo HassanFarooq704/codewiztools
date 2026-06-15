@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Free Online Image Compressor — Reduce Image Size Fast | CodeWizTools</title>
+    <meta name="description" content="Compress JPG, PNG, and WebP images online for free. Reduce file size quickly for university assignments, portals, and websites without losing quality. 100% secure and client-side.">
+    <meta name="keywords" content="image compressor, reduce image size, online photo compressor, compress png, compress jpeg, student assignment tool, resize image online, codewiztools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://codewiztools.com/tools/image-compressor.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codewiztools.com/tools/image-compressor.html">
+    <meta property="og:title" content="Free Online Image Compressor — Reduce Image Size Fast | CodeWizTools">
+    <meta property="og:description" content="Quickly compress your images online. Perfect for students uploading to university portals and developers optimizing web performance. Safe, fast, and free.">
+    <meta property="og:image" content="https://codewiztools.com/og-image.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://codewiztools.com/tools/image-compressor.html">
+    <meta property="twitter:title" content="Free Online Image Compressor — Reduce Image Size Fast">
+    <meta property="twitter:description" content="Reduce image size instantly in your browser without losing quality. Perfect for student portal uploads.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Free Online Image Compressor",
+      "url": "https://codewiztools.com/tools/image-compressor.html",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "description": "An online browser-based utility tool that allows users, especially students and developers, to compress PNG, JPG, and WebP images instantly to reduce file size without losing quality.",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23grad)'/%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+
+    <style>
+        :root {
+            --bg: #0B0F19;
+            --surface: #151D30;
+            --surface2: #1a2440;
+            --surface3: #1f2b4a;
+            --surface-hover: #1E2942;
+            --accent: #00F2FE;
+            --accent-dim: rgba(0,242,254,0.12);
+            --accent-glow: 0 0 15px rgba(0, 242, 254, 0.3);
+            --border: rgba(255, 255, 255, 0.08);
+            --border2: rgba(0,242,254,0.18);
+            --success: #10B981;
+            --text: #FFFFFF;
+            --text-dim: #94A3B8;
+            --sans: 'Space Grotesk', sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+            --r: 10px;
+            --r-lg: 16px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--sans);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        body::before {
+            content:''; position:fixed; inset:0;
+            background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
+            background-size:50px 50px; pointer-events:none; z-index:0;
+        }
+
+        /* Header Style Match */
+        header {
+            border-bottom: 1px solid var(--border2);
+            padding: 0 2rem;
+            height: 62px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 15, 25, 0.88);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+        }
+        .logo-box {
+            background: linear-gradient(135deg, var(--accent), #0070f3);
+            color: #000;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9px;
+            font-weight: 800;
+            font-size: 15px;
+            box-shadow: 0 0 18px rgba(0,242,254,0.4);
+        }
+        .logo span span { color: var(--accent); }
+
+        .back-link {
+            font-family: var(--mono);
+            font-size: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: var(--r);
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .back-link:hover { color: var(--accent); background: var(--accent-dim); border-color: var(--accent); }
+
+        /* Main Workspace Layout */
+        .page-wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+        
+        .breadcrumb {
+            font-family: var(--mono);
+            font-size: 12px;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .breadcrumb a { color: #4a5568; text-decoration: none; }
+        .breadcrumb a:hover { color: var(--accent); }
+
+        .panel-hdr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .panel-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+        .panel-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); background: var(--accent-dim); border: 1px solid var(--border2); padding: 3px 10px; border-radius: 20px; }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        @media(max-width:850px){ .two-col { grid-template-columns: 1fr; } }
+        .col-label { font-family: var(--mono); font-size: 11px; color: #4a5568; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 7px; }
+
+        /* Upload Area */
+        .upload-card {
+            background: var(--surface);
+            border: 2px dashed var(--border2);
+            border-radius: 16px;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .upload-card:hover, .upload-card.dragover {
+            border-color: var(--accent);
+            background: rgba(0,242,254,0.02);
+            box-shadow: var(--accent-glow);
+        }
+        .upload-card input[type="file"] {
+            position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;
+        }
+        .upload-icon {
+            font-size: 36px; color: var(--accent); margin-bottom: 12px; display: inline-block; text-shadow: var(--accent-glow);
+        }
+        .upload-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+        .upload-card p { color: var(--text-dim); font-size: 11px; font-family: var(--mono); }
+
+        /* Configuration Controls Panel */
+        .control-panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: none;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .slider-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--mono);
+            font-size: 13px;
+        }
+        .quality-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            outline: none;
+        }
+        .quality-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            box-shadow: var(--accent-glow);
+        }
+
+        /* Action Buttons */
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px 24px;
+            border-radius: var(--r);
+            border: none;
+            font-family: var(--sans);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+            border: 1px solid var(--accent);
+            box-shadow: var(--accent-glow);
+        }
+        .btn-primary:hover { filter: brightness(1.1); transform: scale(1.01); box-shadow: var(--accent-glow); }
+        .btn-secondary {
+            background: var(--surface2);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { background: var(--surface3); color: var(--accent); }
+
+        /* Real-time Stats Panel Dashboard */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        @media(max-width:480px){ .stats-grid { grid-template-columns: 1fr; } }
+        .stat-box {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+            padding: 12px;
+            position: relative;
+            min-height: 75px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .stat-box span { display: block; font-family: var(--mono); font-size: 10px; color: #4a5568; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+        .stat-box strong { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--text); word-break: break-all; line-height: 1.4; }
+        .stat-box strong.saved { color: var(--success); }
+
+        /* Deep Educational SEO Content Section */
+        .seo-block {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border2);
+        }
+        .seo-block h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin-bottom: 1rem; }
+        .seo-block h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 .5rem; }
+        .seo-block p { font-family: var(--mono); font-size: 13px; color: var(--text-dim); line-height: 1.75; margin-bottom: .75rem; }
+        .seo-block ul { margin-left: 1.25rem; margin-bottom: 1.5rem; font-family: var(--mono); color: var(--text-dim); font-size: 13px; }
+        .seo-block li { margin-bottom: 0.5rem; }
+
+        /* FAQ Accordion Architecture */
+        .faq-section { margin-top: 3rem; display: flex; flex-direction: column; gap: 10px; }
+        .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+        .faq-q {
+            width: 100%; display: flex; align-items: center; justify-content: space-between;
+            padding: 14px; background: transparent; border: none;
+            font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--text);
+            cursor: pointer; text-align: left; user-select: none;
+        }
+        .faq-q:hover { background: rgba(0,242,254,0.02); }
+        .faq-chevron { font-size: 16px; color: var(--accent); transition: transform 0.2s; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-a {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.2s;
+            padding: 0 14px; font-family: var(--mono); font-size: 12.5px; color: var(--text-dim); line-height: 1.7;
+        }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 14px 14px; }
+
+        /* Ecosystem Grid Interface */
+        .network-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 1.5rem; }
+        .network-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 14px; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; gap: 5px; }
+        .network-card:hover { border-color: var(--accent); transform: translateY(-2px); background: var(--surface2); box-shadow: 0 5px 15px rgba(0,242,254,0.05); }
+        .net-title { font-size: 13px; font-weight: 600; color: #fff; }
+        .net-desc { font-family: var(--mono); font-size: 11px; color: #4a5568; line-height: 1.4; }
+
+        /* Footer Custom Style */
+        .site-footer { text-align: center; padding: 2rem 1.5rem; border-top: 1px solid var(--border); margin-top: 4rem; font-family: var(--mono); font-size: 12px; color: #4a5568; }
+        .site-footer p { font-family: var(--mono); font-size: 12px; color: #4a5568; }
+        .site-footer a { color: var(--text-dim); text-decoration: none; }
+        .site-footer a:hover { color: var(--accent); }
+
+        @keyframes fadeIn { from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+        .fadein { animation: fadeIn .3s ease both; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="https://codewiztools.com/" class="logo">
+            <div class="logo-box">C</div>
+            <span>CodeWiz<span>Tools</span></span>
+        </a>
+        <a href="https://codewiztools.com/" class="back-link">← All Tools</a>
+    </header>
+
+    <div class="page-wrap fadein">
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span style="color:var(--border2);">/</span>
+            <span style="color:var(--text-dim);">Image Compressor</span>
+        </nav>
+
+        <div class="panel-hdr">
+            <h1 class="panel-title">
+                <span style="font-family:var(--mono);color:var(--accent);">🖼️</span>
+                Client-Side Image Compressor
+                <span class="panel-tag">100% Client-Sandbox</span>
+            </h1>
+        </div>
+
+        <div class="two-col">
+            <div>
+                <div class="col-label">Upload Asset Target</div>
+                <div class="upload-card" id="dropZone">
+                    <span class="upload-icon">⚡</span>
+                    <h3>Drag &amp; drop your image here</h3>
+                    <p>or click to browse files (Max 10MB)</p>
+                    <input type="file" id="fileInput" accept="image/jpeg, image/png, image/webp">
+                </div>
+
+                <div class="control-panel" id="controlPanel">
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="quality">Compression Quality Ratio</label>
+                            <span id="qualityVal" style="color:var(--accent); font-weight:600;">70%</span>
+                        </div>
+                        <input type="range" id="quality" class="quality-slider" min="10" max="100" value="70">
+                    </div>
+
+                    <div class="btn-container">
+                        <button class="btn btn-secondary" id="resetBtn">Reset Asset File</button>
+                        <a class="btn btn-primary" id="downloadBtn" download="compressed-image.jpg">Download Compressed Image</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="col-label">Asset Metrics &amp; Reduction Tracker</div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span>Original Weight</span>
+                        <strong id="origSize">0 KB</strong>
+                    </div>
+                    <div class="stat-box">
+                        <span>Compressed Weight</span>
+                        <strong id="compSize" style="color:var(--accent);">0 KB</strong>
+                    </div>
+                    <div class="stat-box">
+                        <span>Size Allocation Saved</span>
+                        <strong id="reduction" class="saved">0%</strong>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px; background: rgba(0,0,0,0.15); border: 1px solid var(--border); border-radius: var(--r); padding: 12px;">
+                    <div class="col-label" style="margin-bottom:4px; font-size:10px;">Pipeline Environment Log</div>
+                    <div style="font-family:var(--mono); font-size:11px; color:var(--text-dim); line-height:1.5;">
+                        // status: <span style="color:var(--success);">idle</span><br>
+                        // framework: HTML5 Canvas Context2D<br>
+                        // encryption: Client-Side Isolated Sandbox
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="seo-block" aria-label="SEO Informational Content">
+            <h2>Why Use Our Online Image Compressor?</h2>
+            <p>Whether you are a university student struggling to upload assignments on portals with tight file size constraints, or a web developer looking to maximize your Google PageSpeed scores, large images can slow you down. Our utility tool solves this instantly by handling the raw compression directly inside your web browser.</p>
+            
+            <h2>100% Secure &amp; Client-Side Processing</h2>
+            <p>Unlike other compression platforms, CodeWizTools respects your privacy. Your data and photos are never uploaded to any remote server or cloud database. All compression algorithms execute inside your local browser instance via HTML5 Canvas rendering pipeline, making it secure and blazing fast.</p>
+
+            <h2>Key Features for Students &amp; Creators:</h2>
+            <ul>
+                <li><strong>No Quality Loss:</strong> High-end smart lossy algorithms that keep details intact while stripping bloated pixels.</li>
+                <li><strong>Multiple Formats:</strong> Seamlessly compresses JPG, JPEG, static WebP, and heavy PNG files.</li>
+                <li><strong>Zero Limits:</strong> No registration, no subscription packages, and 100% free forever.</li>
+            </ul>
+        </section>
+
+        <section class="faq-section" aria-label="Frequently asked questions about Image Compressor">
+            <div class="col-label" style="margin-bottom:5px;">Frequently Asked Questions</div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Are my uploaded images stored or saved on your servers?
+                    <span class="faq-chevron">⌄</span>
+                </button>
+                <div class="faq-a">Absolutely not! CodeWizTools operates entirely as a browser-based client side utility sandbox. Your selected graphics, images, or assets are never sent to external servers. The processing occurs inside your device's memory pool via HTML5 Canvas buffers, providing complete privacy.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    How can I compress images to a specific target file size restriction?
+                    <span class="faq-chevron">⌄</span>
+                </button>
+                <div class="faq-a">To hit a specific portal limitation (such as under 2MB for LMS configurations), simply slide the Compression Quality thumb control handle. The Real-time Metrics dashboard will instantly update the estimated output weight size, allowing you to fine-tune the exact balance.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Does this tool support bulk processing or transparency rendering layers?
+                    <span class="faq-chevron">⌄</span>
+                </button>
+                <div class="faq-a">This specific module optimizes single assets dynamically to achieve the maximum data reduction output. When compressing transparent PNG configurations, it matches your device canvas specs. For typical university submission records or documentation layout rules, the workflow is seamless.</div>
+            </div>
+        </section>
+
+        <div style="margin-top:3.5rem;">
+            <div class="col-label">CodeWizTools Utility Ecosystem</div>
+            <div class="network-grid">
+                <a href="assignment-renamer.html" class="network-card">
+                    <div class="net-title">📝 Assignment Renamer</div>
+                    <div class="net-desc">Standardize your academic file names for university portal uploads.</div>
+                </a>
+                <a href="attendance-calculator.html" class="network-card">
+                    <div class="net-title">📊 Attendance Calculator</div>
+                    <div class="net-desc">Track required attendance thresholds and class percentages instantly.</div>
+                </a>
+                <a href="base64-converter.html" class="network-card">
+                    <div class="net-title">🔗 Base64 Converter</div>
+                    <div class="net-desc">Encode or decode strings and media assets into raw binary schemas.</div>
+                </a>
+                <a href="case-converter.html" class="network-card">
+                    <div class="net-title">🔤 Case Converter</div>
+                    <div class="net-desc">Switch text blocks seamlessly between UPPER, lower, camel, and snake case formats.</div>
+                </a>
+                <a href="cgpa-calculator.html" class="network-card">
+                    <div class="net-title">🎓 CGPA Calculator</div>
+                    <div class="net-desc">Compute dynamic semester GPAs and cumulative academic averages instantly.</div>
+                </a>
+                <a href="color-picker.html" class="network-card">
+                    <div class="net-title">🎨 Color Picker Workstation</div>
+                    <div class="net-desc">Interactive Hex to RGBA canvas color matrix selector engine for developers.</div>
+                </a>
+                <a href="image-compressor.html" class="network-card">
+                    <div class="net-title">🖼️ Image Compressor</div>
+                    <div class="net-desc">Optimize JPG, PNG, and WebP dimensions while stripping weight allocations.</div>
+                </a>
+                <a href="json-formatter.html" class="network-card">
+                    <div class="net-title">⚡ JSON Formatter &amp; Validator</div>
+                    <div class="net-desc">Prettify structural data payloads and syntax error streams on the fly.</div>
+                </a>
+                <a href="lorem-ipsum-generator.html" class="network-card">
+                    <div class="net-title">✍️ Lorem Ipsum Generator</div>
+                    <div class="net-desc">Generate raw mockup filler text parameters for front-end layouts.</div>
+                </a>
+                <a href="password-generator.html" class="network-card">
+                    <div class="net-title">🔑 Password Generator</div>
+                    <div class="net-desc">Construct secure, cryptographically random string tokens for verification rules.</div>
+                </a>
+                <a href="pdf-merger.html" class="network-card">
+                    <div class="net-title">🗂️ PDF Document Merger</div>
+                    <div class="net-desc">Combine separate target asset documents into a unified file structure.</div>
+                </a>
+                <a href="percentage-calculator.html" class="network-card">
+                    <div class="net-title">🔢 Percentage Calculator</div>
+                    <div class="net-desc">Solve basic ratios, relative variations, and percentage changes dynamically.</div>
+                </a>
+                <a href="url-encoder.html" class="network-card">
+                    <div class="net-title">🌐 URL Encoder / Decoder</div>
+                    <div class="net-desc">Convert query components safely to keep character parameters standard.</div>
+                </a>
+                <a href="word-counter.html" class="network-card">
+                    <div class="net-title">⏱️ Word Counter</div>
+                    <div class="net-desc">Analyze string values for structural loops, character maps, and reading time.</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <p><a href="https://codewiztools.com/" style="color:var(--text-dim); text-decoration:none;">← Back to Dashboard</a> &nbsp;·&nbsp; <a href="https://codewiztools.com/" style="color:var(--text-dim); text-decoration:none;">CodeWizTools</a></p>
+        <p style="margin-top:6px;">&copy; 2026 CodeWizTools.com</p>
+    </footer>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const controlPanel = document.getElementById('controlPanel');
+        const qualitySlider = document.getElementById('quality');
+        const qualityVal = document.getElementById('qualityVal');
+        
+        const origSizeEl = document.getElementById('origSize');
+        const compSizeEl = document.getElementById('compSize');
+        const reductionEl = document.getElementById('reduction');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const resetBtn = document.getElementById('resetBtn');
+
+        let rawImage = null;
+        let originalFileSize = 0;
+        let mimeType = 'image/jpeg';
+
+        // Drag & Drop Handlers
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+            }, false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if(files.length > 0) handleFile(files[0]);
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if(e.target.files.length > 0) handleFile(e.target.files[0]);
+        });
+
+        function formatSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const dm = 2;
+            const sizes = ['Bytes', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+        }
+
+        function handleFile(file) {
+            if (!file.type.match('image.*')) {
+                alert('Please upload an image file (JPG, PNG, WebP)!');
+                return;
+            }
+            
+            originalFileSize = file.size;
+            mimeType = file.type;
+            origSizeEl.innerText = formatSize(originalFileSize);
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                rawImage = new Image();
+                rawImage.onload = function() {
+                    // Show configurations panel & hide upload card
+                    dropZone.style.display = 'none';
+                    controlPanel.style.display = 'flex';
+                    compressImage();
+                };
+                rawImage.src = event.target.value || event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function compressImage() {
+            if(!rawImage) return;
+
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Maintain native dimensions
+            canvas.width = rawImage.width;
+            canvas.height = rawImage.height;
+
+            // Draw image on canvas pipeline
+            ctx.drawImage(rawImage, 0, 0, canvas.width, canvas.height);
+
+            // Fetch structural quality multiplier
+            const targetQuality = qualitySlider.value / 100;
+            
+            // Generate DataURL string payload
+            const compressedDataUrl = canvas.toDataURL(mimeType, targetQuality);
+
+            // Calculate Approximate Output Size
+            const head = compressedDataUrl.indexOf(',') + 1;
+            const outputBlobSize = Math.round((compressedDataUrl.length - head) * 3 / 4);
+
+            compSizeEl.innerText = formatSize(outputBlobSize);
+            
+            // Calculate saving percent
+            const savings = Math.max(0, Math.round(((originalFileSize - outputBlobSize) / originalFileSize) * 100));
+            reductionEl.innerText = `${savings}% Saved`;
+
+            // Prepare Download Attachment Link
+            downloadBtn.href = compressedDataUrl;
+            
+            // Set dynamic download extensions
+            let extension = '.jpg';
+            if(mimeType === 'image/png') extension = '.png';
+            if(mimeType === 'image/webp') extension = '.webp';
+            downloadBtn.setAttribute('download', `codewiztools_${Date.now()}${extension}`);
+        }
+
+        // Listener events for dynamic scaling
+        qualitySlider.addEventListener('input', (e) => {
+            qualityVal.innerText = `${e.target.value}%`;
+            compressImage();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            rawImage = null;
+            originalFileSize = 0;
+            fileInput.value = '';
+            controlPanel.style.display = 'none';
+            dropZone.style.display = 'block';
+        });
+
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(el => el.el.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Online PDF Merger — Combine Multiple PDF Files Online | CodeWizTools</title>
+<meta name="description" content="Merge and combine multiple PDF files into one document instantly. 100% free, secure, and browser-based PDF merger. No registration, no server uploads, unlimited usage.">
+<meta name="keywords" content="merge pdf online, combine pdf files, free pdf merger, join pdf documents, secure pdf joiner, university assignment pdf merger, codewiztools">
+<meta name="author" content="CodeWizTools">
+<meta property="og:title" content="Free Online PDF Merger — Combine PDFs Instantly">
+<meta property="og:description" content="Combine multiple PDF files into a single document right in your browser. 100% private with zero server uploads.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://codewiztools.com/tools/pdf-merger.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23grad)'/%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+<style>
+:root {
+  --bg: #0B0F19;
+  --surface: #151D30;
+  --surface2: #1a2440;
+  --surface3: #1f2b4a;
+  --border: rgba(0,242,254,0.08);
+  --border2: rgba(0,242,254,0.18);
+  --accent: #00F2FE;
+  --accent-dim: rgba(0,242,254,0.12);
+  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
+  --success: #10B981;
+  --text: #FFFFFF;
+  --text2: #94A3B8;
+  --text3: #4a5568;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Space Grotesk', sans-serif;
+  --r: 10px;
+  --r-lg: 16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
+  background-size:50px 50px;pointer-events:none;z-index:0;
+}
+
+/* SITE HEADER */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:62px;
+  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2);
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,#00F2FE,#0070f3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);
+}
+.logo-text{font-size:1.1rem;font-weight:700;color:var(--text);}
+.logo-text span{color:var(--accent);}
+.back-btn{
+  font-family:var(--mono);font-size:12px;color:var(--text2);
+  text-decoration:none;padding:6px 12px;border-radius:var(--r);
+  border:1px solid var(--border);transition:all 0.2s;
+}
+.back-btn:hover{color:var(--accent);background:var(--accent-dim);border-color:var(--accent);}
+
+/* MAIN LAYOUT WRAPPER */
+.page-wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:2rem 1.5rem 4rem;}
+.breadcrumb{font-family:var(--mono);font-size:12px;color:var(--text3);margin-bottom:1.5rem;display:flex;align-items:center;gap:6px;}
+.breadcrumb a{color:var(--text3);text-decoration:none;}
+.breadcrumb a:hover{color:var(--accent);}
+.panel-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:10px;}
+.panel-title{font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;}
+.panel-tag{font-family:var(--mono);font-size:11px;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border2);padding:3px 10px;border-radius:20px;}
+
+.two-col{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start;}
+@media(max-width:850px){.two-col{grid-template-columns:1fr;}}
+.col-label{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:7px;}
+
+/* WORKSTATION DROPZONE */
+.dropzone{
+  background:var(--surface);border:2px dashed var(--border2);border-radius:var(--r-lg);
+  padding:3.5rem 2rem;text-align:center;cursor:pointer;transition:all 0.3s;
+  position:relative;
+}
+.dropzone:hover, .dropzone.dragover{
+  border-color:var(--accent);background:rgba(0,242,254,0.02);
+  box-shadow:var(--accent-glow);
+}
+.dropzone-icon{font-size:36px;margin-bottom:12px;display:inline-block;color:var(--accent);text-shadow:var(--accent-glow);}
+.dropzone h3{font-size:16px;font-weight:600;margin-bottom:4px;}
+.dropzone p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+#file-input{display:none;}
+
+/* FILE SEQUENCE LIST ENGINE */
+.file-list-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.25rem;margin-top:16px;display:none;}
+.file-list-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--border);margin-bottom:10px;font-family:var(--mono);font-size:12px;color:var(--text2);}
+.file-item{
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);
+  padding:10px 14px;margin-bottom:8px;transition:all 0.2s;
+}
+.file-item:last-child{margin-bottom:0;}
+.file-info{display:flex;align-items:center;gap:10px;overflow:hidden;}
+.file-icon{font-size:18px;color:#f43f5e;flex-shrink:0;}
+.file-name{font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.file-size{font-family:var(--mono);font-size:11px;color:var(--text3);flex-shrink:0;}
+.file-actions{display:flex;align-items:center;gap:4px;}
+.action-btn{
+  background:transparent;border:none;color:var(--text2);font-size:14px;
+  width:28px;height:28px;border-radius:6px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all 0.2s;
+}
+.action-btn:hover{background:var(--surface3);color:var(--accent);}
+.action-btn.delete:hover{color:#f43f5e;background:rgba(244,63,94,0.1);}
+
+/* BUTTON ACTIONS ENGINE */
+.action-area{margin-top:16px;display:none;}
+.merge-btn{
+  font-family:var(--sans);font-size:13px;font-weight:700;padding:12px 24px;border-radius:var(--r);border:1px solid var(--accent);background:var(--accent);color:#000;cursor:pointer;transition:all 0.3s;width:100%;text-align:center;box-shadow:var(--accent-glow);
+}
+.merge-btn:hover{filter:brightness(1.1);transform:scale(1.01);box-shadow:var(--accent-glow);}
+.merge-btn:disabled{background:var(--surface2);border-color:var(--border);color:var(--text3);box-shadow:none;cursor:not-allowed;transform:none;}
+
+/* METRIC MONITOR DASHBOARD */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media(max-width:480px){.stats-grid{grid-template-columns:1fr;}}
+.stat-box{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:12px;position:relative;min-height:75px;display:flex;flex-direction:column;justify-content:center;}
+.stat-lbl{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
+.stat-val{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--text);word-break:break-all;line-height:1.4;}
+
+/* PROCESSING BUFFER LOADER */
+.loader-wrap{display:none;background:var(--surface);border:1px dashed rgba(0,242,254,0.2);border-radius:var(--r-lg);padding:2rem 1.5rem;text-align:center;margin-top:16px;}
+.spinner{width:32px;height:32px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px;box-shadow:var(--accent-glow);}
+@keyframes spin{to{transform:rotate(360deg);}}
+.loader-wrap p{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:0.02em;}
+
+/* ABOUT SEO COMPONENT ENGINE */
+.seo-block{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border2);}
+.seo-block h2{font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;}
+.seo-block h3{font-size:1.05rem;font-weight:600;color:var(--text);margin:1.5rem 0 .5rem;}
+.seo-block p{font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;margin-bottom:.75rem;}
+
+/* FAQ ACCORDION ENGINE */
+.faq-section{margin-top:3rem;display:flex;flex-direction:column;gap:10px;}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:14px;background:transparent;border:none;
+  font-family:var(--sans);font-size:14px;font-weight:600;color:var(--text);
+  cursor:pointer;text-align:left;user-select:none;
+}
+.faq-q:hover{background:rgba(0,242,254,0.02);}
+.faq-chevron{font-size:16px;color:var(--accent);transition:transform 0.2s;}
+.faq-item.open .faq-chevron{transform:rotate(180deg);}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height 0.3s ease, padding 0.2s;
+  padding:0 14px;font-family:var(--mono);font-size:12.5px;color:var(--text2);line-height:1.7;
+}
+.faq-item.open .faq-a{max-height:300px;padding:0 14px 14px;}
+
+/* UTILITIES HUB NETWORK GRID */
+.network-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:12px;margin-top:1.5rem;}
+.network-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px;text-decoration:none;transition:all 0.2s;display:flex;flex-direction:column;gap:5px;}
+.network-card:hover{border-color:var(--accent);transform:translateY(-2px);background:var(--surface2);box-shadow:0 5px 15px rgba(0,242,254,0.05);}
+.net-title{font-size:13px;font-weight:600;color:#fff;}
+.net-desc{font-family:var(--mono);font-size:11px;color:var(--text3);line-height:1.4;}
+
+/* FOOTER ARCHITECTURE */
+.site-footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid var(--border);margin-top:4rem;font-family:var(--mono);font-size:12px;color:var(--text3);}
+.site-footer p{font-family:var(--mono);font-size:12px;color:var(--text3);}
+.site-footer a{color:var(--text2);text-decoration:none;}
+.site-footer a:hover{color:var(--accent);}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.fadein{animation:fadeIn .3s ease both;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo">
+    <div class="logo-icon">C</div>
+    <span class="logo-text">CodeWiz<span>Tools</span></span>
+  </a>
+  <a href="../index.html" class="back-btn">← All Tools</a>
+</header>
+
+<div class="page-wrap fadein">
+  
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span style="color:var(--border2);">/</span>
+    <span style="color:var(--text2);">PDF Merger</span>
+  </nav>
+
+  <div class="panel-hdr">
+    <h1 class="panel-title">
+      <span style="font-family:var(--mono);color:var(--accent);">🗂️</span>
+      Client-Side PDF Merger
+      <span class="panel-tag">100% Client-Side</span>
+    </h1>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="col-label">Upload Assets Target</div>
+      <div class="dropzone" id="dropzone" onclick="document.getElementById('file-input').click()">
+        <span class="dropzone-icon">⚡</span>
+        <h3>Drag &amp; drop PDF files here</h3>
+        <p>or click to browse from device (Select multiple files)</p>
+        <input type="file" id="file-input" multiple accept="application/pdf" onchange="handleFileSelect(event)">
+      </div>
+
+      <div class="loader-wrap" id="loader">
+        <div class="spinner"></div>
+        <p>Merging document contexts locally inside browser memory pipelines...</p>
+      </div>
+
+      <div class="file-list-wrap" id="list-wrapper">
+        <div class="file-list-header">
+          <span>Selected Files (Arrange sequence)</span>
+          <span id="file-count">0 files</span>
+        </div>
+        <div id="file-list"></div>
+      </div>
+
+      <div class="action-area" id="action-wrapper">
+        <button class="merge-btn" id="merge-btn" onclick="mergeAllPdfs()">Combine &amp; Download PDF Asset</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="col-label">Asset Metrics &amp; Sequence Tracker Dashboard</div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-lbl">Total Queued Items</div>
+          <div class="stat-val" id="stats-file-count">0 Document Components</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-lbl">Framework Core</div>
+          <div class="stat-val" style="color:var(--accent);">pdf-lib compilation</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-lbl">Security Context</div>
+          <div class="stat-val" style="color:var(--success);">Zero Server Exposure</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-lbl">Execution Framework</div>
+          <div class="stat-val">100% Client-Sandbox</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-block" aria-label="SEO Informational Content">
+    <h2>Why Use Our Online PDF Joiner?</h2>
+    <p>
+      Managing academic documents can be overwhelming. Whether you are a university student preparing a final thesis, a researcher compiling multiple study reports, or a developer organizing documentation, our <strong>free online PDF merger</strong> simplifies your workflow. You don't need to install heavy software like Adobe Acrobat or register on tracking websites.
+    </p>
+
+    <h3>Perfect for University Assignments &amp; Portals</h3>
+    <p>
+      Most university student portals (like LMS or Moodle) allow only a single file submission per assignment. If you have a separate cover page, main report, and appendix, you must combine them. Our tool lets you upload all parts, arrange them in the exact sequence using up/down controls, and merge them with 100% precision.
+    </p>
+
+    <h3>100% Client-Side Privacy (Zero Server Uploads)</h3>
+    <p>
+      Unlike other online PDF tools that upload your sensitive documents to their clouds, CodeWizTools operates entirely in your web browser. The merging process runs locally via advanced JavaScript web buffers. Your files never leave your computer, ensuring total confidentiality for data-sensitive documents.
+    </p>
+  </section>
+
+  <section class="faq-section" aria-label="Frequently asked questions about PDF Merger">
+    <div class="col-label" style="margin-bottom:5px;">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Are my uploaded PDF files saved on your servers?
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-a">Absolutely not! CodeWizTools is a 100% browser-based utility platform. Your files are never uploaded to any remote or cloud server. The entire PDF merging process runs completely within your browser via the `pdf-lib` client-side JavaScript engine. Your structural data remains totally secure.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What is the step-by-step process to use this PDF Merger?
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-a">It is incredibly simple: <br>1. Click inside the "Drag &amp; Drop" zone to select all the PDF documents you wish to combine.<br>2. Once populated, use the Up (↑) and Down (↓) sequencing arrows next to each file to arrange your ideal documentation order.<br>3. Click the "Combine &amp; Download PDF Asset" button to compile your unified PDF document layout directly.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Is there an arbitrary limit on file sizes or the number of uploaded documents?
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-a">No, there are no artificial boundaries imposed on the number of targets. However, because compilation takes place inside your active system RAM context, extreme files (exceeding 500MB+) might hit local browser memory sandbox boundaries. For typical academic semester records, reports, and long theses, the engine executes smoothly.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Will combining files decrease the overall text sharpness or asset quality?
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-a">Not at all. Our system operates on low-level structural buffer streams, parsing and extracting layout references without altering the raster attributes or text parameters. All font configurations, hyper-links, structural scaling parameters, and embedded vector objects are brought over with zero degradation.</div>
+    </div>
+  </section>
+
+  <div style="margin-top:3.5rem;">
+    <div class="col-label">CodeWizTools Utility Ecosystem</div>
+    <div class="network-grid">
+      <a href="assignment-renamer.html" class="network-card">
+        <div class="net-title">📝 Assignment Renamer</div>
+        <div class="net-desc">Standardize your academic file names for university portal uploads.</div>
+      </a>
+      <a href="attendance-calculator.html" class="network-card">
+        <div class="net-title">📊 Attendance Calculator</div>
+        <div class="net-desc">Track required attendance thresholds and class percentages instantly.</div>
+      </a>
+      <a href="base64-converter.html" class="network-card">
+        <div class="net-title">🔗 Base64 Converter</div>
+        <div class="net-desc">Encode or decode strings and media assets into raw binary schemas.</div>
+      </a>
+      <a href="case-converter.html" class="network-card">
+        <div class="net-title">🔤 Case Converter</div>
+        <div class="net-desc">Switch text blocks seamlessly between UPPER, lower, camel, and snake case formats.</div>
+      </a>
+      <a href="cgpa-calculator.html" class="network-card">
+        <div class="net-title">🎓 CGPA Calculator</div>
+        <div class="net-desc">Compute dynamic semester GPAs and cumulative academic averages instantly.</div>
+      </a>
+      <a href="color-picker.html" class="network-card">
+        <div class="net-title">🎨 Color Picker Workstation</div>
+        <div class="net-desc">Interactive Hex to RGBA canvas color matrix selector engine for developers.</div>
+      </a>
+      <a href="image-compressor.html" class="network-card">
+        <div class="net-title">🖼️ Image Compressor</div>
+        <div class="net-desc">Optimize JPG, PNG, and WebP dimensions while stripping weight allocations.</div>
+      </a>
+      <a href="json-formatter.html" class="network-card">
+        <div class="net-title">⚡ JSON Formatter &amp; Validator</div>
+        <div class="net-desc">Prettify structural data payloads and syntax error streams on the fly.</div>
+      </a>
+      <a href="lorem-ipsum-generator.html" class="network-card">
+        <div class="net-title">✍️ Lorem Ipsum Generator</div>
+        <div class="net-desc">Generate raw mockup filler text parameters for front-end layouts layout configurations.</div>
+      </a>
+      <a href="password-generator.html" class="network-card">
+        <div class="net-title">🔑 Password Generator</div>
+        <div class="net-desc">Construct secure, cryptographically random string tokens for verification rules.</div>
+      </a>
+      <a href="pdf-merger.html" class="network-card">
+        <div class="net-title">🗂️ PDF Document Merger</div>
+        <div class="net-desc">Combine separate target asset documents into a unified file structure.</div>
+      </a>
+      <a href="percentage-calculator.html" class="network-card">
+        <div class="net-title">🔢 Percentage Calculator</div>
+        <div class="net-desc">Solve basic ratios, relative variations, and percentage changes dynamically.</div>
+      </a>
+      <a href="url-encoder.html" class="network-card">
+        <div class="net-title">🌐 URL Encoder / Decoder</div>
+        <div class="net-desc">Convert query components safely to keep character parameters standard.</div>
+      </a>
+      <a href="word-counter.html" class="network-card">
+        <div class="net-title">⏱️ Word Counter</div>
+        <div class="net-desc">Analyze string values for structural loops, character maps, and reading time.</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <p><a href="../index.html" style="color:var(--text2);text-decoration:none;">← Back to all tools</a> &nbsp;·&nbsp; <a href="../index.html" style="color:var(--text2);text-decoration:none;">CodeWizTools</a></p>
+  <p style="margin-top:6px;">© 2026 CodeWizTools.com</p>
+</footer>
+
+<script>
+let selectedFiles = [];
+
+// Drag and drop handlers
+const dropzone = document.getElementById('dropzone');
+['dragenter', 'dragover'].forEach(eventName => {
+  dropzone.addEventListener(eventName, (e) => { e.preventDefault(); dropzone.classList.add('dragover'); }, false);
+});
+['dragleave', 'drop'].forEach(eventName => {
+  dropzone.addEventListener(eventName, (e) => { e.preventDefault(); dropzone.classList.remove('dragover'); }, false);
+});
+dropzone.addEventListener('drop', (e) => {
+  const dt = e.dataTransfer;
+  const files = Array.from(dt.files).filter(f => f.type === "application/pdf");
+  if(files.length > 0) {
+    addFilesToList(files);
+  }
+});
+
+function handleFileSelect(e) {
+  const files = Array.from(e.target.files).filter(f => f.type === "application/pdf");
+  addFilesToList(files);
+}
+
+function addFilesToList(files) {
+  files.forEach(file => {
+    selectedFiles.push({
+      id: Math.random().toString(36).substr(2, 9),
+      fileObj: file
+    });
+  });
+  renderFileList();
+}
+
+function formatBytes(bytes) {
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
+
+function renderFileList() {
+  const listContainer = document.getElementById('file-list');
+  const listWrapper = document.getElementById('list-wrapper');
+  const actionWrapper = document.getElementById('action-wrapper');
+  const fileCountText = document.getElementById('file-count');
+  const statsCountText = document.getElementById('stats-file-count');
+  
+  listContainer.innerHTML = '';
+  fileCountText.textContent = `${selectedFiles.length} file(s)`;
+  statsCountText.textContent = `${selectedFiles.length} Document Component(s)`;
+
+  if(selectedFiles.length === 0) {
+    listWrapper.style.display = 'none';
+    actionWrapper.style.display = 'none';
+    return;
+  }
+
+  listWrapper.style.display = 'block';
+  actionWrapper.style.display = 'block';
+  
+  // Disable merge button if less than 2 files
+  document.getElementById('merge-btn').disabled = selectedFiles.length < 2;
+
+  selectedFiles.forEach((item, index) => {
+    const itemEl = document.createElement('div');
+    itemEl.className = 'file-item';
+    itemEl.innerHTML = `
+      <div class="file-info">
+        <span class="file-icon">📄</span>
+        <span class="file-name" title="${item.fileObj.name}">${item.fileObj.name}</span>
+        <span class="file-size">(${formatBytes(item.fileObj.size)})</span>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn" onclick="moveItem(${index}, -1)" title="Move Up" ${index === 0 ? 'disabled style="opacity:0.2;"' : ''}>↑</button>
+        <button class="action-btn" onclick="moveItem(${index}, 1)" title="Move Down" ${index === selectedFiles.length - 1 ? 'disabled style="opacity:0.2;"' : ''}>↓</button>
+        <button class="action-btn delete" onclick="removeItem('${item.id}')" title="Remove file">✕</button>
+      </div>
+    `;
+    listContainer.appendChild(itemEl);
+  });
+}
+
+function moveItem(index, direction) {
+  const targetIndex = index + direction;
+  if(targetIndex < 0 || targetIndex >= selectedFiles.length) return;
+  const temp = selectedFiles[index];
+  selectedFiles[index] = selectedFiles[targetIndex];
+  selectedFiles[targetIndex] = temp;
+  renderFileList();
+}
+
+function removeItem(id) {
+  selectedFiles = selectedFiles.filter(item => item.id !== id);
+  renderFileList();
+}
+
+async function mergeAllPdfs() {
+  if (selectedFiles.length < 2) return;
+  
+  const loader = document.getElementById('loader');
+  const mergeBtn = document.getElementById('merge-btn');
+  
+  loader.style.display = 'block';
+  mergeBtn.disabled = true;
+
+  try {
+    // 1. Create a blank local PDF Document object
+    const mergedPdf = await PDFLib.PDFDocument.create();
+    
+    // 2. Loop and read internal stream bytes of each file
+    for (const fileItem of selectedFiles) {
+      const arrayBuffer = await fileItem.fileObj.arrayBuffer();
+      const currentPdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+      
+      // Copy all individual pages safely
+      const copiedPages = await mergedPdf.copyPages(currentPdfDoc, currentPdfDoc.getPageIndices());
+      copiedPages.forEach((page) => mergedPdf.addPage(page));
+    }
+    
+    // 3. Save combined context stream buffer
+    const mergedPdfBytes = await mergedPdf.save();
+    
+    // 4. Force binary blob action for user download
+    const blob = new Blob([mergedPdfBytes], { type: 'application/pdf' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `CodeWizTools_Merged_${Date.now()}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+  } catch (error) {
+    console.error("Merging failed: ", error);
+    alert("Ops! PDF merge karte waqt koi error aaya hai. Kindly verify karein ke files corrupted na hon.");
+  } finally {
+    loader.style.display = 'none';
+    mergeBtn.disabled = false;
+  }
+}
+
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free URL Encoder & Decoder Online — Percent Encoding Converter | CodeWizTools</title>
+<meta name="description" content="Free online URL encoder and decoder. Encode special characters into percent-encoded formats or decode complex parameters instantly. 100% secure client-side conversion.">
+<meta name="keywords" content="url encoder, url decoder, percent encoding, encode url, decode url, online url encoder, encodeURIComponent, decodeURIComponent, query string parser">
+<meta name="author" content="CodeWizTools">
+<link rel="canonical" href="https://codewiztools.com/tools/url-encoder.html">
+
+<meta property="og:title" content="Free URL Encoder & Decoder Online — CodeWizTools">
+<meta property="og:description" content="Encode special characters or decode percent-encoded strings securely in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codewiztools.com/tools/url-encoder.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0B0F19;
+  --surface: #151D30;
+  --surface2: #1a2440;
+  --surface3: #1f2b4a;
+  --border: rgba(0,242,254,0.08);
+  --border2: rgba(0,242,254,0.18);
+  --accent: #00F2FE;
+  --accent-dim: rgba(0,242,254,0.12);
+  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
+  --success: #10B981;
+  --success-dim: rgba(16,185,129,0.12);
+  --error: #EF4444;
+  --error-dim: rgba(239,68,68,0.12);
+  --text: #FFFFFF;
+  --text2: #94A3B8;
+  --text3: #4a5568;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Space Grotesk', sans-serif;
+  --r: 10px;
+  --r-lg: 16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
+
+/* Grid bg & Glow orbs from Home Page */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
+  background-size:50px 50px;pointer-events:none;z-index:0;
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),
+             radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);
+}
+
+/* ── HEADER ── */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:62px;
+  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2);
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,#00F2FE,#0070f3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:800;color:#000;
+  box-shadow:0 0 18px rgba(0,242,254,0.4);
+  flex-shrink:0;
+}
+.logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
+.logo-text span{color:var(--accent);}
+.header-nav{display:flex;align-items:center;}
+.nav-link{
+  font-family:var(--mono);font-size:12px;color:var(--text2);
+  text-decoration:none;padding:6px 14px;border-radius:var(--r);
+  transition:all 0.2s;letter-spacing:0.02em;
+  border:1px solid var(--border);background:rgba(21,29,48,0.5);
+}
+.nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
+
+/* ── LAYOUT WRAPPER ── */
+.tool-page-wrap {
+  position:relative;z-index:1;
+  max-width:960px;margin:2rem auto 5rem;padding:0 1.5rem;
+  animation:fadeUp 0.5s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+.breadcrumb {
+  font-family:var(--mono);font-size:11px;color:var(--text3);
+  margin-bottom:1.5rem;display:flex;gap:6px;
+}
+.breadcrumb a {color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover {color:var(--accent);}
+
+/* PANEL HEADER */
+.panel-header {
+  background:var(--surface);border:1px solid var(--border2);
+  border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);
+  padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;
+}
+.panel-title {
+  font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);
+  display:flex;align-items:center;gap:6px;
+}
+.panel-actions {display:flex;align-items:center;gap:12px;}
+
+/* MODE TOGGLE CONTROLLER */
+.mode-toggle {
+  display:flex;background:var(--surface2);border:1px solid var(--border2);
+  padding:2px;border-radius:20px;
+}
+.mode-btn {
+  font-family:var(--mono);font-size:11px;padding:5px 14px;border-radius:20px;
+  background:transparent;border:none;color:var(--text2);cursor:pointer;transition:all 0.2s;outline:none;
+}
+.mode-btn:hover {color:var(--text);}
+.mode-btn.active {
+  background:var(--accent);color:#000000;font-weight:600;box-shadow:var(--accent-glow);
+}
+
+.btn {
+  font-family:var(--mono);font-size:11px;letter-spacing:0.04em;
+  padding:6px 14px;border-radius:20px;
+  border:1px solid var(--text3);background:transparent;
+  color:var(--text2);cursor:pointer;transition:all 0.3s;outline:none;
+}
+.btn:hover {border-color:var(--text2);color:var(--text);background:rgba(255,255,255,0.03);}
+.btn-success {
+  border-color:var(--success);background:rgba(16,185,129,0.05);color:var(--success);
+}
+.btn-success:hover {
+  background:var(--success);color:#000000;box-shadow:0 0 15px rgba(16,185,129,0.3);
+}
+
+/* ── TWO COLUMN DISPLAY ── */
+.two-col {
+  display:grid;grid-template-columns:repeat(2,1fr);
+  background:var(--surface);border-left:1px solid var(--border2);
+  border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);
+  border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);
+  overflow:hidden;
+}
+.two-col > div {display:flex;flex-direction:column;}
+.two-col > div:first-child {border-right:1px solid var(--border2);}
+
+.col-label {
+  font-family:var(--mono);font-size:11px;color:var(--text3);
+  padding:0.6rem 1.2rem;background:rgba(11,15,25,0.2);
+  border-bottom:1px solid var(--border2);text-transform:uppercase;letter-spacing:0.04em;
+}
+
+.card {display:flex;flex-direction:column;height:100%;background:transparent;}
+
+/* TEXTAREA CODE AREA */
+.code-area {
+  background:transparent;border:none;padding:1.2rem;
+  font-family:var(--mono);font-size:14px;color:var(--text);
+  outline:none;transition:all 0.3s;resize:vertical;line-height:1.6;
+  width:100%;box-shadow:none;flex:1;
+}
+.code-area::placeholder {color:var(--text3);}
+.code-area[readonly] {background:rgba(11,15,25,0.08);color:var(--text2);}
+
+/* STATUS BOTTOM BARS */
+.status-bar {
+  display:flex;align-items:center;gap:8px;padding:0.6rem 1.2rem;
+  background:rgba(11,15,25,0.15);border-top:1px solid var(--border);
+  font-family:var(--mono);font-size:11px;color:var(--text2);min-height:36px;
+}
+.s-dot {width:6px;height:6px;border-radius:50%;background:var(--text3);transition:all 0.3s;}
+.s-dot.info {background:var(--accent);box-shadow:var(--accent-glow);}
+.s-dot.ok {background:var(--success);box-shadow:0 0 10px var(--success);}
+.s-dot.err {background:var(--error);box-shadow:0 0 10px var(--error);}
+
+/* ── SEO SECTION ── */
+.seo-section {
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;
+}
+.seo-section h2 {
+  font-size:1.4rem;font-weight:700;letter-spacing:-0.02em;
+  color:var(--text);margin-bottom:1rem;
+}
+.seo-section p {
+  font-family:var(--sans);font-size:14px;color:var(--text2);
+  line-height:1.7;margin-bottom:1rem;
+}
+.seo-section p:last-child {margin-bottom:0;}
+
+/* FAQ Accordion */
+.faq-accordion {margin-top: 2rem; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--border); padding-top: 2rem;}
+.faq-item {background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden;}
+.faq-trigger {width: 100%; background: none; border: none; padding: 14px 18px; text-align: left; color: #fff; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between;}
+.faq-content {max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(11, 15, 25, 0.3);}
+.faq-content p {padding: 14px 18px; font-family: var(--mono); font-size: 13px; color: #94A3B8; line-height: 1.75;}
+.faq-item.active .faq-content {max-height: 500px;}
+
+/* Internal Grid System (14 Tools Matrix) */
+.internal-grid-wrapper {margin-top: 3rem; padding: 1.5rem; background: rgba(21, 29, 48, 0.4); border: 1px solid var(--border); border-radius: var(--r-lg);}
+.internal-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top:1rem;}
+.internal-link-card {display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; font-size: 13px; color: var(--text2); transition: all 0.2s;}
+.internal-link-card:hover {border-color: var(--accent); color: #fff; transform: translateY(-1px); box-shadow: var(--accent-glow);}
+
+/* ── FOOTER ── */
+.site-footer{
+  position:relative;z-index:1;text-align:center;
+  padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;
+}
+.site-footer a{
+  font-family:var(--mono);font-size:12px;color:var(--text2);
+  text-decoration:none;transition:color 0.2s;
+}
+.site-footer a:hover{color:var(--accent);}
+.site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+
+@media(max-width:768px){
+  .two-col {grid-template-columns:1fr;}
+  .two-col > div:first-child {border-right:none;border-bottom:1px solid var(--border2);}
+}
+@media(max-width:640px){
+  .site-header{padding:0 1rem;}
+  .tool-page-wrap{margin:1.5rem auto 3rem;}
+  .panel-header {padding:0.8rem 1rem;flex-direction:column;gap:10px;align-items:flex-start;}
+  .panel-actions {width:100%;justify-content:space-between;}
+  .seo-section{padding:1.2rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo">
+    <div class="logo-icon">C</div>
+    <span class="logo-text">CodeWiz<span>Tools</span></span>
+  </a>
+  <nav class="header-nav">
+    <a href="../index.html" class="nav-link">← All Tools</a>
+  </nav>
+</header>
+
+<div class="tool-page-wrap">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>/</span> URL Encoder / Decoder
+  </div>
+  
+  <div class="panel-header">
+    <div class="panel-title">⊛ &nbsp;URL Encoder / Decoder</div>
+    <div class="panel-actions">
+      <div class="mode-toggle">
+        <button class="mode-btn active" id="btn-enc" onclick="setMode('encode')">Encode</button>
+        <button class="mode-btn" id="btn-dec" onclick="setMode('decode')">Decode</button>
+      </div>
+      <button class="btn" onclick="clearAll()">Clear</button>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="col-label" id="lbl-in">Input URL or Text</div>
+      <div class="card">
+        <textarea class="code-area" id="url-in" placeholder="Paste URL or text to encode..." spellcheck="false" oninput="convert()" style="min-height:240px;"></textarea>
+        <div class="status-bar">
+          <div class="s-dot" id="udot"></div>
+          <span id="ustatus">Ready</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="col-label" id="lbl-out">Encoded Output</div>
+      <div class="card">
+        <textarea class="code-area" id="url-out" placeholder="Result..." readonly spellcheck="false" style="min-height:240px;"></textarea>
+        <div class="status-bar" style="justify-content:space-between;">
+          <span id="url-info">—</span>
+          <button class="btn btn-success" onclick="copyOut(event)">Copy Output</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-section">
+    <h2>What is URL encoding?</h2>
+    <p>URL encoding (also called percent-encoding) converts special characters in a uniform resource locator into a safe, cross-compatible format that can be reliably transmitted over the internet via HTTP packets. Characters like spaces, ampersands (&amp;), equals signs (=), and hashtags (#) hold structural definitions in query structures and are replaced with a % symbol followed by their corresponding two-digit hexadecimal code representation (e.g., a space character turns into %20).</p>
+    <p>URL decoding performs the absolute inverse operations — taking a string containing complex data attributes or parameters and decoding %20 configurations back to readable string spaces. This utility is absolutely critical for software architecture, API endpoint manipulation, query string configuration parsers, and web testing environments.</p>
+
+    <div class="faq-accordion">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">1. What is the difference between encodeURI and encodeURIComponent? <span>▼</span></button>
+        <div class="faq-content"><p>encodeURI preserves structural delimiter marks like "/", "?", ":", and "@" to keep full web paths intact. encodeURIComponent aggressively percent-encodes all reserved special attributes including punctuation modifiers, making it perfect for preparing specific text arguments inside nested query strings.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">2. Why do characters get converted into percentage masks? <span>▼</span></button>
+        <div class="faq-content"><p>URLs are structurally limited to characters defined within the standard ASCII configuration character block. Complex formatting symbols, parameters, and non-English text strings must undergo uniform transmission transformations to prevent network breaks or data truncation during transfers.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">3. Is the processing of my sensitive data strings tracked or logged? <span>▼</span></button>
+        <div class="faq-content"><p>Absolutely not. The core logic computation operates 100% locally on your machine client-side using asynchronous native browser functions. Your parameters and private link structures never communicate with servers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="internal-grid-wrapper">
+    <div style="font-weight:700; color:#fff;">⚡ More Essential Utilities</div>
+    <div class="internal-grid">
+      <a href="case-converter.html" class="internal-link-card"><span>Case Converter</span><span>→</span></a>
+      <a href="json-formatter.html" class="internal-link-card"><span>JSON Formatter</span><span>→</span></a>
+      <a href="pdf-compressor.html" class="internal-link-card"><span>PDF Compressor</span><span>→</span></a>
+      <a href="pdf-merger.html" class="internal-link-card"><span>PDF Merger</span><span>→</span></a>
+      <a href="word-counter.html" class="internal-link-card"><span>Word Counter</span><span>→</span></a>
+      <a href="color-picker.html" class="internal-link-card"><span>Color Picker</span><span>→</span></a>
+      <a href="qr-generator.html" class="internal-link-card"><span>QR Code Generator</span><span>→</span></a>
+      <a href="cgpa-calculator.html" class="internal-link-card"><span>CGPA Calculator</span><span>→</span></a>
+      <a href="password-generator.html" class="internal-link-card"><span>Password Generator</span><span>→</span></a>
+      <a href="md5-generator.html" class="internal-link-card"><span>MD5 Generator</span><span>→</span></a>
+      <a href="base64-encoder.html" class="internal-link-card"><span>Base64 Encoder</span><span>→</span></a>
+      <a href="html-encoder.html" class="internal-link-card"><span>HTML Entity Encoder</span><span>→</span></a>
+      <a href="lorem-ipsum.html" class="internal-link-card"><span>Lorem Ipsum Generator</span><span>→</span></a>
+      <a href="diff-checker.html" class="internal-link-card"><span>Text Diff Checker</span><span>→</span></a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all tools</a></p>
+  <p>© 2026 CodeWizTools · No tracking. No logs. Pure Privacy.</p>
+</footer>
+
+<script>
+let mode='encode';
+function setMode(m){
+  mode=m;
+  document.getElementById('btn-enc').classList.toggle('active',m==='encode');
+  document.getElementById('btn-dec').classList.toggle('active',m==='decode');
+  document.getElementById('lbl-in').textContent=m==='encode'?'Input URL or text':'Encoded URL input';
+  document.getElementById('lbl-out').textContent=m==='encode'?'Encoded output':'Decoded output';
+  convert();
+}
+function toggleFaq(btn){ btn.parentElement.classList.toggle('active'); }
+
+function convert(){
+  const input=document.getElementById('url-in').value;
+  const dot=document.getElementById('udot');
+  if(!input){
+    document.getElementById('url-out').value='';
+    document.getElementById('url-info').textContent='—';
+    dot.className='s-dot';
+    document.getElementById('ustatus').textContent='Ready';
+    return;
+  }
+  try{
+    const out=mode==='encode'?encodeURIComponent(input):decodeURIComponent(input);
+    document.getElementById('url-out').value=out;
+    dot.className='s-dot '+(mode==='encode'?'info':'ok');
+    document.getElementById('ustatus').textContent=mode==='encode'?'Encoded':'Decoded successfully';
+    document.getElementById('url-info').textContent='Output: '+out.length+' chars';
+  }catch(e){
+    document.getElementById('url-out').value='';
+    dot.className='s-dot err';
+    document.getElementById('ustatus').textContent='Invalid encoded string';
+  }
+}
+function clearAll(){
+  document.getElementById('url-in').value='';
+  document.getElementById('url-out').value='';
+  document.getElementById('udot').className='s-dot';
+  document.getElementById('ustatus').textContent='Ready';
+  document.getElementById('url-info').textContent='—';
+}
+function copyOut(event){
+  const v=document.getElementById('url-out').value; if(!v)return;
+  navigator.clipboard.writeText(v).catch(()=>{});
+  const btn=event.target, o=btn.textContent;
+  btn.textContent='Copied!'; setTimeout(()=>btn.textContent=o,1500);
+}
+</script>
+</body>
+</html>

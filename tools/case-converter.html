@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Online Case Converter — UPPERCASE, lowercase, Title Case | CodeWizTools</title>
+<meta name="description" content="Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and kebab-case instantly. Free online client-side case converter.">
+<meta name="keywords" content="case converter, uppercase converter, lowercase converter, title case, camelcase, snake_case, text case changer, kebab-case, pascalcase">
+<meta name="author" content="CodeWizTools">
+<link rel="canonical" href="https://codewiztools.com/tools/case-converter.html">
+
+<meta property="og:title" content="Free Online Case Converter — CodeWizTools">
+<meta property="og:description" content="Convert between UPPERCASE, lowercase, Title Case, camelCase, and more instantly. 100% private.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codewiztools.com/tools/case-converter.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0B0F19;
+  --surface: #151D30;
+  --surface2: #1a2440;
+  --surface3: #1f2b4a;
+  --border: rgba(0,242,254,0.08);
+  --border2: rgba(0,242,254,0.18);
+  --accent: #00F2FE;
+  --accent-dim: rgba(0,242,254,0.12);
+  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
+  --success: #10B981;
+  --success-dim: rgba(16,185,129,0.12);
+  --text: #FFFFFF;
+  --text2: #94A3B8;
+  --text3: #4a5568;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Space Grotesk', sans-serif;
+  --r: 10px;
+  --r-lg: 16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
+
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
+  background-size:50px 50px;pointer-events:none;z-index:0;
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),
+             radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);
+}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:62px;
+  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2);
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,#00F2FE,#0070f3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:800;color:#000;
+  box-shadow:0 0 18px rgba(0,242,254,0.4);
+  flex-shrink:0;
+}
+.logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
+.logo-text span{color:var(--accent);}
+.header-nav{display:flex;align-items:center;}
+.nav-link{
+  font-family:var(--mono);font-size:12px;color:var(--text2);
+  text-decoration:none;padding:6px 14px;border-radius:var(--r);
+  transition:all 0.2s;letter-spacing:0.02em;
+  border:1px solid var(--border);background:rgba(21,29,48,0.5);
+}
+.nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
+
+/* Layout */
+.tool-page-wrap {
+  position:relative;z-index:1;
+  max-width:1080px;margin:2rem auto 5rem;padding:0 1.5rem;
+  animation:fadeUp 0.5s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+.breadcrumb {
+  font-family:var(--mono);font-size:11px;color:var(--text3);
+  margin-bottom:1.5rem;display:flex;gap:6px;
+}
+.breadcrumb a {color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover {color:var(--accent);}
+
+/* Panel header */
+.panel-header {
+  background:var(--surface);border:1px solid var(--border2);
+  border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);
+  padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;
+}
+.panel-title {
+  font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);
+  display:flex;align-items:center;gap:6px;
+}
+.panel-actions {display:flex;gap:8px;}
+
+.btn {
+  font-family:var(--mono);font-size:11px;letter-spacing:0.04em;
+  padding:6px 14px;border-radius:20px;
+  border:1px solid var(--text3);background:transparent;
+  color:var(--text2);cursor:pointer;transition:all 0.3s;outline:none;
+}
+.btn:hover {border-color:var(--text2);color:var(--text);background:rgba(255,255,255,0.03);}
+.btn-success {
+  border-color:var(--success);background:rgba(16,185,129,0.05);color:var(--success);
+}
+.btn-success:hover {
+  background:var(--success);color:#000;box-shadow:0 0 15px rgba(16,185,129,0.3);
+}
+
+/* Case selectors */
+.case-btns {
+  display:flex;gap:8px;flex-wrap:wrap;
+  background:var(--surface);border-left:1px solid var(--border2);border-right:1px solid var(--border2);
+  padding:0.8rem 1.4rem;border-bottom:1px solid var(--border2);
+}
+.case-btn {
+  font-family:var(--mono);font-size:11px;padding:6px 14px;border-radius:20px;
+  border:1px solid var(--border2);background:var(--surface2);color:var(--text2);
+  cursor:pointer;transition:all 0.2s;outline:none;
+}
+.case-btn:hover {color:var(--text);border-color:var(--text3);background:var(--surface3);}
+.case-btn.active {
+  background:var(--accent);border-color:var(--accent);color:#000;
+  font-weight:600;box-shadow:var(--accent-glow);
+}
+
+/* Two-column layout */
+.two-col {
+  display:grid;grid-template-columns:repeat(2,1fr);
+  background:var(--surface);border-left:1px solid var(--border2);
+  border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);
+  border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);
+  overflow:hidden;
+}
+.two-col > div {display:flex;flex-direction:column;}
+.two-col > div:first-child {border-right:1px solid var(--border2);}
+
+.col-label {
+  font-family:var(--mono);font-size:11px;color:var(--text3);
+  padding:0.6rem 1.2rem;background:rgba(11,15,25,0.2);
+  border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:0.04em;
+}
+
+/* Textareas */
+.code-area {
+  background:transparent;border:none;padding:1.2rem;
+  font-family:var(--mono);font-size:14px;color:var(--text);
+  outline:none;transition:all 0.3s;resize:vertical;line-height:1.6;
+  width:100%;height:100%;box-shadow:none;
+}
+.code-area:focus {background:rgba(0,242,254,0.01);}
+.code-area::placeholder {color:var(--text3);}
+.code-area[readonly] {background:rgba(11,15,25,0.1);color:var(--text2);}
+
+/* SEO Block styling */
+.seo-section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
+.seo-section h2{font-size:1.15rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:.75rem;}
+.seo-section h3{font-size:.95rem;font-weight:600;color:var(--text);margin:1rem 0 .5rem;}
+.seo-section p{font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;margin-bottom:.75rem;}
+.seo-section ul{font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;padding-left:1.4rem;margin-bottom:.75rem;}
+
+/* FAQ Accordion Accordion component */
+.faq-accordion {margin-top: 1.5rem; display: flex; flex-direction: column; gap: 10px;}
+.faq-item {background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; transition: all 0.3s ease;}
+.faq-item:hover {border-color: var(--border2); background: rgba(26, 36, 64, 0.7);}
+.faq-trigger {width: 100%; background: none; border: none; padding: 14px 18px; text-align: left; color: #fff; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 15px; outline: none;}
+.faq-icon {font-family: var(--mono); color: var(--accent); transition: transform 0.3s ease; font-size: 12px;}
+.faq-content {max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0, 1, 0, 1); background: rgba(11, 15, 25, 0.3);}
+.faq-content p {padding: 0 18px 14px 18px; font-family: var(--mono); font-size: 13px; color: #94A3B8; line-height: 1.75; margin: 0;}
+.faq-item.active {border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 0 10px rgba(0, 242, 254, 0.03);}
+.faq-item.active .faq-icon {transform: rotate(180deg);}
+.faq-item.active .faq-content {max-height: 1000px; transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);}
+
+/* INTERNAL LINKING MATRIX HUB GRID */
+.internal-grid-wrapper {margin-top: 3rem; padding: 1.5rem; background: rgba(21, 29, 48, 0.4); border: 1px solid var(--border); border-radius: var(--r-lg);}
+.internal-grid-title {font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: #fff; display: flex; align-items: center; gap: 8px;}
+.internal-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;}
+.internal-link-card {display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; font-family: var(--sans); font-size: 13px; color: var(--text2); transition: all 0.2s;}
+.internal-link-card:hover {border-color: var(--accent); background: var(--surface3); color: #fff; transform: translateY(-1px);}
+.internal-link-card .arrow-icon {font-family: var(--mono); color: var(--accent); font-weight: bold; font-size: 11px;}
+
+/* Footer */
+.site-footer{
+  position:relative;z-index:1;text-align:center;
+  padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;
+}
+.site-footer a{
+  font-family:var(--mono);font-size:12px;color:var(--text2);
+  text-decoration:none;transition:color 0.2s;
+}
+.site-footer a:hover{color:var(--accent);}
+.site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+
+@media(max-width:768px){
+  .two-col {grid-template-columns:1fr;}
+  .two-col > div:first-child {border-right:none;border-bottom:1px solid var(--border2);}
+}
+@media(max-width:640px){
+  .site-header{padding:0 1rem;}
+  .tool-page-wrap{margin:1.5rem auto 3rem;}
+  .case-btns {padding:0.6rem 1rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo">
+    <div class="logo-icon">C</div>
+    <span class="logo-text">CodeWiz<span>Tools</span></span>
+  </a>
+  <nav class="header-nav">
+    <a href="../index.html" class="nav-link">← All Tools</a>
+  </nav>
+</header>
+
+<div class="tool-page-wrap">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>/</span> Case Converter
+  </div>
+  
+  <div class="panel-header">
+    <div class="panel-title">Aa &nbsp;Case Converter</div>
+    <div class="panel-actions">
+      <button class="btn btn-success" onclick="copyResult()" id="copy-btn">Copy Result</button>
+      <button class="btn" onclick="clearAll()">Clear</button>
+    </div>
+  </div>
+
+  <div class="case-btns" id="case-btns">
+    <button class="case-btn active" data-case="upper" onclick="convert(this)">UPPERCASE</button>
+    <button class="case-btn" data-case="lower" onclick="convert(this)">lowercase</button>
+    <button class="case-btn" data-case="title" onclick="convert(this)">Title Case</button>
+    <button class="case-btn" data-case="sentence" onclick="convert(this)">Sentence Case</button>
+    <button class="case-btn" data-case="camel" onclick="convert(this)">camelCase</button>
+    <button class="case-btn" data-case="pascal" onclick="convert(this)">PascalCase</button>
+    <button class="case-btn" data-case="snake" onclick="convert(this)">snake_case</button>
+    <button class="case-btn" data-case="kebab" onclick="convert(this)">kebab-case</button>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="col-label">Input Text</div>
+      <textarea class="code-area" id="cc-in" placeholder="Type or paste text here..." oninput="autoConvert()" style="min-height:240px;"></textarea>
+    </div>
+    <div>
+      <div class="col-label">Converted Output</div>
+      <textarea class="code-area" id="cc-out" placeholder="Result appears here..." readonly style="min-height:240px;"></textarea>
+    </div>
+  </div>
+
+  <section class="seo-section" aria-label="About Case Converter">
+    <h2>Best Free Online Case Converter Tool</h2>
+    <p>
+      CodeWizTools.com offers the <strong>best free online case converter</strong> — an instant, web-browser utility built to modify string styles with zero server reliance. Whether you are correcting accidental caps lock text blocks, transforming paragraph headings, or structuring programming variable instances, this client-side architecture script processes payloads dynamically.
+    </p>
+    <p>
+      Simply copy and paste raw data blocks into the input module field, select your desired casing tab token, and review the structured semantic execution immediately. The tool eliminates manual formatting overhead entirely.
+    </p>
+
+    <h3>Supported Casing Transformations</h3>
+    <ul>
+      <li><strong>UPPERCASE</strong> — Forces every individual text element string character into capitalization hooks.</li>
+      <li><strong>lowercase</strong> — Cleans configuration files by neutralizing capitalizing structures completely.</li>
+      <li><strong>Title Case</strong> — Upper-cases structural tokens following word boundary indicators natively.</li>
+      <li><strong>Sentence Case</strong> — Parses paragraphs and capitally structures strings following active delimiter arrays.</li>
+      <li><strong>camelCase &amp; PascalCase</strong> — Essential formatting engines for JavaScript clusters and OOP constructor components.</li>
+      <li><strong>snake_case &amp; kebab-case</strong> — Generates optimized multi-tier URL paths and standardized SQL schema metrics.</li>
+    </ul>
+
+    <h3>Why Use a Browser-Based Converter Engine?</h3>
+    <p>
+      Traditional text optimization scripts send payloads to third-party servers, posing risks to proprietary strings or secret keys. Our converter runs completely in local RAM blocks using your machine's JavaScript compilation layer. No logs, no transmission vectors—100% security optimization compliance natively.
+    </p>
+
+    <div class="faq-accordion">
+      <h2>Frequently Asked Questions (FAQs)</h2>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span>1. What is the difference between camelCase and PascalCase?</span>
+          <span class="faq-icon">▼</span>
+        </button>
+        <div class="faq-content">
+          <p>In camelCase, the first letter of the entire compound phrase is lowercase, while each subsequent word starts with a capital letter (e.g., "myVariableName"). In PascalCase, every single word, including the first one, starts with an uppercase letter (e.g., "MyVariableName").</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span>2. Does this tool send my input data to any server?</span>
+          <span class="faq-icon">▼</span>
+        </button>
+        <div class="faq-content">
+          <p>No, this tool operates completely on your local device via client-side JavaScript. The text you process is never sent or transmitted to any external engine, ensuring total privacy and data standard compliance.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          <span>3. When should I use snake_case vs kebab-case?</span>
+          <span class="faq-icon">▼</span>
+        </button>
+        <div class="faq-content">
+          <p>snake_case joins word strings using underscores (e.g., "database_column_name") and is highly standard in SQL frameworks and Python ecosystems. kebab-case joins word segments using hyphens (e.g., "url-slug-example") and is widely used for clean web architecture URLs and CSS class patterns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="internal-grid-wrapper">
+    <div class="internal-grid-title">
+      <span style="color:var(--accent);">⚡</span> Explore More Free Developer Tools
+    </div>
+    <div class="internal-grid">
+      <a href="assignment-renamer.html" class="internal-link-card">
+        <span>Assignment Renamer</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="attendance-calculator.html" class="internal-link-card">
+        <span>Attendance Calculator</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="base64-converter.html" class="internal-link-card">
+        <span>Base64 Converter</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="case-converter.html" class="internal-link-card">
+        <span>Case Converter</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="cgpa-calculator.html" class="internal-link-card">
+        <span>CGPA Calculator</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="color-picker.html" class="internal-link-card">
+        <span>Color Picker Workstation</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="image-compressor.html" class="internal-link-card">
+        <span>Image Compressor</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="json-formatter.html" class="internal-link-card">
+        <span>JSON Formatter &amp; Validator</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="lorem-ipsum-generator.html" class="internal-link-card">
+        <span>Lorem Ipsum Generator</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="password-generator.html" class="internal-link-card">
+        <span>Password Generator</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="pdf-compressor.html" class="internal-link-card">
+        <span>PDF Document Compressor</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="pdf-merger.html" class="internal-link-card">
+        <span>PDF Document Merger</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="percentage-calculator.html" class="internal-link-card">
+        <span>Percentage Calculator</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="url-encoder.html" class="internal-link-card">
+        <span>URL Encoder / Decoder</span>
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="word-counter.html" class="internal-link-card">
+        <span>Word &amp; Character Counter</span>
+        <span class="arrow-icon">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all tools</a></p>
+  <p>© 2026 CodeWizTools · Free developer tools. No tracking. No ads.</p>
+</footer>
+
+<script>
+let activeCase='upper';
+function convert(btn){
+  document.querySelectorAll('.case-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  activeCase=btn.dataset.case;
+  doConvert();
+}
+function autoConvert(){ doConvert(); }
+function doConvert(){
+  const t=document.getElementById('cc-in').value;
+  if(!t) { document.getElementById('cc-out').value=''; return; }
+  let out='';
+  switch(activeCase){
+    case 'upper': out=t.toUpperCase(); break;
+    case 'lower': out=t.toLowerCase(); break;
+    case 'title': out=t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()); break;
+    case 'sentence': out=t.toLowerCase().replace(/(^\s*\w|[.!?]\s+\w)/g,c=>c.toUpperCase()); break;
+    case 'camel': out=t.trim().split(/[\s_\-]+/).map((w,i)=>w?(i===0?w.toLowerCase():w[0].toUpperCase()+w.slice(1).toLowerCase()):'').join(''); break;
+    case 'pascal': out=t.trim().split(/[\s_\-]+/).map(w=>w?w[0].toUpperCase()+w.slice(1).toLowerCase():'').join(''); break;
+    case 'snake': out=t.trim().toLowerCase().replace(/[\s\-]+/g,'_'); break;
+    case 'kebab': out=t.trim().toLowerCase().replace(/[\s_]+/g,'-'); break;
+  }
+  document.getElementById('cc-out').value=out;
+}
+function clearAll(){ document.getElementById('cc-in').value=''; document.getElementById('cc-out').value=''; }
+function copyResult(){
+  const v=document.getElementById('cc-out').value; if(!v) return;
+  navigator.clipboard.writeText(v).catch(()=>{});
+  const btn=document.getElementById('copy-btn'), o=btn.textContent;
+  btn.textContent='Copied!'; setTimeout(()=>btn.textContent=o,1500);
+}
+
+/* INTERACTIVE DROPDOWN TOGGLE ENGINE */
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  item.classList.toggle('active');
+}
+</script>
+</body>
+</html>

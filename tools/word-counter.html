@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Word Counter Online — Count Words, Characters & Reading Time | CodeWizTools</title>
+<meta name="description" content="Free online word counter. Count words, characters, sentences, paragraphs and estimated reading time instantly. 100% browser-based, private, and secure text analyzer.">
+<meta name="keywords" content="word counter, character counter, word count online, count words, reading time calculator, characters with no spaces, word counter for writers, text analyzer">
+<meta name="author" content="CodeWizTools">
+<link rel="canonical" href="https://codewiztools.com/tools/word-counter.html">
+
+<meta property="og:title" content="Free Word Counter Online — CodeWizTools">
+<meta property="og:description" content="Count words, characters, sentences, paragraphs and reading time instantly in your browser securely.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codewiztools.com/tools/word-counter.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0B0F19;
+  --surface: #151D30;
+  --surface2: #1a2440;
+  --surface3: #1f2b4a;
+  --border: rgba(0,242,254,0.08);
+  --border2: rgba(0,242,254,0.18);
+  --accent: #00F2FE;
+  --accent-dim: rgba(0,242,254,0.12);
+  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
+  --success: #10B981;
+  --success-dim: rgba(16,185,129,0.12);
+  --text: #FFFFFF;
+  --text2: #94A3B8;
+  --text3: #4a5568;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Space Grotesk', sans-serif;
+  --r: 10px;
+  --r-lg: 16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
+
+/* Grid bg & Glow orbs */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
+  background-size:50px 50px;pointer-events:none;z-index:0;
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),
+             radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);
+}
+
+/* ── HEADER ── */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:62px;
+  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2);
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,#00F2FE,#0070f3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:800;color:#000;
+  box-shadow:0 0 18px rgba(0,242,254,0.4);
+  flex-shrink:0;
+}
+.logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
+.logo-text span{color:var(--accent);}
+.header-nav{display:flex;align-items:center;}
+.nav-link{
+  font-family:var(--mono);font-size:12px;color:var(--text2);
+  text-decoration:none;padding:6px 14px;border-radius:var(--r);
+  transition:all 0.2s;letter-spacing:0.02em;
+  border:1px solid var(--border);background:rgba(21,29,48,0.5);
+}
+.nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
+
+/* ── LAYOUT WRAPPER ── */
+.tool-page-wrap {
+  position:relative;z-index:1;
+  max-width:860px;margin:2rem auto 5rem;padding:0 1.5rem;
+  animation:fadeUp 0.5s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+.breadcrumb {
+  font-family:var(--mono);font-size:11px;color:var(--text3);
+  margin-bottom:1.5rem;display:flex;gap:6px;
+}
+.breadcrumb a {color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover {color:var(--accent);}
+
+/* PANEL HEADER */
+.panel-header {
+  background:var(--surface);border:1px solid var(--border2);
+  border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);
+  padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:none;
+}
+.panel-title {
+  font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);
+  display:flex;align-items:center;gap:6px;
+}
+.btn {
+  font-family:var(--mono);font-size:11px;letter-spacing:0.04em;
+  padding:6px 14px;border-radius:20px;
+  border:1px solid #f43f5e;background:rgba(244,63,94,0.05);
+  color:#f43f5e;cursor:pointer;transition:all 0.3s;outline:none;
+}
+.btn:hover {background:#f43f5e;color:#000;box-shadow:0 0 15px rgba(244,63,94,0.3);}
+
+/* TEXTAREA CODE AREA */
+.code-area {
+  background:var(--surface);border:1px solid var(--border2);
+  border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);
+  padding:1.2rem;font-family:var(--mono);font-size:14px;color:var(--text);
+  outline:none;transition:all 0.3s;resize:vertical;line-height:1.6;
+  box-shadow:inset 0 2px 8px rgba(0,0,0,0.2);
+}
+.code-area:focus {
+  border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim), inset 0 2px 8px rgba(0,0,0,0.2);
+}
+.code-area::placeholder {color:var(--text3);}
+
+/* STATS GRID */
+.stats-grid {
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));
+  gap:12px;margin-top:1.5rem;
+}
+.stat-card {
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:1.2rem 1rem;text-align:center;
+  transition:all 0.3s;
+}
+.stat-card:hover {
+  border-color:var(--accent);transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.3);
+}
+.stat-val {
+  font-size:1.8rem;font-weight:700;letter-spacing:-0.03em;
+  color:var(--accent);font-family:var(--sans);
+}
+.stat-label {
+  font-family:var(--mono);font-size:11px;color:var(--text2);
+  margin-top:4px;text-transform:uppercase;letter-spacing:0.05em;
+}
+
+/* ── SEO SECTION ── */
+.seo-section {
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;
+}
+.seo-section h2 {
+  font-size:1.4rem;font-weight:700;letter-spacing:-0.02em;
+  color:var(--text);margin-bottom:1rem;
+}
+.seo-section p {
+  font-family:var(--sans);font-size:14px;color:var(--text2);
+  line-height:1.7;margin-bottom:1rem;
+}
+.seo-section p:last-child {margin-bottom:0;}
+
+/* FAQ Accordion */
+.faq-accordion {margin-top: 2rem; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--border); padding-top: 2rem;}
+.faq-item {background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden;}
+.faq-trigger {width: 100%; background: none; border: none; padding: 14px 18px; text-align: left; color: #fff; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between;}
+.faq-content {max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(11, 15, 25, 0.3);}
+.faq-content p {padding: 14px 18px; font-family: var(--mono); font-size: 13px; color: #94A3B8; line-height: 1.75;}
+.faq-item.active .faq-content {max-height: 500px;}
+
+/* Internal Grid System (14 Tools Matrix) */
+.internal-grid-wrapper {margin-top: 3rem; padding: 1.5rem; background: rgba(21, 29, 48, 0.4); border: 1px solid var(--border); border-radius: var(--r-lg);}
+.internal-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top:1rem;}
+.internal-link-card {display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; font-size: 13px; color: var(--text2); transition: all 0.2s;}
+.internal-link-card:hover {border-color: var(--accent); color: #fff; transform: translateY(-1px); box-shadow: var(--accent-glow);}
+
+/* ── FOOTER ── */
+.site-footer{
+  position:relative;z-index:1;text-align:center;
+  padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;
+}
+.site-footer a{
+  font-family:var(--mono);font-size:12px;color:var(--text2);
+  text-decoration:none;transition:color 0.2s;
+}
+.site-footer a:hover{color:var(--accent);}
+.site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+
+@media(max-width:640px){
+  .site-header{padding:0 1rem;}
+  .tool-page-wrap{margin:1.5rem auto 3rem;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .seo-section{padding:1.2rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo">
+    <div class="logo-icon">C</div>
+    <span class="logo-text">CodeWiz<span>Tools</span></span>
+  </a>
+  <nav class="header-nav">
+    <a href="../index.html" class="nav-link">← All Tools</a>
+  </nav>
+</header>
+
+<div class="tool-page-wrap">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>/</span> Word Counter
+  </div>
+  
+  <div class="panel-header">
+    <div class="panel-title">¶ &nbsp;Word Counter</div>
+    <div class="panel-actions">
+      <button class="btn" onclick="document.getElementById('wc-in').value='';countWords();">Clear Content</button>
+    </div>
+  </div>
+  
+  <textarea class="code-area" id="wc-in" placeholder="Type or paste your text here to count words, characters, sentences and more..." oninput="countWords()" style="min-height:260px;width:100%;"></textarea>
+  
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-val" id="s-words">0</div><div class="stat-label">Words</div></div>
+    <div class="stat-card"><div class="stat-val" id="s-chars">0</div><div class="stat-label">Characters</div></div>
+    <div class="stat-card"><div class="stat-val" id="s-nospace">0</div><div class="stat-label">No spaces</div></div>
+    <div class="stat-card"><div class="stat-val" id="s-sent">0</div><div class="stat-label">Sentences</div></div>
+    <div class="stat-card"><div class="stat-val" id="s-para">0</div><div class="stat-label">Paragraphs</div></div>
+    <div class="stat-card"><div class="stat-val" id="s-read">0m</div><div class="stat-label">Read time</div></div>
+  </div>
+  
+  <section class="seo-section">
+    <h2>Free Online Word Counter & Text Analyzer</h2>
+    <p>Type or paste any text to instantly count words, characters (with and without spaces), sentences, paragraphs, and estimated reading time. Our engine uses advanced regex to filter out white spaces and deliver precise metrics in real-time.</p>
+    <p>This tool is ideal for writers, students, and SEO professionals working within strict character limits — such as X/Twitter (280 chars), Google Meta Descriptions (160 chars), or LinkedIn posts (3,000 chars). The estimated reading time is calculated based on a standard speed of 200 words per minute.</p>
+
+    <div class="faq-accordion">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">1. How is reading time calculated? <span>▼</span></button>
+        <div class="faq-content"><p>We use the industry-standard average of 200 words per minute (WPM) for adult readers. The result is rounded up to the nearest minute to give you a quick estimate for blog posts or scripts.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">2. Are my private documents safe? <span>▼</span></button>
+        <div class="faq-content"><p>Yes. This tool is 100% browser-based. Your text never leaves your computer or touches our servers. The processing happens locally in your browser's memory, ensuring total privacy.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)">3. Does it count special characters and symbols? <span>▼</span></button>
+        <div class="faq-content"><p>The character counter tracks everything including emojis, punctuation, and symbols. The 'No Spaces' counter specifically excludes spaces and tabs to give you the raw density of your content.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="internal-grid-wrapper">
+    <div style="font-weight:700; color:#fff; margin-bottom:10px;">⚡ Other Developer Utilities</div>
+    <div class="internal-grid">
+      <a href="case-converter.html" class="internal-link-card"><span>Case Converter</span><span>→</span></a>
+      <a href="json-formatter.html" class="internal-link-card"><span>JSON Formatter</span><span>→</span></a>
+      <a href="pdf-compressor.html" class="internal-link-card"><span>PDF Compressor</span><span>→</span></a>
+      <a href="pdf-merger.html" class="internal-link-card"><span>PDF Merger</span><span>→</span></a>
+      <a href="color-picker.html" class="internal-link-card"><span>Color Picker</span><span>→</span></a>
+      <a href="qr-generator.html" class="internal-link-card"><span>QR Generator</span><span>→</span></a>
+      <a href="cgpa-calculator.html" class="internal-link-card"><span>CGPA Calculator</span><span>→</span></a>
+      <a href="password-generator.html" class="internal-link-card"><span>Password Gen</span><span>→</span></a>
+      <a href="md5-generator.html" class="internal-link-card"><span>MD5 Generator</span><span>→</span></a>
+      <a href="base64-encoder.html" class="internal-link-card"><span>Base64 Encode</span><span>→</span></a>
+      <a href="html-encoder.html" class="internal-link-card"><span>HTML Encoder</span><span>→</span></a>
+      <a href="url-encoder.html" class="internal-link-card"><span>URL Encoder</span><span>→</span></a>
+      <a href="lorem-ipsum.html" class="internal-link-card"><span>Lorem Ipsum</span><span>→</span></a>
+      <a href="diff-checker.html" class="internal-link-card"><span>Diff Checker</span><span>→</span></a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all tools</a></p>
+  <p>© 2026 CodeWizTools · No logs. No tracking. Pure Privacy.</p>
+</footer>
+
+<script>
+function countWords(){
+  const t=document.getElementById('wc-in').value;
+  const words=t.trim()===''?0:t.trim().split(/\s+/).length;
+  const chars=t.length;
+  const nospace=t.replace(/\s/g,'').length;
+  const sent=t.trim()===''?0:(t.match(/[.!?]+/g)||[]).length;
+  const para=t.trim()===''?0:t.trim().split(/\n\s*\n+/).filter(p=>p.trim()).length||1;
+  const mins=Math.ceil(words/200);
+  
+  document.getElementById('s-words').textContent=words.toLocaleString();
+  document.getElementById('s-chars').textContent=chars.toLocaleString();
+  document.getElementById('s-nospace').textContent=nospace.toLocaleString();
+  document.getElementById('s-sent').textContent=sent.toLocaleString();
+  document.getElementById('s-para').textContent=para.toLocaleString();
+  document.getElementById('s-read').textContent=mins+'m';
+}
+
+function toggleFaq(btn){
+  btn.parentElement.classList.toggle('active');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════════
+     PRIMARY SEO META TAGS
+     Target keywords from GSC data:
+     "rgba color picker"     → 27 imp, pos 76.26  ← #1 priority
+     "color picker rgba"     →  9 imp, pos 74.78
+     "rgba picker"           →  5 imp, pos 39.40  ← closest to page 1
+     "rgba colour picker"    →  3 imp, pos 72
+     "css rgba color picker" →  2 imp, pos 67
+     "argb color picker"     →  1 imp, pos 72
+     "color wheel rgba"      →  1 imp, pos 95
+     "rgba color selector"   →  1 imp, pos 78
+     "rgba color wheel"      →  1 imp, pos 95
+═══════════════════════════════════════════════ -->
+<title>RGBA Color Picker — HEX, RGB, HSL & CSS Color Converter | CodeWizTools</title>
+<meta name="description" content="Free RGBA color picker with real-time preview. Pick any color and instantly copy RGBA, HEX, RGB, HSL, CSS variable, and Tailwind values. Browser-based, no signup.">
+<meta name="keywords" content="rgba color picker, color picker rgba, rgba picker, css rgba color picker, hex to rgba, rgb color picker, rgba colour picker, rgba color selector, argb color picker, color wheel rgba, rgba color wheel, hex color picker, hsl color picker, tailwind color picker, css color converter">
+<meta name="author" content="CodeWizTools">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<link rel="canonical" href="https://codewiztools.com/tools/color-picker.html">
+
+<!-- ═══════════════════════════════════════════════
+     OPEN GRAPH
+═══════════════════════════════════════════════ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="RGBA Color Picker — HEX, RGB, HSL & CSS Color Converter | CodeWizTools">
+<meta property="og:description" content="Free RGBA color picker. Pick any color and instantly copy RGBA, HEX, RGB, HSL, CSS variable, and Tailwind values. No signup, 100% private.">
+<meta property="og:url" content="https://codewiztools.com/tools/color-picker.html">
+<meta property="og:site_name" content="CodeWizTools">
+<meta property="og:image" content="https://codewiztools.com/assets/og-color-picker.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RGBA Color Picker tool on CodeWizTools">
+<meta property="og:locale" content="en_US">
+
+<!-- ═══════════════════════════════════════════════
+     TWITTER / X CARD
+═══════════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RGBA Color Picker — HEX, RGB, HSL & CSS Color Converter | CodeWizTools">
+<meta name="twitter:description" content="Free RGBA color picker. Instantly copy RGBA, HEX, RGB, HSL, CSS variable & Tailwind values. Browser-based, no signup.">
+<meta name="twitter:image" content="https://codewiztools.com/assets/og-color-picker.png">
+<meta name="twitter:site" content="@CodeWizTools">
+
+<!-- ═══════════════════════════════════════════════
+     JSON-LD STRUCTURED DATA — 3 SCHEMAS
+     1. WebApplication
+     2. FAQPage  (8 questions from GSC query intent)
+     3. BreadcrumbList
+═══════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://codewiztools.com/tools/color-picker.html#webapp",
+  "name": "RGBA Color Picker",
+  "url": "https://codewiztools.com/tools/color-picker.html",
+  "description": "Free online RGBA color picker. Pick any color and instantly get RGBA, HEX, RGB, HSL, HSLA, CSS variable, SCSS variable, and Tailwind arbitrary class. Alpha transparency slider included. Browser-based, no signup.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+  "browserRequirements": "Requires JavaScript and HTML5 compatible web browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "CodeWizTools",
+    "url": "https://codewiztools.com"
+  },
+  "featureList": [
+    "Real-time RGBA, HEX, RGB, HSL conversion",
+    "Alpha opacity transparency slider (0–100%)",
+    "CSS variable and SCSS variable generation",
+    "Tailwind CSS arbitrary value output",
+    "WCAG contrast preview (white and black text)",
+    "Preset color swatches and shade generator",
+    "Paste any HEX code directly into the input",
+    "Developer embed code snippet generator",
+    "100% browser-based, no data sent to server"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an RGBA color picker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An RGBA color picker is a tool that lets you select a color visually or by entering a HEX code, and then outputs that color in RGBA format — red, green, blue, and alpha (opacity). The alpha channel ranges from 0 (fully transparent) to 1 (fully opaque). This CodeWizTools RGBA picker also outputs HEX, RGB, HSL, HSLA, CSS variables, SCSS variables, and Tailwind arbitrary classes simultaneously."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between RGBA and ARGB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RGBA and ARGB represent the same four color channels (red, green, blue, alpha) but in different order. RGBA is used in CSS and web development: rgba(255, 99, 71, 0.5). ARGB is used in Android development and some design tools like Figma's API: the alpha value comes first, as in FFFF6347. This picker outputs in RGBA format for CSS, but you can manually rearrange the values for ARGB use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert HEX to RGBA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste or type your HEX code (e.g. #FF6347) into the input box below the color preview. The tool instantly converts it to RGBA format. The alpha value defaults to 1 (fully opaque). Use the A slider to adjust transparency. The RGBA output card updates in real time — click it to copy the value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use RGBA colors in CSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the rgba() function in any CSS color property. Example: background-color: rgba(255, 99, 71, 0.5); — this sets a semi-transparent tomato red. RGBA is supported in all modern browsers and is ideal for overlays, glassmorphism effects, and transparent UI elements. You can also use it in border-color, box-shadow, text-shadow, and outline properties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the alpha channel in RGBA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The alpha channel is the fourth value in RGBA — it controls the opacity of the color. It ranges from 0 (completely transparent) to 1 (fully opaque). Values in between create semi-transparent effects: rgba(0, 0, 0, 0.5) is 50% transparent black, commonly used for dark overlay backgrounds. Use the A slider in this tool to adjust alpha and see the RGBA value update instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I change the opacity or alpha value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the A (Alpha) slider below the R, G, B sliders. Dragging it left decreases opacity toward 0 (transparent); dragging right increases it toward 100 (fully opaque). The RGBA and HSLA output cards update instantly to reflect the new alpha value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between RGB and RGBA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RGB defines a color using three channels: red, green, and blue (0–255 each). RGBA adds a fourth channel — alpha — for opacity control. RGB is fully opaque by default. RGBA allows transparency, which is essential for overlays, shadows, and layered UI designs. In CSS, rgb(255, 99, 71) and rgba(255, 99, 71, 1) produce identical visible results; the difference only appears when the alpha value is less than 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this color picker work with Tailwind CSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This tool automatically outputs a Tailwind CSS arbitrary value in the format bg-[#RRGGBB] — for example, bg-[#FF6347]. Paste this class directly into any Tailwind project. For RGBA values with transparency in Tailwind v3+, you can use the CSS variable card to define a custom color token in your tailwind.config.js file."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://codewiztools.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://codewiztools.com/#tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RGBA Color Picker",
+      "item": "https://codewiztools.com/tools/color-picker.html"
+    }
+  ]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════════
+     PERFORMANCE
+═══════════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0B0F19;--surface:#151D30;--surface2:#1a2440;--surface3:#1f2b4a;
+  --border:rgba(0,242,254,0.08);--border2:rgba(0,242,254,0.18);
+  --accent:#00F2FE;--accent-dim:rgba(0,242,254,0.1);--accent-glow:0 0 15px rgba(0,242,254,0.35);
+  --success:#10B981;--success-dim:rgba(16,185,129,0.1);
+  --text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;
+  --mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;
+  --r:10px;--r-lg:16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.02) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
+
+/* ── HEADER ── */
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#000;box-shadow:0 0 16px rgba(0,242,254,0.35);flex-shrink:0;}
+.logo-text{font-size:1rem;font-weight:700;color:var(--text);}
+.logo-text span{color:var(--accent);}
+.back-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 12px;border-radius:var(--r);border:1px solid var(--border);transition:all 0.2s;}
+.back-link:hover{color:var(--accent);border-color:var(--border2);background:var(--accent-dim);}
+
+/* ── LAYOUT ── */
+.page-wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:2rem 1.5rem 4rem;}
+
+/* ── BREADCRUMB ── */
+.breadcrumb{font-family:var(--mono);font-size:12px;color:var(--text3);margin-bottom:1.2rem;display:flex;align-items:center;gap:6px;}
+.breadcrumb a{color:var(--text3);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--accent);}
+
+/* ── H1 HERO — GSC primary keyword "rgba color picker" ── */
+.page-hero{margin-bottom:1.5rem;}
+.page-h1{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.25;margin-bottom:0.45rem;}
+.page-h1 span{color:var(--accent);}
+.page-subtitle{font-size:13px;color:var(--text2);font-family:var(--mono);line-height:1.6;}
+
+/* ── TOOL HEADER ── */
+.panel-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:10px;}
+.panel-title-inner{font-size:1rem;font-weight:700;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;}
+.panel-tag{font-family:var(--mono);font-size:11px;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border2);padding:3px 10px;border-radius:20px;}
+.btn{font-family:var(--sans);font-size:13px;font-weight:600;padding:8px 16px;border-radius:var(--r);border:1px solid var(--border2);background:var(--surface2);color:var(--text2);cursor:pointer;transition:all 0.3s;}
+.btn:hover{background:var(--surface3);color:var(--text);transform:scale(1.02);}
+.btn:active{transform:scale(0.98);}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#000;font-weight:700;}
+.btn-primary:hover{background:#1af4ff;box-shadow:var(--accent-glow);}
+.two-col{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;align-items:start;}
+@media(max-width:850px){.two-col{grid-template-columns:1fr;}}
+.col-label{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:7px;}
+
+/* Color display */
+.color-display{width:100%;height:160px;border-radius:var(--r-lg);border:1px solid var(--border);position:relative;overflow:hidden;cursor:crosshair;transition:background 0.1s;}
+.color-display-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+.hex-big{font-family:var(--mono);font-size:1.8rem;font-weight:700;letter-spacing:0.05em;text-shadow:0 2px 8px rgba(0,0,0,0.5);user-select:none;}
+.native-input{position:absolute;inset:0;opacity:0;cursor:crosshair;width:100%;height:100%;}
+
+/* Sliders */
+.slider-group{margin-top:14px;display:flex;flex-direction:column;gap:10px;}
+.slider-row{display:flex;align-items:center;gap:10px;}
+.slider-row label{font-family:var(--mono);font-size:11px;color:var(--text3);width:18px;text-align:center;flex-shrink:0;}
+.slider-row input[type=range]{flex:1;height:4px;border-radius:2px;border:none;outline:none;cursor:pointer;-webkit-appearance:none;appearance:none;}
+.slider-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--accent);cursor:pointer;transition:transform 0.15s;box-shadow:0 0 6px rgba(0,242,254,0.4);}
+.slider-row input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2);}
+.slider-val{font-family:var(--mono);font-size:12px;color:var(--text2);width:30px;text-align:right;flex-shrink:0;}
+
+/* Swatches */
+.swatch{width:30px;height:30px;border-radius:7px;cursor:pointer;border:2px solid transparent;transition:all 0.2s;flex-shrink:0;}
+.swatch:hover{transform:scale(1.15);border-color:rgba(255,255,255,0.4);box-shadow:0 0 8px rgba(0,0,0,0.4);}
+
+/* Value cards */
+.vals-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media(max-width:480px){.vals-grid{grid-template-columns:1fr;}}
+.val-card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:12px;cursor:pointer;position:relative;transition:all 0.2s;}
+.val-card:hover{border-color:var(--accent);background:var(--surface3);transform:translateY(-1px);box-shadow:0 0 10px rgba(0,242,254,0.05);}
+.val-label{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
+.val-value{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--text);word-break:break-all;line-height:1.4;}
+.copy-hint{position:absolute;top:5px;right:8px;font-size:10px;color:var(--accent);opacity:0;transition:opacity 0.2s;font-family:var(--mono);}
+.val-card:hover .copy-hint{opacity:1;}
+@keyframes copyFlash{0%{background:rgba(0,242,254,0.15);}100%{background:transparent;}}
+.flash{animation:copyFlash 0.5s ease;}
+
+/* Hex input */
+.hex-input-row{display:flex;gap:8px;align-items:center;margin-top:12px;}
+.hex-text-input{flex:1;font-family:var(--mono);font-size:13px;color:var(--text);background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r);padding:8px 12px;outline:none;transition:all 0.3s;letter-spacing:0.04em;}
+.hex-text-input:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(0,242,254,0.15);}
+
+/* Embed engine */
+.embed-panel{margin-top:20px;background:rgba(0,242,254,0.01);border:1px dashed rgba(0,242,254,0.2);border-radius:var(--r-lg);padding:1.25rem;display:flex;flex-direction:column;gap:10px;}
+.embed-title{font-size:0.95rem;font-weight:600;color:#fff;display:flex;align-items:center;gap:6px;}
+.embed-area{width:100%;height:65px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:8px 10px;font-family:var(--mono);font-size:11px;color:var(--text2);resize:none;outline:none;}
+
+/* ── SEO CONTENT SECTION ── */
+.seo-block{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border2);}
+.seo-block h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;margin-top:2rem;}
+.seo-block h2:first-child{margin-top:0;}
+.seo-block h3{font-size:1rem;font-weight:600;color:var(--accent);margin:1.25rem 0 0.6rem;}
+.seo-block p{font-family:var(--sans);font-size:14px;color:#94A3B8;line-height:1.75;margin-bottom:.9rem;}
+.seo-block p:last-child{margin-bottom:0;}
+.seo-block ul{font-family:var(--sans);font-size:14px;color:#94A3B8;line-height:1.75;padding-left:1.4rem;margin-bottom:.9rem;display:flex;flex-direction:column;gap:5px;}
+
+/* Format chips */
+.format-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:1rem 0;}
+.format-chip{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r);padding:10px 14px;}
+.format-chip strong{color:var(--accent);display:block;font-size:11px;font-family:var(--mono);margin-bottom:4px;}
+.format-chip span{font-size:13px;color:var(--text2);font-family:var(--sans);}
+
+/* Code inline */
+code{font-family:var(--mono);font-size:12px;background:rgba(0,242,254,0.08);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent);}
+
+/* ── FAQ SECTION ── */
+.faq-section{margin-top:3.5rem;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border2);padding-top:2rem;}
+.faq-section > h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:.5rem;}
+details{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px;transition:all 0.3s;}
+details[open]{border-color:var(--border2);background:var(--surface2);}
+summary{font-size:14px;font-weight:600;color:#fff;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:'+';font-family:var(--mono);color:var(--accent);font-size:16px;transition:transform 0.2s;}
+details[open] summary::after{content:'−';}
+.faq-body{margin-top:10px;font-family:var(--sans);font-size:13.5px;color:var(--text2);line-height:1.75;}
+.faq-body code{font-size:12px;}
+
+/* ── INTERNAL GRID ── */
+.internal-grid-wrapper{margin-top:4rem;padding:1.5rem;background:rgba(21,29,48,0.4);border:1px solid var(--border);border-radius:var(--r-lg);}
+.internal-grid-wrapper h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.internal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.internal-link-card{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);text-decoration:none;font-size:13px;color:var(--text2);transition:all 0.2s;}
+.internal-link-card:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:var(--accent-glow);}
+.tool-icon{font-size:15px;margin-right:8px;}
+
+/* ── FOOTER ── */
+.site-footer{position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid var(--border);margin-top:4rem;}
+.site-footer p{font-family:var(--mono);font-size:12px;color:var(--text3);}
+.site-footer a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.site-footer a:hover{color:var(--accent);}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.fadein{animation:fadeIn .3s ease both;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo" aria-label="CodeWizTools Home">
+    <div class="logo-icon" aria-hidden="true">C</div>
+    <span class="logo-text">CodeWiz<span>Tools</span></span>
+  </a>
+  <nav aria-label="Site navigation">
+    <a href="../index.html" class="back-link">← All Tools</a>
+  </nav>
+</header>
+
+<main class="page-wrap fadein">
+
+  <!-- BREADCRUMB — matches BreadcrumbList JSON-LD -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="../index.html#tools">Tools</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">RGBA Color Picker</span>
+  </nav>
+
+  <!-- H1 — exact match for GSC top query "rgba color picker" (27 imp, pos 76) -->
+  <div class="page-hero">
+    <h1 class="page-h1"><span>RGBA Color Picker</span> — HEX, RGB, HSL & CSS Converter</h1>
+    <p class="page-subtitle">Pick any color → instantly copy RGBA, HEX, RGB, HSL, CSS variable & Tailwind · Alpha slider · Free, no signup</p>
+  </div>
+
+  <!-- TOOL PANEL -->
+  <div class="panel-hdr">
+    <div class="panel-title-inner" aria-hidden="true">
+      <span style="font-family:var(--mono);color:var(--accent);">◉</span>
+      Color Picker
+      <span class="panel-tag">HEX · RGB · HSL · RGBA</span>
+    </div>
+    <div style="display:flex;gap:8px;">
+      <button class="btn" onclick="randomColor()" aria-label="Pick a random color">Random Color</button>
+      <button class="btn btn-primary" onclick="copyAll()" aria-label="Copy all color formats to clipboard">Copy All Values</button>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <!-- LEFT: COLOR PICKER CONTROLS -->
+    <div>
+      <div class="col-label" id="picker-label">Select color</div>
+      <div class="color-display" id="cdisplay" role="img" aria-labelledby="picker-label">
+        <input type="color" class="native-input" id="native" value="#00F2FE" oninput="setColor(this.value)" aria-label="Color picker — click to open color palette">
+        <div class="color-display-inner">
+          <div class="hex-big" id="hex-big" aria-live="polite">#00F2FE</div>
+        </div>
+      </div>
+
+      <div class="hex-input-row">
+        <label for="hex-text" class="sr-only">Enter HEX color code</label>
+        <input type="text" class="hex-text-input" id="hex-text" value="#00F2FE" placeholder="#RRGGBB" oninput="onHexText()" maxlength="7" aria-label="HEX color input — type or paste a hex code like #FF6347">
+        <button class="btn" onclick="copyHex()" id="btn-copy-main-hex" style="padding:8px 14px;">Copy HEX</button>
+      </div>
+
+      <div class="slider-group" role="group" aria-label="RGBA channel sliders">
+        <div class="slider-row">
+          <label for="rs">R</label>
+          <input type="range" id="rs" min="0" max="255" value="0" oninput="onSliders()" style="background:linear-gradient(to right,#0B0F19,#ff0000);" aria-label="Red channel 0 to 255">
+          <span class="slider-val" id="rv" aria-live="polite">0</span>
+        </div>
+        <div class="slider-row">
+          <label for="gs">G</label>
+          <input type="range" id="gs" min="0" max="255" value="242" oninput="onSliders()" style="background:linear-gradient(to right,#0B0F19,#00ff00);" aria-label="Green channel 0 to 255">
+          <span class="slider-val" id="gv" aria-live="polite">242</span>
+        </div>
+        <div class="slider-row">
+          <label for="bs">B</label>
+          <input type="range" id="bs" min="0" max="255" value="254" oninput="onSliders()" style="background:linear-gradient(to right,#0B0F19,#0000ff);" aria-label="Blue channel 0 to 255">
+          <span class="slider-val" id="bv" aria-live="polite">254</span>
+        </div>
+        <div class="slider-row">
+          <label for="as">A</label>
+          <input type="range" id="as" min="0" max="100" value="100" oninput="onAlpha()" style="background:linear-gradient(to right,transparent,var(--accent));" aria-label="Alpha opacity 0 to 100 percent">
+          <span class="slider-val" id="av" aria-live="polite">100</span>
+        </div>
+      </div>
+
+      <div class="col-label" style="margin-top:16px;">Preset colors</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;" id="presets" role="list" aria-label="Preset color swatches"></div>
+
+      <div class="col-label" style="margin-top:14px;">Shades &amp; tints</div>
+      <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:6px;" id="shades" role="list" aria-label="Color shades"></div>
+    </div>
+
+    <!-- RIGHT: OUTPUT CARDS -->
+    <div>
+      <div class="col-label">Color values — click any card to copy</div>
+      <div class="vals-grid">
+        <div class="val-card" onclick="copyVal('hex')" role="button" tabindex="0" aria-label="Copy HEX value" onkeydown="if(event.key==='Enter')copyVal('hex')">
+          <div class="copy-hint">click to copy</div>
+          <div class="val-label">HEX</div>
+          <div class="val-value" id="v-hex">#00F2FE</div>
+        </div>
+        <div class="val-card" onclick="copyVal('rgb')" role="button" tabindex="0" aria-label="Copy RGB value" onkeydown="if(event.key==='Enter')copyVal('rgb')">
+          <div class="copy-hint">click to copy</div>
+          <div class="val-label">RGB</div>
+          <div class="val-value" id="v-rgb">rgb(0, 242, 254)</div>
+        </div>
+        <div class="val-card" onclick="copyVal('hsl')" role="button" tabindex="0" aria-label="Copy HSL value" onkeydown="if(event.key==='Enter')copyVal('hsl')">
+          <div class="copy-hint">click to copy</div>
+          <div class="val-label">HSL</div>
+          <div class="val-value" id="v-hsl">hsl(183, 100%, 50%)</div>
+        </div>
+        <div class="val-card" onclick="copyVal('rgba')" role="button" tabindex="0" aria-label="Copy RGBA value" onkeydown="if(event.key==='Enter')copyVal('rgba')">
+          <div class="copy-hint">click to copy</div>
+          <div class="val-label">RGBA</div>
+          <div class="val-value" id="v-rgba">rgba(0, 242, 254, 1)</div>
+        </div>
+        <div class="val-card" onclick="copyVal('cssvar')" role="button" tabindex="0" aria-label="Copy CSS variable" onkeydown="if(event.key==='Enter')copyVal('cssvar')">
+          <div class="copy-hint">click to copy</div>
+          <div class="val-label">CSS Variable</div>
+          <div class="val-value" id="v-cssvar">--color: #00F2FE;</div>
+        </div>
+        <div class="val-card" onclick="copyVal('tw')" role="button" tabindex="0" aria-label="Copy Tailwind class" onkeydown="if(event.key==='Enter')copyVal('tw')">
+          <div class="copy-hint">click to copy</div>
+          <div class="val-label">Tailwind Arbitrary</div>
+          <div class="val-value" id="v-tw">bg-[#00F2FE]</div>
+        </div>
+        <div class="val-card" onclick="copyVal('hsla')" role="button" tabindex="0" aria-label="Copy HSLA value" onkeydown="if(event.key==='Enter')copyVal('hsla')">
+          <div class="copy-hint">click to copy</div>
+          <div class="val-label">HSLA</div>
+          <div class="val-value" id="v-hsla">hsla(183, 100%, 50%, 1)</div>
+        </div>
+        <div class="val-card" onclick="copyVal('scss')" role="button" tabindex="0" aria-label="Copy SCSS variable" onkeydown="if(event.key==='Enter')copyVal('scss')">
+          <div class="copy-hint">click to copy</div>
+          <div class="val-label">SCSS Variable</div>
+          <div class="val-value" id="v-scss">$color: #00F2FE;</div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;">
+        <div class="col-label" style="margin-bottom:8px;">Contrast preview (WCAG)</div>
+        <div id="contrast-light" style="padding:8px 12px;border-radius:6px;font-family:var(--mono);font-size:13px;margin-bottom:6px;transition:all 0.2s;" aria-label="White text on selected color preview">White text on this color</div>
+        <div id="contrast-dark" style="padding:8px 12px;border-radius:6px;font-family:var(--mono);font-size:13px;transition:all 0.2s;" aria-label="Black text on selected color preview">Black text on this color</div>
+      </div>
+
+      <div class="embed-panel">
+        <div class="embed-title">
+          <span aria-hidden="true">🛠️</span> Developer Embed Snippet
+        </div>
+        <label for="embed-code" class="sr-only">HTML embed code for selected color</label>
+        <textarea class="embed-area" id="embed-code" readonly aria-label="HTML embed snippet for current color"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       SEO CONTENT — keyword targets from GSC:
+       rgba color picker, rgba picker, css rgba,
+       argb color picker, color wheel rgba, rgba vs rgb
+  ═══════════════════════════════════════════════ -->
+  <section class="seo-block" aria-label="About this RGBA color picker">
+
+    <h2>Free RGBA Color Picker for Web Developers and Designers</h2>
+    <p>This RGBA color picker lets you select any color visually or by entering a HEX code, and instantly outputs that color in every format you need for web development — <strong>RGBA, HEX, RGB, HSL, HSLA, CSS custom property, SCSS variable, and Tailwind CSS arbitrary class</strong>. Every output card is one click to copy. The alpha slider gives you full transparency control, making it ideal for overlays, glassmorphism, and layered UI designs.</p>
+    <p>Everything runs in your browser. No color data is ever sent to a server. Use it freely across Figma handoffs, CSS stylesheets, React components, Tailwind projects, and native Android or iOS design work.</p>
+
+    <h2>How to use RGBA colors in CSS</h2>
+    <p>RGBA is the most versatile color format in CSS. Use the <code>rgba()</code> function in any color-accepting property:</p>
+    <ul>
+      <li><code>background-color: rgba(0, 242, 254, 0.5);</code> — semi-transparent background</li>
+      <li><code>border: 1px solid rgba(255, 255, 255, 0.15);</code> — frosted glass border</li>
+      <li><code>box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);</code> — soft drop shadow</li>
+      <li><code>color: rgba(148, 163, 184, 0.8);</code> — slightly dimmed text</li>
+    </ul>
+    <p>The fourth value (alpha) ranges from <code>0</code> (fully transparent) to <code>1</code> (fully opaque). Adjust the A slider in this tool to set your target transparency, then copy the RGBA card.</p>
+
+    <h2>RGBA vs RGB vs HEX — which format should you use in CSS?</h2>
+    <div class="format-grid">
+      <div class="format-chip">
+        <strong>HEX (#RRGGBB)</strong>
+        <span>Best for solid colors. Shortest syntax. Used in Figma, Sketch, and most design tools.</span>
+      </div>
+      <div class="format-chip">
+        <strong>RGB rgb(r,g,b)</strong>
+        <span>Explicit channel control. No transparency. Ideal when you need exact numeric values.</span>
+      </div>
+      <div class="format-chip">
+        <strong>RGBA rgba(r,g,b,a)</strong>
+        <span>Best for transparency. Overlays, shadows, glassmorphism. Industry standard for layered UI.</span>
+      </div>
+      <div class="format-chip">
+        <strong>HSL hsl(h,s%,l%)</strong>
+        <span>Best for theming — easy to adjust brightness and saturation. CSS custom property systems.</span>
+      </div>
+      <div class="format-chip">
+        <strong>CSS Variable --c: #hex</strong>
+        <span>Best for design systems. Define once, use across all components via var(--color).</span>
+      </div>
+      <div class="format-chip">
+        <strong>Tailwind bg-[#hex]</strong>
+        <span>Arbitrary values for one-off brand colors outside your Tailwind config palette.</span>
+      </div>
+    </div>
+
+    <h2>What is the difference between RGBA and ARGB?</h2>
+    <p>RGBA and ARGB contain the same four color channels — red, green, blue, and alpha — but in different byte order. <strong>RGBA is used in CSS and web development</strong>, where the alpha comes last: <code>rgba(255, 99, 71, 0.5)</code>. <strong>ARGB is used in Android development</strong> and some design APIs like Figma's plugin system, where alpha comes first as a hex byte: <code>#80FF6347</code> (where <code>80</code> is the hex value of 50% opacity).</p>
+    <p>This tool outputs RGBA format for CSS. To get an ARGB value for Android, take the alpha percentage from the A slider, convert it to a hex byte (0–FF), and prepend it to the HEX output.</p>
+
+    <h2>RGBA Color Picker for WCAG Accessibility Contrast</h2>
+    <p>The contrast preview panel below the output cards shows how white and black text appear on your selected RGBA color in real time. This is essential for meeting <strong>WCAG 2.1 contrast ratio requirements</strong> — a minimum of 4.5:1 for normal text and 3:1 for large text. Before deploying any color to a button, heading, or body text, check the preview to confirm readability for all users including those with visual impairments.</p>
+
+  </section>
+
+  <!-- FAQ — matches FAQPage JSON-LD schema exactly -->
+  <section class="faq-section" aria-label="Frequently asked questions about RGBA color picker">
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>What is an RGBA color picker?</summary>
+      <div class="faq-body">An RGBA color picker lets you select a color visually or by entering a HEX code, then outputs it as an <code>rgba(r, g, b, a)</code> value. The alpha channel (a) controls transparency from 0 (invisible) to 1 (solid). This tool also outputs HEX, RGB, HSL, HSLA, CSS variable, SCSS variable, and Tailwind arbitrary class simultaneously.</div>
+    </details>
+
+    <details>
+      <summary>What is the difference between RGBA and ARGB?</summary>
+      <div class="faq-body">Both formats use the same four channels (red, green, blue, alpha) but in different order. <strong>RGBA</strong> is the CSS standard — alpha is last: <code>rgba(255, 99, 71, 0.5)</code>. <strong>ARGB</strong> is used in Android and some design APIs — alpha byte is first: <code>#80FF6347</code>. This tool outputs RGBA for CSS use.</div>
+    </details>
+
+    <details>
+      <summary>How do I convert HEX to RGBA?</summary>
+      <div class="faq-body">Paste your HEX code (e.g. <code>#FF6347</code>) into the input field below the color preview. The RGBA card updates instantly. Use the A slider to set transparency. The default alpha is 1 (fully opaque). Click the RGBA card to copy.</div>
+    </details>
+
+    <details>
+      <summary>How do I use RGBA in CSS?</summary>
+      <div class="faq-body">Use <code>rgba()</code> in any CSS property that accepts a color value — <code>background-color</code>, <code>color</code>, <code>border-color</code>, <code>box-shadow</code>, <code>outline</code>, and more. Example: <code>background-color: rgba(0, 0, 0, 0.5);</code> creates a 50% transparent black overlay. RGBA is supported in all modern browsers.</div>
+    </details>
+
+    <details>
+      <summary>What is the alpha channel in RGBA?</summary>
+      <div class="faq-body">The alpha channel is the fourth value (a) in <code>rgba(r, g, b, a)</code>. It controls opacity: <code>0</code> = fully transparent, <code>1</code> = fully opaque. <code>rgba(0, 0, 0, 0.5)</code> is 50% transparent black — commonly used for modal overlays. Use the A slider in this tool to set any alpha value and see the output update live.</div>
+    </details>
+
+    <details>
+      <summary>How do I change the opacity / alpha value?</summary>
+      <div class="faq-body">Drag the <strong>A (Alpha)</strong> slider — the bottommost slider in the RGBA controls. Moving it left decreases opacity toward 0 (transparent); right increases toward 100 (opaque). The RGBA and HSLA output cards update instantly.</div>
+    </details>
+
+    <details>
+      <summary>What is the difference between RGB and RGBA?</summary>
+      <div class="faq-body">RGB has three channels (red, green, blue) and is always fully opaque. RGBA adds a fourth alpha channel for transparency control. <code>rgb(255, 99, 71)</code> and <code>rgba(255, 99, 71, 1)</code> look identical — the difference only matters when alpha is below 1.</div>
+    </details>
+
+    <details>
+      <summary>Does this color picker work with Tailwind CSS?</summary>
+      <div class="faq-body">Yes. The <strong>Tailwind Arbitrary</strong> card outputs a class like <code>bg-[#FF6347]</code> you can paste directly into any Tailwind project. For RGBA with transparency in Tailwind v3+, define a CSS custom property via the CSS Variable card and reference it in your <code>tailwind.config.js</code> as a custom color token.</div>
+    </details>
+
+  </section>
+
+  <!-- INTERNAL LINKS — keyword-rich anchor text per GSC data -->
+  <div class="internal-grid-wrapper">
+    <h2>⚡ More Developer Tools</h2>
+    <div class="internal-grid">
+      <a href="lorem-ipsum.html" class="internal-link-card" title="Generate Lorem Ipsum dummy text — copy paste placeholder text">
+        <span><span class="tool-icon" aria-hidden="true">📝</span>Lorem Ipsum Generator</span><span>→</span>
+      </a>
+      <a href="url-encoder.html" class="internal-link-card" title="URL encode and decode — percent encoding converter">
+        <span><span class="tool-icon" aria-hidden="true">🔗</span>URL Encoder & Decoder</span><span>→</span>
+      </a>
+      <a href="base64-encoder.html" class="internal-link-card" title="Encode and decode Base64 strings online">
+        <span><span class="tool-icon" aria-hidden="true">🔐</span>Base64 Encoder</span><span>→</span>
+      </a>
+      <a href="json-formatter.html" class="internal-link-card" title="Format and validate JSON data online free">
+        <span><span class="tool-icon" aria-hidden="true">📋</span>JSON Formatter & Validator</span><span>→</span>
+      </a>
+      <a href="case-converter.html" class="internal-link-card" title="Convert text to uppercase, lowercase, titlecase">
+        <span><span class="tool-icon" aria-hidden="true">🔤</span>Case Converter</span><span>→</span>
+      </a>
+      <a href="word-counter.html" class="internal-link-card" title="Count words, characters and sentences online">
+        <span><span class="tool-icon" aria-hidden="true">🔢</span>Word Counter</span><span>→</span>
+      </a>
+      <a href="password-generator.html" class="internal-link-card" title="Generate strong random passwords free">
+        <span><span class="tool-icon" aria-hidden="true">🔑</span>Password Generator</span><span>→</span>
+      </a>
+      <a href="md5-generator.html" class="internal-link-card" title="Generate MD5 hash from any string">
+        <span><span class="tool-icon" aria-hidden="true">🧮</span>MD5 Hash Generator</span><span>→</span>
+      </a>
+      <a href="qr-generator.html" class="internal-link-card" title="Generate QR codes from URLs or text free">
+        <span><span class="tool-icon" aria-hidden="true">📱</span>QR Code Generator</span><span>→</span>
+      </a>
+      <a href="html-encoder.html" class="internal-link-card" title="Encode HTML entities for safe web output">
+        <span><span class="tool-icon" aria-hidden="true">🌐</span>HTML Entity Encoder</span><span>→</span>
+      </a>
+      <a href="pdf-compressor.html" class="internal-link-card" title="Compress PDF files online free">
+        <span><span class="tool-icon" aria-hidden="true">📄</span>PDF Compressor</span><span>→</span>
+      </a>
+      <a href="pdf-merger.html" class="internal-link-card" title="Merge multiple PDF files into one online">
+        <span><span class="tool-icon" aria-hidden="true">📎</span>PDF Merger</span><span>→</span>
+      </a>
+      <a href="diff-checker.html" class="internal-link-card" title="Compare two text blocks — find differences">
+        <span><span class="tool-icon" aria-hidden="true">🔍</span>Text Diff Checker</span><span>→</span>
+      </a>
+      <a href="cgpa-calculator.html" class="internal-link-card" title="Calculate CGPA from grades online">
+        <span><span class="tool-icon" aria-hidden="true">🎓</span>CGPA Calculator</span><span>→</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all CodeWizTools</a></p>
+  <p>© 2026 CodeWizTools · No logs. No tracking. Pure Privacy.</p>
+</footer>
+
+<script>
+let r = 0, g = 242, b = 254, a = 100;
+
+const presetColors = [
+  '#00F2FE','#10B981','#3B82F6','#8B5CF6','#EC4899',
+  '#EF4444','#F59E0B','#1E293B','#0F172A','#FFFFFF','#000000'
+];
+
+window.onload = function() {
+  generatePresets();
+  updateAll();
+};
+
+function generatePresets() {
+  const container = document.getElementById('presets');
+  container.innerHTML = '';
+  presetColors.forEach(color => {
+    let div = document.createElement('div');
+    div.className = 'swatch';
+    div.style.backgroundColor = color;
+    div.setAttribute('role','listitem');
+    div.setAttribute('aria-label','Set color to ' + color);
+    div.setAttribute('tabindex','0');
+    div.onclick = () => setColor(color);
+    div.onkeydown = (e) => { if(e.key === 'Enter' || e.key === ' ') setColor(color); };
+    container.appendChild(div);
+  });
+}
+
+function setColor(hex) {
+  if(!hex.startsWith('#')) hex = '#' + hex;
+  if(hex.length !== 7) return;
+  document.getElementById('native').value = hex;
+  document.getElementById('hex-text').value = hex.toUpperCase();
+  let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  if(result) {
+    r = parseInt(result[1], 16);
+    g = parseInt(result[2], 16);
+    b = parseInt(result[3], 16);
+    document.getElementById('rs').value = r;
+    document.getElementById('gs').value = g;
+    document.getElementById('bs').value = b;
+    updateAll();
+  }
+}
+
+function onSliders() {
+  r = parseInt(document.getElementById('rs').value);
+  g = parseInt(document.getElementById('gs').value);
+  b = parseInt(document.getElementById('bs').value);
+  let hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+  document.getElementById('native').value = hex;
+  document.getElementById('hex-text').value = hex;
+  updateAll();
+}
+
+function onAlpha() {
+  a = parseInt(document.getElementById('as').value);
+  updateAll();
+}
+
+function onHexText() {
+  let val = document.getElementById('hex-text').value;
+  if(val.length === 7 && val.startsWith('#')) setColor(val);
+}
+
+function randomColor() {
+  let color = '#';
+  for(let i = 0; i < 6; i++) color += '0123456789ABCDEF'[Math.floor(Math.random() * 16)];
+  setColor(color);
+}
+
+function rgbToHsl(r, g, b) {
+  r /= 255; g /= 255; b /= 255;
+  let max = Math.max(r,g,b), min = Math.min(r,g,b);
+  let h, s, l = (max + min) / 2;
+  if(max === min) {
+    h = s = 0;
+  } else {
+    let d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch(max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+    h /= 6;
+  }
+  return [Math.round(h * 360), Math.round(s * 100), Math.round(l * 100)];
+}
+
+function updateAll() {
+  document.getElementById('rv').textContent = r;
+  document.getElementById('gv').textContent = g;
+  document.getElementById('bv').textContent = b;
+  document.getElementById('av').textContent = a;
+
+  let hex = document.getElementById('native').value.toUpperCase();
+  let alphaVal = (a / 100).toFixed(2);
+  if(alphaVal === '1.00') alphaVal = '1';
+
+  let rgbStr   = `rgb(${r}, ${g}, ${b})`;
+  let rgbaStr  = `rgba(${r}, ${g}, ${b}, ${alphaVal})`;
+  let hsl      = rgbToHsl(r, g, b);
+  let hslStr   = `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)`;
+  let hslaStr  = `hsla(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%, ${alphaVal})`;
+
+  document.getElementById('hex-big').textContent = hex;
+  document.getElementById('cdisplay').style.backgroundColor = rgbaStr;
+
+  let luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  document.getElementById('hex-big').style.color = luminance > 0.5 ? '#000000' : '#FFFFFF';
+
+  document.getElementById('contrast-light').style.backgroundColor = rgbaStr;
+  document.getElementById('contrast-light').style.color = '#FFFFFF';
+  document.getElementById('contrast-dark').style.backgroundColor = rgbaStr;
+  document.getElementById('contrast-dark').style.color = '#000000';
+
+  document.getElementById('v-hex').textContent    = hex;
+  document.getElementById('v-rgb').textContent    = rgbStr;
+  document.getElementById('v-hsl').textContent    = hslStr;
+  document.getElementById('v-rgba').textContent   = rgbaStr;
+  document.getElementById('v-cssvar').textContent = `--color: ${hex};`;
+  document.getElementById('v-tw').textContent     = `bg-[${hex}]`;
+  document.getElementById('v-hsla').textContent   = hslaStr;
+  document.getElementById('v-scss').textContent   = `$color: ${hex};`;
+
+  document.getElementById('embed-code').value =
+    `<div style="width:100px;height:100px;background:${rgbaStr};border-radius:8px;"></div>`;
+
+  generateShades();
+}
+
+function generateShades() {
+  const container = document.getElementById('shades');
+  container.innerHTML = '';
+  for(let i = 1; i <= 8; i++) {
+    let factor = i * 0.12;
+    let nr = Math.floor(r * (1 - factor));
+    let ng = Math.floor(g * (1 - factor));
+    let nb = Math.floor(b * (1 - factor));
+    let shadowHex = "#" + ((1 << 24) + (nr << 16) + (ng << 8) + nb).toString(16).slice(1);
+    let div = document.createElement('div');
+    div.className = 'swatch';
+    div.style.backgroundColor = shadowHex;
+    div.setAttribute('role','listitem');
+    div.setAttribute('aria-label','Shade ' + shadowHex);
+    div.setAttribute('tabindex','0');
+    div.onclick = () => setColor(shadowHex);
+    div.onkeydown = (e) => { if(e.key==='Enter'||e.key===' ') setColor(shadowHex); };
+    container.appendChild(div);
+  }
+}
+
+function copyText(txt) {
+  navigator.clipboard.writeText(txt).catch(() => {
+    let ta = document.createElement('textarea');
+    ta.value = txt;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  });
+}
+
+function copyHex() {
+  copyText(document.getElementById('hex-text').value);
+  let btn = document.getElementById('btn-copy-main-hex');
+  btn.textContent = '✓ Copied!';
+  setTimeout(() => btn.textContent = 'Copy HEX', 1400);
+}
+
+function copyVal(type) {
+  let mapping = {
+    hex:'v-hex', rgb:'v-rgb', hsl:'v-hsl', rgba:'v-rgba',
+    cssvar:'v-cssvar', tw:'v-tw', hsla:'v-hsla', scss:'v-scss'
+  };
+  let el = document.getElementById(mapping[type]);
+  copyText(el.textContent);
+  let parent = el.parentElement;
+  parent.classList.add('flash');
+  let hint = parent.querySelector('.copy-hint');
+  hint.textContent = 'copied!';
+  setTimeout(() => {
+    parent.classList.remove('flash');
+    hint.textContent = 'click to copy';
+  }, 1000);
+}
+
+function copyAll() {
+  let val = [
+    `HEX:  ${document.getElementById('v-hex').textContent}`,
+    `RGB:  ${document.getElementById('v-rgb').textContent}`,
+    `RGBA: ${document.getElementById('v-rgba').textContent}`,
+    `HSL:  ${document.getElementById('v-hsl').textContent}`,
+    `HSLA: ${document.getElementById('v-hsla').textContent}`
+  ].join('\n');
+  copyText(val);
+  let btn = document.querySelector('.btn-primary');
+  btn.textContent = '✓ All Copied!';
+  setTimeout(() => btn.textContent = 'Copy All Values', 1600);
+}
+</script>
+</body>
+</html>
