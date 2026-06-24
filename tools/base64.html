@@ -3,425 +3,782 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secure Base64 Encoder and Decoder Tool — Free Online — CodeWizTools.com</title>
-<meta name="description" content="The most secure Base64 encoder and decoder tool online. Encode text to Base64 or decode Base64 strings instantly. 100% browser-based, zero server transmission, full Unicode support including Urdu and Arabic.">
-<meta name="keywords" content="base64 encoder decoder, base64 online, encode base64, decode base64, secure base64 tool, free base64 encoder, base64 string, base64 converter">
+
+<!-- ═══════════════════════════════════════════════
+     PRIMARY SEO META TAGS
+     GSC Position: 2.0 (top 3!) — but only 3 impressions
+     Fix: Add content depth so Google shows it for
+     more queries, not just branded/exact match
+     Target keywords:
+     "base64 encoder decoder"  — primary
+     "base64 online"           — high volume
+     "encode base64"           — transactional
+     "decode base64"           — transactional
+     "base64 converter"        — supporting
+     "jwt decoder"             — opportunity
+     "data uri generator"      — opportunity
+═══════════════════════════════════════════════ -->
+<title>Base64 Encoder & Decoder — Free Online Base64 Converter | CodeWizTools</title>
+<meta name="description" content="Free Base64 encoder and decoder online. Encode text to Base64 or decode Base64 strings instantly. Supports Unicode, Urdu, Arabic, emoji. 100% browser-based — no data sent to any server.">
+<meta name="keywords" content="base64 encoder decoder, base64 online, encode base64, decode base64, base64 converter, base64 string, base64 encode online, base64 decode online, base64 encoder free, jwt decoder, data uri generator, base64 to text, text to base64, unicode base64 encoder">
+<meta name="author" content="CodeWizTools">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://codewiztools.com/tools/base64.html">
-<meta property="og:title" content="Secure Base64 Encoder and Decoder — CodeWizTools.com">
-<meta property="og:description" content="Encode or decode Base64 strings in your browser. No server. No tracking. Full Unicode support.">
+
+<!-- ═══════════════════════════════════════════════
+     OPEN GRAPH — was missing og:image, locale, site_name
+═══════════════════════════════════════════════ -->
 <meta property="og:type" content="website">
+<meta property="og:title" content="Base64 Encoder & Decoder — Free Online Base64 Converter | CodeWizTools">
+<meta property="og:description" content="Encode text to Base64 or decode Base64 strings instantly. Supports Unicode, Urdu, Arabic, emoji. 100% browser-based, no data sent to server.">
 <meta property="og:url" content="https://codewiztools.com/tools/base64.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta property="og:site_name" content="CodeWizTools">
+<meta property="og:image" content="https://codewiztools.com/assets/og-base64.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Base64 Encoder and Decoder tool on CodeWizTools">
+<meta property="og:locale" content="en_US">
+
+<!-- ═══════════════════════════════════════════════
+     TWITTER / X CARD — was completely missing
+═══════════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Base64 Encoder & Decoder — Free Online | CodeWizTools">
+<meta name="twitter:description" content="Encode or decode Base64 strings instantly. Full Unicode support. 100% browser-based, no signup.">
+<meta name="twitter:image" content="https://codewiztools.com/assets/og-base64.png">
+<meta name="twitter:site" content="@CodeWizTools">
+
+<!-- ═══════════════════════════════════════════════
+     MOBILE META — was missing
+═══════════════════════════════════════════════ -->
+<meta name="theme-color" content="#00F2FE">
+
+<!-- ═══════════════════════════════════════════════
+     JSON-LD STRUCTURED DATA — 3 SCHEMAS
+     1. WebApplication  (existed but description was jargon)
+     2. FAQPage         (existed but only 3 FAQs, all jargon)
+     3. BreadcrumbList  (was completely missing)
+═══════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://codewiztools.com/tools/base64.html#webapp",
+  "name": "Base64 Encoder & Decoder",
+  "url": "https://codewiztools.com/tools/base64.html",
+  "description": "Free online Base64 encoder and decoder. Encode any text — including Unicode, Arabic, Urdu, emoji — to Base64, or decode Base64 strings back to readable text. Runs 100% in your browser with no data sent to any server.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+  "browserRequirements": "Requires JavaScript and a modern web browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "CodeWizTools",
+    "url": "https://codewiztools.com"
+  },
+  "featureList": [
+    "Encode plain text to Base64 instantly",
+    "Decode Base64 strings back to readable text",
+    "Full Unicode support — Arabic, Urdu, Chinese, emoji",
+    "Real-time conversion on every keystroke",
+    "One-click copy with clipboard fallback",
+    "Input and output character counter",
+    "Base64 vs Base64URL explained",
+    "100% browser-based — no data sent to server"
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@type": "WebApplication",
-      "@id": "https://codewiztools.com/tools/base64.html#webapp",
-      "url": "https://codewiztools.com/tools/base64.html",
-      "name": "Secure Base64 Encoder and Decoder Utility",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "All",
-      "browserRequirements": "Requires JavaScript. Requires HTML5.",
-      "description": "A high-performance client-side script optimized to encode plain string structures into base64 ASCII character representations and securely decode data streams locally.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+      "@type": "Question",
+      "name": "What is Base64 encoding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base64 is a method of encoding binary data into a string of 64 printable ASCII characters (A–Z, a–z, 0–9, +, /). It was designed to allow binary data to be safely sent through text-only systems like email, JSON, HTML, and XML without corruption. The '64' in the name refers to the 64 characters used in the encoding alphabet."
       }
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://codewiztools.com/tools/base64.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is my text data safe when using this Base64 conversion tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, absolutely. The conversion routine runs 100% locally inside your web browser sandbox using client-side JavaScript architecture. No payload schemas, text configurations, or binary keys are uploaded to external databases or host nodes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does this dynamic Base64 utility support localized multilingual text formats like Urdu or Arabic?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. While standard window.btoa APIs fail when evaluating non-ASCII multi-byte tokens, this script incorporates an integrated encodeURIComponent escape sequence loop, ensuring stable support for Urdu, Arabic, and all multibyte Unicode strings."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the computational difference between base64 conversion and true encryption layers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Base64 is strictly a dynamic data formatting mechanism designed to process data into a safe transmission syntax. It does not use structural validation keys or cryptographic salts, meaning it can be instantly reversed by any terminal script without passwords."
-          }
-        }
+      "@type": "Question",
+      "name": "Is Base64 encoding the same as encryption?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Base64 is encoding, not encryption. It converts data into a different format for safe transmission — anyone can decode it instantly without a key or password. Never use Base64 to protect sensitive data. For security, use proper encryption like AES or bcrypt. Base64 just makes binary data text-safe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this Base64 tool support Urdu, Arabic, and Unicode characters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, full Unicode support. The standard btoa() function in browsers only handles ASCII. This tool uses encodeURIComponent combined with btoa — the correct modern standard for encoding multibyte Unicode text. Arabic, Urdu, Chinese, Japanese, emoji, and all other Unicode characters encode and decode correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Base64 and Base64URL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard Base64 uses + and / characters, which are unsafe in URLs and HTTP headers. Base64URL replaces + with - and / with _, making it safe for URL query parameters and HTTP headers without percent-encoding. JWT (JSON Web Tokens) use Base64URL encoding. This tool encodes standard Base64 which is correct for data URIs, MIME email, and general use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I decode a JWT token payload?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A JWT has three parts separated by dots: header.payload.signature. The header and payload are Base64URL encoded. To read the payload, take the middle part, replace - with + and / with _, switch to Decode mode in this tool, and paste it in. You will see the raw JSON claims including user ID, email, expiry, and any custom fields."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I create a data URI from an image using Base64?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To embed an image in HTML or CSS without a separate file request, encode the image file to Base64 and format it as: data:image/png;base64,YOUR_BASE64_STRING. This can be used directly in an img src attribute or CSS background-image property. It increases file size by about 33% but eliminates the extra HTTP request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my Base64 string end with = or == signs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The = and == at the end are padding characters. Base64 encodes data in groups of 3 bytes at a time. If the input length is not divisible by 3, padding characters are added to complete the final group. One = means one byte of padding was needed; == means two bytes. Padding is part of the standard and must be preserved for correct decoding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data safe when using this Base64 tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100% private. All encoding and decoding runs entirely in your browser using JavaScript. No text, tokens, API keys, or any other input is ever sent to any server. CodeWizTools operates with a strict no-logs, no-tracking policy — your data never leaves your device."
       }
     }
   ]
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://codewiztools.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://codewiztools.com/#tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Base64 Encoder & Decoder",
+      "item": "https://codewiztools.com/tools/base64.html"
+    }
+  ]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════════
+     PERFORMANCE — gstatic was missing
+═══════════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+
 <style>
+/* ═══════ DESIGN SYSTEM — identical to all CodeWizTools pages ═══════ */
 :root{
   --bg:#0B0F19;--surface:#151D30;--surface2:#1a2440;--surface3:#1f2b4a;
   --border:rgba(0,242,254,0.08);--border2:rgba(0,242,254,0.18);
-  --accent:#00F2FE;--accent-dim:rgba(0,242,254,0.1);--accent-glow:0 0 15px rgba(0,242,254,0.35);
-  --success:#10B981;--success-dim:rgba(16,185,129,0.1);
-  --danger:#f43f5e;--text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;
+  --accent:#00F2FE;--accent-dim:rgba(0,242,254,0.12);--accent-glow:0 0 15px rgba(0,242,254,0.35);
+  --success:#10B981;--success-dim:rgba(16,185,129,0.12);
+  --error:#EF4444;--error-dim:rgba(239,68,68,0.12);
+  --text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;
   --mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;
   --r:10px;--r-lg:16px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;}
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.02) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
-.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);}
+
+/* ── HEADER — identical to all pages ── */
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.logo-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#000;box-shadow:0 0 16px rgba(0,242,254,0.35);flex-shrink:0;}
-.logo-text{font-size:1rem;font-weight:700;color:var(--text);}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);flex-shrink:0;}
+.logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
 .logo-text span{color:var(--accent);}
-.back-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 12px;border-radius:var(--r);border:1px solid var(--border);transition:all 0.2s;}
-.back-link:hover{color:var(--accent);border-color:var(--border2);background:var(--accent-dim);}
-.page-wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:2rem 1.5rem 4rem;}
-.breadcrumb{font-family:var(--mono);font-size:12px;color:var(--text3);margin-bottom:1.5rem;display:flex;align-items:center;gap:6px;}
-.breadcrumb a{color:var(--text3);text-decoration:none;}
+.nav-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 14px;border-radius:var(--r);transition:all 0.2s;border:1px solid var(--border);background:rgba(21,29,48,0.5);}
+.nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
+
+/* ── LAYOUT ── */
+.tool-page-wrap{position:relative;z-index:1;max-width:960px;margin:2rem auto 5rem;padding:0 1.5rem;animation:fadeUp 0.5s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── BREADCRUMB ── */
+.breadcrumb{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:1.5rem;display:flex;gap:6px;align-items:center;}
+.breadcrumb a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
 .breadcrumb a:hover{color:var(--accent);}
-.panel-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:10px;}
-.panel-title{font-size:1.2rem;font-weight:700;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;}
+
+/* ── H1 HERO — consistent with all pages ── */
+.page-hero{margin-bottom:1.5rem;}
+.page-h1{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.25;margin-bottom:0.45rem;}
+.page-h1 span{color:var(--accent);}
+.page-subtitle{font-size:13px;color:var(--text2);font-family:var(--mono);line-height:1.6;}
+
+/* ── PANEL HEADER ── */
+.panel-header{background:var(--surface);border:1px solid var(--border2);border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.panel-title-inner{font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);display:flex;align-items:center;gap:8px;}
 .panel-tag{font-family:var(--mono);font-size:11px;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border2);padding:3px 10px;border-radius:20px;}
-.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
-.btn{font-family:var(--sans);font-size:13px;font-weight:600;padding:8px 16px;border-radius:var(--r);border:1px solid var(--border2);background:var(--surface2);color:var(--text2);cursor:pointer;transition:all 0.3s;outline:none;}
-.btn:hover{background:var(--surface3);color:var(--text);transform:scale(1.03);}
-.btn:active{transform:scale(0.98);}
-.btn-primary{background:var(--accent);border-color:var(--accent);color:#000;font-weight:700;}
-.btn-primary:hover{background:#1af4ff;box-shadow:var(--accent-glow);}
-.btn-success{border-color:rgba(16,185,129,0.4);color:var(--success);}
-.btn-success:hover{background:var(--success-dim);border-color:var(--success);box-shadow:0 0 12px rgba(16,185,129,0.3);}
-.btn-danger{border-color:rgba(244,63,94,0.3);color:#f43f5e;}
-.btn-danger:hover{background:rgba(244,63,94,0.08);}
-.mode-toggle{display:flex;background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r);padding:3px;gap:3px;}
-.mode-btn{font-family:var(--mono);font-size:12px;padding:5px 16px;border-radius:8px;border:none;background:transparent;color:var(--text3);cursor:pointer;transition:all 0.2s;}
-.mode-btn.active{background:var(--accent);color:#000;font-weight:600;}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-@media(max-width:700px){.two-col{grid-template-columns:1fr;}}
-.col-label{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:7px;}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
-.code-area{width:100%;min-height:280px;resize:vertical;font-family:var(--mono);font-size:13px;line-height:1.7;color:var(--text);background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:1rem;outline:none;transition:all 0.3s;appearance:none; -webkit-appearance:none;}
-.code-area:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(0,242,254,0.15);}
-.code-area.is-ok{border-color:rgba(16,185,129,0.4);}
-.code-area.is-err{border-color:rgba(244,63,94,0.5);}
-.status-bar{display:flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(11,15,25,0.6);border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--text3);min-height:34px;}
-.s-dot{width:7px;height:7px;border-radius:50%;background:var(--text3);flex-shrink:0;transition:all 0.3s;}
+
+/* MODE TOGGLE */
+.mode-toggle{display:flex;background:var(--surface2);border:1px solid var(--border2);padding:2px;border-radius:20px;gap:2px;}
+.mode-btn{font-family:var(--mono);font-size:11px;padding:5px 16px;border-radius:20px;border:none;background:transparent;color:var(--text2);cursor:pointer;transition:all 0.2s;outline:none;}
+.mode-btn:hover{color:var(--text);}
+.mode-btn.active{background:var(--accent);color:#000;font-weight:600;box-shadow:var(--accent-glow);}
+
+.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:6px 14px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .3s;outline:none;}
+.btn:hover{border-color:var(--text2);color:var(--text);}
+.btn-success{border-color:var(--success);background:var(--success-dim);color:var(--success);}
+.btn-success:hover{background:var(--success);color:#000;box-shadow:0 0 15px rgba(16,185,129,0.3);}
+.btn-danger{border-color:rgba(239,68,68,0.4);color:var(--error);}
+.btn-danger:hover{background:var(--error-dim);border-color:var(--error);}
+
+/* TWO COLUMN */
+.two-col{display:grid;grid-template-columns:repeat(2,1fr);background:var(--surface);border-left:1px solid var(--border2);border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);overflow:hidden;}
+.two-col>div{display:flex;flex-direction:column;}
+.two-col>div:first-child{border-right:1px solid var(--border2);}
+.col-label{font-family:var(--mono);font-size:11px;color:var(--text3);padding:.6rem 1.2rem;background:rgba(11,15,25,.2);border-bottom:1px solid var(--border2);text-transform:uppercase;letter-spacing:.04em;}
+.code-area{background:transparent;border:none;padding:1.2rem;font-family:var(--mono);font-size:14px;color:var(--text);outline:none;resize:vertical;line-height:1.6;width:100%;flex:1;min-height:260px;}
+.code-area::placeholder{color:var(--text3);}
+.code-area[readonly]{background:rgba(11,15,25,.08);color:var(--text2);}
+.status-bar{display:flex;align-items:center;gap:8px;padding:.6rem 1.2rem;background:rgba(11,15,25,.15);border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--text2);min-height:36px;}
+.s-dot{width:6px;height:6px;border-radius:50%;background:var(--text3);flex-shrink:0;transition:all .3s;}
 .s-dot.ok{background:var(--success);box-shadow:0 0 8px var(--success);}
-.s-dot.err{background:var(--danger);box-shadow:0 0 8px var(--danger);}
-.s-dot.info{background:var(--accent);box-shadow:0 0 8px var(--accent);}
-.use-cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-top:12px;}
-.use-case{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:10px 12px;}
-.uc-label{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:600;margin-bottom:3px;}
-.uc-desc{font-family:var(--mono);font-size:11px;color:var(--text2);line-height:1.5;}
+.s-dot.err{background:var(--error);box-shadow:0 0 8px var(--error);}
+.s-dot.info{background:var(--accent);box-shadow:var(--accent-glow);}
 
-/* MODERN GLASSMORPHIC FAQ ACCORDION STYLES */
-.faq-accordion {margin-top: 1.5rem; display: flex; flex-direction: column; gap: 10px;}
-.faq-item {background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; transition: all 0.3s ease;}
-.faq-item:hover {border-color: var(--border2); background: rgba(26, 36, 64, 0.7);}
-.faq-trigger {width: 100%; background: none; border: none; padding: 14px 18px; text-align: left; color: #fff; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 15px; outline: none;}
-.faq-icon {font-family: var(--mono); color: var(--accent); transition: transform 0.3s ease; font-size: 12px;}
-.faq-content {max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0, 1, 0, 1); background: rgba(11, 15, 25, 0.3);}
-.faq-content p {padding: 0 18px 14px 18px; font-family: var(--mono); font-size: 13px; color: #94A3B8; line-height: 1.75; margin: 0;}
-.faq-item.active {border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 0 10px rgba(0, 242, 254, 0.03);}
-.faq-item.active .faq-icon {transform: rotate(180deg);}
-.faq-item.active .faq-content {max-height: 1000px; transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);}
+/* USE CASES GRID */
+.use-cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:10px;margin-top:1.5rem;}
+.use-case{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;}
+.uc-label{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:600;margin-bottom:4px;}
+.uc-desc{font-family:var(--sans);font-size:13px;color:var(--text2);line-height:1.55;}
 
-/* INTERNAL LINKING STRATEGY HUB GRID */
-.internal-grid-wrapper {margin-top: 3rem; padding: 1.5rem; background: rgba(21, 29, 48, 0.4); border: 1px solid var(--border); border-radius: var(--r-lg);}
-.internal-grid-title {font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: #fff; display: flex; align-items: center; gap: 8px;}
-.internal-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;}
-.internal-link-card {display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; font-family: var(--sans); font-size: 13px; color: var(--text2); transition: all 0.2s;}
-.internal-link-card:hover {border-color: var(--accent); background: var(--surface3); color: #fff; transform: translateY(-1px);}
-.internal-link-card .arrow-icon {font-family: var(--mono); color: var(--accent); font-weight: bold; font-size: 11px;}
+/* SEO CONTENT */
+.seo-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;}
+.seo-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;margin-top:2rem;}
+.seo-section h2:first-child{margin-top:0;}
+.seo-section h3{font-size:1rem;font-weight:600;color:var(--accent);margin:1.25rem 0 .6rem;}
+.seo-section p{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:.9rem;}
+.seo-section p:last-child{margin-bottom:0;}
+.seo-section ul{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;padding-left:1.4rem;margin-bottom:.9rem;display:flex;flex-direction:column;gap:4px;}
+code{font-family:var(--mono);font-size:12px;background:rgba(0,242,254,.08);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent);}
 
-.seo-block{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
-.seo-block h2{font-size:1.15rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:.75rem;}
-.seo-block h3{font-size:.95rem;font-weight:600;color:var(--text);margin:1rem 0 .5rem;}
-.seo-block p{font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;margin-bottom:.75rem;}
-.seo-block ul{font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;padding-left:1.4rem;margin-bottom:.75rem;}
-.site-footer{position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid var(--border);}
-.site-footer p{font-family:var(--mono);font-size:12px;color:var(--text3);}
-.site-footer a{color:var(--text2);text-decoration:none;}
+/* BASE64 REFERENCE TABLE */
+.ref-table-wrap{margin-top:2rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
+.ref-table-title{padding:.9rem 1.2rem;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);border-bottom:1px solid var(--border);}
+.ref-table{width:100%;border-collapse:collapse;}
+.ref-table th{text-align:left;padding:8px 14px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);background:rgba(11,15,25,.15);border-bottom:1px solid var(--border);}
+.ref-table td{padding:8px 14px;font-family:var(--mono);font-size:12.5px;color:var(--text2);border-bottom:1px solid var(--border);}
+.ref-table tr:last-child td{border-bottom:none;}
+.ref-table tr:hover td{background:rgba(0,242,254,.03);color:var(--text);}
+.ref-table td:first-child{color:var(--accent);font-weight:600;}
+
+/* FAQ */
+.faq-accordion{margin-top:2rem;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border);padding-top:2rem;}
+.faq-accordion h2{margin-top:0!important;}
+.faq-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.faq-trigger{width:100%;background:none;border:none;padding:14px 18px;text-align:left;color:#fff;font-family:var(--sans);font-size:.95rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.faq-trigger .arrow{transition:transform .3s;font-size:12px;color:var(--text3);flex-shrink:0;}
+.faq-item.active .faq-trigger .arrow{transform:rotate(180deg);}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .35s ease;background:rgba(11,15,25,.3);}
+.faq-content p{padding:14px 18px;font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;}
+.faq-item.active .faq-content{max-height:600px;}
+
+/* INTERNAL LINKS */
+.internal-grid-wrapper{margin-top:3rem;padding:1.5rem;background:rgba(21,29,48,.4);border:1px solid var(--border);border-radius:var(--r-lg);}
+.internal-grid-wrapper h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.internal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.internal-link-card{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);text-decoration:none;font-size:13px;color:var(--text2);transition:all .2s;}
+.internal-link-card:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:var(--accent-glow);}
+.tool-icon{font-size:15px;margin-right:8px;}
+
+/* FOOTER */
+.site-footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;}
+.site-footer a{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;transition:color .2s;}
 .site-footer a:hover{color:var(--accent);}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-.fadein{animation:fadeIn .3s ease both;}
+.site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+
+@media(max-width:768px){
+  .two-col{grid-template-columns:1fr;}
+  .two-col>div:first-child{border-right:none;border-bottom:1px solid var(--border2);}
+}
+@media(max-width:640px){
+  .site-header{padding:0 1rem;}
+  .tool-page-wrap{margin:1.5rem auto 3rem;}
+  .panel-header{flex-direction:column;align-items:flex-start;}
+  .seo-section{padding:1.2rem;}
+  .page-h1{font-size:1.4rem;}
+}
 </style>
 </head>
 <body>
+
+<!-- HEADER — consistent across all CodeWizTools pages -->
 <header class="site-header">
-  <a href="../index.html" class="logo">
-    <div class="logo-icon">C</div>
-    <span class="logo-text">CodeWiz<span>Tools</span>.com</span>
+  <a href="../index.html" class="logo" aria-label="CodeWizTools — Home">
+    <div class="logo-icon" aria-hidden="true">C</div>
+    <span class="logo-text">CodeWiz<span>Tools</span></span>
   </a>
-  <a href="../index.html" class="back-link">← All Tools</a>
+  <nav aria-label="Site navigation">
+    <a href="../index.html" class="nav-link">← All Tools</a>
+  </nav>
 </header>
 
-<div class="page-wrap fadein">
+<main class="tool-page-wrap">
+
+  <!-- BREADCRUMB — matches BreadcrumbList JSON-LD schema -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
-    <span style="color:var(--border2);">/</span>
-    <span style="color:var(--text2);">Base64 Encoder / Decoder</span>
+    <span aria-hidden="true">/</span>
+    <a href="../index.html#tools">Tools</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Base64 Encoder &amp; Decoder</span>
   </nav>
 
-  <div class="panel-hdr">
-    <h1 class="panel-title">
+  <!-- H1 — moved OUT of panel, consistent with all other pages -->
+  <div class="page-hero">
+    <h1 class="page-h1"><span>Base64 Encoder & Decoder</span> — Free Online Converter</h1>
+    <p class="page-subtitle">Encode text to Base64 · Decode Base64 strings · Full Unicode support · One-click copy · No signup, 100% browser-based</p>
+  </div>
+
+  <!-- TOOL PANEL -->
+  <div class="panel-header">
+    <div class="panel-title-inner" aria-hidden="true">
       <span style="font-family:var(--mono);color:var(--accent);">⇄</span>
       Base64 Encoder / Decoder
-      <span class="panel-tag">Secure · Local</span>
-    </h1>
+      <span class="panel-tag">Unicode · Private · Free</span>
+    </div>
     <div class="actions">
-      <div class="mode-toggle">
-        <button class="mode-btn active" id="btn-enc" onclick="setMode('encode')">Encode →</button>
-        <button class="mode-btn" id="btn-dec" onclick="setMode('decode')">← Decode</button>
+      <div class="mode-toggle" role="group" aria-label="Encoding mode">
+        <button class="mode-btn active" id="btn-enc" onclick="setMode('encode')" aria-pressed="true">Encode →</button>
+        <button class="mode-btn" id="btn-dec" onclick="setMode('decode')" aria-pressed="false">← Decode</button>
       </div>
-      <button class="btn btn-danger" onclick="clearAll()">Clear</button>
+      <button class="btn btn-danger" onclick="clearAll()" aria-label="Clear all input and output">Clear</button>
     </div>
   </div>
 
+  <!-- TWO COLUMN EDITOR -->
   <div class="two-col">
     <div>
       <div class="col-label" id="lbl-in">Plain text input</div>
-      <div class="card">
-        <textarea class="code-area" id="b64-in" placeholder="Type or paste text to encode to Base64..." spellcheck="false" oninput="convert()"></textarea>
-        <div class="status-bar">
-          <div class="s-dot" id="bdot"></div>
-          <span id="bstatus" style="flex:1;">Ready — type or paste text</span>
-        </div>
+      <label for="b64-in" class="sr-only">Enter text to encode to Base64</label>
+      <textarea
+        class="code-area"
+        id="b64-in"
+        placeholder="Type or paste text to encode to Base64...&#10;&#10;Examples:&#10;Hello World&#10;اردو متن&#10;{&quot;user&quot;:&quot;admin&quot;,&quot;role&quot;:&quot;editor&quot;}"
+        spellcheck="false"
+        oninput="convert()"
+        aria-label="Input text for Base64 encoding or decoding"
+      ></textarea>
+      <div class="status-bar">
+        <div class="s-dot" id="bdot" aria-hidden="true"></div>
+        <span id="bstatus" aria-live="polite">Ready — type or paste text</span>
+        <span style="margin-left:auto;" id="in-count" aria-live="polite"></span>
       </div>
     </div>
     <div>
       <div class="col-label" id="lbl-out">Base64 output</div>
-      <div class="card">
-        <textarea class="code-area" id="b64-out" placeholder="Base64 result appears here..." readonly spellcheck="false"></textarea>
-        <div class="status-bar" style="justify-content:space-between;">
-          <span id="b64-size" style="font-family:var(--mono);font-size:11px;color:var(--text3);">—</span>
-          <button class="btn btn-success" id="copy-btn-b64" onclick="copyOut()" style="padding:4px 12px;font-size:11px;">Copy Output</button>
-        </div>
+      <label for="b64-out" class="sr-only">Base64 encoded or decoded output</label>
+      <textarea
+        class="code-area"
+        id="b64-out"
+        placeholder="Result appears here..."
+        readonly
+        spellcheck="false"
+        aria-label="Output — click Copy Output to copy to clipboard"
+        aria-live="polite"
+      ></textarea>
+      <div class="status-bar" style="justify-content:space-between;">
+        <span id="b64-size" aria-live="polite">—</span>
+        <button class="btn btn-success" id="copy-btn-b64" onclick="copyOut(event)" aria-label="Copy output to clipboard">Copy Output</button>
       </div>
     </div>
   </div>
 
-  <div class="col-label" style="margin-top:1.5rem;">Common Base64 use cases</div>
-  <div class="use-cases">
-    <div class="use-case"><div class="uc-label">JWT Tokens</div><div class="uc-desc">JSON Web Token payloads are Base64URL encoded for safe HTTP transmission</div></div>
-    <div class="use-case"><div class="uc-label">Data URIs</div><div class="uc-desc">Embed images directly in CSS or HTML using data:image/png;base64,... format</div></div>
-    <div class="use-case"><div class="uc-label">HTTP Auth</div><div class="uc-desc">Basic Auth header credentials are encoded as Base64(username:password)</div></div>
-    <div class="use-case"><div class="uc-label">Email MIME</div><div class="uc-desc">Email attachments are Base64-encoded within MIME multipart messages</div></div>
-    <div class="use-case"><div class="uc-label">API Payloads</div><div class="uc-desc">Binary data in JSON APIs is commonly passed as Base64 encoded strings</div></div>
-    <div class="use-case"><div class="uc-label">Config Files</div><div class="uc-desc">Kubernetes secrets and Docker configs store sensitive values in Base64</div></div>
+  <!-- USE CASES GRID -->
+  <div style="margin-top:1.5rem;">
+    <div style="font-family:var(--mono);font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.75rem;">Common Base64 use cases</div>
+    <div class="use-cases">
+      <div class="use-case"><div class="uc-label">JWT Tokens</div><div class="uc-desc">Decode JWT payloads to read user claims, expiry, and custom fields without a library.</div></div>
+      <div class="use-case"><div class="uc-label">Data URIs</div><div class="uc-desc">Embed images directly in HTML or CSS using <code>data:image/png;base64,...</code> format.</div></div>
+      <div class="use-case"><div class="uc-label">HTTP Basic Auth</div><div class="uc-desc">API test credentials are sent as <code>Authorization: Basic base64(user:pass)</code>.</div></div>
+      <div class="use-case"><div class="uc-label">Email MIME</div><div class="uc-desc">Email attachments are Base64-encoded inside MIME multipart message bodies.</div></div>
+      <div class="use-case"><div class="uc-label">API Payloads</div><div class="uc-desc">Binary data (images, files) in JSON REST APIs is passed as Base64-encoded strings.</div></div>
+      <div class="use-case"><div class="uc-label">Kubernetes Secrets</div><div class="uc-desc">All values in Kubernetes Secret manifests are Base64-encoded before storage.</div></div>
+    </div>
   </div>
 
-  <section class="seo-block" aria-label="About Base64 encoder decoder tool">
-    <h2>Secure Base64 Encoder and Decoder Tool — Free Online</h2>
-    <p>
-      CodeWizTools.com provides the most <strong>secure Base64 encoder and decoder tool</strong> available for free online. Unlike other Base64 tools that process your data on their servers, every single encode and decode operation on this tool happens exclusively inside your browser using native JavaScript. Your text, tokens, credentials, and data are never transmitted anywhere — making this the safest choice for encoding sensitive information like API keys, passwords, or private tokens.
-    </p>
-    <p>
-      This tool supports full Unicode text encoding, including Arabic, Urdu, Chinese, Japanese, emoji, and all multibyte characters. We use the correct <code>encodeURIComponent + btoa</code> standard — the same approach used by major frameworks like Node.js, Python's base64 module, and browser crypto libraries — so your encoded output is always interoperable.
-    </p>
+  <!-- SEO CONTENT SECTION -->
+  <section class="seo-section" aria-label="About Base64 encoding and decoding">
 
-    <h3>What Is Base64 Encoding?</h3>
-    <p>
-      Base64 is a binary-to-text encoding scheme that converts data into a string of 64 ASCII characters (A–Z, a–z, 0–9, +, /). The "64" refers to the 64 printable ASCII characters used. It was designed to allow binary data to be safely embedded in text-only contexts like email, HTML, JSON, or XML — where raw binary bytes would otherwise corrupt the format.
-    </p>
+    <h2>What is Base64 Encoding?</h2>
+    <p>Base64 is a method of encoding binary data into a string using only <strong>64 printable ASCII characters</strong> — the letters A–Z and a–z, digits 0–9, plus <code>+</code> and <code>/</code>. The name "Base64" comes from this 64-character alphabet. It was designed so that binary data could be safely transmitted through systems that only handle text — like email protocols, JSON APIs, HTML attributes, and XML documents — without the raw binary bytes corrupting the format.</p>
+    <p>Every 3 bytes of input data become 4 Base64 characters. This means Base64-encoded output is always approximately <strong>33% larger</strong> than the original input. The <code>=</code> or <code>==</code> padding at the end is added when the input length is not divisible by 3.</p>
 
-    <h3>When Should You Use Base64?</h3>
+    <h2>Base64 vs Base64URL — What is the Difference?</h2>
+    <p>Standard Base64 uses <code>+</code> and <code>/</code> characters, which are special characters in URLs and HTTP headers. <strong>Base64URL</strong> is a variant that replaces <code>+</code> with <code>-</code> and <code>/</code> with <code>_</code>, making it safe for URL query strings and HTTP headers without percent-encoding.</p>
+    <p><strong>JWT (JSON Web Tokens)</strong> use Base64URL encoding — not standard Base64. To decode a JWT payload with this tool: take the middle section (between the two dots), replace all <code>-</code> with <code>+</code> and <code>_</code> with <code>/</code>, switch to Decode mode, and paste it in.</p>
+
+    <!-- Reference table -->
+    <div class="ref-table-wrap">
+      <div class="ref-table-title">Base64 vs Base64URL — Quick Reference</div>
+      <table class="ref-table" aria-label="Base64 format comparison table">
+        <thead>
+          <tr><th>Property</th><th>Standard Base64</th><th>Base64URL</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Alphabet</td><td>A–Z, a–z, 0–9, +, /</td><td>A–Z, a–z, 0–9, -, _</td></tr>
+          <tr><td>Padding</td><td>= or ==</td><td>= omitted (optional)</td></tr>
+          <tr><td>URL safe?</td><td>No — + and / need encoding</td><td>Yes — safe in URLs</td></tr>
+          <tr><td>Used in</td><td>Data URIs, MIME, Kubernetes</td><td>JWT, OAuth tokens, cookies</td></tr>
+          <tr><td>Size overhead</td><td>~33% larger than input</td><td>~33% larger than input</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Is Base64 the Same as Encryption?</h2>
+    <p>No — and this is a very common misconception. Base64 is <strong>encoding</strong>, not encryption. Anyone can decode a Base64 string instantly without a password or key. It does not protect your data — it only makes binary data text-safe for transmission. If you need to protect sensitive data, use proper encryption like AES-256 or bcrypt. Never store passwords, API secrets, or private keys as Base64 and assume they are secure.</p>
+
+    <h2>How to Decode a JWT Token</h2>
+    <p>A JWT consists of three Base64URL-encoded parts separated by dots: <code>header.payload.signature</code>. To read the payload claims:</p>
     <ul>
-      <li>Decoding JWT (JSON Web Token) payloads to inspect claims</li>
-      <li>Creating data: URIs to embed images inline in HTML or CSS</li>
-      <li>Encoding HTTP Basic Authentication credentials for API testing</li>
-      <li>Inspecting Kubernetes secrets or Docker config.json files</li>
-      <li>Passing binary data in JSON REST API request bodies</li>
-      <li>Encoding email attachments in MIME message format</li>
+      <li>Copy the middle section of your JWT (between the first and second dot)</li>
+      <li>Replace all <code>-</code> characters with <code>+</code></li>
+      <li>Replace all <code>_</code> characters with <code>/</code></li>
+      <li>Switch to <strong>Decode</strong> mode in the tool above and paste it in</li>
+      <li>You will see the raw JSON with user ID, email, expiry (<code>exp</code>), and any custom claims</li>
     </ul>
 
-    <h3>Base64 vs Base64URL</h3>
-    <p>
-      Standard Base64 uses + and / characters which are unsafe in URLs. Base64URL replaces + with - and / with _, making it safe for URL query parameters and HTTP headers. JWT tokens use Base64URL encoding. This tool uses standard Base64 which is correct for most use cases including data URIs, MIME, and general string encoding.
-    </p>
+    <!-- FAQ -->
+    <div class="faq-accordion">
+      <h2>Frequently Asked Questions</h2>
 
-    <div class="faq-box" style="margin-top: 2.5rem;">
-      <h2>Frequently Asked Questions (FAQs)</h2>
-      
-      <div class="faq-accordion">
-        <div class="faq-item">
-          <button class="faq-trigger" onclick="toggleFaq(this)">
-            <span>1. Is my data secure when using this local Base64 script?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-content">
-            <p>Yes, security is completely guaranteed. The conversion routine works inside your client browser thread via JavaScript algorithms without querying back-end servers. This isolates your sensitive access configuration scripts, secret tokens, and plain text parameters away from network interception vulnerabilities.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-trigger" onclick="toggleFaq(this)">
-            <span>2. Why do other base64 encoders crash when formatting Urdu or specialized symbols?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-content">
-            <p>Standard browser window.btoa utility components are natively confined to evaluating binary 8-bit character streams. If you introduce 16-bit text schemas like Urdu letters, Arabic alphabets, or complex string mappings, the execution architecture crashes. Our layout patches this constraint by passing the input buffer array into an advanced URI normalization layout before compilation.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-trigger" onclick="toggleFaq(this)">
-            <span>3. Does this encoder optimize text structures into Base64URL format?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-content">
-            <p>This layout focuses explicitly on formatting standard RFC 4648 protocols (+ and / characters with custom padding tokens). If you require specialized URL token structures for stateless token validation models or raw database strings, ensure you substitute the dynamic output signs accordingly.</p>
-          </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          What is Base64 encoding?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Base64 converts binary data into a string of 64 printable ASCII characters (A–Z, a–z, 0–9, +, /). It allows binary data to be safely sent through text-only systems — email, JSON, HTML, XML — without corruption. Every 3 input bytes become 4 Base64 characters, making the output about 33% larger.</p>
         </div>
       </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          Is Base64 encoding the same as encryption?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>No — Base64 is encoding, not encryption. Anyone can decode it instantly without a key or password. It does not protect your data. Never use Base64 to secure passwords, API keys, or private tokens. For security, use proper encryption like AES-256 or bcrypt.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          Does this Base64 tool support Urdu, Arabic, and Unicode?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Yes, full Unicode support. The browser's built-in <code>btoa()</code> only handles ASCII. This tool uses <code>encodeURIComponent + btoa</code> — the correct modern method for encoding multibyte Unicode. Arabic, Urdu, Chinese, Japanese, emoji, and all other characters encode and decode correctly.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          What is the difference between Base64 and Base64URL?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Standard Base64 uses <code>+</code> and <code>/</code> which are special characters in URLs. Base64URL replaces <code>+</code> with <code>-</code> and <code>/</code> with <code>_</code> for URL safety. JWT tokens use Base64URL. This tool encodes standard Base64 — correct for data URIs, MIME, Kubernetes secrets, and general encoding use cases.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          How do I decode a JWT token payload?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Take the middle section of your JWT (between the two dots). Replace <code>-</code> with <code>+</code> and <code>_</code> with <code>/</code>. Switch to Decode mode and paste it in. You will see the raw JSON payload with user ID, email, <code>exp</code> timestamp, and any custom claims — all in plain text.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          Why does my Base64 string end with = or == signs?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Base64 encodes data in groups of 3 bytes. If input length is not divisible by 3, padding characters (<code>=</code>) are added. One <code>=</code> means one padding byte was needed; <code>==</code> means two. Padding is part of the RFC 4648 standard — always preserve it for correct decoding. Never trim it manually.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          How do I create a data URI from an image using Base64?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Encode your image file to Base64, then format it as: <code>data:image/png;base64,YOUR_STRING</code>. Use this directly in an HTML <code>img src</code> attribute or CSS <code>background-image</code>. It eliminates the extra HTTP request but increases file size by ~33% — best for small icons and critical above-the-fold images.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          Is my data safe when using this Base64 tool?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Yes — 100% private. All encoding and decoding runs entirely in your browser using JavaScript. No text, tokens, API keys, or any other input is ever sent to any server. CodeWizTools operates with a strict no-logs, no-tracking policy — your data never leaves your device.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- INTERNAL LINKS — keyword-rich, consistent with all pages -->
   <div class="internal-grid-wrapper">
-    <div class="internal-grid-title">
-      <span style="color:var(--accent);">⚡</span> Explore More Free Developer Tools
-    </div>
+    <h2>⚡ More Developer Tools</h2>
     <div class="internal-grid">
-      <a href="json-formatter.html" class="internal-link-card">
-        <span>JSON Formatter &amp; Validator</span>
-        <span class="arrow-icon">→</span>
+      <a href="url-encoder.html" class="internal-link-card" title="URL Encoder and Percent Encoding Converter">
+        <span><span class="tool-icon" aria-hidden="true">🔗</span>URL Encoder &amp; Decoder</span><span>→</span>
       </a>
-      <a href="case-converter.html" class="internal-link-card">
-        <span>Case Converter Tool</span>
-        <span class="arrow-icon">→</span>
+      <a href="json-formatter.html" class="internal-link-card" title="Format and validate JSON data online">
+        <span><span class="tool-icon" aria-hidden="true">📋</span>JSON Formatter &amp; Validator</span><span>→</span>
       </a>
-      <a href="pdf-compressor.html" class="internal-link-card">
-        <span>Compress PDF Documents</span>
-        <span class="arrow-icon">→</span>
+      <a href="color-picker.html" class="internal-link-card" title="RGBA Color Picker — copy HEX, RGB, HSL, CSS variable">
+        <span><span class="tool-icon" aria-hidden="true">🎨</span>RGBA Color Picker</span><span>→</span>
       </a>
-      <a href="pdf-merger.html" class="internal-link-card">
-        <span>Merge PDF Files</span>
-        <span class="arrow-icon">→</span>
+      <a href="lorem-ipsum.html" class="internal-link-card" title="Lorem Ipsum Generator — copy paste placeholder text">
+        <span><span class="tool-icon" aria-hidden="true">📝</span>Lorem Ipsum Generator</span><span>→</span>
       </a>
-      <a href="cgpa-calculator.html" class="internal-link-card">
-        <span>Try Free CGPA Calculator</span>
-        <span class="arrow-icon">→</span>
+      <a href="password-generator.html" class="internal-link-card" title="Generate strong random passwords free">
+        <span><span class="tool-icon" aria-hidden="true">🔑</span>Password Generator</span><span>→</span>
       </a>
-      <a href="color-picker.html" class="internal-link-card">
-        <span>Responsive Color Picker</span>
-        <span class="arrow-icon">→</span>
+      <a href="case-converter.html" class="internal-link-card" title="Convert text case — uppercase, lowercase, camelCase">
+        <span><span class="tool-icon" aria-hidden="true">🔤</span>Case Converter</span><span>→</span>
       </a>
-      <a href="password-generator.html" class="internal-link-card">
-        <span>Secure Password Generator</span>
-        <span class="arrow-icon">→</span>
+      <a href="word-counter.html" class="internal-link-card" title="Count words, characters and reading time online">
+        <span><span class="tool-icon" aria-hidden="true">🔢</span>Word Counter</span><span>→</span>
       </a>
-      <a href="word-counter.html" class="internal-link-card">
-        <span>Word &amp; Character Counter</span>
-        <span class="arrow-icon">→</span>
+      <a href="html-encoder.html" class="internal-link-card" title="HTML Entity Encoder — encode special HTML characters">
+        <span><span class="tool-icon" aria-hidden="true">🌐</span>HTML Entity Encoder</span><span>→</span>
       </a>
-      <a href="qr-generator.html" class="internal-link-card">
-        <span>Dynamic QR Code Generator</span>
-        <span class="arrow-icon">→</span>
+      <a href="pdf-compressor.html" class="internal-link-card" title="Compress PDF files online free">
+        <span><span class="tool-icon" aria-hidden="true">📄</span>PDF Compressor</span><span>→</span>
       </a>
-      <a href="html-formatter.html" class="internal-link-card">
-        <span>Beautify HTML &amp; CSS Source</span>
-        <span class="arrow-icon">→</span>
+      <a href="pdf-merger.html" class="internal-link-card" title="Merge multiple PDF files into one online free">
+        <span><span class="tool-icon" aria-hidden="true">📎</span>PDF Merger</span><span>→</span>
+      </a>
+      <a href="md5-generator.html" class="internal-link-card" title="Generate MD5 hash from any text string">
+        <span><span class="tool-icon" aria-hidden="true">🧮</span>MD5 Hash Generator</span><span>→</span>
+      </a>
+      <a href="qr-generator.html" class="internal-link-card" title="Generate QR codes from URLs or text free">
+        <span><span class="tool-icon" aria-hidden="true">📱</span>QR Code Generator</span><span>→</span>
+      </a>
+      <a href="cgpa-calculator.html" class="internal-link-card" title="Calculate CGPA from grades online">
+        <span><span class="tool-icon" aria-hidden="true">🎓</span>CGPA Calculator</span><span>→</span>
+      </a>
+      <a href="attendance-calculator.html" class="internal-link-card" title="Attendance and bunk calculator for students">
+        <span><span class="tool-icon" aria-hidden="true">📅</span>Attendance Calculator</span><span>→</span>
       </a>
     </div>
   </div>
-</div>
+
+</main>
 
 <footer class="site-footer">
-  <p><a href="../index.html">← Back to all tools</a> &nbsp;·&nbsp; <a href="../index.html">CodeWizTools</a></p>
-  <p style="margin-top:6px;">© 2026 CodeWizTools.com</p>
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all CodeWizTools</a></p>
+  <p>© 2026 CodeWizTools · No tracking. No logs. Pure Privacy.</p>
 </footer>
 
 <script>
+/* ═══════════════════════════════════════════════════
+   BASE64 ENCODER / DECODER — FULLY FIXED
+   
+   Bugs fixed from original:
+   1. unescape() was DEPRECATED — replaced with correct
+      TextEncoder / Uint8Array approach
+   2. escape(atob()) was DEPRECATED — replaced with
+      TextDecoder for proper Unicode decode
+   3. result.trim() on encode was WRONG — breaks
+      Base64 padding (= chars at end would be removed)
+   4. copyOut() had no fallback — silent fail on HTTP
+      or older browsers. Fixed with fallbackCopy()
+   5. aria-pressed never updated on mode toggle
+   6. aria-expanded never updated on FAQ toggle
+   7. copyOut() had no event param — btn text couldn't
+      update reliably. Fixed.
+   8. Input character counter added
+═══════════════════════════════════════════════════ */
 let mode = 'encode';
 
+/* ── ENCODING HELPERS — fixed deprecated unescape/escape ── */
+
+function encodeToBase64(str) {
+  // FIX: Was btoa(unescape(encodeURIComponent(str))) — unescape() is deprecated
+  // Correct modern approach: encode to UTF-8 bytes, then to Base64
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  bytes.forEach(b => binary += String.fromCharCode(b));
+  return btoa(binary);
+}
+
+function decodeFromBase64(str) {
+  // FIX: Was decodeURIComponent(escape(atob(str))) — escape() is deprecated
+  // Correct modern approach: decode Base64 to bytes, then UTF-8 decode
+  try {
+    const binary = atob(str.trim());
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+      bytes[i] = binary.charCodeAt(i);
+    }
+    return new TextDecoder().decode(bytes);
+  } catch(e) {
+    throw new Error('Invalid Base64 string');
+  }
+}
+
+/* ── MODE SWITCH ── */
 function setMode(m) {
   mode = m;
   document.getElementById('btn-enc').classList.toggle('active', m === 'encode');
   document.getElementById('btn-dec').classList.toggle('active', m === 'decode');
-  document.getElementById('lbl-in').textContent = m === 'encode' ? 'Plain text input' : 'Base64 string input';
+  // FIX: aria-pressed was never updated in original
+  document.getElementById('btn-enc').setAttribute('aria-pressed', m === 'encode');
+  document.getElementById('btn-dec').setAttribute('aria-pressed', m === 'decode');
+  document.getElementById('lbl-in').textContent  = m === 'encode' ? 'Plain text input' : 'Base64 string input';
   document.getElementById('lbl-out').textContent = m === 'encode' ? 'Base64 output' : 'Decoded text output';
-  document.getElementById('b64-in').placeholder = m === 'encode'
-    ? 'Type or paste text to encode to Base64...'
-    : 'Paste a Base64 string here to decode it...';
+  document.getElementById('b64-in').placeholder  = m === 'encode'
+    ? 'Type or paste text to encode to Base64...\n\nExamples:\nHello World\nاردو متن\n{"user":"admin","role":"editor"}'
+    : 'Paste a Base64 string to decode...\n\nExample:\naGVsbG8gd29ybGQ=';
   convert();
 }
 
+/* ── MAIN CONVERT ── */
 function convert() {
-  const input = document.getElementById('b64-in').value;
-  const dot = document.getElementById('bdot');
+  const input  = document.getElementById('b64-in').value;
+  const dot    = document.getElementById('bdot');
   const status = document.getElementById('bstatus');
   const sizeEl = document.getElementById('b64-size');
-  
+  const outEl  = document.getElementById('b64-out');
+
+  // Input char counter
+  document.getElementById('in-count').textContent = input.length ? input.length + ' chars' : '';
+
   if (!input) {
-    document.getElementById('b64-out').value = '';
-    document.getElementById('b64-out').className = 'code-area';
-    sizeEl.textContent = '—'; 
+    outEl.value = '';
     dot.className = 's-dot';
-    status.textContent = 'Ready — type or paste text'; 
+    status.textContent = 'Ready — type or paste text';
+    sizeEl.textContent = '—';
     return;
   }
-  
+
   try {
     let result;
     if (mode === 'encode') {
-      result = btoa(unescape(encodeURIComponent(input)));
+      result = encodeToBase64(input);
+      // FIX: Original had result.trim() which could strip = padding — removed
+      outEl.value = result;
       dot.className = 's-dot info';
-      status.textContent = 'Encoded · ' + input.length + ' chars → ' + result.length + ' chars Base64';
+      status.textContent = 'Encoded ✓ — ' + input.length + ' chars → ' + result.length + ' chars Base64';
     } else {
-      result = decodeURIComponent(escape(atob(input.trim())));
+      result = decodeFromBase64(input);
+      outEl.value = result;
       dot.className = 's-dot ok';
-      status.textContent = 'Decoded successfully · ' + result.length + ' chars output';
+      status.textContent = 'Decoded ✓ — ' + result.length + ' chars output';
     }
-    // Clean modern JavaScript string trim deployment
-    document.getElementById('b64-out').value = result.trim();
-    document.getElementById('b64-out').className = 'code-area is-ok';
     sizeEl.textContent = 'Output: ' + result.length + ' characters';
   } catch (e) {
-    document.getElementById('b64-out').value = '';
-    document.getElementById('b64-out').className = 'code-area is-err';
+    outEl.value = '';
     dot.className = 's-dot err';
-    status.textContent = '⚠ Invalid Base64 — check your input string';
+    status.textContent = '⚠ Invalid Base64 — check for missing = padding or non-Base64 characters';
     sizeEl.textContent = '—';
   }
 }
 
+/* ── CLEAR ── */
 function clearAll() {
-  document.getElementById('b64-in').value = '';
+  document.getElementById('b64-in').value  = '';
   document.getElementById('b64-out').value = '';
-  document.getElementById('b64-in').className = 'code-area';
-  document.getElementById('b64-out').className = 'code-area';
   document.getElementById('bdot').className = 's-dot';
   document.getElementById('bstatus').textContent = 'Ready — type or paste text';
   document.getElementById('b64-size').textContent = '—';
+  document.getElementById('in-count').textContent = '';
+  document.getElementById('b64-in').focus();
 }
 
-function copyOut() {
+/* ── COPY WITH FALLBACK — FIX: original had no fallback, silently failed ── */
+function copyOut(event) {
   const val = document.getElementById('b64-out').value;
   if (!val) return;
-  navigator.clipboard.writeText(val).catch(() => {});
-  const btn = document.getElementById('copy-btn-b64');
+  const btn  = event.target;
   const orig = btn.textContent;
-  btn.textContent = '✓ Copied!';
-  
-  btn.style.color = 'var(--success)';
-  setTimeout(() => { btn.textContent = orig; btn.style.color = ''; }, 1800);
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(val).then(() => {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = orig, 1600);
+    }).catch(() => fallbackCopy(val, btn, orig));
+  } else {
+    fallbackCopy(val, btn, orig);
+  }
 }
 
-/* INTERACTIVE DROPDOWN TOGGLE ENGINE */
+function fallbackCopy(text, btn, orig) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;opacity:0;';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try {
+    document.execCommand('copy');
+    btn.textContent = '✓ Copied!';
+  } catch {
+    btn.textContent = 'Copy failed';
+  }
+  document.body.removeChild(ta);
+  setTimeout(() => btn.textContent = orig, 1600);
+}
+
+/* ── FAQ TOGGLE — FIX: aria-expanded was never updated in original ── */
 function toggleFaq(btn) {
-  const item = btn.parentElement;
+  const item   = btn.parentElement;
+  const isOpen = item.classList.contains('active');
   item.classList.toggle('active');
+  btn.setAttribute('aria-expanded', String(!isOpen));
 }
 </script>
 </body>

@@ -3,382 +3,769 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free URL Encoder & Decoder Online — Percent Encoding Converter | CodeWizTools</title>
-<meta name="description" content="Free online URL encoder and decoder. Encode special characters into percent-encoded formats or decode complex parameters instantly. 100% secure client-side conversion.">
-<meta name="keywords" content="url encoder, url decoder, percent encoding, encode url, decode url, online url encoder, encodeURIComponent, decodeURIComponent, query string parser">
+
+<!-- ═══════════════════════════════════════════════
+     PRIMARY SEO META TAGS
+     GSC Target Keywords:
+     "url encoder" / "url decoder"     — primary
+     "percent encoding converter"      — 3 imp, pos 39.67 ← closest to page 1
+     "percent encoding tool"           — 2 imp, pos 47.50
+     "encode url online"               — supporting
+     "url encode decode"               — supporting
+═══════════════════════════════════════════════ -->
+<title>URL Encoder & Decoder — Percent Encoding Converter Online Free | CodeWizTools</title>
+<meta name="description" content="Free URL encoder and decoder online. Encode URLs with percent encoding or decode %20 strings instantly. Supports encodeURI, encodeURIComponent & query string mode. No signup, 100% browser-based.">
+<meta name="keywords" content="url encoder, url decoder, percent encoding converter, percent encoding tool, encode url online, decode url online, url encode decode, encodeURIComponent, percent encoding, url percent encoding, query string encoder, online url encoder, url encoding tool, url decoder online">
 <meta name="author" content="CodeWizTools">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://codewiztools.com/tools/url-encoder.html">
 
-<meta property="og:title" content="Free URL Encoder & Decoder Online — CodeWizTools">
-<meta property="og:description" content="Encode special characters or decode percent-encoded strings securely in your browser.">
+<!-- ═══════════════════════════════════════════════
+     OPEN GRAPH — Full set (was missing og:image, og:locale, og:site_name)
+═══════════════════════════════════════════════ -->
 <meta property="og:type" content="website">
+<meta property="og:title" content="URL Encoder & Decoder — Percent Encoding Converter | CodeWizTools">
+<meta property="og:description" content="Encode URLs with percent encoding or decode %20 strings instantly. Supports encodeURI and encodeURIComponent modes. Free, no signup, 100% browser-based.">
 <meta property="og:url" content="https://codewiztools.com/tools/url-encoder.html">
+<meta property="og:site_name" content="CodeWizTools">
+<meta property="og:image" content="https://codewiztools.com/assets/og-url-encoder.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="URL Encoder and Decoder tool on CodeWizTools">
+<meta property="og:locale" content="en_US">
 
+<!-- ═══════════════════════════════════════════════
+     TWITTER / X CARD — was completely missing
+═══════════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="URL Encoder & Decoder — Percent Encoding Converter | CodeWizTools">
+<meta name="twitter:description" content="Encode or decode URLs with percent encoding instantly. Free, no signup, 100% browser-based.">
+<meta name="twitter:image" content="https://codewiztools.com/assets/og-url-encoder.png">
+<meta name="twitter:site" content="@CodeWizTools">
+
+<!-- ═══════════════════════════════════════════════
+     JSON-LD STRUCTURED DATA — 3 SCHEMAS
+     1. WebApplication  — tool rich result
+     2. FAQPage         — 8 FAQ rich results (was only 3, not in JSON-LD at all)
+     3. BreadcrumbList  — was completely missing
+═══════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://codewiztools.com/tools/url-encoder.html#webapp",
+  "name": "URL Encoder & Decoder — Percent Encoding Converter",
+  "url": "https://codewiztools.com/tools/url-encoder.html",
+  "description": "Free online URL encoder and decoder. Encode special characters to percent-encoded format or decode %XX strings. Supports encodeURI, encodeURIComponent, and full URL modes. 100% browser-based, no data sent to any server.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+  "browserRequirements": "Requires JavaScript and a modern web browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "CodeWizTools",
+    "url": "https://codewiztools.com"
+  },
+  "featureList": [
+    "encodeURIComponent mode — encode query string values",
+    "encodeURI mode — encode full URLs preserving structure",
+    "Decode mode — convert %XX strings back to readable text",
+    "Real-time conversion on every keystroke",
+    "Supports Unicode, Urdu, Arabic, Chinese, emoji",
+    "One-click copy to clipboard with fallback",
+    "Input character and output character counter",
+    "100% browser-based — no data sent to server"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is percent encoding in URLs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percent encoding (also called URL encoding) converts characters that are not allowed in a URL into a safe format by replacing them with a % sign followed by their two-digit hexadecimal code. For example, a space becomes %20, an ampersand becomes %26, and a forward slash becomes %2F. This ensures URLs transmit correctly over HTTP without ambiguity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between encodeURI and encodeURIComponent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "encodeURI is designed to encode a complete URL — it preserves characters that have structural meaning in URLs such as : / ? # [ ] @ ! $ & ' ( ) * + , ; =. encodeURIComponent encodes everything including those structural characters, making it ideal for encoding individual query string parameter values. Use encodeURI for full URLs and encodeURIComponent for values inside query strings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What characters need to be percent encoded in a URL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any character outside the unreserved set must be percent encoded. Unreserved characters (A–Z, a–z, 0–9, - _ . ~) are always safe. Reserved characters (: / ? # [ ] @ ! $ & ' ( ) * + , ; =) must be encoded when used as data values. Space encodes to %20, @ to %40, & to %26, = to %3D, + to %2B, / to %2F, # to %23."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I URL encode a space character?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A space character encodes to %20 using standard percent encoding (encodeURIComponent). In HTML form submissions and some older APIs, a space is also represented as a plus sign (+) — this is called application/x-www-form-urlencoded encoding. This tool uses the modern %20 standard as defined in RFC 3986."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I URL encode non-English text like Arabic or Urdu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This tool supports full Unicode including Arabic, Urdu, Chinese, Japanese, emoji, and all multibyte characters. Non-ASCII text is first converted to UTF-8 bytes, then each byte is percent-encoded. For example, the Arabic letter ا (alef) encodes to %D8%A7."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a percent encoding converter used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A percent encoding converter is used by web developers and testers to prepare URL query string parameters, encode API endpoint values, debug malformed URLs, test web scraping scripts, and safely pass special characters in HTTP requests. It is also used to decode obfuscated URLs to check their destination before clicking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my URL data safe when using this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100% private. This URL encoder runs entirely in your browser using JavaScript. No input text, URLs, or query strings are ever sent to any server. All encoding and decoding happens locally on your device — CodeWizTools operates with a strict no-logs, no-tracking policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my decoded URL show garbled text or question marks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This usually happens when the encoded string uses a character encoding other than UTF-8 — typically legacy encodings like ISO-8859-1 (Latin-1) or Windows-1252. Modern web standards require UTF-8 for percent encoding per RFC 3986. If you see garbled output, the original encoder may not have been UTF-8 compliant."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://codewiztools.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://codewiztools.com/#tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "URL Encoder & Decoder",
+      "item": "https://codewiztools.com/tools/url-encoder.html"
+    }
+  ]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════════
+     PERFORMANCE — gstatic preconnect was missing
+═══════════════════════════════════════════════ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 
 <style>
-:root {
-  --bg: #0B0F19;
-  --surface: #151D30;
-  --surface2: #1a2440;
-  --surface3: #1f2b4a;
-  --border: rgba(0,242,254,0.08);
-  --border2: rgba(0,242,254,0.18);
-  --accent: #00F2FE;
-  --accent-dim: rgba(0,242,254,0.12);
-  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
-  --success: #10B981;
-  --success-dim: rgba(16,185,129,0.12);
-  --error: #EF4444;
-  --error-dim: rgba(239,68,68,0.12);
-  --text: #FFFFFF;
-  --text2: #94A3B8;
-  --text3: #4a5568;
-  --mono: 'JetBrains Mono', monospace;
-  --sans: 'Space Grotesk', sans-serif;
-  --r: 10px;
-  --r-lg: 16px;
+/* ═══════ DESIGN SYSTEM — identical to all CodeWizTools pages ═══════ */
+:root{
+  --bg:#0B0F19;--surface:#151D30;--surface2:#1a2440;--surface3:#1f2b4a;
+  --border:rgba(0,242,254,0.08);--border2:rgba(0,242,254,0.18);
+  --accent:#00F2FE;--accent-dim:rgba(0,242,254,0.12);--accent-glow:0 0 15px rgba(0,242,254,0.35);
+  --success:#10B981;--success-dim:rgba(16,185,129,0.12);
+  --error:#EF4444;--error-dim:rgba(239,68,68,0.12);
+  --text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;
+  --mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;
+  --r:10px;--r-lg:16px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
 
-/* Grid bg & Glow orbs from Home Page */
-body::before{
-  content:'';position:fixed;inset:0;
-  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
-  background-size:50px 50px;pointer-events:none;z-index:0;
-}
-body::after{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),
-             radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);
-}
+/* Grid bg */
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);}
 
-/* ── HEADER ── */
-.site-header{
-  position:sticky;top:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2rem;height:62px;
-  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border2);
-}
+/* ── HEADER — identical to lorem-ipsum.html & color-picker.html ── */
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.logo-icon{
-  width:34px;height:34px;border-radius:9px;
-  background:linear-gradient(135deg,#00F2FE,#0070f3);
-  display:flex;align-items:center;justify-content:center;
-  font-size:15px;font-weight:800;color:#000;
-  box-shadow:0 0 18px rgba(0,242,254,0.4);
-  flex-shrink:0;
-}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);flex-shrink:0;}
 .logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
 .logo-text span{color:var(--accent);}
 .header-nav{display:flex;align-items:center;}
-.nav-link{
-  font-family:var(--mono);font-size:12px;color:var(--text2);
-  text-decoration:none;padding:6px 14px;border-radius:var(--r);
-  transition:all 0.2s;letter-spacing:0.02em;
-  border:1px solid var(--border);background:rgba(21,29,48,0.5);
-}
+.nav-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 14px;border-radius:var(--r);transition:all 0.2s;letter-spacing:0.02em;border:1px solid var(--border);background:rgba(21,29,48,0.5);}
 .nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
 
-/* ── LAYOUT WRAPPER ── */
-.tool-page-wrap {
-  position:relative;z-index:1;
-  max-width:960px;margin:2rem auto 5rem;padding:0 1.5rem;
-  animation:fadeUp 0.5s ease both;
-}
+/* ── LAYOUT ── */
+.tool-page-wrap{position:relative;z-index:1;max-width:960px;margin:2rem auto 5rem;padding:0 1.5rem;animation:fadeUp 0.5s ease both;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
 
-.breadcrumb {
-  font-family:var(--mono);font-size:11px;color:var(--text3);
-  margin-bottom:1.5rem;display:flex;gap:6px;
-}
-.breadcrumb a {color:var(--text2);text-decoration:none;transition:color 0.2s;}
-.breadcrumb a:hover {color:var(--accent);}
+/* ── BREADCRUMB ── */
+.breadcrumb{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:1.5rem;display:flex;gap:6px;align-items:center;}
+.breadcrumb a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--accent);}
 
-/* PANEL HEADER */
-.panel-header {
-  background:var(--surface);border:1px solid var(--border2);
-  border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);
-  padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;
-}
-.panel-title {
-  font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);
-  display:flex;align-items:center;gap:6px;
-}
-.panel-actions {display:flex;align-items:center;gap:12px;}
+/* ── H1 HERO — GSC primary keyword in heading ── */
+.page-hero{margin-bottom:1.5rem;}
+.page-h1{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.25;margin-bottom:0.45rem;}
+.page-h1 span{color:var(--accent);}
+.page-subtitle{font-size:13px;color:var(--text2);font-family:var(--mono);line-height:1.6;}
 
-/* MODE TOGGLE CONTROLLER */
-.mode-toggle {
-  display:flex;background:var(--surface2);border:1px solid var(--border2);
-  padding:2px;border-radius:20px;
-}
-.mode-btn {
-  font-family:var(--mono);font-size:11px;padding:5px 14px;border-radius:20px;
-  background:transparent;border:none;color:var(--text2);cursor:pointer;transition:all 0.2s;outline:none;
-}
-.mode-btn:hover {color:var(--text);}
-.mode-btn.active {
-  background:var(--accent);color:#000000;font-weight:600;box-shadow:var(--accent-glow);
-}
+/* ── PANEL HEADER ── */
+.panel-header{background:var(--surface);border:1px solid var(--border2);border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;}
+.panel-title{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);display:flex;align-items:center;gap:6px;}
+.panel-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 
-.btn {
-  font-family:var(--mono);font-size:11px;letter-spacing:0.04em;
-  padding:6px 14px;border-radius:20px;
-  border:1px solid var(--text3);background:transparent;
-  color:var(--text2);cursor:pointer;transition:all 0.3s;outline:none;
-}
-.btn:hover {border-color:var(--text2);color:var(--text);background:rgba(255,255,255,0.03);}
-.btn-success {
-  border-color:var(--success);background:rgba(16,185,129,0.05);color:var(--success);
-}
-.btn-success:hover {
-  background:var(--success);color:#000000;box-shadow:0 0 15px rgba(16,185,129,0.3);
-}
+/* MODE TOGGLE — identical design system */
+.mode-toggle{display:flex;background:var(--surface2);border:1px solid var(--border2);padding:2px;border-radius:20px;}
+.mode-btn{font-family:var(--mono);font-size:11px;padding:5px 14px;border-radius:20px;background:transparent;border:none;color:var(--text2);cursor:pointer;transition:all 0.2s;outline:none;}
+.mode-btn:hover{color:var(--text);}
+.mode-btn.active{background:var(--accent);color:#000;font-weight:600;box-shadow:var(--accent-glow);}
+
+/* ENCODE MODE SELECTOR */
+.enc-mode-wrap{display:flex;align-items:center;gap:6px;}
+.enc-mode-label{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.05em;}
+.enc-select{font-family:var(--mono);font-size:11px;background:var(--surface2);border:1px solid var(--border2);color:var(--text2);border-radius:20px;padding:5px 10px;outline:none;cursor:pointer;transition:all 0.2s;}
+.enc-select:hover,.enc-select:focus{border-color:var(--accent);color:var(--text);}
+
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:0.04em;padding:6px 14px;border-radius:20px;border:1px solid var(--text3);background:transparent;color:var(--text2);cursor:pointer;transition:all 0.3s;outline:none;}
+.btn:hover{border-color:var(--text2);color:var(--text);background:rgba(255,255,255,0.03);}
+.btn-success{border-color:var(--success);background:rgba(16,185,129,0.05);color:var(--success);}
+.btn-success:hover{background:var(--success);color:#000;box-shadow:0 0 15px rgba(16,185,129,0.3);}
 
 /* ── TWO COLUMN DISPLAY ── */
-.two-col {
-  display:grid;grid-template-columns:repeat(2,1fr);
-  background:var(--surface);border-left:1px solid var(--border2);
-  border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);
-  border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);
-  overflow:hidden;
-}
-.two-col > div {display:flex;flex-direction:column;}
-.two-col > div:first-child {border-right:1px solid var(--border2);}
+.two-col{display:grid;grid-template-columns:repeat(2,1fr);background:var(--surface);border-left:1px solid var(--border2);border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);overflow:hidden;}
+.two-col>div{display:flex;flex-direction:column;}
+.two-col>div:first-child{border-right:1px solid var(--border2);}
+.col-label{font-family:var(--mono);font-size:11px;color:var(--text3);padding:0.6rem 1.2rem;background:rgba(11,15,25,0.2);border-bottom:1px solid var(--border2);text-transform:uppercase;letter-spacing:0.04em;}
+.card{display:flex;flex-direction:column;height:100%;background:transparent;}
+.code-area{background:transparent;border:none;padding:1.2rem;font-family:var(--mono);font-size:14px;color:var(--text);outline:none;resize:vertical;line-height:1.6;width:100%;flex:1;}
+.code-area::placeholder{color:var(--text3);}
+.code-area[readonly]{background:rgba(11,15,25,0.08);color:var(--text2);}
 
-.col-label {
-  font-family:var(--mono);font-size:11px;color:var(--text3);
-  padding:0.6rem 1.2rem;background:rgba(11,15,25,0.2);
-  border-bottom:1px solid var(--border2);text-transform:uppercase;letter-spacing:0.04em;
-}
+/* STATUS BARS */
+.status-bar{display:flex;align-items:center;gap:8px;padding:0.6rem 1.2rem;background:rgba(11,15,25,0.15);border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--text2);min-height:36px;}
+.s-dot{width:6px;height:6px;border-radius:50%;background:var(--text3);transition:all 0.3s;flex-shrink:0;}
+.s-dot.info{background:var(--accent);box-shadow:var(--accent-glow);}
+.s-dot.ok{background:var(--success);box-shadow:0 0 10px var(--success);}
+.s-dot.err{background:var(--error);box-shadow:0 0 10px var(--error);}
 
-.card {display:flex;flex-direction:column;height:100%;background:transparent;}
-
-/* TEXTAREA CODE AREA */
-.code-area {
-  background:transparent;border:none;padding:1.2rem;
-  font-family:var(--mono);font-size:14px;color:var(--text);
-  outline:none;transition:all 0.3s;resize:vertical;line-height:1.6;
-  width:100%;box-shadow:none;flex:1;
-}
-.code-area::placeholder {color:var(--text3);}
-.code-area[readonly] {background:rgba(11,15,25,0.08);color:var(--text2);}
-
-/* STATUS BOTTOM BARS */
-.status-bar {
-  display:flex;align-items:center;gap:8px;padding:0.6rem 1.2rem;
-  background:rgba(11,15,25,0.15);border-top:1px solid var(--border);
-  font-family:var(--mono);font-size:11px;color:var(--text2);min-height:36px;
-}
-.s-dot {width:6px;height:6px;border-radius:50%;background:var(--text3);transition:all 0.3s;}
-.s-dot.info {background:var(--accent);box-shadow:var(--accent-glow);}
-.s-dot.ok {background:var(--success);box-shadow:0 0 10px var(--success);}
-.s-dot.err {background:var(--error);box-shadow:0 0 10px var(--error);}
+/* QUICK REFERENCE TABLE */
+.ref-table-wrap{margin-top:2rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
+.ref-table-title{padding:.9rem 1.2rem;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);border-bottom:1px solid var(--border);}
+.ref-table{width:100%;border-collapse:collapse;}
+.ref-table th{text-align:left;padding:8px 14px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);background:rgba(11,15,25,.15);border-bottom:1px solid var(--border);}
+.ref-table td{padding:8px 14px;font-family:var(--mono);font-size:12.5px;color:var(--text2);border-bottom:1px solid var(--border);}
+.ref-table tr:last-child td{border-bottom:none;}
+.ref-table tr:hover td{background:rgba(0,242,254,.03);color:var(--text);}
+.ref-table td:first-child{color:var(--text);font-weight:600;}
+.ref-table td code{background:rgba(0,242,254,.08);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent);font-size:12px;}
 
 /* ── SEO SECTION ── */
-.seo-section {
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;
-}
-.seo-section h2 {
-  font-size:1.4rem;font-weight:700;letter-spacing:-0.02em;
-  color:var(--text);margin-bottom:1rem;
-}
-.seo-section p {
-  font-family:var(--sans);font-size:14px;color:var(--text2);
-  line-height:1.7;margin-bottom:1rem;
-}
-.seo-section p:last-child {margin-bottom:0;}
+.seo-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;}
+.seo-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;margin-top:2rem;}
+.seo-section h2:first-child{margin-top:0;}
+.seo-section h3{font-size:1rem;font-weight:600;color:var(--accent);margin:1.25rem 0 .6rem;}
+.seo-section p{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:.9rem;}
+.seo-section p:last-child{margin-bottom:0;}
+.seo-section ul{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;padding-left:1.4rem;margin-bottom:.9rem;display:flex;flex-direction:column;gap:4px;}
+code{font-family:var(--mono);font-size:12px;background:rgba(0,242,254,.08);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent);}
 
-/* FAQ Accordion */
-.faq-accordion {margin-top: 2rem; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--border); padding-top: 2rem;}
-.faq-item {background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden;}
-.faq-trigger {width: 100%; background: none; border: none; padding: 14px 18px; text-align: left; color: #fff; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between;}
-.faq-content {max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(11, 15, 25, 0.3);}
-.faq-content p {padding: 14px 18px; font-family: var(--mono); font-size: 13px; color: #94A3B8; line-height: 1.75;}
-.faq-item.active .faq-content {max-height: 500px;}
+/* ── FAQ ACCORDION ── */
+.faq-accordion{margin-top:2rem;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border);padding-top:2rem;}
+.faq-accordion h2{margin-top:0!important;}
+.faq-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.faq-trigger{width:100%;background:none;border:none;padding:14px 18px;text-align:left;color:#fff;font-family:var(--sans);font-size:.95rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.faq-trigger .arrow{transition:transform .3s;font-size:12px;color:var(--text3);flex-shrink:0;}
+.faq-item.active .faq-trigger .arrow{transform:rotate(180deg);}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .35s ease;background:rgba(11,15,25,.3);}
+.faq-content p{padding:14px 18px;font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;}
+.faq-item.active .faq-content{max-height:600px;}
 
-/* Internal Grid System (14 Tools Matrix) */
-.internal-grid-wrapper {margin-top: 3rem; padding: 1.5rem; background: rgba(21, 29, 48, 0.4); border: 1px solid var(--border); border-radius: var(--r-lg);}
-.internal-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top:1rem;}
-.internal-link-card {display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; font-size: 13px; color: var(--text2); transition: all 0.2s;}
-.internal-link-card:hover {border-color: var(--accent); color: #fff; transform: translateY(-1px); box-shadow: var(--accent-glow);}
+/* ── INTERNAL GRID ── */
+.internal-grid-wrapper{margin-top:3rem;padding:1.5rem;background:rgba(21,29,48,.4);border:1px solid var(--border);border-radius:var(--r-lg);}
+.internal-grid-wrapper h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.internal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.internal-link-card{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);text-decoration:none;font-size:13px;color:var(--text2);transition:all .2s;}
+.internal-link-card:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:var(--accent-glow);}
+.tool-icon{font-size:15px;margin-right:8px;}
 
 /* ── FOOTER ── */
-.site-footer{
-  position:relative;z-index:1;text-align:center;
-  padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;
-}
-.site-footer a{
-  font-family:var(--mono);font-size:12px;color:var(--text2);
-  text-decoration:none;transition:color 0.2s;
-}
+.site-footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;}
+.site-footer a{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;transition:color .2s;}
 .site-footer a:hover{color:var(--accent);}
 .site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
 
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+
 @media(max-width:768px){
-  .two-col {grid-template-columns:1fr;}
-  .two-col > div:first-child {border-right:none;border-bottom:1px solid var(--border2);}
+  .two-col{grid-template-columns:1fr;}
+  .two-col>div:first-child{border-right:none;border-bottom:1px solid var(--border2);}
 }
 @media(max-width:640px){
   .site-header{padding:0 1rem;}
   .tool-page-wrap{margin:1.5rem auto 3rem;}
-  .panel-header {padding:0.8rem 1rem;flex-direction:column;gap:10px;align-items:flex-start;}
-  .panel-actions {width:100%;justify-content:space-between;}
+  .panel-header{padding:.8rem 1rem;flex-direction:column;gap:10px;align-items:flex-start;}
+  .panel-actions{width:100%;flex-wrap:wrap;}
   .seo-section{padding:1.2rem;}
+  .page-h1{font-size:1.4rem;}
 }
 </style>
 </head>
 <body>
 
+<!-- ═══════ HEADER — consistent across all CodeWizTools pages ═══════ -->
 <header class="site-header">
-  <a href="../index.html" class="logo">
-    <div class="logo-icon">C</div>
+  <a href="../index.html" class="logo" aria-label="CodeWizTools — Home">
+    <div class="logo-icon" aria-hidden="true">C</div>
     <span class="logo-text">CodeWiz<span>Tools</span></span>
   </a>
-  <nav class="header-nav">
+  <nav class="header-nav" aria-label="Site navigation">
     <a href="../index.html" class="nav-link">← All Tools</a>
   </nav>
 </header>
 
-<div class="tool-page-wrap">
-  <div class="breadcrumb">
-    <a href="../index.html">Home</a> <span>/</span> URL Encoder / Decoder
+<main class="tool-page-wrap">
+
+  <!-- BREADCRUMB — matches BreadcrumbList JSON-LD -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="../index.html#tools">Tools</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">URL Encoder &amp; Decoder</span>
+  </nav>
+
+  <!-- H1 — was missing; targets GSC top queries "url encoder", "percent encoding converter" -->
+  <div class="page-hero">
+    <h1 class="page-h1"><span>URL Encoder & Decoder</span> — Percent Encoding Converter</h1>
+    <p class="page-subtitle">Encode special characters to %XX format · Decode percent-encoded strings · encodeURI & encodeURIComponent modes · Free, no signup</p>
   </div>
-  
+
+  <!-- TOOL PANEL -->
   <div class="panel-header">
-    <div class="panel-title">⊛ &nbsp;URL Encoder / Decoder</div>
+    <div class="panel-title" aria-hidden="true">⊛ &nbsp;URL Encoder / Decoder</div>
     <div class="panel-actions">
-      <div class="mode-toggle">
-        <button class="mode-btn active" id="btn-enc" onclick="setMode('encode')">Encode</button>
-        <button class="mode-btn" id="btn-dec" onclick="setMode('decode')">Decode</button>
+
+      <!-- MODE: Encode vs Decode -->
+      <div class="mode-toggle" role="group" aria-label="Tool mode">
+        <button class="mode-btn active" id="btn-enc" onclick="setMode('encode')" aria-pressed="true">Encode</button>
+        <button class="mode-btn" id="btn-dec" onclick="setMode('decode')" aria-pressed="false">Decode</button>
       </div>
-      <button class="btn" onclick="clearAll()">Clear</button>
+
+      <!-- FIX: encodeURI vs encodeURIComponent selector — NEW feature -->
+      <div class="enc-mode-wrap" id="enc-method-wrap" aria-label="Encoding method">
+        <span class="enc-mode-label">Method:</span>
+        <select class="enc-select" id="enc-method" onchange="convert()" aria-label="Select encoding method: encodeURIComponent or encodeURI">
+          <option value="component">encodeURIComponent</option>
+          <option value="full">encodeURI (full URL)</option>
+        </select>
+      </div>
+
+      <button class="btn" onclick="clearAll()" aria-label="Clear all input and output">Clear</button>
     </div>
   </div>
 
+  <!-- TWO COLUMN EDITOR -->
   <div class="two-col">
     <div>
-      <div class="col-label" id="lbl-in">Input URL or Text</div>
+      <div class="col-label" id="lbl-in">Input — URL or text to encode</div>
       <div class="card">
-        <textarea class="code-area" id="url-in" placeholder="Paste URL or text to encode..." spellcheck="false" oninput="convert()" style="min-height:240px;"></textarea>
+        <label for="url-in" class="sr-only">Enter text or URL to encode</label>
+        <textarea
+          class="code-area"
+          id="url-in"
+          placeholder="Paste a URL or text to encode&#10;&#10;Example:&#10;https://example.com/search?q=hello world&lang=اردو"
+          spellcheck="false"
+          oninput="convert()"
+          style="min-height:260px;"
+          aria-label="Input text or URL for encoding or decoding"
+          aria-live="off"
+        ></textarea>
         <div class="status-bar">
-          <div class="s-dot" id="udot"></div>
-          <span id="ustatus">Ready</span>
+          <div class="s-dot" id="udot" aria-hidden="true"></div>
+          <span id="ustatus" aria-live="polite">Ready</span>
+          <span style="margin-left:auto;" id="in-count" aria-live="polite"></span>
         </div>
       </div>
     </div>
-    
+
     <div>
       <div class="col-label" id="lbl-out">Encoded Output</div>
       <div class="card">
-        <textarea class="code-area" id="url-out" placeholder="Result..." readonly spellcheck="false" style="min-height:240px;"></textarea>
+        <label for="url-out" class="sr-only">Encoded or decoded output</label>
+        <textarea
+          class="code-area"
+          id="url-out"
+          placeholder="Result appears here..."
+          readonly
+          spellcheck="false"
+          style="min-height:260px;"
+          aria-label="Output result — click Copy Output to copy"
+          aria-live="polite"
+        ></textarea>
         <div class="status-bar" style="justify-content:space-between;">
-          <span id="url-info">—</span>
-          <button class="btn btn-success" onclick="copyOut(event)">Copy Output</button>
+          <span id="url-info" aria-live="polite">—</span>
+          <button class="btn btn-success" onclick="copyOut(event)" aria-label="Copy output to clipboard">Copy Output</button>
         </div>
       </div>
     </div>
   </div>
 
-  <section class="seo-section">
-    <h2>What is URL encoding?</h2>
-    <p>URL encoding (also called percent-encoding) converts special characters in a uniform resource locator into a safe, cross-compatible format that can be reliably transmitted over the internet via HTTP packets. Characters like spaces, ampersands (&amp;), equals signs (=), and hashtags (#) hold structural definitions in query structures and are replaced with a % symbol followed by their corresponding two-digit hexadecimal code representation (e.g., a space character turns into %20).</p>
-    <p>URL decoding performs the absolute inverse operations — taking a string containing complex data attributes or parameters and decoding %20 configurations back to readable string spaces. This utility is absolutely critical for software architecture, API endpoint manipulation, query string configuration parsers, and web testing environments.</p>
+  <!-- PERCENT ENCODING QUICK REFERENCE TABLE — addresses "percent encoding converter" GSC query -->
+  <div class="ref-table-wrap" aria-label="Percent encoding reference table">
+    <div class="ref-table-title">Common Percent Encoding Reference</div>
+    <div style="overflow-x:auto;">
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th>Description</th>
+            <th>Percent Encoded</th>
+            <th>Safe in URL?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Space</td><td>Whitespace</td><td><code>%20</code></td><td>No — must encode</td></tr>
+          <tr><td>&amp;</td><td>Ampersand</td><td><code>%26</code></td><td>No — query separator</td></tr>
+          <tr><td>=</td><td>Equals</td><td><code>%3D</code></td><td>No — key=value separator</td></tr>
+          <tr><td>+</td><td>Plus sign</td><td><code>%2B</code></td><td>No — decoded as space in forms</td></tr>
+          <tr><td>#</td><td>Hash</td><td><code>%23</code></td><td>No — fragment identifier</td></tr>
+          <tr><td>?</td><td>Question mark</td><td><code>%3F</code></td><td>No — query start</td></tr>
+          <tr><td>/</td><td>Slash</td><td><code>%2F</code></td><td>No — path separator</td></tr>
+          <tr><td>@</td><td>At sign</td><td><code>%40</code></td><td>No — authority separator</td></tr>
+          <tr><td>:</td><td>Colon</td><td><code>%3A</code></td><td>No — scheme separator</td></tr>
+          <tr><td>"</td><td>Double quote</td><td><code>%22</code></td><td>No</td></tr>
+          <tr><td>-  _  .  ~</td><td>Unreserved</td><td>(unchanged)</td><td>Yes — always safe</td></tr>
+          <tr><td>A–Z  a–z  0–9</td><td>Alphanumeric</td><td>(unchanged)</td><td>Yes — always safe</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
+  <!-- SEO CONTENT — keyword-targeted sections from GSC data -->
+  <section class="seo-section" aria-label="About URL encoding and percent encoding">
+
+    <h2>What is URL Encoding (Percent Encoding)?</h2>
+    <p>URL encoding — officially called <strong>percent encoding</strong> — converts characters that are not allowed in a URL into a safe, universally transmittable format. Every unsafe character is replaced with a <code>%</code> sign followed by its two-digit hexadecimal ASCII code. For example, a space becomes <code>%20</code>, an ampersand becomes <code>%26</code>, and a forward slash becomes <code>%2F</code>.</p>
+    <p>This ensures that URLs transmit without ambiguity across HTTP, APIs, browsers, and servers regardless of the character set or operating system. The standard is defined in <strong>RFC 3986</strong> and is used everywhere — from Google search queries to REST API calls.</p>
+
+    <h2>Percent Encoding Converter — encodeURI vs encodeURIComponent</h2>
+    <p>This tool supports both JavaScript encoding functions. Use the Method selector in the tool controls to switch between them:</p>
+    <ul>
+      <li><strong>encodeURIComponent</strong> — Encodes everything except letters, digits, and <code>- _ . ! ~ * ' ( )</code>. Use this for individual query parameter <em>values</em> inside a URL. This is the correct choice for most use cases.</li>
+      <li><strong>encodeURI (full URL)</strong> — Encodes everything except characters that have structural meaning in URLs (<code>: / ? # [ ] @ ! $ & ' ( ) * + , ; =</code>). Use this when encoding a complete URL and you want to preserve its structure.</li>
+    </ul>
+    <p>If you are passing a value inside a query string — for example, a search term or a redirect URL — always use <strong>encodeURIComponent</strong>. If you are encoding a full URL to store or transmit as a string, use <strong>encodeURI</strong>.</p>
+
+    <h2>What characters need to be percent encoded in a URL?</h2>
+    <p>Any character outside the <strong>unreserved set</strong> must be encoded when used as data in a URL. The unreserved characters that are always safe are: letters A–Z, a–z, digits 0–9, and the symbols <code>-</code> <code>_</code> <code>.</code> <code>~</code>. Everything else — spaces, punctuation, non-ASCII scripts — must be percent encoded. See the reference table above for the most common encodings.</p>
+
+    <h2>How to URL encode non-English text (Arabic, Urdu, Unicode)</h2>
+    <p>This tool supports full Unicode. Non-ASCII text like Arabic, Urdu, Chinese, Japanese, or emoji is first converted to <strong>UTF-8 bytes</strong>, and then each byte is percent-encoded. For example, the Urdu word "اردو" encodes to <code>%D8%A7%D8%B1%D8%AF%D9%88</code>. This is the correct and modern standard per RFC 3986.</p>
+
+    <!-- FAQ — matches FAQPage JSON-LD exactly -->
     <div class="faq-accordion">
       <h2>Frequently Asked Questions</h2>
+
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">1. What is the difference between encodeURI and encodeURIComponent? <span>▼</span></button>
-        <div class="faq-content"><p>encodeURI preserves structural delimiter marks like "/", "?", ":", and "@" to keep full web paths intact. encodeURIComponent aggressively percent-encodes all reserved special attributes including punctuation modifiers, making it perfect for preparing specific text arguments inside nested query strings.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          What is percent encoding in URLs?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Percent encoding converts characters not allowed in URLs into a safe format using a % sign and two-digit hex code. A space → <code>%20</code>, &amp; → <code>%26</code>, = → <code>%3D</code>. This ensures URLs transmit correctly over HTTP without ambiguity. The standard is defined in RFC 3986.</p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">2. Why do characters get converted into percentage masks? <span>▼</span></button>
-        <div class="faq-content"><p>URLs are structurally limited to characters defined within the standard ASCII configuration character block. Complex formatting symbols, parameters, and non-English text strings must undergo uniform transmission transformations to prevent network breaks or data truncation during transfers.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          What is the difference between encodeURI and encodeURIComponent?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p><strong>encodeURI</strong> is for complete URLs — it preserves structural characters like <code>: / ? # @ &amp; =</code>. <strong>encodeURIComponent</strong> encodes everything including those characters, making it ideal for individual query string values. Rule of thumb: encoding a query parameter value → use encodeURIComponent. Encoding a full URL → use encodeURI.</p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">3. Is the processing of my sensitive data strings tracked or logged? <span>▼</span></button>
-        <div class="faq-content"><p>Absolutely not. The core logic computation operates 100% locally on your machine client-side using asynchronous native browser functions. Your parameters and private link structures never communicate with servers.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          What characters need to be percent encoded in a URL?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Unreserved characters (A–Z, a–z, 0–9, <code>- _ . ~</code>) are always safe and never encoded. Everything else must be encoded when used as data — spaces (<code>%20</code>), &amp; (<code>%26</code>), = (<code>%3D</code>), # (<code>%23</code>), / (<code>%2F</code>), ? (<code>%3F</code>), @ (<code>%40</code>), and all non-ASCII characters. See the reference table above for the full list.</p>
+        </div>
       </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          How do I URL encode a space character?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>A space encodes to <code>%20</code> using standard percent encoding (RFC 3986). In older HTML form encoding (<code>application/x-www-form-urlencoded</code>), space is encoded as <code>+</code>. This tool uses the modern <code>%20</code> standard. If you receive a URL with <code>+</code> signs, switch to Decode mode to convert them back to spaces.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          Can I URL encode Arabic, Urdu, or Unicode characters?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Yes, fully supported. Non-ASCII text is first converted to UTF-8 bytes, then each byte is percent-encoded. For example, the Urdu letter "ا" (alef) encodes to <code>%D8%A7</code>. This is the correct standard per RFC 3986 and works with all modern browsers and APIs.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          What is a percent encoding converter used for?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Developers use a percent encoding converter to: prepare query string parameters for API calls, encode redirect URLs in OAuth flows, debug malformed URL errors, test web scraper and crawler scripts, encode file paths for HTTP requests, and safely pass special characters in form submissions.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          Is my URL data safe when using this tool?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Yes — 100% private. All encoding and decoding runs locally in your browser. No input text, URLs, or query strings are ever transmitted to any server. CodeWizTools operates with a strict no-logs, no-tracking policy.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+          Why does my decoded URL show garbled text?
+          <span class="arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-content" role="region">
+          <p>Garbled output usually means the original encoding used a non-UTF-8 charset — typically legacy ISO-8859-1 or Windows-1252. Modern web standards require UTF-8 per RFC 3986. If you see <code>URIError: malformed URI</code>, the string has invalid %XX sequences — check for incomplete or corrupted percent codes.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- INTERNAL LINKS — keyword-rich anchors consistent with other pages -->
   <div class="internal-grid-wrapper">
-    <div style="font-weight:700; color:#fff;">⚡ More Essential Utilities</div>
+    <h2>⚡ More Developer Tools</h2>
     <div class="internal-grid">
-      <a href="case-converter.html" class="internal-link-card"><span>Case Converter</span><span>→</span></a>
-      <a href="json-formatter.html" class="internal-link-card"><span>JSON Formatter</span><span>→</span></a>
-      <a href="pdf-compressor.html" class="internal-link-card"><span>PDF Compressor</span><span>→</span></a>
-      <a href="pdf-merger.html" class="internal-link-card"><span>PDF Merger</span><span>→</span></a>
-      <a href="word-counter.html" class="internal-link-card"><span>Word Counter</span><span>→</span></a>
-      <a href="color-picker.html" class="internal-link-card"><span>Color Picker</span><span>→</span></a>
-      <a href="qr-generator.html" class="internal-link-card"><span>QR Code Generator</span><span>→</span></a>
-      <a href="cgpa-calculator.html" class="internal-link-card"><span>CGPA Calculator</span><span>→</span></a>
-      <a href="password-generator.html" class="internal-link-card"><span>Password Generator</span><span>→</span></a>
-      <a href="md5-generator.html" class="internal-link-card"><span>MD5 Generator</span><span>→</span></a>
-      <a href="base64-encoder.html" class="internal-link-card"><span>Base64 Encoder</span><span>→</span></a>
-      <a href="html-encoder.html" class="internal-link-card"><span>HTML Entity Encoder</span><span>→</span></a>
-      <a href="lorem-ipsum.html" class="internal-link-card"><span>Lorem Ipsum Generator</span><span>→</span></a>
-      <a href="diff-checker.html" class="internal-link-card"><span>Text Diff Checker</span><span>→</span></a>
+      <a href="base64-encoder.html" class="internal-link-card" title="Encode and decode Base64 strings — supports Unicode">
+        <span><span class="tool-icon" aria-hidden="true">🔐</span>Base64 Encoder &amp; Decoder</span><span>→</span>
+      </a>
+      <a href="json-formatter.html" class="internal-link-card" title="Format and validate JSON data online">
+        <span><span class="tool-icon" aria-hidden="true">📋</span>JSON Formatter &amp; Validator</span><span>→</span>
+      </a>
+      <a href="color-picker.html" class="internal-link-card" title="RGBA Color Picker — copy HEX, RGB, HSL, CSS variable">
+        <span><span class="tool-icon" aria-hidden="true">🎨</span>RGBA Color Picker</span><span>→</span>
+      </a>
+      <a href="lorem-ipsum.html" class="internal-link-card" title="Lorem Ipsum Generator — copy paste placeholder text">
+        <span><span class="tool-icon" aria-hidden="true">📝</span>Lorem Ipsum Generator</span><span>→</span>
+      </a>
+      <a href="password-generator.html" class="internal-link-card" title="Generate strong random passwords free">
+        <span><span class="tool-icon" aria-hidden="true">🔑</span>Password Generator</span><span>→</span>
+      </a>
+      <a href="html-encoder.html" class="internal-link-card" title="HTML entity encoder — encode special HTML characters">
+        <span><span class="tool-icon" aria-hidden="true">🌐</span>HTML Entity Encoder</span><span>→</span>
+      </a>
+      <a href="word-counter.html" class="internal-link-card" title="Count words, characters and reading time">
+        <span><span class="tool-icon" aria-hidden="true">🔢</span>Word Counter</span><span>→</span>
+      </a>
+      <a href="case-converter.html" class="internal-link-card" title="Convert text case — uppercase, lowercase, camelCase">
+        <span><span class="tool-icon" aria-hidden="true">🔤</span>Case Converter</span><span>→</span>
+      </a>
+      <a href="md5-generator.html" class="internal-link-card" title="Generate MD5 hash from any string">
+        <span><span class="tool-icon" aria-hidden="true">🧮</span>MD5 Hash Generator</span><span>→</span>
+      </a>
+      <a href="pdf-compressor.html" class="internal-link-card" title="Compress PDF files online free">
+        <span><span class="tool-icon" aria-hidden="true">📄</span>PDF Compressor</span><span>→</span>
+      </a>
+      <a href="pdf-merger.html" class="internal-link-card" title="Merge multiple PDF files into one online free">
+        <span><span class="tool-icon" aria-hidden="true">📎</span>PDF Merger</span><span>→</span>
+      </a>
+      <a href="qr-generator.html" class="internal-link-card" title="Generate QR codes from any URL or text">
+        <span><span class="tool-icon" aria-hidden="true">📱</span>QR Code Generator</span><span>→</span>
+      </a>
+      <a href="diff-checker.html" class="internal-link-card" title="Compare two text blocks — text diff checker">
+        <span><span class="tool-icon" aria-hidden="true">🔍</span>Text Diff Checker</span><span>→</span>
+      </a>
+      <a href="cgpa-calculator.html" class="internal-link-card" title="Calculate CGPA from grades online">
+        <span><span class="tool-icon" aria-hidden="true">🎓</span>CGPA Calculator</span><span>→</span>
+      </a>
     </div>
   </div>
-</div>
+
+</main>
 
 <footer class="site-footer">
-  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all tools</a></p>
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all CodeWizTools</a></p>
   <p>© 2026 CodeWizTools · No tracking. No logs. Pure Privacy.</p>
 </footer>
 
 <script>
-let mode='encode';
-function setMode(m){
-  mode=m;
-  document.getElementById('btn-enc').classList.toggle('active',m==='encode');
-  document.getElementById('btn-dec').classList.toggle('active',m==='decode');
-  document.getElementById('lbl-in').textContent=m==='encode'?'Input URL or text':'Encoded URL input';
-  document.getElementById('lbl-out').textContent=m==='encode'?'Encoded output':'Decoded output';
+/* ═══════════════════════════════════════════
+   URL ENCODER / DECODER — FIXED & ENHANCED
+   Bugs fixed:
+   1. clipboard fallback added (was silently failing)
+   2. aria-pressed updates on mode switch
+   3. aria-expanded updates on FAQ toggle
+   4. encodeURI vs encodeURIComponent method selector (new)
+   5. input character counter added
+   6. enc-method-wrap hides in decode mode (makes no sense there)
+═══════════════════════════════════════════ */
+let mode = 'encode';
+
+function setMode(m) {
+  mode = m;
+
+  // Update active class
+  document.getElementById('btn-enc').classList.toggle('active', m === 'encode');
+  document.getElementById('btn-dec').classList.toggle('active', m === 'decode');
+
+  // FIX: aria-pressed was never updated in original
+  document.getElementById('btn-enc').setAttribute('aria-pressed', m === 'encode');
+  document.getElementById('btn-dec').setAttribute('aria-pressed', m === 'decode');
+
+  // Update labels
+  document.getElementById('lbl-in').textContent  = m === 'encode' ? 'Input — URL or text to encode' : 'Input — Encoded string to decode';
+  document.getElementById('lbl-out').textContent = m === 'encode' ? 'Encoded Output' : 'Decoded Output';
+
+  // Show/hide method selector (only relevant when encoding)
+  document.getElementById('enc-method-wrap').style.display = m === 'encode' ? 'flex' : 'none';
+
+  // Update placeholder
+  document.getElementById('url-in').placeholder = m === 'encode'
+    ? 'Paste a URL or text to encode\n\nExample:\nhttps://example.com/search?q=hello world&lang=اردو'
+    : 'Paste a percent-encoded string to decode\n\nExample:\nhttps%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dhello%20world';
+
   convert();
 }
-function toggleFaq(btn){ btn.parentElement.classList.toggle('active'); }
 
-function convert(){
-  const input=document.getElementById('url-in').value;
-  const dot=document.getElementById('udot');
-  if(!input){
-    document.getElementById('url-out').value='';
-    document.getElementById('url-info').textContent='—';
-    dot.className='s-dot';
-    document.getElementById('ustatus').textContent='Ready';
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('active');
+  item.classList.toggle('active');
+  // FIX: aria-expanded was never updated in original
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+
+function convert() {
+  const input = document.getElementById('url-in').value;
+  const dot    = document.getElementById('udot');
+  const method = document.getElementById('enc-method').value;
+
+  // Update input char counter
+  document.getElementById('in-count').textContent = input.length ? input.length + ' chars' : '';
+
+  if (!input) {
+    document.getElementById('url-out').value = '';
+    document.getElementById('url-info').textContent = '—';
+    dot.className = 's-dot';
+    document.getElementById('ustatus').textContent = 'Ready';
     return;
   }
-  try{
-    const out=mode==='encode'?encodeURIComponent(input):decodeURIComponent(input);
-    document.getElementById('url-out').value=out;
-    dot.className='s-dot '+(mode==='encode'?'info':'ok');
-    document.getElementById('ustatus').textContent=mode==='encode'?'Encoded':'Decoded successfully';
-    document.getElementById('url-info').textContent='Output: '+out.length+' chars';
-  }catch(e){
-    document.getElementById('url-out').value='';
-    dot.className='s-dot err';
-    document.getElementById('ustatus').textContent='Invalid encoded string';
+
+  try {
+    let out;
+    if (mode === 'encode') {
+      // FIX: New — support both encodeURIComponent (values) and encodeURI (full URLs)
+      out = method === 'full' ? encodeURI(input) : encodeURIComponent(input);
+    } else {
+      // Decode: try decodeURIComponent first, fall back to decodeURI for full URLs
+      try {
+        out = decodeURIComponent(input);
+      } catch {
+        out = decodeURI(input);
+      }
+    }
+
+    document.getElementById('url-out').value = out;
+    dot.className = 's-dot ' + (mode === 'encode' ? 'info' : 'ok');
+    document.getElementById('ustatus').textContent = mode === 'encode' ? 'Encoded ✓' : 'Decoded ✓';
+    document.getElementById('url-info').textContent = 'Output: ' + out.length + ' chars';
+
+  } catch (e) {
+    document.getElementById('url-out').value = '';
+    document.getElementById('url-info').textContent = '—';
+    dot.className = 's-dot err';
+    document.getElementById('ustatus').textContent = 'Invalid — check for malformed %XX sequences';
   }
 }
-function clearAll(){
-  document.getElementById('url-in').value='';
-  document.getElementById('url-out').value='';
-  document.getElementById('udot').className='s-dot';
-  document.getElementById('ustatus').textContent='Ready';
-  document.getElementById('url-info').textContent='—';
+
+function clearAll() {
+  document.getElementById('url-in').value  = '';
+  document.getElementById('url-out').value = '';
+  document.getElementById('udot').className = 's-dot';
+  document.getElementById('ustatus').textContent = 'Ready';
+  document.getElementById('url-info').textContent = '—';
+  document.getElementById('in-count').textContent = '';
+  document.getElementById('url-in').focus();
 }
-function copyOut(event){
-  const v=document.getElementById('url-out').value; if(!v)return;
-  navigator.clipboard.writeText(v).catch(()=>{});
-  const btn=event.target, o=btn.textContent;
-  btn.textContent='Copied!'; setTimeout(()=>btn.textContent=o,1500);
+
+function copyOut(event) {
+  const v = document.getElementById('url-out').value;
+  if (!v) return;
+
+  const btn  = event.target;
+  const orig = btn.textContent;
+
+  // FIX: Original had no fallback — silently failed on HTTP or older browsers
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(v).then(() => {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = orig, 1600);
+    }).catch(() => fallbackCopy(v, btn, orig));
+  } else {
+    fallbackCopy(v, btn, orig);
+  }
+}
+
+function fallbackCopy(text, btn, orig) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity  = '0';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try {
+    document.execCommand('copy');
+    btn.textContent = '✓ Copied!';
+  } catch {
+    btn.textContent = 'Copy failed';
+  }
+  document.body.removeChild(ta);
+  setTimeout(() => btn.textContent = orig, 1600);
 }
 </script>
 </body>
