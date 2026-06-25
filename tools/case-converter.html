@@ -3,437 +3,504 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Case Converter — UPPERCASE, lowercase, Title Case | CodeWizTools</title>
-<meta name="description" content="Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and kebab-case instantly. Free online client-side case converter.">
-<meta name="keywords" content="case converter, uppercase converter, lowercase converter, title case, camelcase, snake_case, text case changer, kebab-case, pascalcase">
+
+<title>Case Converter — UPPERCASE, lowercase, camelCase, snake_case Online | CodeWizTools</title>
+<meta name="description" content="Free online case converter. Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case and kebab-case instantly. 100% browser-based, no signup.">
+<meta name="keywords" content="case converter, text case converter, uppercase converter, lowercase converter, camelcase converter, snake_case converter, title case converter, kebab case converter, online case converter, text converter uppercase lowercase, sentence case converter, pascal case converter">
 <meta name="author" content="CodeWizTools">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://codewiztools.com/tools/case-converter.html">
 
-<meta property="og:title" content="Free Online Case Converter — CodeWizTools">
-<meta property="og:description" content="Convert between UPPERCASE, lowercase, Title Case, camelCase, and more instantly. 100% private.">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Case Converter — UPPERCASE, lowercase, camelCase, snake_case | CodeWizTools">
+<meta property="og:description" content="Convert text to any case format instantly. UPPERCASE, lowercase, Title Case, camelCase, snake_case, kebab-case and more. 100% browser-based, no signup.">
 <meta property="og:url" content="https://codewiztools.com/tools/case-converter.html">
+<meta property="og:site_name" content="CodeWizTools">
+<meta property="og:image" content="https://codewiztools.com/assets/og-case-converter.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Case Converter tool on CodeWizTools">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case Converter — UPPERCASE, lowercase, camelCase, snake_case | CodeWizTools">
+<meta name="twitter:description" content="Convert text to any case format instantly. Free, no signup, 100% browser-based.">
+<meta name="twitter:image" content="https://codewiztools.com/assets/og-case-converter.png">
+<meta name="twitter:site" content="@CodeWizTools">
+
+<meta name="theme-color" content="#00F2FE">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://codewiztools.com/tools/case-converter.html#webapp",
+  "name": "Case Converter",
+  "url": "https://codewiztools.com/tools/case-converter.html",
+  "description": "Free online text case converter. Convert any text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, or kebab-case instantly. 100% browser-based, no data sent to server.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "creator": { "@type": "Organization", "name": "CodeWizTools", "url": "https://codewiztools.com" },
+  "featureList": [
+    "UPPERCASE conversion",
+    "lowercase conversion",
+    "Title Case conversion",
+    "Sentence case conversion",
+    "camelCase conversion",
+    "PascalCase conversion",
+    "snake_case conversion",
+    "kebab-case conversion",
+    "Real-time conversion on every keystroke",
+    "One-click copy to clipboard with fallback",
+    "100% browser-based — no data sent to server"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between camelCase and PascalCase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In camelCase the first word is all lowercase and each subsequent word starts with a capital letter — for example: myVariableName. In PascalCase (also called UpperCamelCase) every word including the first starts with a capital letter — for example: MyVariableName. camelCase is used for variable names and function names in JavaScript, Java, and Swift. PascalCase is used for class names, component names in React, and type names in TypeScript."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use snake_case vs kebab-case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "snake_case uses underscores between words (my_variable_name) and is the standard for Python variables, Ruby variables, database column names, and file names in many systems. kebab-case uses hyphens between words (my-variable-name) and is the standard for CSS class names, HTML attributes, URL slugs, and package names in npm. The key difference: underscores are valid in most variable name contexts; hyphens are not valid in most programming language variable names."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Title Case and how is it different from Sentence case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Title Case capitalizes the first letter of every word — for example: The Quick Brown Fox. Sentence case capitalizes only the first letter of the first word and any proper nouns — for example: The quick brown fox. Title Case is used for headings, article titles, and product names. Sentence case is used for UI labels, button text, and subheadings in modern design systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this case converter work for programming variable names?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The camelCase, PascalCase, snake_case, and kebab-case modes are designed specifically for converting plain text into valid programming identifiers. Type or paste plain English phrases and the tool converts them to the correct format — spaces and special characters are removed and replaced with the appropriate separator for each case style."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text safe when using this case converter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100% private. All conversion runs entirely in your browser using JavaScript. Your text is never sent to any server. CodeWizTools has a strict no-logs, no-tracking policy — your content stays on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert text to CSS class names using kebab-case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click the kebab-case button and paste your text. The converter removes spaces and replaces them with hyphens, and converts all characters to lowercase — producing valid CSS class names ready to paste into your stylesheet. For example: My Button Component becomes my-button-component."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert URL slugs with this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use kebab-case mode to convert a title or phrase into a URL-friendly slug. For example: How to Build a Website in 2026 becomes how-to-build-a-website-in-2026. This is the standard URL slug format used by WordPress, Ghost, and most CMS platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which case format should I use for Python variable names?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Python follows PEP 8 style guidelines: use snake_case for variable names, function names, and module names — for example: user_profile, calculate_total, parse_json. Use PascalCase for class names — for example: UserProfile, DataProcessor. Use UPPERCASE with underscores for constants — for example: MAX_RETRIES, DEFAULT_TIMEOUT."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://codewiztools.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://codewiztools.com/#tools" },
+    { "@type": "ListItem", "position": 3, "name": "Case Converter", "item": "https://codewiztools.com/tools/case-converter.html" }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 
 <style>
-:root {
-  --bg: #0B0F19;
-  --surface: #151D30;
-  --surface2: #1a2440;
-  --surface3: #1f2b4a;
-  --border: rgba(0,242,254,0.08);
-  --border2: rgba(0,242,254,0.18);
-  --accent: #00F2FE;
-  --accent-dim: rgba(0,242,254,0.12);
-  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
-  --success: #10B981;
-  --success-dim: rgba(16,185,129,0.12);
-  --text: #FFFFFF;
-  --text2: #94A3B8;
-  --text3: #4a5568;
-  --mono: 'JetBrains Mono', monospace;
-  --sans: 'Space Grotesk', sans-serif;
-  --r: 10px;
-  --r-lg: 16px;
-}
+:root{--bg:#0B0F19;--surface:#151D30;--surface2:#1a2440;--surface3:#1f2b4a;--border:rgba(0,242,254,0.08);--border2:rgba(0,242,254,0.18);--accent:#00F2FE;--accent-dim:rgba(0,242,254,0.12);--accent-glow:0 0 15px rgba(0,242,254,0.35);--success:#10B981;--success-dim:rgba(16,185,129,0.12);--error:#EF4444;--text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;--mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;--r:10px;--r-lg:16px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
-
-body::before{
-  content:'';position:fixed;inset:0;
-  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
-  background-size:50px 50px;pointer-events:none;z-index:0;
-}
-body::after{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),
-             radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);
-}
-
-/* Header */
-.site-header{
-  position:sticky;top:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2rem;height:62px;
-  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border2);
-}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);}
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.logo-icon{
-  width:34px;height:34px;border-radius:9px;
-  background:linear-gradient(135deg,#00F2FE,#0070f3);
-  display:flex;align-items:center;justify-content:center;
-  font-size:15px;font-weight:800;color:#000;
-  box-shadow:0 0 18px rgba(0,242,254,0.4);
-  flex-shrink:0;
-}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);flex-shrink:0;}
 .logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
 .logo-text span{color:var(--accent);}
-.header-nav{display:flex;align-items:center;}
-.nav-link{
-  font-family:var(--mono);font-size:12px;color:var(--text2);
-  text-decoration:none;padding:6px 14px;border-radius:var(--r);
-  transition:all 0.2s;letter-spacing:0.02em;
-  border:1px solid var(--border);background:rgba(21,29,48,0.5);
-}
+.nav-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 14px;border-radius:var(--r);transition:all 0.2s;border:1px solid var(--border);background:rgba(21,29,48,0.5);}
 .nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
-
-/* Layout */
-.tool-page-wrap {
-  position:relative;z-index:1;
-  max-width:1080px;margin:2rem auto 5rem;padding:0 1.5rem;
-  animation:fadeUp 0.5s ease both;
-}
+.tool-page-wrap{position:relative;z-index:1;max-width:920px;margin:2rem auto 5rem;padding:0 1.5rem;animation:fadeUp 0.5s ease both;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
-
-.breadcrumb {
-  font-family:var(--mono);font-size:11px;color:var(--text3);
-  margin-bottom:1.5rem;display:flex;gap:6px;
-}
-.breadcrumb a {color:var(--text2);text-decoration:none;transition:color 0.2s;}
-.breadcrumb a:hover {color:var(--accent);}
-
-/* Panel header */
-.panel-header {
-  background:var(--surface);border:1px solid var(--border2);
-  border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);
-  padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;
-}
-.panel-title {
-  font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);
-  display:flex;align-items:center;gap:6px;
-}
-.panel-actions {display:flex;gap:8px;}
-
-.btn {
-  font-family:var(--mono);font-size:11px;letter-spacing:0.04em;
-  padding:6px 14px;border-radius:20px;
-  border:1px solid var(--text3);background:transparent;
-  color:var(--text2);cursor:pointer;transition:all 0.3s;outline:none;
-}
-.btn:hover {border-color:var(--text2);color:var(--text);background:rgba(255,255,255,0.03);}
-.btn-success {
-  border-color:var(--success);background:rgba(16,185,129,0.05);color:var(--success);
-}
-.btn-success:hover {
-  background:var(--success);color:#000;box-shadow:0 0 15px rgba(16,185,129,0.3);
-}
-
-/* Case selectors */
-.case-btns {
-  display:flex;gap:8px;flex-wrap:wrap;
-  background:var(--surface);border-left:1px solid var(--border2);border-right:1px solid var(--border2);
-  padding:0.8rem 1.4rem;border-bottom:1px solid var(--border2);
-}
-.case-btn {
-  font-family:var(--mono);font-size:11px;padding:6px 14px;border-radius:20px;
-  border:1px solid var(--border2);background:var(--surface2);color:var(--text2);
-  cursor:pointer;transition:all 0.2s;outline:none;
-}
-.case-btn:hover {color:var(--text);border-color:var(--text3);background:var(--surface3);}
-.case-btn.active {
-  background:var(--accent);border-color:var(--accent);color:#000;
-  font-weight:600;box-shadow:var(--accent-glow);
-}
-
-/* Two-column layout */
-.two-col {
-  display:grid;grid-template-columns:repeat(2,1fr);
-  background:var(--surface);border-left:1px solid var(--border2);
-  border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);
-  border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);
-  overflow:hidden;
-}
-.two-col > div {display:flex;flex-direction:column;}
-.two-col > div:first-child {border-right:1px solid var(--border2);}
-
-.col-label {
-  font-family:var(--mono);font-size:11px;color:var(--text3);
-  padding:0.6rem 1.2rem;background:rgba(11,15,25,0.2);
-  border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:0.04em;
-}
-
-/* Textareas */
-.code-area {
-  background:transparent;border:none;padding:1.2rem;
-  font-family:var(--mono);font-size:14px;color:var(--text);
-  outline:none;transition:all 0.3s;resize:vertical;line-height:1.6;
-  width:100%;height:100%;box-shadow:none;
-}
-.code-area:focus {background:rgba(0,242,254,0.01);}
-.code-area::placeholder {color:var(--text3);}
-.code-area[readonly] {background:rgba(11,15,25,0.1);color:var(--text2);}
-
-/* SEO Block styling */
-.seo-section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
-.seo-section h2{font-size:1.15rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:.75rem;}
-.seo-section h3{font-size:.95rem;font-weight:600;color:var(--text);margin:1rem 0 .5rem;}
-.seo-section p{font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;margin-bottom:.75rem;}
-.seo-section ul{font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;padding-left:1.4rem;margin-bottom:.75rem;}
-
-/* FAQ Accordion Accordion component */
-.faq-accordion {margin-top: 1.5rem; display: flex; flex-direction: column; gap: 10px;}
-.faq-item {background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; transition: all 0.3s ease;}
-.faq-item:hover {border-color: var(--border2); background: rgba(26, 36, 64, 0.7);}
-.faq-trigger {width: 100%; background: none; border: none; padding: 14px 18px; text-align: left; color: #fff; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 15px; outline: none;}
-.faq-icon {font-family: var(--mono); color: var(--accent); transition: transform 0.3s ease; font-size: 12px;}
-.faq-content {max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0, 1, 0, 1); background: rgba(11, 15, 25, 0.3);}
-.faq-content p {padding: 0 18px 14px 18px; font-family: var(--mono); font-size: 13px; color: #94A3B8; line-height: 1.75; margin: 0;}
-.faq-item.active {border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 0 10px rgba(0, 242, 254, 0.03);}
-.faq-item.active .faq-icon {transform: rotate(180deg);}
-.faq-item.active .faq-content {max-height: 1000px; transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);}
-
-/* INTERNAL LINKING MATRIX HUB GRID */
-.internal-grid-wrapper {margin-top: 3rem; padding: 1.5rem; background: rgba(21, 29, 48, 0.4); border: 1px solid var(--border); border-radius: var(--r-lg);}
-.internal-grid-title {font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: #fff; display: flex; align-items: center; gap: 8px;}
-.internal-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;}
-.internal-link-card {display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; font-family: var(--sans); font-size: 13px; color: var(--text2); transition: all 0.2s;}
-.internal-link-card:hover {border-color: var(--accent); background: var(--surface3); color: #fff; transform: translateY(-1px);}
-.internal-link-card .arrow-icon {font-family: var(--mono); color: var(--accent); font-weight: bold; font-size: 11px;}
-
-/* Footer */
-.site-footer{
-  position:relative;z-index:1;text-align:center;
-  padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;
-}
-.site-footer a{
-  font-family:var(--mono);font-size:12px;color:var(--text2);
-  text-decoration:none;transition:color 0.2s;
-}
+.breadcrumb{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:1.5rem;display:flex;gap:6px;align-items:center;}
+.breadcrumb a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--accent);}
+.page-hero{margin-bottom:1.5rem;}
+.page-h1{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.25;margin-bottom:0.45rem;}
+.page-h1 span{color:var(--accent);}
+.page-subtitle{font-size:13px;color:var(--text2);font-family:var(--mono);line-height:1.6;}
+.panel-header{background:var(--surface);border:1px solid var(--border2);border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.panel-title-inner{font-size:1rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px;}
+.panel-actions{display:flex;gap:8px;}
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:6px 14px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .3s;outline:none;}
+.btn:hover{border-color:var(--text2);color:var(--text);}
+.btn-success{border-color:rgba(16,185,129,0.4);color:var(--success);background:var(--success-dim);}
+.btn-success:hover{background:var(--success);color:#000;box-shadow:0 0 15px rgba(16,185,129,0.3);}
+.btn-danger{border-color:rgba(239,68,68,0.4);color:var(--error);}
+.btn-danger:hover{background:rgba(239,68,68,0.08);border-color:var(--error);}
+/* CASE BUTTONS */
+.case-buttons{display:flex;flex-wrap:wrap;gap:8px;padding:1rem 1.4rem;background:var(--surface);border-left:1px solid var(--border2);border-right:1px solid var(--border2);border-bottom:1px solid var(--border);}
+.case-btn{font-family:var(--mono);font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid var(--border2);background:var(--surface2);color:var(--text2);cursor:pointer;transition:all .25s;outline:none;letter-spacing:.02em;}
+.case-btn:hover{border-color:var(--accent);color:var(--text);}
+.case-btn.active{background:var(--accent);border-color:var(--accent);color:#000;font-weight:700;box-shadow:var(--accent-glow);}
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border-left:1px solid var(--border2);border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);overflow:hidden;}
+.two-col>div:first-child{border-right:1px solid var(--border2);}
+.col-label{font-family:var(--mono);font-size:11px;color:var(--text3);padding:.6rem 1.2rem;background:rgba(11,15,25,.2);border-bottom:1px solid var(--border2);text-transform:uppercase;letter-spacing:.04em;}
+.code-area{background:transparent;border:none;padding:1.2rem;font-family:var(--mono);font-size:14px;color:var(--text);outline:none;resize:vertical;line-height:1.6;width:100%;min-height:220px;}
+.code-area::placeholder{color:var(--text3);}
+.code-area[readonly]{background:rgba(11,15,25,.08);color:var(--text2);}
+.out-bar{display:flex;justify-content:flex-end;padding:.6rem 1.2rem;border-top:1px solid var(--border);}
+/* CASE REFERENCE TABLE */
+.ref-table-wrap{margin-top:2rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
+.ref-table-title{padding:.9rem 1.2rem;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);border-bottom:1px solid var(--border);}
+.ref-table{width:100%;border-collapse:collapse;}
+.ref-table th{text-align:left;padding:8px 14px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);background:rgba(11,15,25,.15);border-bottom:1px solid var(--border);}
+.ref-table td{padding:8px 14px;font-family:var(--mono);font-size:12.5px;color:var(--text2);border-bottom:1px solid var(--border);}
+.ref-table tr:last-child td{border-bottom:none;}
+.ref-table tr:hover td{background:rgba(0,242,254,.03);color:var(--text);}
+.ref-table td:first-child{color:var(--accent);font-weight:600;}
+code{font-family:var(--mono);font-size:12px;background:rgba(0,242,254,.08);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent);}
+/* SEO */
+.seo-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;}
+.seo-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;margin-top:2rem;}
+.seo-section h2:first-child{margin-top:0;}
+.seo-section h3{font-size:1rem;font-weight:600;color:var(--accent);margin:1.25rem 0 .6rem;}
+.seo-section p{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:.9rem;}
+.seo-section p:last-child{margin-bottom:0;}
+.seo-section ul{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;padding-left:1.4rem;margin-bottom:.9rem;display:flex;flex-direction:column;gap:4px;}
+/* FAQ */
+.faq-accordion{margin-top:2rem;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border);padding-top:2rem;}
+.faq-accordion h2{margin-top:0!important;}
+.faq-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.faq-trigger{width:100%;background:none;border:none;padding:14px 18px;text-align:left;color:#fff;font-family:var(--sans);font-size:.95rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.faq-trigger .arrow{transition:transform .3s;font-size:12px;color:var(--text3);flex-shrink:0;}
+.faq-item.active .faq-trigger .arrow{transform:rotate(180deg);}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .35s ease;background:rgba(11,15,25,.3);}
+.faq-content p{padding:14px 18px;font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;}
+.faq-item.active .faq-content{max-height:500px;}
+/* INTERNAL */
+.internal-grid-wrapper{margin-top:3rem;padding:1.5rem;background:rgba(21,29,48,.4);border:1px solid var(--border);border-radius:var(--r-lg);}
+.internal-grid-wrapper h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.internal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;}
+.internal-link-card{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);text-decoration:none;font-size:13px;color:var(--text2);transition:all .2s;}
+.internal-link-card:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:var(--accent-glow);}
+.tool-icon{font-size:15px;margin-right:8px;}
+.site-footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;}
+.site-footer a{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;transition:color .2s;}
 .site-footer a:hover{color:var(--accent);}
 .site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
-
-@media(max-width:768px){
-  .two-col {grid-template-columns:1fr;}
-  .two-col > div:first-child {border-right:none;border-bottom:1px solid var(--border2);}
-}
-@media(max-width:640px){
-  .site-header{padding:0 1rem;}
-  .tool-page-wrap{margin:1.5rem auto 3rem;}
-  .case-btns {padding:0.6rem 1rem;}
-}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+@media(max-width:768px){.two-col{grid-template-columns:1fr;}.two-col>div:first-child{border-right:none;border-bottom:1px solid var(--border2);}}
+@media(max-width:640px){.site-header{padding:0 1rem;}.tool-page-wrap{margin:1.5rem auto 3rem;}.seo-section{padding:1.2rem;}.page-h1{font-size:1.4rem;}}
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <a href="../index.html" class="logo">
-    <div class="logo-icon">C</div>
+  <a href="../index.html" class="logo" aria-label="CodeWizTools — Home">
+    <div class="logo-icon" aria-hidden="true">C</div>
     <span class="logo-text">CodeWiz<span>Tools</span></span>
   </a>
-  <nav class="header-nav">
+  <nav aria-label="Site navigation">
     <a href="../index.html" class="nav-link">← All Tools</a>
   </nav>
 </header>
 
-<div class="tool-page-wrap">
-  <div class="breadcrumb">
-    <a href="../index.html">Home</a> <span>/</span> Case Converter
+<main class="tool-page-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="../index.html#tools">Tools</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Case Converter</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1 class="page-h1"><span>Case Converter</span> — UPPERCASE, lowercase, camelCase & More</h1>
+    <p class="page-subtitle">Convert text to any case format instantly · 8 modes · Real-time · One-click copy · Free, no signup</p>
   </div>
-  
+
+  <!-- TOOL PANEL -->
   <div class="panel-header">
-    <div class="panel-title">Aa &nbsp;Case Converter</div>
+    <div class="panel-title-inner" aria-hidden="true">
+      <span style="font-family:var(--mono);color:var(--accent);">Aa</span>
+      Case Converter
+    </div>
     <div class="panel-actions">
-      <button class="btn btn-success" onclick="copyResult()" id="copy-btn">Copy Result</button>
-      <button class="btn" onclick="clearAll()">Clear</button>
+      <button class="btn btn-danger" onclick="clearAll()" aria-label="Clear input and output">Clear</button>
     </div>
   </div>
 
-  <div class="case-btns" id="case-btns">
-    <button class="case-btn active" data-case="upper" onclick="convert(this)">UPPERCASE</button>
-    <button class="case-btn" data-case="lower" onclick="convert(this)">lowercase</button>
-    <button class="case-btn" data-case="title" onclick="convert(this)">Title Case</button>
-    <button class="case-btn" data-case="sentence" onclick="convert(this)">Sentence Case</button>
-    <button class="case-btn" data-case="camel" onclick="convert(this)">camelCase</button>
-    <button class="case-btn" data-case="pascal" onclick="convert(this)">PascalCase</button>
-    <button class="case-btn" data-case="snake" onclick="convert(this)">snake_case</button>
-    <button class="case-btn" data-case="kebab" onclick="convert(this)">kebab-case</button>
+  <!-- CASE MODE BUTTONS -->
+  <div class="case-buttons" role="group" aria-label="Select case conversion mode">
+    <button class="case-btn active" data-case="upper" onclick="convert(this)" aria-pressed="true">UPPERCASE</button>
+    <button class="case-btn" data-case="lower" onclick="convert(this)" aria-pressed="false">lowercase</button>
+    <button class="case-btn" data-case="title" onclick="convert(this)" aria-pressed="false">Title Case</button>
+    <button class="case-btn" data-case="sentence" onclick="convert(this)" aria-pressed="false">Sentence case</button>
+    <button class="case-btn" data-case="camel" onclick="convert(this)" aria-pressed="false">camelCase</button>
+    <button class="case-btn" data-case="pascal" onclick="convert(this)" aria-pressed="false">PascalCase</button>
+    <button class="case-btn" data-case="snake" onclick="convert(this)" aria-pressed="false">snake_case</button>
+    <button class="case-btn" data-case="kebab" onclick="convert(this)" aria-pressed="false">kebab-case</button>
   </div>
 
+  <!-- TWO COLUMN -->
   <div class="two-col">
     <div>
-      <div class="col-label">Input Text</div>
-      <textarea class="code-area" id="cc-in" placeholder="Type or paste text here..." oninput="autoConvert()" style="min-height:240px;"></textarea>
+      <div class="col-label">Input text</div>
+      <label for="cc-in" class="sr-only">Enter text to convert</label>
+      <textarea
+        class="code-area"
+        id="cc-in"
+        placeholder="Type or paste your text here...&#10;&#10;Example: hello world from CodeWizTools"
+        oninput="autoConvert()"
+        aria-label="Input text for case conversion"
+        spellcheck="false"
+      ></textarea>
     </div>
     <div>
-      <div class="col-label">Converted Output</div>
-      <textarea class="code-area" id="cc-out" placeholder="Result appears here..." readonly style="min-height:240px;"></textarea>
+      <div class="col-label">Converted output</div>
+      <label for="cc-out" class="sr-only">Converted output text</label>
+      <textarea
+        class="code-area"
+        id="cc-out"
+        placeholder="Result appears here..."
+        readonly
+        aria-label="Converted output — click Copy Result to copy"
+        aria-live="polite"
+        spellcheck="false"
+      ></textarea>
+      <div class="out-bar">
+        <button class="btn btn-success" id="copy-btn" onclick="copyResult(event)" aria-label="Copy converted text to clipboard">Copy Result</button>
+      </div>
     </div>
   </div>
 
-  <section class="seo-section" aria-label="About Case Converter">
-    <h2>Best Free Online Case Converter Tool</h2>
-    <p>
-      CodeWizTools.com offers the <strong>best free online case converter</strong> — an instant, web-browser utility built to modify string styles with zero server reliance. Whether you are correcting accidental caps lock text blocks, transforming paragraph headings, or structuring programming variable instances, this client-side architecture script processes payloads dynamically.
-    </p>
-    <p>
-      Simply copy and paste raw data blocks into the input module field, select your desired casing tab token, and review the structured semantic execution immediately. The tool eliminates manual formatting overhead entirely.
-    </p>
+  <!-- CASE REFERENCE TABLE -->
+  <div class="ref-table-wrap" aria-label="Case format reference table">
+    <div class="ref-table-title">Case format quick reference</div>
+    <div style="overflow-x:auto;">
+      <table class="ref-table">
+        <thead>
+          <tr><th>Format</th><th>Example</th><th>Used in</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>UPPERCASE</td><td><code>HELLO WORLD</code></td><td>Constants, headings, acronyms</td></tr>
+          <tr><td>lowercase</td><td><code>hello world</code></td><td>URLs, email addresses, filenames</td></tr>
+          <tr><td>Title Case</td><td><code>Hello World</code></td><td>Article titles, headings, names</td></tr>
+          <tr><td>Sentence case</td><td><code>Hello world</code></td><td>UI labels, button text, body copy</td></tr>
+          <tr><td>camelCase</td><td><code>helloWorld</code></td><td>JavaScript/Java variables, function names</td></tr>
+          <tr><td>PascalCase</td><td><code>HelloWorld</code></td><td>Class names, React components, TypeScript types</td></tr>
+          <tr><td>snake_case</td><td><code>hello_world</code></td><td>Python variables, database columns, file names</td></tr>
+          <tr><td>kebab-case</td><td><code>hello-world</code></td><td>CSS classes, URL slugs, npm packages</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-    <h3>Supported Casing Transformations</h3>
+  <section class="seo-section" aria-label="About text case conversion">
+
+    <h2>Free Online Text Case Converter — 8 Formats</h2>
+    <p>This case converter transforms your text into any of 8 case formats instantly. Select a format, type or paste your text, and the output updates on every keystroke. One click copies the result to your clipboard. All conversion runs in your browser — your text never leaves your device.</p>
+
+    <h2>camelCase vs PascalCase vs snake_case — When to Use Each</h2>
+    <p>Different programming languages and contexts have different conventions. Using the wrong case in code causes naming inconsistencies that make codebases harder to read and maintain.</p>
     <ul>
-      <li><strong>UPPERCASE</strong> — Forces every individual text element string character into capitalization hooks.</li>
-      <li><strong>lowercase</strong> — Cleans configuration files by neutralizing capitalizing structures completely.</li>
-      <li><strong>Title Case</strong> — Upper-cases structural tokens following word boundary indicators natively.</li>
-      <li><strong>Sentence Case</strong> — Parses paragraphs and capitally structures strings following active delimiter arrays.</li>
-      <li><strong>camelCase &amp; PascalCase</strong> — Essential formatting engines for JavaScript clusters and OOP constructor components.</li>
-      <li><strong>snake_case &amp; kebab-case</strong> — Generates optimized multi-tier URL paths and standardized SQL schema metrics.</li>
+      <li><strong>camelCase</strong> — JavaScript variables, function names, JSON keys, Swift/Kotlin variables</li>
+      <li><strong>PascalCase</strong> — Class names in any OOP language, React components, TypeScript interfaces</li>
+      <li><strong>snake_case</strong> — Python variables and functions, Ruby conventions, SQL column names</li>
+      <li><strong>kebab-case</strong> — CSS class names, HTML custom attributes, URL slugs, npm package names</li>
+      <li><strong>UPPERCASE</strong> — Constants in JavaScript/Python (<code>MAX_RETRIES</code>), environment variables</li>
     </ul>
 
-    <h3>Why Use a Browser-Based Converter Engine?</h3>
-    <p>
-      Traditional text optimization scripts send payloads to third-party servers, posing risks to proprietary strings or secret keys. Our converter runs completely in local RAM blocks using your machine's JavaScript compilation layer. No logs, no transmission vectors—100% security optimization compliance natively.
-    </p>
+    <h2>Title Case vs Sentence Case — Content Writing</h2>
+    <p><strong>Title Case</strong> capitalizes the first letter of every word. It is the standard for article titles, product names, and formal headings. <strong>Sentence case</strong> capitalizes only the first word and proper nouns — it is the modern standard for UI labels, button text, and subheadings in design systems like Google Material and Apple HIG.</p>
 
+    <h2>Case Converter for URL Slugs</h2>
+    <p>Use <strong>kebab-case</strong> mode to convert a title or phrase into a URL-friendly slug. The converter removes spaces, replaces them with hyphens, and lowercases all characters — producing a valid URL slug ready to paste into your CMS. For example: <code>How to Build a Website</code> → <code>how-to-build-a-website</code>.</p>
+
+    <!-- FAQ -->
     <div class="faq-accordion">
-      <h2>Frequently Asked Questions (FAQs)</h2>
+      <h2>Frequently Asked Questions</h2>
 
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">
-          <span>1. What is the difference between camelCase and PascalCase?</span>
-          <span class="faq-icon">▼</span>
-        </button>
-        <div class="faq-content">
-          <p>In camelCase, the first letter of the entire compound phrase is lowercase, while each subsequent word starts with a capital letter (e.g., "myVariableName"). In PascalCase, every single word, including the first one, starts with an uppercase letter (e.g., "MyVariableName").</p>
-        </div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What is the difference between camelCase and PascalCase?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>camelCase: first word lowercase, each next word capitalized — <code>myVariableName</code>. Used for JS/Java variables. PascalCase: every word capitalized including the first — <code>MyVariableName</code>. Used for class names, React components, TypeScript types.</p></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">
-          <span>2. Does this tool send my input data to any server?</span>
-          <span class="faq-icon">▼</span>
-        </button>
-        <div class="faq-content">
-          <p>No, this tool operates completely on your local device via client-side JavaScript. The text you process is never sent or transmitted to any external engine, ensuring total privacy and data standard compliance.</p>
-        </div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">When should I use snake_case vs kebab-case?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>snake_case uses underscores — standard for Python variables, Ruby, and database columns. kebab-case uses hyphens — standard for CSS classes, URL slugs, and npm packages. Key rule: hyphens are not valid in most programming language variable names, underscores are.</p></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">
-          <span>3. When should I use snake_case vs kebab-case?</span>
-          <span class="faq-icon">▼</span>
-        </button>
-        <div class="faq-content">
-          <p>snake_case joins word strings using underscores (e.g., "database_column_name") and is highly standard in SQL frameworks and Python ecosystems. kebab-case joins word segments using hyphens (e.g., "url-slug-example") and is widely used for clean web architecture URLs and CSS class patterns.</p>
-        </div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What is Title Case and how is it different from Sentence case?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Title Case capitalizes every word: <code>The Quick Brown Fox</code>. Sentence case capitalizes only the first word: <code>The quick brown fox</code>. Title Case for article titles and product names. Sentence case for UI labels, button text, and modern design system subheadings.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Does this tool work for programming variable names?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes. camelCase, PascalCase, snake_case, and kebab-case modes convert plain text into valid programming identifiers. Type plain English phrases and get properly formatted identifiers — spaces and special characters are handled automatically.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Is my text safe when using this case converter?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes — 100% private. All conversion runs in your browser using JavaScript. Your text is never sent to any server. No logs, no tracking.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How do I convert text to a CSS class name (kebab-case)?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Click kebab-case and paste your text. The converter lowercases everything and replaces spaces with hyphens — producing valid CSS class names. Example: <code>My Button Component</code> → <code>my-button-component</code>. Ready to paste directly into your stylesheet.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Can I use this tool to create URL slugs?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes. Use kebab-case mode to create URL-friendly slugs. Example: <code>How to Build a Website in 2026</code> → <code>how-to-build-a-website-in-2026</code>. Standard URL slug format used by WordPress, Ghost, and most CMS platforms.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Which case format should I use for Python?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Python PEP 8: snake_case for variables and functions, PascalCase for class names, UPPERCASE with underscores for constants. Examples: <code>user_profile</code>, <code>UserProfile</code>, <code>MAX_RETRIES</code>.</p></div>
       </div>
     </div>
   </section>
 
   <div class="internal-grid-wrapper">
-    <div class="internal-grid-title">
-      <span style="color:var(--accent);">⚡</span> Explore More Free Developer Tools
-    </div>
+    <h2>⚡ More Developer Tools</h2>
     <div class="internal-grid">
-      <a href="assignment-renamer.html" class="internal-link-card">
-        <span>Assignment Renamer</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="attendance-calculator.html" class="internal-link-card">
-        <span>Attendance Calculator</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="base64-converter.html" class="internal-link-card">
-        <span>Base64 Converter</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="case-converter.html" class="internal-link-card">
-        <span>Case Converter</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="cgpa-calculator.html" class="internal-link-card">
-        <span>CGPA Calculator</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="color-picker.html" class="internal-link-card">
-        <span>Color Picker Workstation</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="image-compressor.html" class="internal-link-card">
-        <span>Image Compressor</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="json-formatter.html" class="internal-link-card">
-        <span>JSON Formatter &amp; Validator</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="lorem-ipsum-generator.html" class="internal-link-card">
-        <span>Lorem Ipsum Generator</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="password-generator.html" class="internal-link-card">
-        <span>Password Generator</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="pdf-compressor.html" class="internal-link-card">
-        <span>PDF Document Compressor</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="pdf-merger.html" class="internal-link-card">
-        <span>PDF Document Merger</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="percentage-calculator.html" class="internal-link-card">
-        <span>Percentage Calculator</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="url-encoder.html" class="internal-link-card">
-        <span>URL Encoder / Decoder</span>
-        <span class="arrow-icon">→</span>
-      </a>
-      <a href="word-counter.html" class="internal-link-card">
-        <span>Word &amp; Character Counter</span>
-        <span class="arrow-icon">→</span>
-      </a>
+      <a href="word-counter.html" class="internal-link-card" title="Word Counter — count words, characters and reading time"><span><span class="tool-icon" aria-hidden="true">🔢</span>Word Counter</span><span>→</span></a>
+      <a href="lorem-ipsum.html" class="internal-link-card" title="Lorem Ipsum Generator — copy paste placeholder text"><span><span class="tool-icon" aria-hidden="true">📝</span>Lorem Ipsum Generator</span><span>→</span></a>
+      <a href="json-formatter.html" class="internal-link-card" title="Format and validate JSON data online"><span><span class="tool-icon" aria-hidden="true">📋</span>JSON Formatter &amp; Validator</span><span>→</span></a>
+      <a href="color-picker.html" class="internal-link-card" title="RGBA Color Picker — copy HEX, RGB, HSL, CSS variable"><span><span class="tool-icon" aria-hidden="true">🎨</span>RGBA Color Picker</span><span>→</span></a>
+      <a href="url-encoder.html" class="internal-link-card" title="URL Encoder and Percent Encoding Converter"><span><span class="tool-icon" aria-hidden="true">🔗</span>URL Encoder &amp; Decoder</span><span>→</span></a>
+      <a href="base64.html" class="internal-link-card" title="Base64 Encoder and Decoder — supports Unicode"><span><span class="tool-icon" aria-hidden="true">🔐</span>Base64 Encoder &amp; Decoder</span><span>→</span></a>
+      <a href="password-generator.html" class="internal-link-card" title="Generate strong random passwords free"><span><span class="tool-icon" aria-hidden="true">🔑</span>Password Generator</span><span>→</span></a>
+      <a href="pdf-compressor.html" class="internal-link-card" title="Compress PDF files online free"><span><span class="tool-icon" aria-hidden="true">📄</span>PDF Compressor</span><span>→</span></a>
+      <a href="pdf-merger.html" class="internal-link-card" title="Merge multiple PDF files into one online free"><span><span class="tool-icon" aria-hidden="true">📎</span>PDF Merger</span><span>→</span></a>
+      <a href="cgpa-calculator.html" class="internal-link-card" title="Calculate CGPA from grades online"><span><span class="tool-icon" aria-hidden="true">🎓</span>CGPA Calculator</span><span>→</span></a>
+      <a href="attendance-calculator.html" class="internal-link-card" title="Attendance and bunk calculator for students"><span><span class="tool-icon" aria-hidden="true">📅</span>Attendance Calculator</span><span>→</span></a>
+      <a href="md5-generator.html" class="internal-link-card" title="Generate MD5 hash from any text string"><span><span class="tool-icon" aria-hidden="true">🧮</span>MD5 Hash Generator</span><span>→</span></a>
+      <a href="qr-generator.html" class="internal-link-card" title="Generate QR codes from URLs or text free"><span><span class="tool-icon" aria-hidden="true">📱</span>QR Code Generator</span><span>→</span></a>
+      <a href="diff-checker.html" class="internal-link-card" title="Compare two text blocks — diff checker"><span><span class="tool-icon" aria-hidden="true">🔍</span>Text Diff Checker</span><span>→</span></a>
     </div>
   </div>
-</div>
+
+</main>
 
 <footer class="site-footer">
-  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all tools</a></p>
-  <p>© 2026 CodeWizTools · Free developer tools. No tracking. No ads.</p>
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all CodeWizTools</a></p>
+  <p>© 2026 CodeWizTools · No tracking. No logs. Pure Privacy.</p>
 </footer>
 
 <script>
-let activeCase='upper';
-function convert(btn){
-  document.querySelectorAll('.case-btn').forEach(b=>b.classList.remove('active'));
+let activeCase = 'upper';
+
+function convert(btn) {
+  document.querySelectorAll('.case-btn').forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-pressed', 'false');
+  });
   btn.classList.add('active');
-  activeCase=btn.dataset.case;
+  btn.setAttribute('aria-pressed', 'true');
+  activeCase = btn.dataset.case;
   doConvert();
 }
-function autoConvert(){ doConvert(); }
-function doConvert(){
-  const t=document.getElementById('cc-in').value;
-  if(!t) { document.getElementById('cc-out').value=''; return; }
-  let out='';
-  switch(activeCase){
-    case 'upper': out=t.toUpperCase(); break;
-    case 'lower': out=t.toLowerCase(); break;
-    case 'title': out=t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()); break;
-    case 'sentence': out=t.toLowerCase().replace(/(^\s*\w|[.!?]\s+\w)/g,c=>c.toUpperCase()); break;
-    case 'camel': out=t.trim().split(/[\s_\-]+/).map((w,i)=>w?(i===0?w.toLowerCase():w[0].toUpperCase()+w.slice(1).toLowerCase()):'').join(''); break;
-    case 'pascal': out=t.trim().split(/[\s_\-]+/).map(w=>w?w[0].toUpperCase()+w.slice(1).toLowerCase():'').join(''); break;
-    case 'snake': out=t.trim().toLowerCase().replace(/[\s\-]+/g,'_'); break;
-    case 'kebab': out=t.trim().toLowerCase().replace(/[\s_]+/g,'-'); break;
+
+function autoConvert() { doConvert(); }
+
+function doConvert() {
+  const t = document.getElementById('cc-in').value;
+  if (!t) { document.getElementById('cc-out').value = ''; return; }
+  let out = '';
+  switch (activeCase) {
+    case 'upper':    out = t.toUpperCase(); break;
+    case 'lower':    out = t.toLowerCase(); break;
+    case 'title':    out = t.toLowerCase().replace(/\b\w/g, c => c.toUpperCase()); break;
+    case 'sentence': out = t.toLowerCase().replace(/(^\s*\w|[.!?]\s+\w)/g, c => c.toUpperCase()); break;
+    case 'camel':    out = t.trim().split(/[\s_\-]+/).map((w,i) => w ? (i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()) : '').join(''); break;
+    case 'pascal':   out = t.trim().split(/[\s_\-]+/).map(w => w ? w[0].toUpperCase() + w.slice(1).toLowerCase() : '').join(''); break;
+    case 'snake':    out = t.trim().toLowerCase().replace(/[\s\-]+/g, '_'); break;
+    case 'kebab':    out = t.trim().toLowerCase().replace(/[\s_]+/g, '-'); break;
   }
-  document.getElementById('cc-out').value=out;
-}
-function clearAll(){ document.getElementById('cc-in').value=''; document.getElementById('cc-out').value=''; }
-function copyResult(){
-  const v=document.getElementById('cc-out').value; if(!v) return;
-  navigator.clipboard.writeText(v).catch(()=>{});
-  const btn=document.getElementById('copy-btn'), o=btn.textContent;
-  btn.textContent='Copied!'; setTimeout(()=>btn.textContent=o,1500);
+  document.getElementById('cc-out').value = out;
 }
 
-/* INTERACTIVE DROPDOWN TOGGLE ENGINE */
+function clearAll() {
+  document.getElementById('cc-in').value  = '';
+  document.getElementById('cc-out').value = '';
+  document.getElementById('cc-in').focus();
+}
+
+/* FIX: Added event param + clipboard fallback — original silently failed */
+function copyResult(event) {
+  const val  = document.getElementById('cc-out').value;
+  if (!val) return;
+  const btn  = event.target;
+  const orig = btn.textContent;
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(val).then(() => {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = orig, 1600);
+    }).catch(() => fallbackCopy(val, btn, orig));
+  } else {
+    fallbackCopy(val, btn, orig);
+  }
+}
+
+function fallbackCopy(text, btn, orig) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;opacity:0;';
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  try { document.execCommand('copy'); btn.textContent = '✓ Copied!'; }
+  catch { btn.textContent = 'Copy failed'; }
+  document.body.removeChild(ta);
+  setTimeout(() => btn.textContent = orig, 1600);
+}
+
 function toggleFaq(btn) {
-  const item = btn.parentElement;
+  const item   = btn.parentElement;
+  const isOpen = item.classList.contains('active');
   item.classList.toggle('active');
+  btn.setAttribute('aria-expanded', String(!isOpen));
 }
 </script>
 </body>

@@ -3,301 +3,407 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free University Attendance & Bunk Margin Calculator | CodeWizTools</title>
-<meta name="description" content="Calculate your semester attendance percentage online. Find out exactly how many more classes you need to attend or how many classes you can safely bunk to maintain your university criteria.">
-<meta name="keywords" content="attendance calculator, bunk margin calculator, how many classes can i bunk, 75 percent attendance calculator, university attendance safe zone, student bunk planner, codewiztools, lms attendance calculator, college shortage tracker">
+
+<!-- ═══════════════════════════════════════════
+     GSC OPPORTUNITY: "klu attendance calculator"
+     pos 40, new query. Also "bunk calculator"
+     pos 62. Target these explicitly.
+═══════════════════════════════════════════ -->
+<title>Attendance & Bunk Calculator — How Many Classes Can I Miss? | CodeWizTools</title>
+<meta name="description" content="Free university attendance calculator. Find out how many classes you can bunk while staying above 75% attendance. Works for KLU, FAST, NUST, COMSATS and all universities. Instant results.">
+<meta name="keywords" content="attendance calculator, bunk calculator, bunk margin calculator, university attendance calculator, how many classes can i miss, attendance percentage calculator, 75 percent attendance calculator, klu attendance calculator, student attendance calculator, classes bunk calculator, attendance shortage calculator">
 <meta name="author" content="CodeWizTools">
-<meta property="og:title" content="University Attendance & Bunk Calculator — CodeWizTools">
-<meta property="og:description" content="Check your attendance status instantly. Calculate required classes or safe bunk counts inside your browser context 100% privately.">
-<meta property="og:type" content="website">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://codewiztools.com/tools/attendance-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Attendance & Bunk Calculator — How Many Classes Can I Miss? | CodeWizTools">
+<meta property="og:description" content="Find how many classes you can safely bunk while staying above 75% attendance. Works for any university. Instant results.">
+<meta property="og:url" content="https://codewiztools.com/tools/attendance-calculator.html">
+<meta property="og:site_name" content="CodeWizTools">
+<meta property="og:image" content="https://codewiztools.com/assets/og-attendance-calculator.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Attendance and Bunk Calculator on CodeWizTools">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Attendance & Bunk Calculator — How Many Classes Can I Miss?">
+<meta name="twitter:description" content="Find how many classes you can safely bunk at 75% attendance. Works for any university. Free, instant.">
+<meta name="twitter:image" content="https://codewiztools.com/assets/og-attendance-calculator.png">
+<meta name="twitter:site" content="@CodeWizTools">
+
+<meta name="theme-color" content="#00F2FE">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://codewiztools.com/tools/attendance-calculator.html#webapp",
+  "name": "Attendance & Bunk Calculator",
+  "url": "https://codewiztools.com/tools/attendance-calculator.html",
+  "description": "Free university attendance and bunk margin calculator. Enter classes attended, total classes conducted, and required attendance percentage to instantly see how many more classes you can safely miss — or how many you must attend to recover from a shortage. Works for KLU, FAST, NUST, COMSATS, and all universities.",
+  "applicationCategory": "EducationApplication",
+  "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "creator": { "@type": "Organization", "name": "CodeWizTools", "url": "https://codewiztools.com" },
+  "featureList": [
+    "Calculate how many classes you can safely bunk",
+    "Calculate how many classes you must attend to recover shortage",
+    "Works for any attendance requirement (75%, 80%, 85%)",
+    "Real-time calculation on every keystroke",
+    "Works for KLU, FAST, NUST, COMSATS and all universities",
+    "100% browser-based — no data sent to server"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many classes can I bunk and still pass at 75% attendance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your classes attended, total classes held, and set the required attendance to 75 in the calculator above. The tool instantly tells you exactly how many consecutive classes you can miss without falling below 75%. The calculation accounts for the fact that each class you miss both adds to the total and fails to add to your attended count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the bunk margin calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator simulates what happens to your attendance percentage as you add more total classes without attending them. It counts how many consecutive classes you can miss before your attendance drops below the required percentage. Formula: current attendance = (attended / total) × 100. Each bunked class increases total by 1 without increasing attended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My attendance is below 75% — how many classes do I need to attend to recover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your numbers and the calculator automatically switches to Recovery Mode when your attendance is below the required threshold. It calculates exactly how many consecutive classes you must attend to bring your percentage back up to the required level. Each attended class both increases total and attended by 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for KLU, FAST, NUST, COMSATS, and other Pakistani universities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This calculator works for any university attendance system. Just set the required attendance percentage to match your university policy — 75% is the standard minimum at most Pakistani universities including KLU, FAST-NUCES, NUST, COMSATS, UET, and Punjab University. Some universities require 80% or 85% — adjust the field accordingly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the attendance rule at Pakistani universities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Pakistani universities require a minimum of 75% attendance to be eligible to sit in final exams. KLU (Kalinga University, for students from Pakistan), FAST-NUCES, NUST, COMSATS, UET, and Punjab University all enforce a 75% minimum as a rule, though some departments or courses may require 80% or higher. Always check your specific course policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for a semester prediction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Estimate your total classes for the semester (e.g. 3 classes per week × 16 weeks = 48 total) and enter your current attended count. The calculator shows your current percentage and bunk margin based on that projected total. Update the numbers any time as the semester progresses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my attendance data private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely private. All calculations run locally in your browser using JavaScript. No attendance data, student information, or any input is ever sent to any server. CodeWizTools has a strict no-logs, no-tracking policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I enter attended classes greater than total classes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator detects this invalid input and resets the display without showing an incorrect result. Make sure attended classes is always less than or equal to total classes conducted. The required attendance field accepts any percentage from 1 to 100 and defaults to 75 if left empty."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://codewiztools.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://codewiztools.com/#tools" },
+    { "@type": "ListItem", "position": 3, "name": "Attendance Calculator", "item": "https://codewiztools.com/tools/attendance-calculator.html" }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23grad)'/%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 
 <style>
-:root {
-  --bg: #0B0F19;
-  --surface: #151D30;
-  --surface2: #1a2440;
-  --border: rgba(0,242,254,0.08);
-  --border2: rgba(0,242,254,0.18);
-  --accent: #00F2FE;
-  --accent-dim: rgba(0,242,254,0.12);
-  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
-  --success: #10B981;
-  --success-dim: rgba(16,185,129,0.15);
-  --danger: #F43F5E;
-  --danger-dim: rgba(244,63,94,0.15);
-  --text: #FFFFFF;
-  --text2: #94A3B8;
-  --text3: #4a5568;
-  --mono: 'JetBrains Mono', monospace;
-  --sans: 'Space Grotesk', sans-serif;
-  --r: 10px;
-  --r-lg: 16px;
-}
+:root{--bg:#0B0F19;--surface:#151D30;--surface2:#1a2440;--surface3:#1f2b4a;--border:rgba(0,242,254,0.08);--border2:rgba(0,242,254,0.18);--accent:#00F2FE;--accent-dim:rgba(0,242,254,0.12);--accent-glow:0 0 15px rgba(0,242,254,0.35);--success:#10B981;--success-dim:rgba(16,185,129,0.12);--error:#EF4444;--error-dim:rgba(239,68,68,0.12);--warn:#F59E0B;--text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;--mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;--r:10px;--r-lg:16px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
-body::before{
-  content:'';position:fixed;inset:0;
-  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
-  background-size:50px 50px;pointer-events:none;z-index:0;
-}
-
-/* HEADER */
-.site-header{
-  position:sticky;top:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2rem;height:62px;
-  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border2);
-}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);}
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.logo-icon{
-  width:34px;height:34px;border-radius:9px;
-  background:linear-gradient(135deg,#00F2FE,#0070f3);
-  display:flex;align-items:center;justify-content:center;
-  font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);
-}
-.logo-text{font-size:1.1rem;font-weight:700;color:var(--text);}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);flex-shrink:0;}
+.logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
 .logo-text span{color:var(--accent);}
-.back-btn{
-  font-family:var(--mono);font-size:12px;color:var(--text2);
-  text-decoration:none;padding:6px 12px;border-radius:var(--r);
-  border:1px solid var(--border);transition:all 0.2s;
-}
-.back-btn:hover{color:var(--accent);background:var(--accent-dim);border-color:var(--accent);}
-
-/* CONTAINER */
-.container{position:relative;z-index:1;max-width:650px;margin:0 auto;padding:3rem 1.5rem;}
-.tool-title-section{text-align:center;margin-bottom:2.5rem;}
-.tool-badge{
-  display:inline-block;font-family:var(--mono);font-size:10px;color:var(--accent);
-  background:var(--accent-dim);border:1px solid var(--border2);
-  padding:4px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:0.05em;text-transform:uppercase;
-}
-.tool-title-section h1{font-size:2.3rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:8px;}
-.tool-title-section p{font-family:var(--mono);font-size:13px;color:var(--text2);}
-
-/* CARD */
-.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;}
-.input-group{margin-bottom:1.5rem;}
-.input-label{display:block;font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:8px;text-transform:uppercase;}
-
-input{
-  background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r);
-  color:var(--text);font-family:var(--mono);font-size:14px;padding:12px;outline:none;transition:all 0.2s;
-  width:100%;
-}
-input:focus{border-color:var(--accent);box-shadow:0 0 10px rgba(0,242,254,0.1);}
-
-/* DYNAMIC DISPLAY */
-.pct-display-wrap{text-align:center;margin:2rem 0;padding:1.5rem;background:rgba(11,15,25,0.4);border-radius:var(--r-lg);border:1px solid var(--border);}
-.pct-title{font-family:var(--mono);font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.05em;}
-.pct-value{font-size:4rem;font-weight:700;color:var(--accent);margin:5px 0;}
-
-.status-box{border-radius:var(--r);padding:1.2rem;text-align:center;font-family:var(--mono);font-size:13px;line-height:1.6;display:none;}
-.status-box.success{display:block;background:var(--success-dim);border:1px dashed var(--success);color:var(--success);}
-.status-box.danger{display:block;background:var(--danger-dim);border:1px dashed var(--danger);color:var(--danger);}
-
-.status-highlight{font-family:var(--sans);font-weight:700;font-size:18px;display:block;margin-bottom:4px;}
-
-/* SEO INFO CONTENT */
-.seo-info-section{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);}
-.seo-info-container{max-width:650px;margin:0 auto;line-height:1.8;}
-.seo-info-section h2{font-size:1.6rem;font-weight:700;margin-bottom:1.2rem;text-align:center;letter-spacing:-0.03em;}
-.seo-info-section h2 span{color:var(--accent);}
-.seo-text-p{color:var(--text2);font-size:14px;margin-bottom:1.5rem;font-family:var(--sans);}
-.seo-info-section h3 {font-size:1.2rem; font-weight:600; color:var(--accent); margin-top:1.5rem; margin-bottom:0.5rem;}
-
-/* FAQ Accordion */
-.faq-accordion {margin-top: 2.5rem; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--border); padding-top: 2rem;}
-.faq-item {background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden;}
-.faq-trigger {width: 100%; background: none; border: none; padding: 14px 18px; text-align: left; color: #fff; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between;}
-.faq-content {max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(11, 15, 25, 0.3);}
-.faq-content p {padding: 14px 18px; font-family: var(--mono); font-size: 13px; color: #94A3B8; line-height: 1.75;}
-.faq-item.active .faq-content {max-height: 500px;}
-
-/* Internal Grid System (14 Tools Matrix) */
-.internal-grid-wrapper {margin-top: 3.5rem; padding: 1.5rem; background: rgba(21, 29, 48, 0.4); border: 1px solid var(--border); border-radius: var(--r-lg);}
-.internal-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top:1rem;}
-.internal-link-card {display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; font-size: 13px; color: var(--text2); transition: all 0.2s;}
-.internal-link-card:hover {border-color: var(--accent); color: #fff; transform: translateY(-1px); box-shadow: var(--accent-glow);}
-
-/* FOOTER */
-.site-footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;font-family:var(--mono);font-size:12px;color:var(--text3);}
-
-@media(max-width:640px){
-  .tool-title-section h1{font-size:1.8rem;}
-  .internal-grid{grid-template-columns: repeat(2, 1fr);}
-}
+.nav-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 14px;border-radius:var(--r);transition:all 0.2s;border:1px solid var(--border);background:rgba(21,29,48,0.5);}
+.nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
+.tool-page-wrap{position:relative;z-index:1;max-width:680px;margin:2rem auto 5rem;padding:0 1.5rem;animation:fadeUp 0.5s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.breadcrumb{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:1.5rem;display:flex;gap:6px;align-items:center;}
+.breadcrumb a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--accent);}
+.page-hero{margin-bottom:1.5rem;}
+.page-h1{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.25;margin-bottom:0.45rem;}
+.page-h1 span{color:var(--accent);}
+.page-subtitle{font-size:13px;color:var(--text2);font-family:var(--mono);line-height:1.6;}
+/* CALC CARD */
+.calc-card{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-lg);padding:1.5rem;margin-bottom:14px;}
+.panel-title-inner{font-size:1rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px;margin-bottom:1.4rem;}
+/* FIELDS */
+.field-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:1.2rem;}
+.field-wrap{display:flex;flex-direction:column;gap:6px;}
+.field-label{font-family:var(--mono);font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.04em;}
+.calc-input{font-family:var(--mono);font-size:15px;color:var(--text);background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r);padding:10px 14px;outline:none;width:100%;text-align:center;transition:all 0.2s;}
+.calc-input:focus{border-color:var(--accent);box-shadow:var(--accent-glow);}
+/* CURRENT PCT DISPLAY */
+.pct-display{text-align:center;margin-bottom:1.2rem;}
+.pct-val{font-size:3rem;font-weight:700;letter-spacing:-0.04em;font-family:var(--sans);color:var(--accent);line-height:1;transition:color 0.3s;}
+.pct-label{font-family:var(--mono);font-size:12px;color:var(--text3);margin-top:4px;}
+/* STATUS BOX */
+.status-box{border-radius:var(--r-lg);padding:1.2rem 1.4rem;font-family:var(--sans);font-size:14px;line-height:1.6;display:none;margin-top:4px;}
+.status-box.success{background:var(--success-dim);border:1px solid rgba(16,185,129,0.3);color:var(--text);}
+.status-box.danger{background:var(--error-dim);border:1px solid rgba(239,68,68,0.3);color:var(--text);}
+.status-box.warn{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--text);}
+.status-highlight{font-weight:700;display:block;margin-bottom:6px;font-size:1rem;}
+/* SEO */
+.seo-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;}
+.seo-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;margin-top:2rem;}
+.seo-section h2:first-child{margin-top:0;}
+.seo-section h3{font-size:1rem;font-weight:600;color:var(--accent);margin:1.25rem 0 .6rem;}
+.seo-section p{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:.9rem;}
+.seo-section p:last-child{margin-bottom:0;}
+.seo-section ul{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;padding-left:1.4rem;margin-bottom:.9rem;display:flex;flex-direction:column;gap:4px;}
+code{font-family:var(--mono);font-size:12px;background:rgba(0,242,254,.08);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent);}
+/* FAQ */
+.faq-accordion{margin-top:2rem;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border);padding-top:2rem;}
+.faq-accordion h2{margin-top:0!important;}
+.faq-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.faq-trigger{width:100%;background:none;border:none;padding:14px 18px;text-align:left;color:#fff;font-family:var(--sans);font-size:.95rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.faq-trigger .arrow{transition:transform .3s;font-size:12px;color:var(--text3);flex-shrink:0;}
+.faq-item.active .faq-trigger .arrow{transform:rotate(180deg);}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .35s ease;background:rgba(11,15,25,.3);}
+.faq-content p{padding:14px 18px;font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;}
+.faq-item.active .faq-content{max-height:600px;}
+/* INTERNAL */
+.internal-grid-wrapper{margin-top:3rem;padding:1.5rem;background:rgba(21,29,48,.4);border:1px solid var(--border);border-radius:var(--r-lg);}
+.internal-grid-wrapper h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.internal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.internal-link-card{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);text-decoration:none;font-size:13px;color:var(--text2);transition:all .2s;}
+.internal-link-card:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:var(--accent-glow);}
+.tool-icon{font-size:15px;margin-right:8px;}
+.site-footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;}
+.site-footer a{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;transition:color .2s;}
+.site-footer a:hover{color:var(--accent);}
+.site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+@media(max-width:640px){.site-header{padding:0 1rem;}.tool-page-wrap{margin:1.5rem auto 3rem;}.field-grid{grid-template-columns:1fr;}.seo-section{padding:1.2rem;}.page-h1{font-size:1.4rem;}.pct-val{font-size:2.4rem;}}
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <a href="../index.html" class="logo">
-    <div class="logo-icon">C</div>
+  <a href="../index.html" class="logo" aria-label="CodeWizTools — Home">
+    <div class="logo-icon" aria-hidden="true">C</div>
     <span class="logo-text">CodeWiz<span>Tools</span></span>
   </a>
-  <a href="../index.html" class="back-btn">← All Tools</a>
+  <nav aria-label="Site navigation">
+    <a href="../index.html" class="nav-link">← All Tools</a>
+  </nav>
 </header>
 
-<main class="container">
-  
-  <div class="tool-title-section">
-    <span class="tool-badge">LMS & Portal Companion</span>
-    <h1>Attendance & Bunk Calculator</h1>
-    <p>// Check your percentage criteria and look over your semester safe zone margins instantly.</p>
+<main class="tool-page-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="../index.html#tools">Tools</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Attendance Calculator</span>
+  </nav>
+
+  <!-- H1 — targets "bunk calculator", "attendance calculator", "klu attendance calculator" -->
+  <div class="page-hero">
+    <h1 class="page-h1"><span>Attendance & Bunk Calculator</span> — How Many Classes Can I Miss?</h1>
+    <p class="page-subtitle">Enter your classes → instantly know how many you can bunk · Works for KLU, FAST, NUST, COMSATS · Any % threshold · Free</p>
   </div>
 
   <div class="calc-card">
-    <div class="input-group">
-      <label class="input-label">Classes Attended</label>
-      <input type="number" id="attended" placeholder="e.g. 15" min="0" oninput="calculateAttendance()">
+    <div class="panel-title-inner" aria-hidden="true">📅 &nbsp;Attendance Calculator</div>
+
+    <div class="field-grid">
+      <div class="field-wrap">
+        <label class="field-label" for="attended">Classes Attended</label>
+        <input type="number" class="calc-input" id="attended" placeholder="e.g. 30" min="0" oninput="calculateAttendance()" aria-label="Number of classes attended">
+      </div>
+      <div class="field-wrap">
+        <label class="field-label" for="total">Total Classes Held</label>
+        <input type="number" class="calc-input" id="total" placeholder="e.g. 40" min="1" oninput="calculateAttendance()" aria-label="Total number of classes conducted">
+      </div>
+      <div class="field-wrap">
+        <label class="field-label" for="required">Required % (default 75)</label>
+        <input type="number" class="calc-input" id="required" placeholder="75" min="1" max="100" value="75" oninput="calculateAttendance()" aria-label="Required attendance percentage, default is 75">
+      </div>
     </div>
 
-    <div class="input-group">
-      <label class="input-label">Total Conducted Classes</label>
-      <input type="number" id="total" placeholder="e.g. 20" min="1" oninput="calculateAttendance()">
+    <div class="pct-display">
+      <div class="pct-val" id="pct-val" aria-live="polite">—</div>
+      <div class="pct-label">Current attendance %</div>
     </div>
 
-    <div class="input-group">
-      <label class="input-label">Required Attendance Criteria (%)</label>
-      <input type="number" id="required" value="75" min="1" max="100" oninput="calculateAttendance()">
-    </div>
-
-    <div class="pct-display-wrap">
-      <div class="pct-title">Your Current Attendance Rate</div>
-      <div class="pct-value" id="pct-val">0.0%</div>
-    </div>
-
-    <div id="status-output" class="status-box"></div>
+    <div class="status-box" id="status-output" role="alert" aria-live="polite"></div>
   </div>
 
-  <section class="seo-info-section">
-    <div class="seo-info-container">
-      <h2>Why Track Your University <span>Bunk Margin Balance</span>?</h2>
-      <p class="seo-text-p">
-        Most higher education institutes and management systems enforce a strict 75% or 80% attendance threshold profile to let engineering, computer science, and medical students sit in final semester examination sessions. Falling below this baseline margin leads to direct portal blocks or course registration shortfalls.
-      </p>
-      <p class="seo-text-p">
-        Our script evaluates the mathematical matrix threshold between your attended class variables and the cumulative lecture tracks conducted by your college dashboard or university system. It calculates the consecutive safe slots available for bunking or how many successive classes you need to attend to satisfy the threshold balance seamlessly.
-      </p>
+  <section class="seo-section" aria-label="About attendance calculation and bunk margin">
 
-      <h3>Optimizing Your Semester Attendance Routine</h3>
-      <p class="seo-text-p">
-        Planning academic routines means managing class attendance carefully alongside internship milestones, technical projects, or emergency leaves. Instead of guessing how an absence might impact your portal eligibility, using local math helps you see exactly where you stand. This keeps your records safe and matches your current university portal profile requirements accurately.
-      </p>
-    </div>
+    <h2>Attendance Calculator — For KLU, FAST, NUST, COMSATS & All Universities</h2>
+    <p>This tool calculates your current attendance percentage and tells you exactly how many more classes you can miss — or how many you must attend to recover. It works for any university's attendance system: just set the required attendance percentage to match your university's policy. Most Pakistani universities including <strong>KLU (Kalinga University)</strong>, FAST-NUCES, NUST, COMSATS, UET, and Punjab University require a minimum of <strong>75%</strong>.</p>
+
+    <h2>How Many Classes Can I Bunk? — The Formula</h2>
+    <p>Your attendance percentage = <code>(classes attended ÷ total classes held) × 100</code>. When you bunk a class, the total increases by 1 but your attended count stays the same — so your percentage drops each time. This tool simulates that drop and tells you the exact number of classes you can safely miss before falling below your required threshold.</p>
+
+    <h2>Attendance Shortage — How to Recover</h2>
+    <p>If your attendance is already below 75%, the calculator switches to <strong>Recovery Mode</strong> automatically. It calculates exactly how many consecutive classes you must attend to bring your percentage back up. Each attended class adds 1 to both your attended count and total — so recovery requires attending a run of classes without missing any.</p>
+
+    <h2>75% Attendance Rule — Pakistani Universities</h2>
+    <p>The 75% minimum attendance rule is enforced at most Pakistani universities as a condition for exam eligibility. If your attendance falls below 75% in any subject, you may be barred from sitting in the final exam for that subject. Some departments or courses require 80–85%. Always check your course outline or ask your department — and use the Required % field above to match your exact requirement.</p>
 
     <div class="faq-accordion">
       <h2>Frequently Asked Questions</h2>
+
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">1. How does the bunk margin calculator determine a safe zone status? <span>▼</span></button>
-        <div class="faq-content"><p>The algorithm runs an internal loop that iteratively simulates future skipped lectures. It increases the total conducted classes without altering your current attended number, continuing until the simulated value drops below your target percentage limit.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How many classes can I bunk at 75% attendance?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Enter your attended classes, total classes held, and set required to 75. The calculator tells you the exact number of consecutive classes you can safely miss without dropping below 75%. The number changes based on your current position — the higher your attendance, the more margin you have.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">2. Can this tool predict my total attendance percentage for the entire semester? <span>▼</span></button>
-        <div class="faq-content"><p>This script calculates data based on your current inputs. To get an accurate forecast, use the absolute metrics provided by your local university student profile log or course dashboard indicators.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How is the bunk margin calculated?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>The tool simulates each additional missed class: total increases by 1, attended stays the same, and your percentage drops. It counts how many misses are possible before you fall below the required threshold. Formula: <code>attendance = (attended / total) × 100</code>.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">3. Is my student attendance record or profile tracking data private? <span>▼</span></button>
-        <div class="faq-content"><p>Yes, 100%. All calculations are processed locally inside your browser window. No data is sent to external databases or cloud servers, ensuring your academic tracking stay secure and fully private.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">My attendance is below 75% — how do I recover?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>The calculator automatically shows a Recovery result when you are below the required threshold. It tells you exactly how many consecutive classes you must attend to get back above 75%. You must attend all of them without missing any — one more miss resets the recovery target.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Does this work for KLU, FAST, NUST, and COMSATS?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes — works for all universities. Set the Required % to match your university: 75% for FAST, NUST, COMSATS, UET, Punjab University, and most others. For KLU (Kalinga University) students the standard is also 75%. If your department requires 80% or 85%, just change the field.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What is the 75% attendance rule at Pakistani universities?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Most Pakistani universities require at least 75% attendance in each subject to be eligible for final exams. Falling below this threshold may result in a non-attempt (NA) grade or exam bar. Check your course outline for the exact rule — some subjects or departments enforce 80–85%.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Can I use this for semester attendance prediction?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes. Estimate your total semester classes (e.g. 3 per week × 16 weeks = 48) and enter your current attended count. The tool shows your current percentage and bunk margin against that projected total. Update numbers as the semester progresses.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Is my attendance data private?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes — 100% private. All calculations run locally in your browser. No attendance data or student information is ever sent to any server. No logs, no tracking.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What if I enter attended classes greater than total?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>The calculator detects this invalid input and resets the display. Attended classes must always be less than or equal to total classes. The required % field defaults to 75 if left empty and accepts any value from 1 to 100.</p></div>
       </div>
     </div>
   </section>
 
   <div class="internal-grid-wrapper">
-    <div style="font-weight:700; color:#fff; margin-bottom:10px;">⚡ Other Essential Developer Utilities</div>
+    <h2>⚡ More Student & Developer Tools</h2>
     <div class="internal-grid">
-      <a href="case-converter.html" class="internal-link-card"><span>Case Converter</span><span>→</span></a>
-      <a href="json-formatter.html" class="internal-link-card"><span>JSON Formatter</span><span>→</span></a>
-      <a href="pdf-compressor.html" class="internal-link-card"><span>PDF Compressor</span><span>→</span></a>
-      <a href="pdf-merger.html" class="internal-link-card"><span>PDF Merger</span><span>→</span></a>
-      <a href="word-counter.html" class="internal-link-card"><span>Word Counter</span><span>→</span></a>
-      <a href="color-picker.html" class="internal-link-card"><span>Color Picker</span><span>→</span></a>
-      <a href="qr-generator.html" class="internal-link-card"><span>QR Generator</span><span>→</span></a>
-      <a href="cgpa-calculator.html" class="internal-link-card"><span>CGPA Calculator</span><span>→</span></a>
-      <a href="password-generator.html" class="internal-link-card"><span>Password Gen</span><span>→</span></a>
-      <a href="md5-generator.html" class="internal-link-card"><span>MD5 Generator</span><span>→</span></a>
-      <a href="base64-encoder.html" class="internal-link-card"><span>Base64 Encode</span><span>→</span></a>
-      <a href="html-encoder.html" class="internal-link-card"><span>HTML Encoder</span><span>→</span></a>
-      <a href="url-encoder.html" class="internal-link-card"><span>URL Encoder</span><span>→</span></a>
-      <a href="diff-checker.html" class="internal-link-card"><span>Diff Checker</span><span>→</span></a>
+      <a href="cgpa-calculator.html" class="internal-link-card" title="Calculate CGPA from grades online"><span><span class="tool-icon" aria-hidden="true">🎓</span>CGPA Calculator</span><span>→</span></a>
+      <a href="percentage-calculator.html" class="internal-link-card" title="Percentage calculator — increase, decrease, change"><span><span class="tool-icon" aria-hidden="true">%</span>Percentage Calculator</span><span>→</span></a>
+      <a href="word-counter.html" class="internal-link-card" title="Count words, characters and reading time"><span><span class="tool-icon" aria-hidden="true">🔢</span>Word Counter</span><span>→</span></a>
+      <a href="lorem-ipsum.html" class="internal-link-card" title="Lorem Ipsum Generator — placeholder text"><span><span class="tool-icon" aria-hidden="true">📝</span>Lorem Ipsum Generator</span><span>→</span></a>
+      <a href="case-converter.html" class="internal-link-card" title="Convert text case online"><span><span class="tool-icon" aria-hidden="true">🔤</span>Case Converter</span><span>→</span></a>
+      <a href="pdf-compressor.html" class="internal-link-card" title="Compress PDF for LMS portal upload"><span><span class="tool-icon" aria-hidden="true">📄</span>PDF Compressor</span><span>→</span></a>
+      <a href="pdf-merger.html" class="internal-link-card" title="Merge multiple PDF files online free"><span><span class="tool-icon" aria-hidden="true">📎</span>PDF Merger</span><span>→</span></a>
+      <a href="password-generator.html" class="internal-link-card" title="Generate strong random passwords"><span><span class="tool-icon" aria-hidden="true">🔑</span>Password Generator</span><span>→</span></a>
+      <a href="json-formatter.html" class="internal-link-card" title="Format and validate JSON data online"><span><span class="tool-icon" aria-hidden="true">📋</span>JSON Formatter</span><span>→</span></a>
+      <a href="color-picker.html" class="internal-link-card" title="RGBA Color Picker — HEX, RGB, HSL"><span><span class="tool-icon" aria-hidden="true">🎨</span>RGBA Color Picker</span><span>→</span></a>
     </div>
   </div>
+
 </main>
 
 <footer class="site-footer">
-  <p>© 2026 CodeWizTools · Fully private terminal utilities for students.</p>
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all CodeWizTools</a></p>
+  <p>© 2026 CodeWizTools · No tracking. No logs. Pure Privacy.</p>
 </footer>
 
 <script>
-function toggleFaq(btn){
-  btn.parentElement.classList.toggle('active');
-}
-
 function calculateAttendance() {
   const attended = parseInt(document.getElementById('attended').value);
-  const total = parseInt(document.getElementById('total').value);
+  const total    = parseInt(document.getElementById('total').value);
   const required = parseFloat(document.getElementById('required').value) || 75;
-  
-  const pctVal = document.getElementById('pct-val');
-  const output = document.getElementById('status-output');
-  
+  const pctEl    = document.getElementById('pct-val');
+  const output   = document.getElementById('status-output');
+
   if (isNaN(attended) || isNaN(total) || total <= 0 || attended > total) {
-    pctVal.textContent = "0.0%";
-    output.className = "status-box";
-    output.style.display = "none";
+    pctEl.textContent = '—';
+    pctEl.style.color = 'var(--accent)';
+    output.className = 'status-box';
+    output.style.display = 'none';
     return;
   }
 
   const currentPct = (attended / total) * 100;
-  pctVal.textContent = currentPct.toFixed(1) + "%";
+  pctEl.textContent = currentPct.toFixed(1) + '%';
 
   if (currentPct >= required) {
-    let tempTotal = total;
-    let tempAttended = attended;
-    let bunkCount = 0;
-    
+    pctEl.style.color = 'var(--success)';
+    let tempTotal = total, bunkCount = 0;
     while (true) {
-      let nextTotal = tempTotal + 1;
-      let nextPct = (tempAttended / nextTotal) * 100;
-      if (nextPct >= required) {
-        bunkCount++;
-        tempTotal = nextTotal;
-      } else {
-        break;
-      }
+      const nextPct = (attended / (tempTotal + 1)) * 100;
+      if (nextPct >= required) { bunkCount++; tempTotal++; } else break;
     }
-    
-    output.className = "status-box success";
+    output.className = 'status-box success';
+    output.style.display = 'block';
     if (bunkCount > 0) {
-      output.innerHTML = `<span class="status-highlight">🎉 Safe Zone!</span> You are clear. You can safely bunk next <strong style="font-size:16px;">${bunkCount}</strong> consecutive class(es) without falling below ${required}%.`;
+      output.innerHTML = `<span class="status-highlight">🎉 Safe Zone!</span>You can safely bunk the next <strong style="font-size:17px;">${bunkCount}</strong> consecutive class(es) without falling below ${required}%.`;
     } else {
-      output.innerHTML = `<span class="status-highlight">⚠️ Borderline Safe!</span> You satisfy the current ${required}% mark, but skipping even 1 single upcoming class will put you in danger zone.`;
+      output.innerHTML = `<span class="status-highlight">⚠️ Borderline!</span>You are at ${required}% exactly. Skipping even 1 more class will push you below the required threshold.`;
     }
   } else {
-    let tempTotal = total;
-    let tempAttended = attended;
-    let requiredClasses = 0;
-    
-    while (true) {
-      let currentCheckPct = (tempAttended / tempTotal) * 100;
-      if (currentCheckPct < required) {
-        requiredClasses++;
-        tempTotal++;
-        tempAttended++;
-      } else {
-        break;
-      }
+    pctEl.style.color = 'var(--error)';
+    let tempTotal = total, tempAttended = attended, needed = 0;
+    while ((tempAttended / tempTotal) * 100 < required) {
+      needed++; tempTotal++; tempAttended++;
     }
-    
-    output.className = "status-box danger";
-    output.innerHTML = `<span class="status-highlight">🚨 Shortage Alert!</span> Attendance is below target. You must attend the next <strong style="font-size:16px;">${requiredClasses}</strong> consecutive lectures to reach back up to ${required}%.`;
+    output.className = 'status-box danger';
+    output.style.display = 'block';
+    output.innerHTML = `<span class="status-highlight">🚨 Shortage Alert!</span>Your attendance is below ${required}%. You must attend the next <strong style="font-size:17px;">${needed}</strong> consecutive class(es) without missing any to get back above ${required}%.`;
   }
+}
+
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('active');
+  item.classList.toggle('active');
+  btn.setAttribute('aria-expanded', String(!isOpen));
 }
 </script>
 </body>
