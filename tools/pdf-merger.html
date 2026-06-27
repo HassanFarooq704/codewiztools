@@ -3,473 +3,462 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online PDF Merger — Combine Multiple PDF Files Online | CodeWizTools</title>
-<meta name="description" content="Merge and combine multiple PDF files into one document instantly. 100% free, secure, and browser-based PDF merger. No registration, no server uploads, unlimited usage.">
-<meta name="keywords" content="merge pdf online, combine pdf files, free pdf merger, join pdf documents, secure pdf joiner, university assignment pdf merger, codewiztools">
+<title>PDF Merger — Combine Multiple PDF Files Online Free | CodeWizTools</title>
+<meta name="description" content="Free online PDF merger. Combine multiple PDF files into one document instantly. Drag to reorder pages, drag and drop upload. 100% browser-based — your PDFs never leave your device. No signup.">
+<meta name="keywords" content="pdf merger, merge pdf online, combine pdf files, merge pdf free, join pdf online, combine multiple pdf, pdf combiner online, merge pdf files into one, pdf joiner online free, combine pdf online free, merge assignment pdf, pdf merge tool">
 <meta name="author" content="CodeWizTools">
-<meta property="og:title" content="Free Online PDF Merger — Combine PDFs Instantly">
-<meta property="og:description" content="Combine multiple PDF files into a single document right in your browser. 100% private with zero server uploads.">
-<meta property="og:type" content="website">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://codewiztools.com/tools/pdf-merger.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23grad)'/%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 
-<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="PDF Merger — Combine Multiple PDF Files Online Free | CodeWizTools">
+<meta property="og:description" content="Merge multiple PDF files into one document. Drag to reorder. 100% browser-based — PDFs never leave your device. Free, no signup.">
+<meta property="og:url" content="https://codewiztools.com/tools/pdf-merger.html">
+<meta property="og:site_name" content="CodeWizTools">
+<meta property="og:image" content="https://codewiztools.com/assets/og-pdf-merger.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PDF Merger tool on CodeWizTools">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PDF Merger — Combine Multiple PDF Files Online Free | CodeWizTools">
+<meta name="twitter:description" content="Merge multiple PDFs into one. Drag to reorder. Browser-based, no server upload. Free.">
+<meta name="twitter:image" content="https://codewiztools.com/assets/og-pdf-merger.png">
+<meta name="twitter:site" content="@CodeWizTools">
+
+<meta name="theme-color" content="#00F2FE">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://codewiztools.com/tools/pdf-merger.html#webapp",
+  "name": "PDF Merger",
+  "url": "https://codewiztools.com/tools/pdf-merger.html",
+  "description": "Free online PDF merger. Combine multiple PDF files into one document. Drag to reorder files before merging. Works for assignment submissions, reports, contracts, and any multi-part document. 100% browser-based — PDFs never uploaded to any server.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+  "browserRequirements": "Requires JavaScript and PDF-Lib",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "creator": { "@type": "Organization", "name": "CodeWizTools", "url": "https://codewiztools.com" },
+  "featureList": [
+    "Merge multiple PDF files into one",
+    "Drag to reorder files before merging",
+    "Remove individual files from the list",
+    "Drag and drop upload",
+    "One-click download of merged PDF",
+    "100% browser-based — PDFs never sent to any server"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are my PDF files uploaded to a server when using this merger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All merging runs entirely in your browser using PDF-Lib. Your PDF files are never uploaded to any server, never stored, and never transmitted anywhere. Assignment files, certificates, contracts, and any other documents stay completely on your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many PDF files can I merge at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no hard limit on the number of files. You can merge 2 files or 20+ files in one session. The practical limit is your device's available memory — very large PDFs (50MB+ each) may slow down the browser. For best performance, merge files under 10MB each."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I merge PDF files for a university assignment submission?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload all your assignment PDF files to this tool. Use the up and down arrows to arrange them in the correct order (cover page first, then content pages, then appendices). Click Merge PDFs and download the combined file. The merged PDF keeps all original pages in sequence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I reorder the PDF files before merging?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. After uploading your files, each file shows up and down arrow buttons. Click the up arrow to move a file earlier in the order, or the down arrow to move it later. The final merged PDF will follow the order shown in the list."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the merged PDF lose any quality or content?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This merger uses PDF-Lib to copy pages directly from each source PDF into the merged document. The text, images, vector graphics, and formatting are preserved exactly as in the originals. No re-rendering or compression takes place during merging."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I merge password-protected PDF files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Password-protected PDFs cannot be read without the password. If you need to merge a protected PDF, remove the password protection first using your PDF software, then upload and merge with this tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does merging PDF files take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Merging is usually instant for files under 10MB total. Larger files (50MB+) may take a few seconds as the browser copies pages in memory. All processing runs locally — internet speed has no effect on merge time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this PDF merger on mobile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This tool works on any modern mobile browser including Chrome for Android and Safari for iOS. Upload files from your phone storage or cloud drive, reorder them, and download the merged PDF to your device."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://codewiztools.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://codewiztools.com/#tools" },
+    { "@type": "ListItem", "position": 3, "name": "PDF Merger", "item": "https://codewiztools.com/tools/pdf-merger.html" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 
 <style>
-:root {
-  --bg: #0B0F19;
-  --surface: #151D30;
-  --surface2: #1a2440;
-  --surface3: #1f2b4a;
-  --border: rgba(0,242,254,0.08);
-  --border2: rgba(0,242,254,0.18);
-  --accent: #00F2FE;
-  --accent-dim: rgba(0,242,254,0.12);
-  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
-  --success: #10B981;
-  --text: #FFFFFF;
-  --text2: #94A3B8;
-  --text3: #4a5568;
-  --mono: 'JetBrains Mono', monospace;
-  --sans: 'Space Grotesk', sans-serif;
-  --r: 10px;
-  --r-lg: 16px;
-}
+:root{--bg:#0B0F19;--surface:#151D30;--surface2:#1a2440;--surface3:#1f2b4a;--border:rgba(0,242,254,0.08);--border2:rgba(0,242,254,0.18);--accent:#00F2FE;--accent-dim:rgba(0,242,254,0.12);--accent-glow:0 0 15px rgba(0,242,254,0.35);--success:#10B981;--success-dim:rgba(16,185,129,0.12);--error:#EF4444;--text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;--mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;--r:10px;--r-lg:16px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
-body::before{
-  content:'';position:fixed;inset:0;
-  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
-  background-size:50px 50px;pointer-events:none;z-index:0;
-}
-
-/* SITE HEADER */
-.site-header{
-  position:sticky;top:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2rem;height:62px;
-  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border2);
-}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);}
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.logo-icon{
-  width:34px;height:34px;border-radius:9px;
-  background:linear-gradient(135deg,#00F2FE,#0070f3);
-  display:flex;align-items:center;justify-content:center;
-  font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);
-}
-.logo-text{font-size:1.1rem;font-weight:700;color:var(--text);}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);flex-shrink:0;}
+.logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
 .logo-text span{color:var(--accent);}
-.back-btn{
-  font-family:var(--mono);font-size:12px;color:var(--text2);
-  text-decoration:none;padding:6px 12px;border-radius:var(--r);
-  border:1px solid var(--border);transition:all 0.2s;
-}
-.back-btn:hover{color:var(--accent);background:var(--accent-dim);border-color:var(--accent);}
-
-/* MAIN LAYOUT WRAPPER */
-.page-wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:2rem 1.5rem 4rem;}
-.breadcrumb{font-family:var(--mono);font-size:12px;color:var(--text3);margin-bottom:1.5rem;display:flex;align-items:center;gap:6px;}
-.breadcrumb a{color:var(--text3);text-decoration:none;}
+.nav-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 14px;border-radius:var(--r);transition:all 0.2s;border:1px solid var(--border);background:rgba(21,29,48,0.5);}
+.nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
+.tool-page-wrap{position:relative;z-index:1;max-width:720px;margin:2rem auto 5rem;padding:0 1.5rem;animation:fadeUp 0.5s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.breadcrumb{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:1.5rem;display:flex;gap:6px;align-items:center;}
+.breadcrumb a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
 .breadcrumb a:hover{color:var(--accent);}
-.panel-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:10px;}
-.panel-title{font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;}
-.panel-tag{font-family:var(--mono);font-size:11px;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border2);padding:3px 10px;border-radius:20px;}
-
-.two-col{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start;}
-@media(max-width:850px){.two-col{grid-template-columns:1fr;}}
-.col-label{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:7px;}
-
-/* WORKSTATION DROPZONE */
-.dropzone{
-  background:var(--surface);border:2px dashed var(--border2);border-radius:var(--r-lg);
-  padding:3.5rem 2rem;text-align:center;cursor:pointer;transition:all 0.3s;
-  position:relative;
-}
-.dropzone:hover, .dropzone.dragover{
-  border-color:var(--accent);background:rgba(0,242,254,0.02);
-  box-shadow:var(--accent-glow);
-}
-.dropzone-icon{font-size:36px;margin-bottom:12px;display:inline-block;color:var(--accent);text-shadow:var(--accent-glow);}
-.dropzone h3{font-size:16px;font-weight:600;margin-bottom:4px;}
-.dropzone p{font-family:var(--mono);font-size:11px;color:var(--text3);}
-#file-input{display:none;}
-
-/* FILE SEQUENCE LIST ENGINE */
-.file-list-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.25rem;margin-top:16px;display:none;}
-.file-list-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--border);margin-bottom:10px;font-family:var(--mono);font-size:12px;color:var(--text2);}
-.file-item{
-  display:flex;align-items:center;justify-content:space-between;
-  background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);
-  padding:10px 14px;margin-bottom:8px;transition:all 0.2s;
-}
-.file-item:last-child{margin-bottom:0;}
-.file-info{display:flex;align-items:center;gap:10px;overflow:hidden;}
-.file-icon{font-size:18px;color:#f43f5e;flex-shrink:0;}
-.file-name{font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.page-hero{margin-bottom:1.5rem;}
+.page-h1{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.25;margin-bottom:0.45rem;}
+.page-h1 span{color:var(--accent);}
+.page-subtitle{font-size:13px;color:var(--text2);font-family:var(--mono);line-height:1.6;}
+.tool-card{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-lg);padding:1.5rem;}
+.panel-title-inner{font-size:1rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px;margin-bottom:1.2rem;}
+.dropzone{border:2px dashed var(--border2);border-radius:var(--r-lg);padding:2.5rem 1.5rem;text-align:center;cursor:pointer;transition:all 0.3s;position:relative;margin-bottom:1rem;}
+.dropzone:hover,.dropzone.dragover{border-color:var(--accent);background:var(--accent-dim);}
+.dropzone-icon{font-size:2rem;margin-bottom:.75rem;display:block;}
+.dropzone-text{font-family:var(--mono);font-size:13px;color:var(--text2);margin-bottom:.5rem;}
+.dropzone-sub{font-family:var(--mono);font-size:11px;color:var(--text3);}
+.file-input-hidden{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+/* FILE LIST */
+.list-wrapper{display:none;margin-bottom:1rem;}
+.list-header{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(11,15,25,.3);border-radius:var(--r) var(--r) 0 0;border:1px solid var(--border);border-bottom:none;}
+.list-header-txt{font-family:var(--mono);font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.04em;}
+.file-count{font-family:var(--mono);font-size:11px;color:var(--accent);}
+.file-list{border:1px solid var(--border);border-radius:0 0 var(--r) var(--r);overflow:hidden;}
+.file-item{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surface2);border-bottom:1px solid var(--border);transition:background .2s;}
+.file-item:last-child{border-bottom:none;}
+.file-item:hover{background:var(--surface3);}
+.file-info{display:flex;align-items:center;gap:8px;flex:1;overflow:hidden;}
+.file-icon{font-size:16px;flex-shrink:0;}
+.file-name{font-family:var(--mono);font-size:12px;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .file-size{font-family:var(--mono);font-size:11px;color:var(--text3);flex-shrink:0;}
-.file-actions{display:flex;align-items:center;gap:4px;}
-.action-btn{
-  background:transparent;border:none;color:var(--text2);font-size:14px;
-  width:28px;height:28px;border-radius:6px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;transition:all 0.2s;
-}
-.action-btn:hover{background:var(--surface3);color:var(--accent);}
-.action-btn.delete:hover{color:#f43f5e;background:rgba(244,63,94,0.1);}
-
-/* BUTTON ACTIONS ENGINE */
-.action-area{margin-top:16px;display:none;}
-.merge-btn{
-  font-family:var(--sans);font-size:13px;font-weight:700;padding:12px 24px;border-radius:var(--r);border:1px solid var(--accent);background:var(--accent);color:#000;cursor:pointer;transition:all 0.3s;width:100%;text-align:center;box-shadow:var(--accent-glow);
-}
-.merge-btn:hover{filter:brightness(1.1);transform:scale(1.01);box-shadow:var(--accent-glow);}
-.merge-btn:disabled{background:var(--surface2);border-color:var(--border);color:var(--text3);box-shadow:none;cursor:not-allowed;transform:none;}
-
-/* METRIC MONITOR DASHBOARD */
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-@media(max-width:480px){.stats-grid{grid-template-columns:1fr;}}
-.stat-box{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:12px;position:relative;min-height:75px;display:flex;flex-direction:column;justify-content:center;}
-.stat-lbl{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
-.stat-val{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--text);word-break:break-all;line-height:1.4;}
-
-/* PROCESSING BUFFER LOADER */
-.loader-wrap{display:none;background:var(--surface);border:1px dashed rgba(0,242,254,0.2);border-radius:var(--r-lg);padding:2rem 1.5rem;text-align:center;margin-top:16px;}
-.spinner{width:32px;height:32px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px;box-shadow:var(--accent-glow);}
+.file-actions{display:flex;gap:4px;flex-shrink:0;margin-left:8px;}
+.action-btn{width:28px;height:28px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text3);cursor:pointer;transition:all .2s;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.action-btn:hover{border-color:var(--accent);color:var(--accent);}
+.action-btn.delete:hover{border-color:var(--error);color:var(--error);}
+.action-btn:disabled{opacity:0.2;cursor:not-allowed;}
+/* ACTIONS */
+.action-wrapper{display:none;margin-top:1rem;}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:8px 18px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .3s;outline:none;}
+.btn:hover{border-color:var(--text2);color:var(--text);}
+.btn:disabled{opacity:0.4;cursor:not-allowed;}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#000;font-weight:700;font-size:13px;padding:10px 24px;}
+.btn-primary:hover:not(:disabled){background:#1af4ff;box-shadow:var(--accent-glow);}
+.btn-accent{border-color:var(--border2);color:var(--text2);}
+.btn-accent:hover{border-color:var(--accent);color:var(--accent);}
+.add-more-note{font-family:var(--mono);font-size:11px;color:var(--text3);}
+.loader{display:none;text-align:center;padding:2rem 1rem;}
+.loader-spin{font-size:1.5rem;animation:spin 1s linear infinite;display:inline-block;margin-bottom:.75rem;}
 @keyframes spin{to{transform:rotate(360deg);}}
-.loader-wrap p{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:0.02em;}
-
-/* ABOUT SEO COMPONENT ENGINE */
-.seo-block{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border2);}
-.seo-block h2{font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;}
-.seo-block h3{font-size:1.05rem;font-weight:600;color:var(--text);margin:1.5rem 0 .5rem;}
-.seo-block p{font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;margin-bottom:.75rem;}
-
-/* FAQ ACCORDION ENGINE */
-.faq-section{margin-top:3rem;display:flex;flex-direction:column;gap:10px;}
-.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
-.faq-q{
-  width:100%;display:flex;align-items:center;justify-content:space-between;
-  padding:14px;background:transparent;border:none;
-  font-family:var(--sans);font-size:14px;font-weight:600;color:var(--text);
-  cursor:pointer;text-align:left;user-select:none;
-}
-.faq-q:hover{background:rgba(0,242,254,0.02);}
-.faq-chevron{font-size:16px;color:var(--accent);transition:transform 0.2s;}
-.faq-item.open .faq-chevron{transform:rotate(180deg);}
-.faq-a{
-  max-height:0;overflow:hidden;transition:max-height 0.3s ease, padding 0.2s;
-  padding:0 14px;font-family:var(--mono);font-size:12.5px;color:var(--text2);line-height:1.7;
-}
-.faq-item.open .faq-a{max-height:300px;padding:0 14px 14px;}
-
-/* UTILITIES HUB NETWORK GRID */
-.network-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:12px;margin-top:1.5rem;}
-.network-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px;text-decoration:none;transition:all 0.2s;display:flex;flex-direction:column;gap:5px;}
-.network-card:hover{border-color:var(--accent);transform:translateY(-2px);background:var(--surface2);box-shadow:0 5px 15px rgba(0,242,254,0.05);}
-.net-title{font-size:13px;font-weight:600;color:#fff;}
-.net-desc{font-family:var(--mono);font-size:11px;color:var(--text3);line-height:1.4;}
-
-/* FOOTER ARCHITECTURE */
-.site-footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid var(--border);margin-top:4rem;font-family:var(--mono);font-size:12px;color:var(--text3);}
-.site-footer p{font-family:var(--mono);font-size:12px;color:var(--text3);}
-.site-footer a{color:var(--text2);text-decoration:none;}
+.loader-text{font-family:var(--mono);font-size:12px;color:var(--text3);}
+/* SEO */
+.seo-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;}
+.seo-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;margin-top:2rem;}
+.seo-section h2:first-child{margin-top:0;}
+.seo-section p{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:.9rem;}
+.seo-section p:last-child{margin-bottom:0;}
+.seo-section ul{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;padding-left:1.4rem;margin-bottom:.9rem;display:flex;flex-direction:column;gap:4px;}
+.faq-accordion{margin-top:2rem;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border);padding-top:2rem;}
+.faq-accordion h2{margin-top:0!important;}
+.faq-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.faq-trigger{width:100%;background:none;border:none;padding:14px 18px;text-align:left;color:#fff;font-family:var(--sans);font-size:.95rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.faq-trigger .arrow{transition:transform .3s;font-size:12px;color:var(--text3);flex-shrink:0;}
+.faq-item.active .faq-trigger .arrow{transform:rotate(180deg);}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .35s ease;background:rgba(11,15,25,.3);}
+.faq-content p{padding:14px 18px;font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;}
+.faq-item.active .faq-content{max-height:500px;}
+.internal-grid-wrapper{margin-top:3rem;padding:1.5rem;background:rgba(21,29,48,.4);border:1px solid var(--border);border-radius:var(--r-lg);}
+.internal-grid-wrapper h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.internal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.internal-link-card{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);text-decoration:none;font-size:13px;color:var(--text2);transition:all .2s;}
+.internal-link-card:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:var(--accent-glow);}
+.tool-icon{font-size:15px;margin-right:8px;}
+.site-footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;}
+.site-footer a{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;transition:color .2s;}
 .site-footer a:hover{color:var(--accent);}
-
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-.fadein{animation:fadeIn .3s ease both;}
+.site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+@media(max-width:640px){.site-header{padding:0 1rem;}.tool-page-wrap{margin:1.5rem auto 3rem;}.seo-section{padding:1.2rem;}.page-h1{font-size:1.4rem;}}
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <a href="../index.html" class="logo">
-    <div class="logo-icon">C</div>
+  <a href="../index.html" class="logo" aria-label="CodeWizTools — Home">
+    <div class="logo-icon" aria-hidden="true">C</div>
     <span class="logo-text">CodeWiz<span>Tools</span></span>
   </a>
-  <a href="../index.html" class="back-btn">← All Tools</a>
+  <nav aria-label="Site navigation">
+    <a href="../index.html" class="nav-link">← All Tools</a>
+  </nav>
 </header>
 
-<div class="page-wrap fadein">
-  
+<main class="tool-page-wrap">
+
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="../index.html">Home</a>
-    <span style="color:var(--border2);">/</span>
-    <span style="color:var(--text2);">PDF Merger</span>
+    <span aria-hidden="true">/</span>
+    <a href="../index.html#tools">Tools</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">PDF Merger</span>
   </nav>
 
-  <div class="panel-hdr">
-    <h1 class="panel-title">
-      <span style="font-family:var(--mono);color:var(--accent);">🗂️</span>
-      Client-Side PDF Merger
-      <span class="panel-tag">100% Client-Side</span>
-    </h1>
+  <div class="page-hero">
+    <h1 class="page-h1"><span>PDF Merger</span> — Combine Multiple PDF Files Online Free</h1>
+    <p class="page-subtitle">Upload PDFs → reorder → merge into one file · Assignment submissions · No server upload · Free</p>
   </div>
 
-  <div class="two-col">
-    <div>
-      <div class="col-label">Upload Assets Target</div>
-      <div class="dropzone" id="dropzone" onclick="document.getElementById('file-input').click()">
-        <span class="dropzone-icon">⚡</span>
-        <h3>Drag &amp; drop PDF files here</h3>
-        <p>or click to browse from device (Select multiple files)</p>
-        <input type="file" id="file-input" multiple accept="application/pdf" onchange="handleFileSelect(event)">
-      </div>
+  <div class="tool-card">
+    <div class="panel-title-inner" aria-hidden="true">📎 &nbsp;PDF Merger</div>
 
-      <div class="loader-wrap" id="loader">
-        <div class="spinner"></div>
-        <p>Merging document contexts locally inside browser memory pipelines...</p>
-      </div>
-
-      <div class="file-list-wrap" id="list-wrapper">
-        <div class="file-list-header">
-          <span>Selected Files (Arrange sequence)</span>
-          <span id="file-count">0 files</span>
-        </div>
-        <div id="file-list"></div>
-      </div>
-
-      <div class="action-area" id="action-wrapper">
-        <button class="merge-btn" id="merge-btn" onclick="mergeAllPdfs()">Combine &amp; Download PDF Asset</button>
-      </div>
+    <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Click or drag PDF files here to add them to the merge list">
+      <input type="file" class="file-input-hidden" id="file-input" accept="application/pdf" multiple onchange="handleFileSelect(event)" aria-label="Upload PDF files to merge">
+      <span class="dropzone-icon" aria-hidden="true">📎</span>
+      <p class="dropzone-text">Click to upload or drag &amp; drop PDF files here</p>
+      <p class="dropzone-sub">Multiple files supported · runs in your browser · no server upload</p>
     </div>
 
-    <div>
-      <div class="col-label">Asset Metrics &amp; Sequence Tracker Dashboard</div>
-      <div class="stats-grid">
-        <div class="stat-box">
-          <div class="stat-lbl">Total Queued Items</div>
-          <div class="stat-val" id="stats-file-count">0 Document Components</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-lbl">Framework Core</div>
-          <div class="stat-val" style="color:var(--accent);">pdf-lib compilation</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-lbl">Security Context</div>
-          <div class="stat-val" style="color:var(--success);">Zero Server Exposure</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-lbl">Execution Framework</div>
-          <div class="stat-val">100% Client-Sandbox</div>
-        </div>
+    <div class="list-wrapper" id="list-wrapper">
+      <div class="list-header">
+        <span class="list-header-txt">Files to merge — use arrows to reorder</span>
+        <span class="file-count" id="file-count" aria-live="polite">0 file(s)</span>
       </div>
+      <div class="file-list" id="file-list" role="list" aria-label="List of PDF files to merge"></div>
+    </div>
+
+    <div class="action-wrapper" id="action-wrapper">
+      <div class="btn-row">
+        <button class="btn btn-primary" id="merge-btn" onclick="mergeAllPdfs()" disabled aria-label="Merge all PDFs into one document">Merge PDFs</button>
+        <label class="btn btn-accent" style="cursor:pointer;" aria-label="Add more PDF files">
+          + Add More Files
+          <input type="file" accept="application/pdf" multiple style="display:none;" onchange="handleFileSelect(event)" aria-label="Add more PDF files">
+        </label>
+      </div>
+      <p class="add-more-note" style="margin-top:8px;">At least 2 files required to merge</p>
+    </div>
+
+    <div class="loader" id="loader" role="status" aria-live="polite">
+      <div class="loader-spin" aria-hidden="true">⚙️</div>
+      <div class="loader-text" id="loader-text">Merging your PDFs...</div>
     </div>
   </div>
 
-  <section class="seo-block" aria-label="SEO Informational Content">
-    <h2>Why Use Our Online PDF Joiner?</h2>
-    <p>
-      Managing academic documents can be overwhelming. Whether you are a university student preparing a final thesis, a researcher compiling multiple study reports, or a developer organizing documentation, our <strong>free online PDF merger</strong> simplifies your workflow. You don't need to install heavy software like Adobe Acrobat or register on tracking websites.
-    </p>
+  <section class="seo-section" aria-label="About PDF merging">
 
-    <h3>Perfect for University Assignments &amp; Portals</h3>
-    <p>
-      Most university student portals (like LMS or Moodle) allow only a single file submission per assignment. If you have a separate cover page, main report, and appendix, you must combine them. Our tool lets you upload all parts, arrange them in the exact sequence using up/down controls, and merge them with 100% precision.
-    </p>
+    <h2>Free PDF Merger — Combine PDFs for Assignment Submissions</h2>
+    <p>This PDF merger combines multiple PDF files into one document using <strong>PDF-Lib</strong>, a modern browser-based PDF library. No images are re-rendered — pages are copied directly from each source file, so the merged PDF preserves the original text quality, vector graphics, and formatting exactly.</p>
 
-    <h3>100% Client-Side Privacy (Zero Server Uploads)</h3>
-    <p>
-      Unlike other online PDF tools that upload your sensitive documents to their clouds, CodeWizTools operates entirely in your web browser. The merging process runs locally via advanced JavaScript web buffers. Your files never leave your computer, ensuring total confidentiality for data-sensitive documents.
-    </p>
-  </section>
+    <h2>How to Merge PDF Files for University Assignment Submission</h2>
+    <p>Many universities require students to submit a single PDF file combining a cover page, main report, appendices, and references. Here is how to use this merger:</p>
+    <ul>
+      <li>Upload all your PDF files — cover page, report sections, appendices</li>
+      <li>Use the <strong>↑ ↓ arrows</strong> to arrange files in the correct order</li>
+      <li>Click <strong>Merge PDFs</strong> to combine them into one file</li>
+      <li>Download the merged PDF and submit to your university portal</li>
+    </ul>
 
-  <section class="faq-section" aria-label="Frequently asked questions about PDF Merger">
-    <div class="col-label" style="margin-bottom:5px;">Frequently Asked Questions</div>
+    <h2>Merge PDFs Without Losing Quality</h2>
+    <p>Unlike PDF compressors, this merger does not re-render or compress any pages. It copies page data directly between PDF documents using PDF-Lib. The merged output has the same text sharpness, image quality, and vector graphics as the original files — no quality loss of any kind.</p>
 
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Are my uploaded PDF files saved on your servers?
-        <span class="faq-chevron">⌄</span>
-      </button>
-      <div class="faq-a">Absolutely not! CodeWizTools is a 100% browser-based utility platform. Your files are never uploaded to any remote or cloud server. The entire PDF merging process runs completely within your browser via the `pdf-lib` client-side JavaScript engine. Your structural data remains totally secure.</div>
-    </div>
+    <h2>Merge PDFs for Contracts, Reports and Official Documents</h2>
+    <p>This tool is also useful for combining multi-part contracts, multi-chapter reports, and any official document that was generated in separate PDF files. Upload all parts, reorder them, and download the single combined PDF. All processing is private — your documents never leave your device.</p>
 
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        What is the step-by-step process to use this PDF Merger?
-        <span class="faq-chevron">⌄</span>
-      </button>
-      <div class="faq-a">It is incredibly simple: <br>1. Click inside the "Drag &amp; Drop" zone to select all the PDF documents you wish to combine.<br>2. Once populated, use the Up (↑) and Down (↓) sequencing arrows next to each file to arrange your ideal documentation order.<br>3. Click the "Combine &amp; Download PDF Asset" button to compile your unified PDF document layout directly.</div>
-    </div>
+    <div class="faq-accordion">
+      <h2>Frequently Asked Questions</h2>
 
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Is there an arbitrary limit on file sizes or the number of uploaded documents?
-        <span class="faq-chevron">⌄</span>
-      </button>
-      <div class="faq-a">No, there are no artificial boundaries imposed on the number of targets. However, because compilation takes place inside your active system RAM context, extreme files (exceeding 500MB+) might hit local browser memory sandbox boundaries. For typical academic semester records, reports, and long theses, the engine executes smoothly.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Will combining files decrease the overall text sharpness or asset quality?
-        <span class="faq-chevron">⌄</span>
-      </button>
-      <div class="faq-a">Not at all. Our system operates on low-level structural buffer streams, parsing and extracting layout references without altering the raster attributes or text parameters. All font configurations, hyper-links, structural scaling parameters, and embedded vector objects are brought over with zero degradation.</div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Are my PDF files uploaded to a server?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>No — 100% private. All merging runs in your browser using PDF-Lib. Your PDFs are never uploaded to any server. Assignment files, certificates, contracts stay entirely on your device.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How many PDF files can I merge at once?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>No hard limit. You can merge 2 files or 20+ files. The practical limit is your device's memory. For best performance, use files under 10MB each. Very large PDFs (50MB+) may slow the browser.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How do I merge PDFs for a university assignment submission?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Upload all files (cover page, report, appendices). Use ↑ ↓ arrows to arrange in the correct order. Click Merge PDFs and download. The merged PDF keeps all pages in sequence.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Can I reorder the PDF files before merging?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes. Each file has up and down arrows. Click ↑ to move a file earlier, ↓ to move it later. The merged PDF follows the order shown in the list.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Will the merged PDF lose any quality?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>No. Pages are copied directly using PDF-Lib — no re-rendering or compression. Text sharpness, images, and vector graphics are preserved exactly as in the originals.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Can I merge password-protected PDFs?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>No. Password-protected PDFs cannot be read without the password. Remove password protection first, then upload and merge.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How long does merging take?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Usually instant for files under 10MB total. Larger files may take a few seconds. All processing runs locally — internet speed has no effect.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Can I use this PDF merger on mobile?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes. Works on Chrome for Android and Safari for iOS. Upload files from your phone storage or cloud drive, reorder, and download the merged PDF.</p></div>
+      </div>
     </div>
   </section>
 
-  <div style="margin-top:3.5rem;">
-    <div class="col-label">CodeWizTools Utility Ecosystem</div>
-    <div class="network-grid">
-      <a href="assignment-renamer.html" class="network-card">
-        <div class="net-title">📝 Assignment Renamer</div>
-        <div class="net-desc">Standardize your academic file names for university portal uploads.</div>
-      </a>
-      <a href="attendance-calculator.html" class="network-card">
-        <div class="net-title">📊 Attendance Calculator</div>
-        <div class="net-desc">Track required attendance thresholds and class percentages instantly.</div>
-      </a>
-      <a href="base64-converter.html" class="network-card">
-        <div class="net-title">🔗 Base64 Converter</div>
-        <div class="net-desc">Encode or decode strings and media assets into raw binary schemas.</div>
-      </a>
-      <a href="case-converter.html" class="network-card">
-        <div class="net-title">🔤 Case Converter</div>
-        <div class="net-desc">Switch text blocks seamlessly between UPPER, lower, camel, and snake case formats.</div>
-      </a>
-      <a href="cgpa-calculator.html" class="network-card">
-        <div class="net-title">🎓 CGPA Calculator</div>
-        <div class="net-desc">Compute dynamic semester GPAs and cumulative academic averages instantly.</div>
-      </a>
-      <a href="color-picker.html" class="network-card">
-        <div class="net-title">🎨 Color Picker Workstation</div>
-        <div class="net-desc">Interactive Hex to RGBA canvas color matrix selector engine for developers.</div>
-      </a>
-      <a href="image-compressor.html" class="network-card">
-        <div class="net-title">🖼️ Image Compressor</div>
-        <div class="net-desc">Optimize JPG, PNG, and WebP dimensions while stripping weight allocations.</div>
-      </a>
-      <a href="json-formatter.html" class="network-card">
-        <div class="net-title">⚡ JSON Formatter &amp; Validator</div>
-        <div class="net-desc">Prettify structural data payloads and syntax error streams on the fly.</div>
-      </a>
-      <a href="lorem-ipsum-generator.html" class="network-card">
-        <div class="net-title">✍️ Lorem Ipsum Generator</div>
-        <div class="net-desc">Generate raw mockup filler text parameters for front-end layouts layout configurations.</div>
-      </a>
-      <a href="password-generator.html" class="network-card">
-        <div class="net-title">🔑 Password Generator</div>
-        <div class="net-desc">Construct secure, cryptographically random string tokens for verification rules.</div>
-      </a>
-      <a href="pdf-merger.html" class="network-card">
-        <div class="net-title">🗂️ PDF Document Merger</div>
-        <div class="net-desc">Combine separate target asset documents into a unified file structure.</div>
-      </a>
-      <a href="percentage-calculator.html" class="network-card">
-        <div class="net-title">🔢 Percentage Calculator</div>
-        <div class="net-desc">Solve basic ratios, relative variations, and percentage changes dynamically.</div>
-      </a>
-      <a href="url-encoder.html" class="network-card">
-        <div class="net-title">🌐 URL Encoder / Decoder</div>
-        <div class="net-desc">Convert query components safely to keep character parameters standard.</div>
-      </a>
-      <a href="word-counter.html" class="network-card">
-        <div class="net-title">⏱️ Word Counter</div>
-        <div class="net-desc">Analyze string values for structural loops, character maps, and reading time.</div>
-      </a>
+  <div class="internal-grid-wrapper">
+    <h2>⚡ More Tools</h2>
+    <div class="internal-grid">
+      <a href="pdf-compressor.html" class="internal-link-card" title="Compress PDF files online free"><span><span class="tool-icon" aria-hidden="true">📄</span>PDF Compressor</span><span>→</span></a>
+      <a href="image-compressor.html" class="internal-link-card" title="Compress JPG, PNG and WebP images"><span><span class="tool-icon" aria-hidden="true">🖼️</span>Image Compressor</span><span>→</span></a>
+      <a href="attendance-calculator.html" class="internal-link-card" title="Attendance and bunk calculator for students"><span><span class="tool-icon" aria-hidden="true">📅</span>Attendance Calculator</span><span>→</span></a>
+      <a href="cgpa-calculator.html" class="internal-link-card" title="CGPA calculator online"><span><span class="tool-icon" aria-hidden="true">🎓</span>CGPA Calculator</span><span>→</span></a>
+      <a href="percentage-calculator.html" class="internal-link-card" title="Percentage calculator online"><span><span class="tool-icon" aria-hidden="true">%</span>Percentage Calculator</span><span>→</span></a>
+      <a href="word-counter.html" class="internal-link-card" title="Count words and characters online"><span><span class="tool-icon" aria-hidden="true">🔢</span>Word Counter</span><span>→</span></a>
+      <a href="password-generator.html" class="internal-link-card" title="Generate strong random passwords"><span><span class="tool-icon" aria-hidden="true">🔑</span>Password Generator</span><span>→</span></a>
+      <a href="json-formatter.html" class="internal-link-card" title="Format and validate JSON online"><span><span class="tool-icon" aria-hidden="true">📋</span>JSON Formatter</span><span>→</span></a>
+      <a href="color-picker.html" class="internal-link-card" title="RGBA Color Picker"><span><span class="tool-icon" aria-hidden="true">🎨</span>RGBA Color Picker</span><span>→</span></a>
+      <a href="lorem-ipsum.html" class="internal-link-card" title="Lorem Ipsum Generator"><span><span class="tool-icon" aria-hidden="true">📝</span>Lorem Ipsum Generator</span><span>→</span></a>
     </div>
   </div>
 
-</div>
+</main>
 
 <footer class="site-footer">
-  <p><a href="../index.html" style="color:var(--text2);text-decoration:none;">← Back to all tools</a> &nbsp;·&nbsp; <a href="../index.html" style="color:var(--text2);text-decoration:none;">CodeWizTools</a></p>
-  <p style="margin-top:6px;">© 2026 CodeWizTools.com</p>
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all CodeWizTools</a></p>
+  <p>© 2026 CodeWizTools · No tracking. No logs. Pure Privacy.</p>
 </footer>
 
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 <script>
 let selectedFiles = [];
 
-// Drag and drop handlers
 const dropzone = document.getElementById('dropzone');
-['dragenter', 'dragover'].forEach(eventName => {
-  dropzone.addEventListener(eventName, (e) => { e.preventDefault(); dropzone.classList.add('dragover'); }, false);
+['dragenter','dragover'].forEach(e => {
+  dropzone.addEventListener(e, ev => { ev.preventDefault(); dropzone.classList.add('dragover'); }, false);
 });
-['dragleave', 'drop'].forEach(eventName => {
-  dropzone.addEventListener(eventName, (e) => { e.preventDefault(); dropzone.classList.remove('dragover'); }, false);
+['dragleave','drop'].forEach(e => {
+  dropzone.addEventListener(e, ev => { ev.preventDefault(); dropzone.classList.remove('dragover'); }, false);
 });
-dropzone.addEventListener('drop', (e) => {
-  const dt = e.dataTransfer;
-  const files = Array.from(dt.files).filter(f => f.type === "application/pdf");
-  if(files.length > 0) {
-    addFilesToList(files);
-  }
+dropzone.addEventListener('drop', e => {
+  const files = Array.from(e.dataTransfer.files).filter(f => f.type === 'application/pdf');
+  if(files.length > 0) addFilesToList(files);
 });
+dropzone.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') document.getElementById('file-input').click(); });
 
 function handleFileSelect(e) {
-  const files = Array.from(e.target.files).filter(f => f.type === "application/pdf");
+  const files = Array.from(e.target.files).filter(f => f.type === 'application/pdf');
   addFilesToList(files);
 }
 
 function addFilesToList(files) {
   files.forEach(file => {
-    selectedFiles.push({
-      id: Math.random().toString(36).substr(2, 9),
-      fileObj: file
-    });
+    selectedFiles.push({ id: Math.random().toString(36).substr(2,9), fileObj: file });
   });
   renderFileList();
 }
 
 function formatBytes(bytes) {
-  if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB'];
+  if(bytes === 0) return '0 Bytes';
+  const k = 1024, sizes = ['Bytes','KB','MB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 }
 
 function renderFileList() {
   const listContainer = document.getElementById('file-list');
-  const listWrapper = document.getElementById('list-wrapper');
+  const listWrapper   = document.getElementById('list-wrapper');
   const actionWrapper = document.getElementById('action-wrapper');
   const fileCountText = document.getElementById('file-count');
-  const statsCountText = document.getElementById('stats-file-count');
-  
+
   listContainer.innerHTML = '';
-  fileCountText.textContent = `${selectedFiles.length} file(s)`;
-  statsCountText.textContent = `${selectedFiles.length} Document Component(s)`;
+  fileCountText.textContent = selectedFiles.length + ' file(s)';
 
   if(selectedFiles.length === 0) {
     listWrapper.style.display = 'none';
     actionWrapper.style.display = 'none';
     return;
   }
-
   listWrapper.style.display = 'block';
   actionWrapper.style.display = 'block';
-  
-  // Disable merge button if less than 2 files
   document.getElementById('merge-btn').disabled = selectedFiles.length < 2;
 
   selectedFiles.forEach((item, index) => {
     const itemEl = document.createElement('div');
     itemEl.className = 'file-item';
+    itemEl.setAttribute('role', 'listitem');
     itemEl.innerHTML = `
       <div class="file-info">
-        <span class="file-icon">📄</span>
+        <span class="file-icon" aria-hidden="true">📄</span>
         <span class="file-name" title="${item.fileObj.name}">${item.fileObj.name}</span>
         <span class="file-size">(${formatBytes(item.fileObj.size)})</span>
       </div>
       <div class="file-actions">
-        <button class="action-btn" onclick="moveItem(${index}, -1)" title="Move Up" ${index === 0 ? 'disabled style="opacity:0.2;"' : ''}>↑</button>
-        <button class="action-btn" onclick="moveItem(${index}, 1)" title="Move Down" ${index === selectedFiles.length - 1 ? 'disabled style="opacity:0.2;"' : ''}>↓</button>
-        <button class="action-btn delete" onclick="removeItem('${item.id}')" title="Remove file">✕</button>
-      </div>
-    `;
+        <button class="action-btn" onclick="moveItem(${index},-1)" aria-label="Move ${item.fileObj.name} up" ${index===0?'disabled':''}>↑</button>
+        <button class="action-btn" onclick="moveItem(${index},1)" aria-label="Move ${item.fileObj.name} down" ${index===selectedFiles.length-1?'disabled':''}>↓</button>
+        <button class="action-btn delete" onclick="removeItem('${item.id}')" aria-label="Remove ${item.fileObj.name}">✕</button>
+      </div>`;
     listContainer.appendChild(itemEl);
   });
 }
 
 function moveItem(index, direction) {
-  const targetIndex = index + direction;
-  if(targetIndex < 0 || targetIndex >= selectedFiles.length) return;
+  const target = index + direction;
+  if(target < 0 || target >= selectedFiles.length) return;
   const temp = selectedFiles[index];
-  selectedFiles[index] = selectedFiles[targetIndex];
-  selectedFiles[targetIndex] = temp;
+  selectedFiles[index] = selectedFiles[target];
+  selectedFiles[target] = temp;
   renderFileList();
 }
 
@@ -479,54 +468,44 @@ function removeItem(id) {
 }
 
 async function mergeAllPdfs() {
-  if (selectedFiles.length < 2) return;
-  
-  const loader = document.getElementById('loader');
+  if(selectedFiles.length < 2) return;
+  const loader  = document.getElementById('loader');
   const mergeBtn = document.getElementById('merge-btn');
-  
   loader.style.display = 'block';
   mergeBtn.disabled = true;
-
   try {
-    // 1. Create a blank local PDF Document object
     const mergedPdf = await PDFLib.PDFDocument.create();
-    
-    // 2. Loop and read internal stream bytes of each file
-    for (const fileItem of selectedFiles) {
+    for(const fileItem of selectedFiles) {
+      document.getElementById('loader-text').textContent = 'Adding: ' + fileItem.fileObj.name;
       const arrayBuffer = await fileItem.fileObj.arrayBuffer();
       const currentPdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
-      
-      // Copy all individual pages safely
       const copiedPages = await mergedPdf.copyPages(currentPdfDoc, currentPdfDoc.getPageIndices());
-      copiedPages.forEach((page) => mergedPdf.addPage(page));
+      copiedPages.forEach(page => mergedPdf.addPage(page));
     }
-    
-    // 3. Save combined context stream buffer
+    document.getElementById('loader-text').textContent = 'Saving merged PDF...';
     const mergedPdfBytes = await mergedPdf.save();
-    
-    // 4. Force binary blob action for user download
     const blob = new Blob([mergedPdfBytes], { type: 'application/pdf' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = `CodeWizTools_Merged_${Date.now()}.pdf`;
-    document.body.appendChild(link);
+    link.download = 'merged-document.pdf';
     link.click();
-    document.body.removeChild(link);
-    
-  } catch (error) {
-    console.error("Merging failed: ", error);
-    alert("Ops! PDF merge karte waqt koi error aaya hai. Kindly verify karein ke files corrupted na hon.");
-  } finally {
+    URL.revokeObjectURL(link.href);
     loader.style.display = 'none';
     mergeBtn.disabled = false;
+    document.getElementById('loader-text').textContent = 'Merging your PDFs...';
+  } catch(err) {
+    loader.style.display = 'none';
+    mergeBtn.disabled = false;
+    alert('Error merging PDFs. One or more files may be password-protected or corrupted.');
+    console.error(err);
   }
 }
 
 function toggleFaq(btn) {
-  const item = btn.closest('.faq-item');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('active');
+  item.classList.toggle('active');
+  btn.setAttribute('aria-expanded', String(!isOpen));
 }
 </script>
 </body>
