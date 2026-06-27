@@ -3,379 +3,475 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online CGPA & GPA Calculator — Calculate University GPA | CodeWizTools</title>
-<meta name="description" content="Calculate your semester GPA and cumulative CGPA online instantly. Free, secure, and accurate university GPA calculator supporting custom credit hours and grade points.">
-<meta name="keywords" content="cgpa calculator, gpa calculator online, calculate university gpa, sgpa to cgpa, credit hour calculator, semester gpa calculator, lgu cgpa calculator, codewiztools, university grading system">
+
+<title>CGPA Calculator — Calculate Semester GPA & Cumulative CGPA Online | CodeWizTools</title>
+<meta name="description" content="Free CGPA and GPA calculator for university students. Calculate semester GPA from grades and credit hours. Calculate cumulative CGPA from multiple semesters. Supports 4.0 scale. Free, no signup.">
+<meta name="keywords" content="cgpa calculator, gpa calculator, cgpa calculator online, semester gpa calculator, calculate cgpa, university gpa calculator, cgpa calculator 4.0 scale, cumulative gpa calculator, sgpa calculator, cgpa to percentage, gpa to cgpa converter, grade point average calculator">
 <meta name="author" content="CodeWizTools">
-<meta property="og:title" content="Free Online CGPA & GPA Calculator — CodeWizTools">
-<meta property="og:description" content="Calculate your semester GPA and cumulative CGPA instantly inside your browser. 100% private with real-time accuracy.">
-<meta property="og:type" content="website">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://codewiztools.com/tools/cgpa-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="CGPA Calculator — Semester GPA & Cumulative CGPA | CodeWizTools">
+<meta property="og:description" content="Calculate semester GPA from grades and credit hours, or cumulative CGPA from multiple semesters. 4.0 scale. Free, no signup.">
+<meta property="og:url" content="https://codewiztools.com/tools/cgpa-calculator.html">
+<meta property="og:site_name" content="CodeWizTools">
+<meta property="og:image" content="https://codewiztools.com/assets/og-cgpa-calculator.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CGPA Calculator on CodeWizTools">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CGPA Calculator — Semester GPA & Cumulative CGPA | CodeWizTools">
+<meta name="twitter:description" content="Calculate GPA and CGPA on a 4.0 scale. Add subjects with grades and credit hours. Free, no signup.">
+<meta name="twitter:image" content="https://codewiztools.com/assets/og-cgpa-calculator.png">
+<meta name="twitter:site" content="@CodeWizTools">
+
+<meta name="theme-color" content="#00F2FE">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://codewiztools.com/tools/cgpa-calculator.html#webapp",
+  "name": "CGPA Calculator",
+  "url": "https://codewiztools.com/tools/cgpa-calculator.html",
+  "description": "Free CGPA and GPA calculator for university students. Calculate semester GPA by entering subjects with grades and credit hours. Calculate cumulative CGPA from multiple semesters. Uses the standard 4.0 scale. 100% browser-based.",
+  "applicationCategory": "EducationApplication",
+  "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "creator": { "@type": "Organization", "name": "CodeWizTools", "url": "https://codewiztools.com" },
+  "featureList": [
+    "Semester GPA calculator — add subjects with grades and credit hours",
+    "Cumulative CGPA calculator from multiple semesters",
+    "Standard 4.0 grade scale (A to F)",
+    "Add or remove subjects and semesters dynamically",
+    "Real-time calculation on every change",
+    "100% browser-based — no data sent to server"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is GPA calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPA (Grade Point Average) = Sum of (Grade Points × Credit Hours) divided by Total Credit Hours. For example: if you scored A (4.0) in a 3-credit subject and B (3.0) in a 2-credit subject, GPA = ((4.0×3) + (3.0×2)) / (3+2) = (12+6) / 5 = 3.60."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between GPA and CGPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPA (Grade Point Average) is calculated for a single semester. CGPA (Cumulative Grade Point Average) combines all semesters — it is the weighted average of all semester GPAs, weighted by credit hours. CGPA represents your overall academic performance across your entire degree program."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What grade scale does this CGPA calculator use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator uses the standard 4.0 scale used by most Pakistani and international universities: A/A+ = 4.00, A- = 3.66, B+ = 3.33, B = 3.00, B- = 2.66, C+ = 2.33, C = 2.00, C- = 1.66, D+ = 1.30, D = 1.00, F = 0.00."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my CGPA from multiple semesters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Switch to the CGPA tab, click Add Semester for each semester you have completed, enter the semester GPA and total credit hours for that semester. The cumulative CGPA updates automatically. Each semester is weighted by its credit hours — semesters with more credits have more impact on the final CGPA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What CGPA is needed for a distinction or honors degree?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At most Pakistani universities: CGPA 3.5 to 4.0 is President's Honor Roll / Gold Medal / Distinction. CGPA 3.0 to 3.49 is Dean's List / Silver Medal. CGPA 2.0 to 2.99 is Satisfactory. Below 2.0 may result in academic probation. Always check your specific university's policy as thresholds vary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert CGPA to percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common formula used by Pakistani universities: Percentage = CGPA × 25. For example: CGPA 3.5 = 87.5%. Some universities use CGPA × 24 or other multipliers. Check your university's official conversion policy for the correct formula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What credit hours should I enter for each subject?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the credit hours as specified in your course outline. Theory courses are typically 3 credit hours. Lab courses are usually 1 credit hour. Some major subjects may be 4 credit hours. The credit hours are printed on your course registration form and transcript."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my academic data safe in this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100% private. All calculations run locally in your browser using JavaScript. Your grades, GPA, and any other input are never sent to any server. CodeWizTools has a strict no-logs, no-tracking policy."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://codewiztools.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://codewiztools.com/#tools" },
+    { "@type": "ListItem", "position": 3, "name": "CGPA Calculator", "item": "https://codewiztools.com/tools/cgpa-calculator.html" }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23grad)'/%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 
 <style>
-:root {
-  --bg: #0B0F19;
-  --surface: #151D30;
-  --surface2: #1a2440;
-  --surface3: #1f2b4a;
-  --border: rgba(0,242,254,0.08);
-  --border2: rgba(0,242,254,0.18);
-  --accent: #00F2FE;
-  --accent-dim: rgba(0,242,254,0.12);
-  --accent-glow: 0 0 15px rgba(0,242,254,0.35);
-  --success: #10B981;
-  --text: #FFFFFF;
-  --text2: #94A3B8;
-  --text3: #4a5568;
-  --mono: 'JetBrains Mono', monospace;
-  --sans: 'Space Grotesk', sans-serif;
-  --r: 10px;
-  --r-lg: 16px;
-}
+:root{--bg:#0B0F19;--surface:#151D30;--surface2:#1a2440;--surface3:#1f2b4a;--border:rgba(0,242,254,0.08);--border2:rgba(0,242,254,0.18);--accent:#00F2FE;--accent-dim:rgba(0,242,254,0.12);--accent-glow:0 0 15px rgba(0,242,254,0.35);--success:#10B981;--success-dim:rgba(16,185,129,0.12);--error:#EF4444;--text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;--mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;--r:10px;--r-lg:16px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
-body::before{
-  content:'';position:fixed;inset:0;
-  background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);
-  background-size:50px 50px;pointer-events:none;z-index:0;
-}
-
-/* HEADER */
-.site-header{
-  position:sticky;top:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2rem;height:62px;
-  background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border2);
-}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);}
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.logo-icon{
-  width:34px;height:34px;border-radius:9px;
-  background:linear-gradient(135deg,#00F2FE,#0070f3);
-  display:flex;align-items:center;justify-content:center;
-  font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);
-}
-.logo-text{font-size:1.1rem;font-weight:700;color:var(--text);}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);flex-shrink:0;}
+.logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
 .logo-text span{color:var(--accent);}
-.back-btn{
-  font-family:var(--mono);font-size:12px;color:var(--text2);
-  text-decoration:none;padding:6px 12px;border-radius:var(--r);
-  border:1px solid var(--border);transition:all 0.2s;
-}
-.back-btn:hover{color:var(--accent);background:var(--accent-dim);border-color:var(--accent);}
-
-/* MAIN WRAPPER */
-.container{position:relative;z-index:1;max-width:850px;margin:0 auto;padding:3rem 1.5rem;}
-.tool-title-section{text-align:center;margin-bottom:2.5rem;}
-.tool-badge{
-  display:inline-block;font-family:var(--mono);font-size:10px;color:var(--accent);
-  background:var(--accent-dim);border:1px solid var(--border2);
-  padding:4px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:0.05em;text-transform:uppercase;
-}
-.tool-title-section h1{font-size:2.5rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:8px;}
-.tool-title-section p{font-family:var(--mono);font-size:13px;color:var(--text2);}
-
-/* TABS BUTTONS */
-.calc-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:2rem;}
-.tab-btn{
-  font-family:var(--mono);font-size:12px;padding:8px 20px;border-radius:20px;
-  border:1px solid var(--border2);background:var(--surface);color:var(--text2);
-  cursor:pointer;transition:all 0.3s;
-}
-.tab-btn:hover{color:var(--text);border-color:var(--accent);}
-.tab-btn.active{background:var(--accent);color:#000;border-color:var(--accent);font-weight:600;box-shadow:var(--accent-glow);}
-
-/* CALCULATOR CARD */
-.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.8rem;margin-bottom:2rem;display:none;}
+.nav-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 14px;border-radius:var(--r);transition:all 0.2s;border:1px solid var(--border);background:rgba(21,29,48,0.5);}
+.nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
+.tool-page-wrap{position:relative;z-index:1;max-width:820px;margin:2rem auto 5rem;padding:0 1.5rem;animation:fadeUp 0.5s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.breadcrumb{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:1.5rem;display:flex;gap:6px;align-items:center;}
+.breadcrumb a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--accent);}
+.page-hero{margin-bottom:1.5rem;}
+.page-h1{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.25;margin-bottom:0.45rem;}
+.page-h1 span{color:var(--accent);}
+.page-subtitle{font-size:13px;color:var(--text2);font-family:var(--mono);line-height:1.6;}
+/* TABS */
+.tab-bar{display:flex;background:var(--surface);border:1px solid var(--border2);border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);border-bottom:none;overflow:hidden;}
+.tab-btn{flex:1;font-family:var(--mono);font-size:13px;font-weight:600;padding:14px;border:none;background:transparent;color:var(--text2);cursor:pointer;transition:all .2s;outline:none;}
+.tab-btn.active{background:var(--accent-dim);color:var(--accent);border-bottom:2px solid var(--accent);}
+.tab-btn:hover:not(.active){background:rgba(255,255,255,.03);color:var(--text);}
+/* CALC CARDS */
+.calc-card{background:var(--surface);border:1px solid var(--border2);border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);padding:1.5rem;display:none;}
 .calc-card.active{display:block;}
-
-.calc-grid-header{
-  display:grid;grid-template-columns:2fr 1fr 1fr 40px;gap:12px;
-  font-family:var(--mono);font-size:11px;color:var(--text3);text-transform:uppercase;
-  margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);
-}
-.row-item{display:grid;grid-template-columns:2fr 1fr 1fr 40px;gap:12px;margin-bottom:10px;align-items:center;}
-
-input, select{
-  background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r);
-  color:var(--text);font-family:var(--mono);font-size:13px;padding:10px 12px;outline:none;transition:all 0.2s;
-  width:100%;
-}
-input:focus, select:focus{border-color:var(--accent);}
-
-.delete-btn{
-  background:transparent;border:none;color:var(--text3);font-size:18px;cursor:pointer;transition:color 0.2s;
-}
-.delete-btn:hover{color:#f43f5e;}
-
-.controls-row{display:flex;justify-content:space-between;margin-top:1.5rem;gap:10px;}
-.action-btn{
-  font-family:var(--sans);font-size:13px;font-weight:500;padding:10px 20px;
-  border-radius:20px;cursor:pointer;border:1px solid var(--border2);background:var(--surface2);color:var(--text);
-  transition:all 0.2s;
-}
-.action-btn:hover{border-color:var(--accent);color:var(--accent);}
-
-/* RESULT BLOCK */
-.result-display{
-  background:linear-gradient(135deg, rgba(0,242,254,0.03), rgba(0,112,243,0.03));
-  border:1px dashed var(--accent);border-radius:var(--r-lg);
-  padding:1.5rem;text-align:center;margin-top:2rem;
-}
-.result-display h2{font-size:14px;font-family:var(--mono);color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;}
-.score-big{font-size:3.5rem;font-weight:700;color:var(--accent);margin:5px 0;text-shadow:var(--accent-glow);}
-.score-info{font-family:var(--mono);font-size:12px;color:var(--success);}
-
-/* SEO INFO CONTENT */
-.seo-info-section {margin-top:4rem; padding-top:2rem; border-top:1px solid var(--border);}
-.seo-info-container {max-width:750px; margin:0 auto; line-height:1.8;}
-.seo-info-section h2 {font-size:1.6rem; font-weight:700; margin-bottom:1.5rem; text-align:center; letter-spacing:-0.03em;}
-.seo-info-section h2 span {color:var(--accent);}
-.seo-text-p {color:var(--text2); font-size:14px; margin-bottom:1.5rem; font-family:var(--sans);}
-.seo-info-section h3 {font-size:1.2rem; font-weight:600; color:var(--accent); margin-top:1.5rem; margin-bottom:0.5rem;}
-
-/* FAQ Accordion */
-.faq-accordion {margin-top: 2.5rem; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--border); padding-top: 2rem;}
-.faq-item {background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden;}
-.faq-trigger {width: 100%; background: none; border: none; padding: 14px 18px; text-align: left; color: #fff; font-family: var(--sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between;}
-.faq-content {max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(11, 15, 25, 0.3);}
-.faq-content p {padding: 14px 18px; font-family: var(--mono); font-size: 13px; color: #94A3B8; line-height: 1.75;}
-.faq-item.active .faq-content {max-height: 500px;}
-
-/* Internal Grid System (14 Tools Matrix) */
-.internal-grid-wrapper {margin-top: 3.5rem; padding: 1.5rem; background: rgba(21, 29, 48, 0.4); border: 1px solid var(--border); border-radius: var(--r-lg);}
-.internal-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top:1rem;}
-.internal-link-card {display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; font-size: 13px; color: var(--text2); transition: all 0.2s;}
-.internal-link-card:hover {border-color: var(--accent); color: #fff; transform: translateY(-1px); box-shadow: var(--accent-glow);}
-
-/* FOOTER */
-.site-footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;font-family:var(--mono);font-size:12px;color:var(--text3);}
-
-@media(max-width:640px){
-  .calc-grid-header, .row-item{grid-template-columns:1.5fr 1fr 1fr 30px;gap:6px;}
-  .tool-title-section h1{font-size:1.8rem;}
-  .score-big{font-size:2.5rem;}
-  .internal-grid{grid-template-columns: repeat(2, 1fr);}
-}
+/* ROWS */
+.rows-header{display:grid;gap:8px;font-family:var(--mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px;}
+.rows-header.sgpa-hdr{grid-template-columns:2fr 1fr 1.5fr 32px;}
+.rows-header.cgpa-hdr{grid-template-columns:2fr 2fr 32px;}
+.row-item{display:grid;gap:8px;margin-bottom:8px;}
+.row-item.sgpa-row{grid-template-columns:2fr 1fr 1.5fr 32px;}
+.row-item.cgpa-row{grid-template-columns:2fr 2fr 32px;}
+.subj-input{font-family:var(--mono);font-size:13px;color:var(--text);background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r);padding:7px 10px;outline:none;width:100%;transition:all .2s;}
+.subj-input:focus{border-color:var(--accent);}
+.subj-input::placeholder{color:var(--text3);}
+select.subj-input{cursor:pointer;}
+.delete-btn{width:32px;height:32px;border-radius:var(--r);border:1px solid rgba(239,68,68,.3);background:transparent;color:var(--error);cursor:pointer;font-size:14px;transition:all .2s;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.delete-btn:hover{background:rgba(239,68,68,.08);border-color:var(--error);}
+/* RESULT BOX */
+.result-box{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.4rem;background:rgba(11,15,25,.4);border:1px solid var(--border);border-radius:var(--r-lg);margin-top:1.2rem;}
+.result-label{font-family:var(--mono);font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;}
+.result-val{font-size:2.2rem;font-weight:700;letter-spacing:-0.03em;color:var(--accent);font-family:var(--sans);}
+.result-info{font-family:var(--mono);font-size:11px;color:var(--text3);margin-top:3px;}
+/* BTNS */
+.btn-row{display:flex;gap:8px;margin-top:1rem;}
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:7px 14px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .3s;outline:none;}
+.btn:hover{border-color:var(--text2);color:var(--text);}
+.btn-accent{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);}
+.btn-accent:hover{background:var(--accent);color:#000;}
+.btn-danger{border-color:rgba(239,68,68,.3);color:var(--error);}
+.btn-danger:hover{background:rgba(239,68,68,.08);}
+/* GRADE TABLE */
+.grade-table-wrap{margin-top:1.5rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
+.grade-table-title{padding:.8rem 1rem;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);border-bottom:1px solid var(--border);}
+.grade-table{width:100%;border-collapse:collapse;}
+.grade-table th{text-align:left;padding:7px 10px;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);background:rgba(11,15,25,.15);border-bottom:1px solid var(--border);}
+.grade-table td{padding:7px 10px;font-family:var(--mono);font-size:12.5px;color:var(--text2);border-bottom:1px solid var(--border);}
+.grade-table tr:last-child td{border-bottom:none;}
+.grade-table td:first-child{color:var(--accent);font-weight:600;}
+/* SEO */
+.seo-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;}
+.seo-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;margin-top:2rem;}
+.seo-section h2:first-child{margin-top:0;}
+.seo-section p{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:.9rem;}
+.seo-section p:last-child{margin-bottom:0;}
+.seo-section ul{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;padding-left:1.4rem;margin-bottom:.9rem;display:flex;flex-direction:column;gap:4px;}
+code{font-family:var(--mono);font-size:12px;background:rgba(0,242,254,.08);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent);}
+.faq-accordion{margin-top:2rem;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border);padding-top:2rem;}
+.faq-accordion h2{margin-top:0!important;}
+.faq-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.faq-trigger{width:100%;background:none;border:none;padding:14px 18px;text-align:left;color:#fff;font-family:var(--sans);font-size:.95rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.faq-trigger .arrow{transition:transform .3s;font-size:12px;color:var(--text3);flex-shrink:0;}
+.faq-item.active .faq-trigger .arrow{transform:rotate(180deg);}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .35s ease;background:rgba(11,15,25,.3);}
+.faq-content p{padding:14px 18px;font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;}
+.faq-item.active .faq-content{max-height:500px;}
+.internal-grid-wrapper{margin-top:3rem;padding:1.5rem;background:rgba(21,29,48,.4);border:1px solid var(--border);border-radius:var(--r-lg);}
+.internal-grid-wrapper h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.internal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.internal-link-card{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);text-decoration:none;font-size:13px;color:var(--text2);transition:all .2s;}
+.internal-link-card:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:var(--accent-glow);}
+.tool-icon{font-size:15px;margin-right:8px;}
+.site-footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;}
+.site-footer a{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;transition:color .2s;}
+.site-footer a:hover{color:var(--accent);}
+.site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+@media(max-width:640px){.site-header{padding:0 1rem;}.tool-page-wrap{margin:1.5rem auto 3rem;}.seo-section{padding:1.2rem;}.page-h1{font-size:1.4rem;}.row-item.sgpa-row{grid-template-columns:1fr 1fr;}.rows-header.sgpa-hdr{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <a href="../index.html" class="logo">
-    <div class="logo-icon">C</div>
+  <a href="../index.html" class="logo" aria-label="CodeWizTools — Home">
+    <div class="logo-icon" aria-hidden="true">C</div>
     <span class="logo-text">CodeWiz<span>Tools</span></span>
   </a>
-  <a href="../index.html" class="back-btn">← All Tools</a>
+  <nav aria-label="Site navigation">
+    <a href="../index.html" class="nav-link">← All Tools</a>
+  </nav>
 </header>
 
-<main class="container">
-  
-  <div class="tool-title-section">
-    <span class="tool-badge">Fast & Privacy Secured</span>
-    <h1>University CGPA Calculator</h1>
-    <p>// Calculate your Semester GPA (SGPA) and Cumulative CGPA in real-time instantly.</p>
+<main class="tool-page-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="../index.html#tools">Tools</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">CGPA Calculator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1 class="page-h1"><span>CGPA Calculator</span> — Semester GPA & Cumulative CGPA Online</h1>
+    <p class="page-subtitle">Calculate semester GPA from grades · Cumulative CGPA from multiple semesters · 4.0 scale · Free, no signup</p>
   </div>
 
-  <div class="calc-tabs">
-    <button class="tab-btn active" onclick="switchTab('semester')">Semester GPA</button>
-    <button class="tab-btn" onclick="switchTab('cgpa')">Cumulative CGPA</button>
+  <!-- TAB BAR -->
+  <div class="tab-bar" role="tablist" aria-label="Calculator mode">
+    <button class="tab-btn active" onclick="switchTab('semester')" role="tab" aria-selected="true" aria-controls="semester-calc">Semester GPA</button>
+    <button class="tab-btn" onclick="switchTab('cgpa')" role="tab" aria-selected="false" aria-controls="cgpa-calc">Cumulative CGPA</button>
   </div>
 
-  <div id="semester-calc" class="calc-card active">
-    <div class="calc-grid-header">
-      <div>Subject Name (Optional)</div>
-      <div>Credits</div>
-      <div>Grade</div>
-      <div></div>
+  <!-- SEMESTER GPA CALCULATOR -->
+  <div class="calc-card active" id="semester-calc" role="tabpanel">
+    <div class="rows-header sgpa-hdr">
+      <span>Subject name</span>
+      <span>Credits</span>
+      <span>Grade</span>
+      <span></span>
     </div>
-    <div id="sgpa-rows">
-      <div class="row-item">
-        <input type="text" placeholder="e.g. OOP" class="subj-name">
-        <input type="number" placeholder="3" class="subj-credit" min="1" max="6" value="3" oninput="calculateSGPA()">
-        <select class="subj-grade" onchange="calculateSGPA()">
-          <option value="4.00">A / A+</option>
-          <option value="3.66">A-</option>
-          <option value="3.33">B+</option>
-          <option value="3.00" selected>B</option>
-          <option value="2.66">B-</option>
-          <option value="2.33">C+</option>
-          <option value="2.00">C</option>
-          <option value="1.66">C-</option>
-          <option value="1.30">D+</option>
-          <option value="1.00">D</option>
-          <option value="0.00">F</option>
-        </select>
-        <button class="delete-btn" onclick="this.parentElement.remove(); calculateSGPA();">×</button>
+    <div id="sgpa-rows" role="list" aria-label="Subject rows for GPA calculation"></div>
+    <div class="btn-row">
+      <button class="btn btn-accent" onclick="addSgpaRow()" aria-label="Add another subject">+ Add Subject</button>
+      <button class="btn btn-danger" onclick="resetSgpa()" aria-label="Reset all subjects">Reset</button>
+    </div>
+    <div class="result-box" role="region" aria-label="GPA result">
+      <div>
+        <div class="result-label">Semester GPA</div>
+        <div class="result-val" id="sgpa-result" aria-live="polite">0.00</div>
+        <div class="result-info" id="sgpa-info" aria-live="polite">Add subjects above</div>
       </div>
     </div>
-    
-    <div class="controls-row">
-      <button class="action-btn" onclick="addSgpaRow()">+ Add Subject</button>
-      <button class="action-btn" style="color:var(--text3);" onclick="resetSgpa()">Reset All</button>
-    </div>
-
-    <div class="result-display">
-      <h2>Your Estimated Semester GPA</h2>
-      <div class="score-big" id="sgpa-result">3.00</div>
-      <div class="score-info" id="sgpa-info">Total Credits: 3 · Pure Client-Side Computation</div>
-    </div>
   </div>
 
-  <div id="cgpa-calc" class="calc-card">
-    <div class="calc-grid-header" style="grid-template-columns: 2fr 2fr 40px;">
-      <div>Semester SGPA</div>
-      <div>Semester Credits</div>
-      <div></div>
+  <!-- CUMULATIVE CGPA CALCULATOR -->
+  <div class="calc-card" id="cgpa-calc" role="tabpanel">
+    <div class="rows-header cgpa-hdr">
+      <span>Semester GPA</span>
+      <span>Total Credits</span>
+      <span></span>
     </div>
-    <div id="cgpa-rows">
-      <div class="row-item" style="grid-template-columns: 2fr 2fr 40px;">
-        <input type="number" step="0.01" placeholder="3.50" class="sem-gpa" min="0" max="4" oninput="calculateCGPA()">
-        <input type="number" placeholder="18" class="sem-credit" min="1" oninput="calculateCGPA()">
-        <button class="delete-btn" onclick="this.parentElement.remove(); calculateCGPA();">×</button>
+    <div id="cgpa-rows" role="list" aria-label="Semester rows for CGPA calculation"></div>
+    <div class="btn-row">
+      <button class="btn btn-accent" onclick="addCgpaRow()" aria-label="Add another semester">+ Add Semester</button>
+      <button class="btn btn-danger" onclick="resetCgpa()" aria-label="Reset all semesters">Reset</button>
+    </div>
+    <div class="result-box" role="region" aria-label="CGPA result">
+      <div>
+        <div class="result-label">Cumulative CGPA</div>
+        <div class="result-val" id="cgpa-result-val" aria-live="polite">0.00</div>
+        <div class="result-info" id="cgpa-info-val" aria-live="polite">Add semesters above</div>
       </div>
     </div>
+  </div>
 
-    <div class="controls-row">
-      <button class="action-btn" onclick="addCgpaRow()">+ Add Semester</button>
-      <button class="action-btn" style="color:var(--text3);" onclick="resetCgpa()">Reset All</button>
-    </div>
-
-    <div class="result-display">
-      <h2>Your Cumulative CGPA</h2>
-      <div class="score-big" id="cgpa-result-val">0.00</div>
-      <div class="score-info" id="cgpa-info-val">Combined Credit Load Across Semesters</div>
+  <!-- GRADE SCALE REFERENCE TABLE -->
+  <div class="grade-table-wrap" aria-label="Grade scale reference">
+    <div class="grade-table-title">Grade scale — 4.0 standard</div>
+    <div style="overflow-x:auto;">
+      <table class="grade-table">
+        <thead><tr><th>Grade</th><th>Grade Points</th><th>Percentage (approx.)</th></tr></thead>
+        <tbody>
+          <tr><td>A / A+</td><td>4.00</td><td>90–100%</td></tr>
+          <tr><td>A−</td><td>3.66</td><td>85–89%</td></tr>
+          <tr><td>B+</td><td>3.33</td><td>80–84%</td></tr>
+          <tr><td>B</td><td>3.00</td><td>75–79%</td></tr>
+          <tr><td>B−</td><td>2.66</td><td>70–74%</td></tr>
+          <tr><td>C+</td><td>2.33</td><td>65–69%</td></tr>
+          <tr><td>C</td><td>2.00</td><td>60–64%</td></tr>
+          <tr><td>C−</td><td>1.66</td><td>55–59%</td></tr>
+          <tr><td>D+</td><td>1.30</td><td>50–54%</td></tr>
+          <tr><td>D</td><td>1.00</td><td>45–49%</td></tr>
+          <tr><td>F</td><td>0.00</td><td>Below 45%</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <section class="seo-info-section">
-    <div class="seo-info-container">
-      <h2>How Does Our <span>CGPA & GPA Calculator</span> Work?</h2>
-      <p class="seo-text-p">
-        Measuring your academic performance indices can be stressful during fast-paced university results timelines. Our online engine computes your total Credit Hours and individual Grade Point multipliers locally inside your web browser instantly. It operates with 100% security ensuring your academic analytics are never logged on external remote cloud databases.
-      </p>
-      
-      <h3>Standard GPA & CGPA Calculation Methodology</h3>
-      <p class="seo-text-p">
-        The application handles your distinct grade parameters based on the universally accepted global algorithm: <strong>GPA = Total Quality Points / Total Credit Hours</strong>. Each singular letter grade translates into an exact predefined mathematical value (such as An A/A+ standard grade equals 4.00, a B equals 3.00, and a C equals 2.00). Multiplying the course credit hour value by the weight of the earned grade scores provides your true Quality Points per class structure.
-      </p>
+  <section class="seo-section" aria-label="About CGPA and GPA calculation">
 
-      <h3>Difference Between SGPA and Cumulative CGPA</h3>
-      <p class="seo-text-p">
-        SGPA (Semester Grade Point Average) evaluates your operational grade scores inside a single term workload module. Conversely, CGPA (Cumulative Grade Point Average) computes your entire unified academic progression parameters across all finished semesters. This tool seamlessly switches between both evaluation metrics to support custom grading schemas optimized for local standards, such as the LGU CGPA criteria and general HEC university patterns.
-      </p>
-    </div>
+    <h2>Free CGPA Calculator — Semester GPA & Cumulative CGPA on 4.0 Scale</h2>
+    <p>This calculator has two modes. Use the <strong>Semester GPA</strong> tab to calculate your GPA for a single semester by entering each subject with its credit hours and grade. Use the <strong>Cumulative CGPA</strong> tab to combine multiple semester GPAs into your overall CGPA. Both use the standard 4.0 scale used by most Pakistani and international universities.</p>
+
+    <h2>How GPA is Calculated — The Formula</h2>
+    <p>GPA = Sum of (Grade Points × Credit Hours) ÷ Total Credit Hours</p>
+    <p>Example: If you scored A (4.0) in a 3-credit subject and B (3.0) in a 2-credit subject:</p>
+    <p>GPA = ((4.0 × 3) + (3.0 × 2)) ÷ (3 + 2) = (12 + 6) ÷ 5 = <code>3.60</code></p>
+
+    <h2>How to Convert CGPA to Percentage</h2>
+    <p>The most common formula used by Pakistani universities: <code>Percentage = CGPA × 25</code>. For example, CGPA 3.5 = 87.5%. Some universities use CGPA × 24 or other multipliers — check your university's official policy for the exact conversion.</p>
+
+    <h2>CGPA Requirements at Pakistani Universities</h2>
+    <ul>
+      <li><strong>CGPA 3.5 – 4.0:</strong> President's Honor Roll, Gold Medal, or Distinction at most universities</li>
+      <li><strong>CGPA 3.0 – 3.49:</strong> Dean's List or Silver Medal</li>
+      <li><strong>CGPA 2.5 – 2.99:</strong> Good standing</li>
+      <li><strong>CGPA 2.0 – 2.49:</strong> Satisfactory — meeting minimum requirements</li>
+      <li><strong>Below CGPA 2.0:</strong> Academic probation at many universities including FAST, NUST, COMSATS</li>
+    </ul>
 
     <div class="faq-accordion">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">1. How do I convert my individual semester SGPA into a cumulative CGPA? <span>▼</span></button>
-        <div class="faq-content"><p>To find your true CGPA, you cannot simply average your SGPAs. Instead, toggle the 'Cumulative CGPA' tab, input each semester's total GPA along with its exact absolute credit hour weight configuration. The calculation requires taking the total accumulated quality points divided by the grand total of credits across your entire timeline.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How is GPA calculated?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>GPA = Sum of (Grade Points × Credit Hours) ÷ Total Credits. Example: A (4.0) in 3-credit + B (3.0) in 2-credit = (12+6) ÷ 5 = 3.60 GPA.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">2. Does this calculator match the LGU CGPA system layout? <span>▼</span></button>
-        <div class="faq-content"><p>Yes. The standard pre-loaded weights map perfectly with standard four-point grading structures applied widely at institutions like Lahore Garrison University (LGU) and other major absolute scale educational models using a standard 4.00 GPA cap distribution.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What is the difference between GPA and CGPA?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>GPA is for a single semester. CGPA is the weighted average of all semesters, weighted by credit hours. CGPA represents your overall academic performance across the entire degree.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-trigger" onclick="toggleFaq(this)">3. What are quality points in semester grading metrics? <span>▼</span></button>
-        <div class="faq-content"><p>Quality points are the numerical outcome calculated by multiplying the base course credit hours weight by the specific point matrix score of your letter grade. For instance, scoring an A (4.00) in a 3-credit course yields exactly 12 total quality points.</p></div>
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What grade scale does this calculator use?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Standard 4.0 scale: A/A+ = 4.00, A- = 3.66, B+ = 3.33, B = 3.00, B- = 2.66, C+ = 2.33, C = 2.00, C- = 1.66, D+ = 1.30, D = 1.00, F = 0.00. Used by most Pakistani and international universities.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How do I calculate my CGPA from multiple semesters?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Switch to the CGPA tab, click Add Semester for each completed semester, enter the semester GPA and total credit hours. The cumulative CGPA updates automatically. Each semester is weighted by its credits.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What CGPA is needed for distinction or honors?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>At most Pakistani universities: CGPA 3.5+ for Gold Medal/Distinction, 3.0–3.49 for Dean's List. Below 2.0 may result in academic probation. Check your specific university's policy.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">How do I convert CGPA to percentage?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Most common formula: <code>Percentage = CGPA × 25</code>. Example: CGPA 3.5 = 87.5%. Some universities use CGPA × 24 or other multipliers — check your university's official conversion policy.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What credit hours should I enter?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Enter credit hours as shown in your course outline. Theory courses: typically 3 credits. Lab courses: usually 1 credit. Major subjects: sometimes 4 credits. Check your course registration form.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Is my academic data safe in this calculator?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes — 100% private. All calculations run in your browser. Grades, GPA, and any input are never sent to any server. No logs, no tracking.</p></div>
       </div>
     </div>
   </section>
 
   <div class="internal-grid-wrapper">
-    <div style="font-weight:700; color:#fff; margin-bottom:10px;">⚡ Other Essential Developer Utilities</div>
+    <h2>⚡ More Student Tools</h2>
     <div class="internal-grid">
-      <a href="case-converter.html" class="internal-link-card"><span>Case Converter</span><span>→</span></a>
-      <a href="json-formatter.html" class="internal-link-card"><span>JSON Formatter</span><span>→</span></a>
-      <a href="pdf-compressor.html" class="internal-link-card"><span>PDF Compressor</span><span>→</span></a>
-      <a href="pdf-merger.html" class="internal-link-card"><span>PDF Merger</span><span>→</span></a>
-      <a href="word-counter.html" class="internal-link-card"><span>Word Counter</span><span>→</span></a>
-      <a href="color-picker.html" class="internal-link-card"><span>Color Picker</span><span>→</span></a>
-      <a href="qr-generator.html" class="internal-link-card"><span>QR Generator</span><span>→</span></a>
-      <a href="password-generator.html" class="internal-link-card"><span>Password Gen</span><span>→</span></a>
-      <a href="md5-generator.html" class="internal-link-card"><span>MD5 Generator</span><span>→</span></a>
-      <a href="base64-encoder.html" class="internal-link-card"><span>Base64 Encode</span><span>→</span></a>
-      <a href="html-encoder.html" class="internal-link-card"><span>HTML Encoder</span><span>→</span></a>
-      <a href="url-encoder.html" class="internal-link-card"><span>URL Encoder</span><span>→</span></a>
-      <a href="lorem-ipsum.html" class="internal-link-card"><span>Lorem Ipsum</span><span>→</span></a>
-      <a href="diff-checker.html" class="internal-link-card"><span>Diff Checker</span><span>→</span></a>
+      <a href="attendance-calculator.html" class="internal-link-card" title="Attendance and bunk calculator"><span><span class="tool-icon" aria-hidden="true">📅</span>Attendance Calculator</span><span>→</span></a>
+      <a href="percentage-calculator.html" class="internal-link-card" title="Percentage calculator online"><span><span class="tool-icon" aria-hidden="true">%</span>Percentage Calculator</span><span>→</span></a>
+      <a href="assignment-renamer.html" class="internal-link-card" title="Batch rename assignment files"><span><span class="tool-icon" aria-hidden="true">📁</span>Assignment Renamer</span><span>→</span></a>
+      <a href="pdf-merger.html" class="internal-link-card" title="Merge PDF files online free"><span><span class="tool-icon" aria-hidden="true">📎</span>PDF Merger</span><span>→</span></a>
+      <a href="pdf-compressor.html" class="internal-link-card" title="Compress PDF for LMS upload"><span><span class="tool-icon" aria-hidden="true">📄</span>PDF Compressor</span><span>→</span></a>
+      <a href="image-compressor.html" class="internal-link-card" title="Compress images for LMS upload"><span><span class="tool-icon" aria-hidden="true">🖼️</span>Image Compressor</span><span>→</span></a>
+      <a href="word-counter.html" class="internal-link-card" title="Count words and characters"><span><span class="tool-icon" aria-hidden="true">🔢</span>Word Counter</span><span>→</span></a>
+      <a href="password-generator.html" class="internal-link-card" title="Generate strong random passwords"><span><span class="tool-icon" aria-hidden="true">🔑</span>Password Generator</span><span>→</span></a>
+      <a href="qr-generator.html" class="internal-link-card" title="QR Code Generator"><span><span class="tool-icon" aria-hidden="true">📱</span>QR Code Generator</span><span>→</span></a>
+      <a href="lorem-ipsum.html" class="internal-link-card" title="Lorem Ipsum Generator"><span><span class="tool-icon" aria-hidden="true">📝</span>Lorem Ipsum Generator</span><span>→</span></a>
     </div>
   </div>
+
 </main>
 
 <footer class="site-footer">
-  <p>© 2026 CodeWizTools · Premium client-side tools for developers & students. Privacy Guaranteed.</p>
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all CodeWizTools</a></p>
+  <p>© 2026 CodeWizTools · No tracking. No logs. Pure Privacy.</p>
 </footer>
 
 <script>
 function switchTab(type) {
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-  document.querySelectorAll('.calc-card').forEach(card => card.classList.remove('active'));
-  
-  if (type === 'semester') {
-    document.querySelectorAll('.tab-btn')[0].classList.add('active');
-    document.getElementById('semester-calc').classList.add('active');
-    calculateSGPA();
-  } else {
-    document.querySelectorAll('.tab-btn')[1].classList.add('active');
-    document.getElementById('cgpa-calc').classList.add('active');
-    calculateCGPA();
-  }
+  const tabs = document.querySelectorAll('.tab-btn');
+  const cards = document.querySelectorAll('.calc-card');
+  tabs.forEach((t,i) => {
+    const active = (i===0 && type==='semester') || (i===1 && type==='cgpa');
+    t.classList.toggle('active', active);
+    t.setAttribute('aria-selected', active);
+  });
+  cards.forEach(c => c.classList.remove('active'));
+  document.getElementById(type==='semester' ? 'semester-calc' : 'cgpa-calc').classList.add('active');
+  if(type==='semester') calculateSGPA(); else calculateCGPA();
 }
 
-function toggleFaq(btn){
-  btn.parentElement.classList.toggle('active');
+function makeGradeOptions(selected='3.00') {
+  const grades = [
+    ['4.00','A / A+'],['3.66','A−'],['3.33','B+'],['3.00','B'],
+    ['2.66','B−'],['2.33','C+'],['2.00','C'],['1.66','C−'],
+    ['1.30','D+'],['1.00','D'],['0.00','F']
+  ];
+  return grades.map(([v,l]) => `<option value="${v}"${v===selected?' selected':''}>${l}</option>`).join('');
 }
 
 function addSgpaRow() {
   const container = document.getElementById('sgpa-rows');
   const div = document.createElement('div');
-  div.className = 'row-item';
+  div.className = 'row-item sgpa-row';
+  div.setAttribute('role','listitem');
   div.innerHTML = `
-    <input type="text" placeholder="Subject Name" class="subj-name">
-    <input type="number" placeholder="3" class="subj-credit" min="1" max="6" value="3" oninput="calculateSGPA()">
-    <select class="subj-grade" onchange="calculateSGPA()">
-      <option value="4.00">A / A+</option>
-      <option value="3.66">A-</option>
-      <option value="3.33">B+</option>
-      <option value="3.00" selected>B</option>
-      <option value="2.66">B-</option>
-      <option value="2.33">C+</option>
-      <option value="2.00">C</option>
-      <option value="1.66">C-</option>
-      <option value="1.30">D+</option>
-      <option value="1.00">D</option>
-      <option value="0.00">F</option>
-    </select>
-    <button class="delete-btn" onclick="this.parentElement.remove(); calculateSGPA();">×</button>
-  `;
+    <input type="text" placeholder="Subject name" class="subj-input subj-name" aria-label="Subject name">
+    <input type="number" placeholder="3" class="subj-input subj-credit" min="1" max="6" value="3" oninput="calculateSGPA()" aria-label="Credit hours">
+    <select class="subj-input subj-grade" onchange="calculateSGPA()" aria-label="Grade">${makeGradeOptions()}</select>
+    <button class="delete-btn" onclick="this.parentElement.remove(); calculateSGPA();" aria-label="Remove this subject">×</button>`;
   container.appendChild(div);
   calculateSGPA();
 }
 
 function calculateSGPA() {
-  const credits = document.querySelectorAll('.subj-credit');
-  const grades = document.querySelectorAll('.subj-grade');
-  
-  let totalPoints = 0;
-  let totalCredits = 0;
-  
-  for (let i = 0; i < credits.length; i++) {
+  const credits = document.querySelectorAll('#sgpa-rows .subj-credit');
+  const grades  = document.querySelectorAll('#sgpa-rows .subj-grade');
+  let totalPoints = 0, totalCredits = 0;
+  for(let i=0; i<credits.length; i++) {
     const c = parseFloat(credits[i].value) || 0;
     const g = parseFloat(grades[i].value) || 0;
-    if (c > 0) {
-      totalPoints += (c * g);
-      totalCredits += c;
-    }
+    if(c > 0) { totalPoints += c * g; totalCredits += c; }
   }
-  
-  const finalSgpa = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : "0.00";
-  document.getElementById('sgpa-result').textContent = finalSgpa;
-  document.getElementById('sgpa-info').textContent = `Total Credits: ${totalCredits} · Pure Client-Side Computation`;
+  const gpa = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : '0.00';
+  document.getElementById('sgpa-result').textContent = gpa;
+  document.getElementById('sgpa-info').textContent = totalCredits > 0
+    ? `Total credits: ${totalCredits} · Equivalent: ${(parseFloat(gpa) * 25).toFixed(1)}%`
+    : 'Add subjects above';
 }
 
 function resetSgpa() {
@@ -386,35 +482,29 @@ function resetSgpa() {
 function addCgpaRow() {
   const container = document.getElementById('cgpa-rows');
   const div = document.createElement('div');
-  div.className = 'row-item';
-  div.style.gridTemplateColumns = '2fr 2fr 40px';
+  div.className = 'row-item cgpa-row';
+  div.setAttribute('role','listitem');
   div.innerHTML = `
-    <input type="number" step="0.01" placeholder="3.50" class="sem-gpa" min="0" max="4" oninput="calculateCGPA()">
-    <input type="number" placeholder="18" class="sem-credit" min="1" oninput="calculateCGPA()">
-    <button class="delete-btn" onclick="this.parentElement.remove(); calculateCGPA();">×</button>
-  `;
+    <input type="number" step="0.01" placeholder="e.g. 3.50" class="subj-input sem-gpa" min="0" max="4" oninput="calculateCGPA()" aria-label="Semester GPA">
+    <input type="number" placeholder="e.g. 18" class="subj-input sem-credit" min="1" oninput="calculateCGPA()" aria-label="Total credit hours this semester">
+    <button class="delete-btn" onclick="this.parentElement.remove(); calculateCGPA();" aria-label="Remove this semester">×</button>`;
   container.appendChild(div);
 }
 
 function calculateCGPA() {
-  const gpas = document.querySelectorAll('.sem-gpa');
-  const credits = document.querySelectorAll('.sem-credit');
-  
-  let totalQualityPoints = 0;
-  let totalCredits = 0;
-  
-  for (let i = 0; i < gpas.length; i++) {
+  const gpas    = document.querySelectorAll('#cgpa-rows .sem-gpa');
+  const credits = document.querySelectorAll('#cgpa-rows .sem-credit');
+  let totalQP = 0, totalCredits = 0;
+  for(let i=0; i<gpas.length; i++) {
     const g = parseFloat(gpas[i].value) || 0;
     const c = parseFloat(credits[i].value) || 0;
-    if (c > 0 && g >= 0) {
-      totalQualityPoints += (g * c);
-      totalCredits += c;
-    }
+    if(c > 0 && g >= 0) { totalQP += g * c; totalCredits += c; }
   }
-  
-  const finalCgpa = totalCredits > 0 ? (totalQualityPoints / totalCredits).toFixed(2) : "0.00";
-  document.getElementById('cgpa-result-val').textContent = finalCgpa;
-  document.getElementById('cgpa-info-val').textContent = `Total Credits Counted: ${totalCredits} Across Semesters`;
+  const cgpa = totalCredits > 0 ? (totalQP / totalCredits).toFixed(2) : '0.00';
+  document.getElementById('cgpa-result-val').textContent = cgpa;
+  document.getElementById('cgpa-info-val').textContent = totalCredits > 0
+    ? `Total credits: ${totalCredits} across ${gpas.length} semester(s) · ~${(parseFloat(cgpa)*25).toFixed(1)}%`
+    : 'Add semesters above';
 }
 
 function resetCgpa() {
@@ -423,7 +513,15 @@ function resetCgpa() {
   calculateCGPA();
 }
 
-// Initial step
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('active');
+  item.classList.toggle('active');
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+
+// Init
+addSgpaRow();
 calculateSGPA();
 </script>
 </body>
