@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MD5 Hash Generator — Generate MD5 Hash Online Free | CodeWizTools</title>
+<meta name="description" content="Free online MD5 hash generator. Convert any text or string to MD5 hash instantly. Real-time generation, one-click copy. 100% browser-based — no data sent to server. No signup.">
+<meta name="keywords" content="md5 generator, md5 hash generator, md5 online, generate md5 hash, md5 hash online, md5 converter, md5 hash checker, md5 calculator online, text to md5, string to md5, md5 encoder online, md5 hash tool">
+<meta name="author" content="CodeWizTools">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://codewiztools.com/tools/md5-generator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MD5 Hash Generator — Generate MD5 Hash Online Free | CodeWizTools">
+<meta property="og:description" content="Convert any text to MD5 hash instantly. Real-time generation, one-click copy. 100% browser-based, no signup.">
+<meta property="og:url" content="https://codewiztools.com/tools/md5-generator.html">
+<meta property="og:site_name" content="CodeWizTools">
+<meta property="og:image" content="https://codewiztools.com/assets/og-md5-generator.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MD5 Hash Generator on CodeWizTools">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MD5 Hash Generator — Generate MD5 Hash Online Free | CodeWizTools">
+<meta name="twitter:description" content="Convert any text to MD5 hash instantly. Free, browser-based, no signup.">
+<meta name="twitter:image" content="https://codewiztools.com/assets/og-md5-generator.png">
+<meta name="twitter:site" content="@CodeWizTools">
+
+<meta name="theme-color" content="#00F2FE">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://codewiztools.com/tools/md5-generator.html#webapp",
+  "name": "MD5 Hash Generator",
+  "url": "https://codewiztools.com/tools/md5-generator.html",
+  "description": "Free online MD5 hash generator. Convert any text or string to a 32-character MD5 hash instantly. Real-time generation, uppercase/lowercase toggle, one-click copy. 100% browser-based — no data sent to any server.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux, iOS, Android",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "creator": { "@type": "Organization", "name": "CodeWizTools", "url": "https://codewiztools.com" },
+  "featureList": [
+    "Real-time MD5 hash generation on every keystroke",
+    "Toggle uppercase and lowercase hash output",
+    "One-click copy to clipboard with fallback",
+    "Input character counter",
+    "100% browser-based — no data sent to server",
+    "Works with Unicode, Arabic, Urdu, emoji"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an MD5 hash?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MD5 (Message Digest 5) is a hashing algorithm that converts any input text into a fixed 32-character hexadecimal string. The same input always produces the same hash, and even a tiny change to the input produces a completely different hash. MD5 was designed by Ronald Rivest in 1991 and is widely used for file integrity verification and data checksums."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is MD5 safe to use for passwords?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. MD5 is not safe for storing passwords. It is a fast, non-salted hash that is vulnerable to rainbow table attacks and brute-force cracking. For password storage, use bcrypt, Argon2, or scrypt — these are slow, salted hashing algorithms specifically designed for passwords. MD5 is appropriate for file checksums, data integrity checks, and non-security-critical use cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is MD5 used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MD5 is commonly used for: verifying file integrity (comparing checksums before and after download or transfer), generating cache keys and identifiers in databases, creating unique identifiers from text strings, verifying data has not been corrupted in transit, and as a non-security fingerprint for deduplication. It is also used in legacy systems and some APIs for request signing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the same text always produce the same MD5 hash?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. MD5 is a deterministic function — the same input will always produce the same 32-character output, on any device, in any browser, at any time. This makes it useful for integrity checking: if the hash of a downloaded file matches the expected hash, the file has not been altered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between uppercase and lowercase MD5?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MD5 hashes are hexadecimal values containing letters A–F and digits 0–9. The letters can be displayed in uppercase (A–F) or lowercase (a–f) — both represent the same hash value. Most systems accept either format. Use the toggle button to switch between them and match whatever format your system expects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can MD5 be reversed or decrypted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MD5 cannot be mathematically reversed — it is a one-way function. However, common values can be looked up in precomputed rainbow tables. Short passwords and common phrases hashed with MD5 can be found in these lookup tables, which is why MD5 should never be used for password storage. For arbitrary text with sufficient entropy, MD5 output is practically irreversible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text safe when using this MD5 generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100% private. The MD5 hash is generated entirely in your browser using JavaScript — no text is ever sent to any server. Your input stays on your device. CodeWizTools has a strict no-logs, no-tracking policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this MD5 generator support Unicode characters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This tool correctly handles full Unicode including Arabic, Urdu, Chinese, Japanese, emoji, and all multibyte characters. The text is first encoded to UTF-8 bytes before hashing, which is the standard approach for producing consistent MD5 hashes from Unicode input across different systems."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://codewiztools.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://codewiztools.com/#tools" },
+    { "@type": "ListItem", "position": 3, "name": "MD5 Hash Generator", "item": "https://codewiztools.com/tools/md5-generator.html" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%230070f3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='800' font-size='55' fill='%23000' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+
+<style>
+:root{--bg:#0B0F19;--surface:#151D30;--surface2:#1a2440;--surface3:#1f2b4a;--border:rgba(0,242,254,0.08);--border2:rgba(0,242,254,0.18);--accent:#00F2FE;--accent-dim:rgba(0,242,254,0.12);--accent-glow:0 0 15px rgba(0,242,254,0.35);--success:#10B981;--success-dim:rgba(16,185,129,0.12);--error:#EF4444;--text:#FFFFFF;--text2:#94A3B8;--text3:#4a5568;--mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;--r:10px;--r-lg:16px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,242,254,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,242,254,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 800px 600px at 10% 20%,rgba(0,242,254,0.04) 0%,transparent 70%),radial-gradient(ellipse 600px 500px at 90% 80%,rgba(16,185,129,0.04) 0%,transparent 70%);}
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:rgba(11,15,25,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#00F2FE,#0070f3);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#000;box-shadow:0 0 18px rgba(0,242,254,0.4);flex-shrink:0;}
+.logo-text{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);}
+.logo-text span{color:var(--accent);}
+.nav-link{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;padding:6px 14px;border-radius:var(--r);transition:all 0.2s;border:1px solid var(--border);background:rgba(21,29,48,0.5);}
+.nav-link:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
+.tool-page-wrap{position:relative;z-index:1;max-width:820px;margin:2rem auto 5rem;padding:0 1.5rem;animation:fadeUp 0.5s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.breadcrumb{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:1.5rem;display:flex;gap:6px;align-items:center;}
+.breadcrumb a{color:var(--text2);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--accent);}
+.page-hero{margin-bottom:1.5rem;}
+.page-h1{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;color:var(--text);line-height:1.25;margin-bottom:0.45rem;}
+.page-h1 span{color:var(--accent);}
+.page-subtitle{font-size:13px;color:var(--text2);font-family:var(--mono);line-height:1.6;}
+.panel-header{background:var(--surface);border:1px solid var(--border2);border-top-left-radius:var(--r-lg);border-top-right-radius:var(--r-lg);padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.panel-title-inner{font-size:1rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border-left:1px solid var(--border2);border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);border-bottom-left-radius:var(--r-lg);border-bottom-right-radius:var(--r-lg);overflow:hidden;}
+.two-col>div:first-child{border-right:1px solid var(--border2);}
+.col-label{font-family:var(--mono);font-size:11px;color:var(--text3);padding:.6rem 1.2rem;background:rgba(11,15,25,.2);border-bottom:1px solid var(--border2);text-transform:uppercase;letter-spacing:.04em;}
+.code-area{background:transparent;border:none;padding:1.2rem;font-family:var(--mono);font-size:14px;color:var(--text);outline:none;resize:vertical;line-height:1.6;width:100%;min-height:180px;}
+.code-area::placeholder{color:var(--text3);}
+.code-area[readonly]{background:rgba(11,15,25,.06);color:var(--accent);font-size:1.1rem;letter-spacing:.06em;font-weight:600;}
+.status-bar{display:flex;align-items:center;gap:8px;padding:.6rem 1.2rem;background:rgba(11,15,25,.15);border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--text2);min-height:36px;}
+.s-dot{width:6px;height:6px;border-radius:50%;background:var(--text3);flex-shrink:0;transition:all .3s;}
+.s-dot.ok{background:var(--success);box-shadow:0 0 8px var(--success);}
+.mode-toggle{display:flex;background:var(--surface2);border:1px solid var(--border2);padding:2px;border-radius:20px;}
+.mode-btn{font-family:var(--mono);font-size:11px;padding:4px 12px;border-radius:20px;border:none;background:transparent;color:var(--text2);cursor:pointer;transition:all .2s;outline:none;}
+.mode-btn.active{background:var(--accent);color:#000;font-weight:600;}
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:6px 14px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .3s;outline:none;}
+.btn:hover{border-color:var(--text2);color:var(--text);}
+.btn-success{border-color:rgba(16,185,129,.4);color:var(--success);background:var(--success-dim);}
+.btn-success:hover{background:var(--success);color:#000;box-shadow:0 0 15px rgba(16,185,129,.3);}
+.seo-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;margin-top:2.5rem;}
+.seo-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:1rem;margin-top:2rem;}
+.seo-section h2:first-child{margin-top:0;}
+.seo-section h3{font-size:1rem;font-weight:600;color:var(--accent);margin:1.25rem 0 .6rem;}
+.seo-section p{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:.9rem;}
+.seo-section p:last-child{margin-bottom:0;}
+.seo-section ul{font-family:var(--sans);font-size:14px;color:var(--text2);line-height:1.75;padding-left:1.4rem;margin-bottom:.9rem;display:flex;flex-direction:column;gap:4px;}
+code{font-family:var(--mono);font-size:12px;background:rgba(0,242,254,.08);border:1px solid var(--border2);border-radius:4px;padding:1px 6px;color:var(--accent);}
+.faq-accordion{margin-top:2rem;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--border);padding-top:2rem;}
+.faq-accordion h2{margin-top:0!important;}
+.faq-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.faq-trigger{width:100%;background:none;border:none;padding:14px 18px;text-align:left;color:#fff;font-family:var(--sans);font-size:.95rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.faq-trigger .arrow{transition:transform .3s;font-size:12px;color:var(--text3);flex-shrink:0;}
+.faq-item.active .faq-trigger .arrow{transform:rotate(180deg);}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .35s ease;background:rgba(11,15,25,.3);}
+.faq-content p{padding:14px 18px;font-family:var(--mono);font-size:13px;color:#94A3B8;line-height:1.75;}
+.faq-item.active .faq-content{max-height:500px;}
+.internal-grid-wrapper{margin-top:3rem;padding:1.5rem;background:rgba(21,29,48,.4);border:1px solid var(--border);border-radius:var(--r-lg);}
+.internal-grid-wrapper h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1rem;}
+.internal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;}
+.internal-link-card{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);text-decoration:none;font-size:13px;color:var(--text2);transition:all .2s;}
+.internal-link-card:hover{border-color:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:var(--accent-glow);}
+.tool-icon{font-size:15px;margin-right:8px;}
+.site-footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1.5rem;border-top:1px solid var(--border);margin-top:5rem;}
+.site-footer a{font-family:var(--mono);font-size:12px;color:var(--text2);text-decoration:none;transition:color .2s;}
+.site-footer a:hover{color:var(--accent);}
+.site-footer p{font-family:var(--mono);font-size:11px;color:var(--text3);}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+@media(max-width:768px){.two-col{grid-template-columns:1fr;}.two-col>div:first-child{border-right:none;border-bottom:1px solid var(--border2);}}
+@media(max-width:640px){.site-header{padding:0 1rem;}.tool-page-wrap{margin:1.5rem auto 3rem;}.seo-section{padding:1.2rem;}.page-h1{font-size:1.4rem;}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo" aria-label="CodeWizTools — Home">
+    <div class="logo-icon" aria-hidden="true">C</div>
+    <span class="logo-text">CodeWiz<span>Tools</span></span>
+  </a>
+  <nav aria-label="Site navigation">
+    <a href="../index.html" class="nav-link">← All Tools</a>
+  </nav>
+</header>
+
+<main class="tool-page-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="../index.html#tools">Tools</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">MD5 Hash Generator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1 class="page-h1"><span>MD5 Hash Generator</span> — Generate MD5 Online Free</h1>
+    <p class="page-subtitle">Real-time MD5 generation · Uppercase &amp; lowercase · One-click copy · Unicode support · Free, no signup</p>
+  </div>
+
+  <div class="panel-header">
+    <div class="panel-title-inner" aria-hidden="true">🧮 &nbsp;MD5 Hash Generator</div>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <div class="mode-toggle" role="group" aria-label="Hash output case">
+        <button class="mode-btn active" id="btn-lower" onclick="setCase('lower')" aria-pressed="true">lowercase</button>
+        <button class="mode-btn" id="btn-upper" onclick="setCase('upper')" aria-pressed="false">UPPERCASE</button>
+      </div>
+      <button class="btn" onclick="clearAll()" aria-label="Clear input and output">Clear</button>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="col-label">Input text</div>
+      <label for="md5-in" class="sr-only">Enter text to generate MD5 hash</label>
+      <textarea
+        class="code-area"
+        id="md5-in"
+        placeholder="Type or paste text here...&#10;&#10;MD5 hash generates in real time."
+        oninput="generate()"
+        spellcheck="false"
+        aria-label="Input text for MD5 hash generation"
+      ></textarea>
+      <div class="status-bar">
+        <div class="s-dot" id="mdot" aria-hidden="true"></div>
+        <span id="mstatus" aria-live="polite">Ready</span>
+        <span style="margin-left:auto;" id="in-count" aria-live="polite"></span>
+      </div>
+    </div>
+    <div>
+      <div class="col-label">MD5 hash output (32 characters)</div>
+      <label for="md5-out" class="sr-only">Generated MD5 hash output</label>
+      <textarea
+        class="code-area"
+        id="md5-out"
+        placeholder="MD5 hash appears here..."
+        readonly
+        spellcheck="false"
+        aria-label="MD5 hash output — click Copy Hash to copy"
+        aria-live="polite"
+      ></textarea>
+      <div class="status-bar" style="justify-content:space-between;">
+        <span id="md5-info" aria-live="polite">—</span>
+        <button class="btn btn-success" onclick="copyHash(event)" aria-label="Copy MD5 hash to clipboard">Copy Hash</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="seo-section" aria-label="About MD5 hashing">
+
+    <h2>Free Online MD5 Hash Generator</h2>
+    <p>Type or paste any text and this tool generates its MD5 hash in real time — on every keystroke. The output is a fixed 32-character hexadecimal string. Use the toggle to switch between lowercase and UPPERCASE hash output. All hashing runs in your browser using a JavaScript implementation of the MD5 algorithm — no text is ever sent to any server.</p>
+
+    <h2>What is MD5 and What is it Used For?</h2>
+    <p>MD5 (Message Digest 5) is a hashing function designed by Ronald Rivest in 1991. It converts any input — a word, a file, a paragraph — into a fixed 32-character hexadecimal fingerprint. The same input always produces the same hash, and changing even one character produces a completely different result.</p>
+    <p>Common MD5 use cases include:</p>
+    <ul>
+      <li><strong>File integrity verification</strong> — compare MD5 checksums to confirm a downloaded file has not been corrupted or tampered with</li>
+      <li><strong>Cache keys</strong> — generate compact, unique identifiers from long strings in databases and APIs</li>
+      <li><strong>Deduplication</strong> — detect duplicate files or records by comparing their MD5 hashes</li>
+      <li><strong>Legacy API signing</strong> — some older APIs use MD5 to sign request parameters</li>
+      <li><strong>Data fingerprinting</strong> — create a short identifier that represents a larger piece of content</li>
+    </ul>
+
+    <h2>MD5 vs SHA-256 — Which Should You Use?</h2>
+    <p>MD5 produces a 32-character hash and is fast to compute. <strong>SHA-256</strong> produces a 64-character hash and is cryptographically stronger. For security-sensitive applications like digital signatures and certificate verification, use SHA-256 or SHA-3. For non-security uses like checksums, cache keys, and deduplication where speed matters more than cryptographic strength, MD5 is still widely used and perfectly appropriate.</p>
+
+    <h2>MD5 is NOT Safe for Passwords</h2>
+    <p>Never use MD5 to store passwords. It is a fast, unsalted hash — it is easy to crack using precomputed rainbow tables or brute-force. For password hashing, use <code>bcrypt</code>, <code>Argon2</code>, or <code>scrypt</code>. These algorithms are intentionally slow and include built-in salting, making them resistant to the attacks that break MD5 password storage.</p>
+
+    <div class="faq-accordion">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What is an MD5 hash?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>MD5 converts any input text into a fixed 32-character hexadecimal string. The same input always produces the same output. Even a single character change produces a completely different hash. Designed by Ronald Rivest in 1991, widely used for checksums and data fingerprinting.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Is MD5 safe to use for passwords?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>No — never use MD5 for passwords. It is fast and unsalted, making it vulnerable to rainbow table attacks. Use <code>bcrypt</code>, <code>Argon2</code>, or <code>scrypt</code> for password storage. MD5 is fine for checksums and non-security use cases.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What is MD5 used for?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>File integrity verification, cache key generation, deduplication, legacy API request signing, and data fingerprinting. MD5 is appropriate whenever you need a fast, compact identifier and security is not the concern.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Does the same text always produce the same MD5 hash?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes — MD5 is deterministic. The same input produces the same 32-character output on any device, in any browser, at any time. This makes it reliable for integrity checking.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">What is the difference between uppercase and lowercase MD5?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Both represent the same hash value. MD5 uses hex digits 0–9 and letters A–F (or a–f). Use the toggle to match whichever format your system expects. Both are equally valid.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Can MD5 be reversed or decrypted?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>MD5 cannot be mathematically reversed — it is a one-way function. However, common values can be found in precomputed rainbow tables. For unique or complex input, MD5 is practically irreversible.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Is my text safe when using this tool?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes — 100% private. MD5 generation runs entirely in your browser. No text is ever sent to any server. No logs, no tracking.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">Does this support Unicode, Arabic and Urdu text?<span class="arrow" aria-hidden="true">▼</span></button>
+        <div class="faq-content" role="region"><p>Yes. Text is encoded to UTF-8 bytes before hashing — the standard approach for consistent MD5 hashes from Unicode input. Arabic, Urdu, Chinese, emoji, and all multibyte characters work correctly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="internal-grid-wrapper">
+    <h2>⚡ More Developer Tools</h2>
+    <div class="internal-grid">
+      <a href="base64.html" class="internal-link-card" title="Base64 Encoder and Decoder"><span><span class="tool-icon" aria-hidden="true">🔐</span>Base64 Encoder &amp; Decoder</span><span>→</span></a>
+      <a href="password-generator.html" class="internal-link-card" title="Generate strong random passwords"><span><span class="tool-icon" aria-hidden="true">🔑</span>Password Generator</span><span>→</span></a>
+      <a href="url-encoder.html" class="internal-link-card" title="URL Encoder and Percent Encoding Converter"><span><span class="tool-icon" aria-hidden="true">🔗</span>URL Encoder &amp; Decoder</span><span>→</span></a>
+      <a href="json-formatter.html" class="internal-link-card" title="Format and validate JSON data online"><span><span class="tool-icon" aria-hidden="true">📋</span>JSON Formatter &amp; Validator</span><span>→</span></a>
+      <a href="qr-generator.html" class="internal-link-card" title="Generate QR codes from URLs or text"><span><span class="tool-icon" aria-hidden="true">📱</span>QR Code Generator</span><span>→</span></a>
+      <a href="color-picker.html" class="internal-link-card" title="RGBA Color Picker — HEX, RGB, HSL"><span><span class="tool-icon" aria-hidden="true">🎨</span>RGBA Color Picker</span><span>→</span></a>
+      <a href="case-converter.html" class="internal-link-card" title="Convert text case online"><span><span class="tool-icon" aria-hidden="true">🔤</span>Case Converter</span><span>→</span></a>
+      <a href="word-counter.html" class="internal-link-card" title="Count words and characters online"><span><span class="tool-icon" aria-hidden="true">🔢</span>Word Counter</span><span>→</span></a>
+      <a href="lorem-ipsum.html" class="internal-link-card" title="Lorem Ipsum Generator"><span><span class="tool-icon" aria-hidden="true">📝</span>Lorem Ipsum Generator</span><span>→</span></a>
+      <a href="pdf-compressor.html" class="internal-link-card" title="Compress PDF files online free"><span><span class="tool-icon" aria-hidden="true">📄</span>PDF Compressor</span><span>→</span></a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p style="margin-bottom:8px;"><a href="../index.html">← Back to all CodeWizTools</a></p>
+  <p>© 2026 CodeWizTools · No tracking. No logs. Pure Privacy.</p>
+</footer>
+
+<script>
+/* Pure JS MD5 implementation — no external library needed */
+function md5(str) {
+  function safeAdd(x,y){const lsw=(x&0xFFFF)+(y&0xFFFF);const msw=(x>>16)+(y>>16)+(lsw>>16);return(msw<<16)|(lsw&0xFFFF);}
+  function bitRotateLeft(num,cnt){return(num<<cnt)|(num>>>(32-cnt));}
+  function md5cmn(q,a,b,x,s,t){return safeAdd(bitRotateLeft(safeAdd(safeAdd(a,q),safeAdd(x,t)),s),b);}
+  function md5ff(a,b,c,d,x,s,t){return md5cmn((b&c)|((~b)&d),a,b,x,s,t);}
+  function md5gg(a,b,c,d,x,s,t){return md5cmn((b&d)|(c&(~d)),a,b,x,s,t);}
+  function md5hh(a,b,c,d,x,s,t){return md5cmn(b^c^d,a,b,x,s,t);}
+  function md5ii(a,b,c,d,x,s,t){return md5cmn(c^(b|(~d)),a,b,x,s,t);}
+
+  // UTF-8 encode
+  const bytes = new TextEncoder().encode(str);
+  const words = [];
+  for(let i=0;i<bytes.length;i++){words[i>>2]|=bytes[i]<<((i%4)*8);}
+  const byteLen = bytes.length;
+  words[byteLen>>2]|=0x80<<((byteLen%4)*8);
+  words[(((byteLen+8)>>6)<<4)+14]=byteLen*8;
+  const l=words.length;
+  let a=1732584193,b=-271733879,c=-1732584194,d=271733878;
+  for(let i=0;i<l;i+=16){
+    const A=a,B=b,C=c,D=d;
+    a=md5ff(a,b,c,d,words[i],7,-680876936);d=md5ff(d,a,b,c,words[i+1],12,-389564586);c=md5ff(c,d,a,b,words[i+2],17,606105819);b=md5ff(b,c,d,a,words[i+3],22,-1044525330);
+    a=md5ff(a,b,c,d,words[i+4],7,-176418897);d=md5ff(d,a,b,c,words[i+5],12,1200080426);c=md5ff(c,d,a,b,words[i+6],17,-1473231341);b=md5ff(b,c,d,a,words[i+7],22,-45705983);
+    a=md5ff(a,b,c,d,words[i+8],7,1770035416);d=md5ff(d,a,b,c,words[i+9],12,-1958414417);c=md5ff(c,d,a,b,words[i+10],17,-42063);b=md5ff(b,c,d,a,words[i+11],22,-1990404162);
+    a=md5ff(a,b,c,d,words[i+12],7,1804603682);d=md5ff(d,a,b,c,words[i+13],12,-40341101);c=md5ff(c,d,a,b,words[i+14],17,-1502002290);b=md5ff(b,c,d,a,words[i+15],22,1236535329);
+    a=md5gg(a,b,c,d,words[i+1],5,-165796510);d=md5gg(d,a,b,c,words[i+6],9,-1069501632);c=md5gg(c,d,a,b,words[i+11],14,643717713);b=md5gg(b,c,d,a,words[i],20,-373897302);
+    a=md5gg(a,b,c,d,words[i+5],5,-701558691);d=md5gg(d,a,b,c,words[i+10],9,38016083);c=md5gg(c,d,a,b,words[i+15],14,-660478335);b=md5gg(b,c,d,a,words[i+4],20,-405537848);
+    a=md5gg(a,b,c,d,words[i+9],5,568446438);d=md5gg(d,a,b,c,words[i+14],9,-1019803690);c=md5gg(c,d,a,b,words[i+3],14,-187363961);b=md5gg(b,c,d,a,words[i+8],20,1163531501);
+    a=md5gg(a,b,c,d,words[i+13],5,-1444681467);d=md5gg(d,a,b,c,words[i+2],9,-51403784);c=md5gg(c,d,a,b,words[i+7],14,1735328473);b=md5gg(b,c,d,a,words[i+12],20,-1926607734);
+    a=md5hh(a,b,c,d,words[i+5],4,-378558);d=md5hh(d,a,b,c,words[i+8],11,-2022574463);c=md5hh(c,d,a,b,words[i+11],16,1839030562);b=md5hh(b,c,d,a,words[i+14],23,-35309556);
+    a=md5hh(a,b,c,d,words[i+1],4,-1530992060);d=md5hh(d,a,b,c,words[i+4],11,1272893353);c=md5hh(c,d,a,b,words[i+7],16,-155497632);b=md5hh(b,c,d,a,words[i+10],23,-1094730640);
+    a=md5hh(a,b,c,d,words[i+13],4,681279174);d=md5hh(d,a,b,c,words[i],11,-358537222);c=md5hh(c,d,a,b,words[i+3],16,-722521979);b=md5hh(b,c,d,a,words[i+6],23,76029189);
+    a=md5hh(a,b,c,d,words[i+9],4,-640364487);d=md5hh(d,a,b,c,words[i+12],11,-421815835);c=md5hh(c,d,a,b,words[i+15],16,530742520);b=md5hh(b,c,d,a,words[i+2],23,-995338651);
+    a=md5ii(a,b,c,d,words[i],6,-198630844);d=md5ii(d,a,b,c,words[i+7],10,1126891415);c=md5ii(c,d,a,b,words[i+14],15,-1416354905);b=md5ii(b,c,d,a,words[i+5],21,-57434055);
+    a=md5ii(a,b,c,d,words[i+12],6,1700485571);d=md5ii(d,a,b,c,words[i+3],10,-1894986606);c=md5ii(c,d,a,b,words[i+10],15,-1051523);b=md5ii(b,c,d,a,words[i+1],21,-2054922799);
+    a=md5ii(a,b,c,d,words[i+8],6,1873313359);d=md5ii(d,a,b,c,words[i+15],10,-30611744);c=md5ii(c,d,a,b,words[i+6],15,-1560198380);b=md5ii(b,c,d,a,words[i+13],21,1309151649);
+    a=md5ii(a,b,c,d,words[i+4],6,-145523070);d=md5ii(d,a,b,c,words[i+11],10,-1120210379);c=md5ii(c,d,a,b,words[i+2],15,718787259);b=md5ii(b,c,d,a,words[i+9],21,-343485551);
+    a=safeAdd(a,A);b=safeAdd(b,B);c=safeAdd(c,C);d=safeAdd(d,D);
+  }
+  const hex = [a,b,c,d].map(n=>{
+    let s='';
+    for(let i=0;i<4;i++){s+=('0'+((n>>>(i*8))&0xFF).toString(16)).slice(-2);}
+    return s;
+  }).join('');
+  return hex;
+}
+
+let caseMode = 'lower';
+
+function setCase(m) {
+  caseMode = m;
+  document.getElementById('btn-lower').classList.toggle('active', m==='lower');
+  document.getElementById('btn-upper').classList.toggle('active', m==='upper');
+  document.getElementById('btn-lower').setAttribute('aria-pressed', m==='lower');
+  document.getElementById('btn-upper').setAttribute('aria-pressed', m==='upper');
+  generate();
+}
+
+function generate() {
+  const input = document.getElementById('md5-in').value;
+  document.getElementById('in-count').textContent = input.length ? input.length + ' chars' : '';
+  if(!input) {
+    document.getElementById('md5-out').value = '';
+    document.getElementById('mdot').className = 's-dot';
+    document.getElementById('mstatus').textContent = 'Ready';
+    document.getElementById('md5-info').textContent = '—';
+    return;
+  }
+  const hash = caseMode === 'upper' ? md5(input).toUpperCase() : md5(input);
+  document.getElementById('md5-out').value = hash;
+  document.getElementById('mdot').className = 's-dot ok';
+  document.getElementById('mstatus').textContent = 'MD5 generated ✓';
+  document.getElementById('md5-info').textContent = '32 characters';
+}
+
+function copyHash(event) {
+  const val = document.getElementById('md5-out').value;
+  if(!val) return;
+  const btn = event.target, orig = btn.textContent;
+  if(navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(val).then(() => {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = orig, 1600);
+    }).catch(() => fallbackCopy(val, btn, orig));
+  } else { fallbackCopy(val, btn, orig); }
+}
+
+function fallbackCopy(text, btn, orig) {
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.cssText = 'position:fixed;opacity:0;';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try { document.execCommand('copy'); btn.textContent = '✓ Copied!'; }
+  catch { btn.textContent = 'Copy failed'; }
+  document.body.removeChild(ta);
+  setTimeout(() => btn.textContent = orig, 1600);
+}
+
+function clearAll() {
+  document.getElementById('md5-in').value = '';
+  document.getElementById('md5-out').value = '';
+  document.getElementById('mdot').className = 's-dot';
+  document.getElementById('mstatus').textContent = 'Ready';
+  document.getElementById('md5-info').textContent = '—';
+  document.getElementById('in-count').textContent = '';
+  document.getElementById('md5-in').focus();
+}
+
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('active');
+  item.classList.toggle('active');
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+</script>
+</body>
+</html>
